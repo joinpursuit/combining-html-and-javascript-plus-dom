@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website for Question 3</title>
+</head>
+
+<body>
+    <h1 id=" heading_for_3">Double your number below</h1>
+    <p>
+        Enter a number:
+        <input type="text" id="number_input">
+    </p>
+
+    <p id="end_result"> Your number doubled is</p>
+
+    <button onclick="doubleNumber()">submit</button>
+
+
+    <script>
+        function doubleNumber() {
+            let inputNumber = document.getElementById("number_input")
+            let num = inputNumber.value
+            let endResult = document.getElementById("end_result")
+            endResult.innerText = `Your number doubled is: ${num * 2}`
+        }
+    </script>
+
+</body>
+
+</html>
