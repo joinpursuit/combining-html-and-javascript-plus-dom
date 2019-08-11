@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Palindrome Detector</title>
+  </head>
+  <body>
+    <h1><center>Palindrome Detector</center></h1>
+    <p id="para1">Is your word a palindrome? Find out now!</p>
+    <p>ENTER YOUR WORD:
+      <input type="text" id="str_input" size=50>
+    </p>
+    <script>
+      function thunderDrome() {
+        let strInputElement = document.getElementById("str_input")
+        let userSubmittedStr = strInputElement.value
+        let re = /[^A-Za-z0-9]/g
+        let str = userSubmittedStr.toLowerCase().replace(re, '')
+        let len = str.length
+        let answer = document.getElementById("hidden_text")
+        for (let i = 0; i < len/2; i++) {
+          if (str[i] !== str[len - 1 - i]) {
+            // window.alert("This is NOT a palindrome!")
+            answer.innerText = "This is NOT a palindrome!"
+          } else {
+            // window.alert("This IS a palindrome!")
+            answer.innerText = "This IS a palindrome!"
+          }
+        }
+      }
+    </script>
+    <button onclick = "thunderDrome()">SUBMIT</button>
+    <p id="hidden_text"></p>
+  </body>
+</html>
