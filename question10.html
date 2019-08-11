@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 10</title>
+</head>
+<body>
+	<h1>Disemvoweler</h1>
+	<label for='word'>Word to Disemvowel</label>
+	<input type='text' id='word'><br>
+	<label for='checkbox'>Is y a vowel?</label>
+	<input type='checkbox' id='checkbox'><br>
+	<button type='button' onClick='disemvowel()'>Submit</button><br>
+	<p id='answer'></p>
+	<script>
+		function disemvowel(){
+			let word = document.getElementById('word').value.split('');
+			let yVowel = document.getElementById('checkbox').checked;
+			if(yVowel){
+				let returnWord = word.filter(elem => {
+					return elem.toLowerCase() !== 'a' && elem.toLowerCase() !== 'e' && elem.toLowerCase() !== 'i' && elem.toLowerCase() !== 'o' && elem.toLowerCase() !== 'u' && elem.toLowerCase() !== 'y';
+				}).join('');
+				window.alert(`Your disemvoweled word is ${returnWord}`);
+				document.getElementById('answer').innerText = `Your disemvoweled word is ${returnWord}`;
+				document.getElementById('word').value = `${returnWord}`;
+			}
+			else{
+				let returnWord = word.filter(elem => {
+					return elem.toLowerCase() !== 'a' && elem.toLowerCase() !== 'e' && elem.toLowerCase() !== 'i' && elem.toLowerCase() !== 'o' && elem.toLowerCase() !== 'u';
+				}).join('');
+				window.alert(`Your disemvoweled word is ${returnWord}`);
+				document.getElementById('answer').innerText = `Your disemvoweled word is ${returnWord}`;
+				document.getElementById('word').value = `${returnWord}`;
+			}
+		}
+	</script>
+</body>
+</html>

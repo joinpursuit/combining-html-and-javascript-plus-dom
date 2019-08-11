@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 6</title>
+</head>
+<body>
+	<h1>String Capital Counter</h1>
+	<input type = 'text' id = 'capital_input'>
+	<button type='button' onClick='numOfCapital()'>Submit</button><br>
+	<p id='answer'></p>
+
+
+	<script>
+		function numOfCapital(){
+			let word = document.getElementById('capital_input').value.split('');
+			let num = word.reduce((total, current) => {
+				if(current.toUpperCase() === current && current !== ' '){
+					return total += 1;
+				}
+				else{
+					return total
+				}
+			},0);
+			window.alert(`There are ${num} capital letters in this string`);
+			document.getElementById('answer').innerText = `There are ${num} capital letters in this string`;
+
+		}
+	</script>
+</body>
+</html>

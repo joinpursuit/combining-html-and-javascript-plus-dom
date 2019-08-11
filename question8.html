@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 8</title>
+</head>
+<body>
+	<h1>Average of Three Numbers</h1>
+	<label for='num_1'>Number 1</label>
+	<input type ='text' id = 'num_1'><br>
+	<label for='num_2'>Number 2</label>
+	<input type ='text' id = 'num_2'><br>
+	<label for='num_3'>Number 3</label>
+	<input type ='text' id = 'num_3'><br>
+	<button type='button' onClick='averageOf3()'>Submit</button>
+	<p id='answer'></p>
+	<script>
+		function averageOf3(){
+			let num1 = parseInt(document.getElementById('num_1').value);
+			let num2 = parseInt(document.getElementById('num_2').value);
+			let num3 = parseInt(document.getElementById('num_3').value);
+			if(isNaN(num1) || isNaN(num2) || isNaN(num3)){
+				window.alert('All of the inputs must be numbers!!');
+				document.getElementById('answer').innerText = '';
+			}
+			else{
+				window.alert(`The average of the three numbers is ${(num1 + num2 + num3)/3}`)
+				document.getElementById('answer').innerText = `The average of the three numbers is ${(num1 + num2 + num3)/3}`;
+			}
+		}
+	</script>
+</body>
+</html>

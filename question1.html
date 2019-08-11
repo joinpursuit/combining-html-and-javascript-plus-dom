@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Question 1
+	</title>
+</head>
+<body>
+	<h1 id='main_header'>Placeholder</h1>
+	<script>
+		let string = window.prompt(`Give me a string please`);
+		let num = window.prompt('Now give me a number!');
+		let superString = '';
+		for(let i = 0; i < num; i++){
+			superString += `${string} `;
+		};
+		window.alert(`${superString}`)
+
+		document.getElementById(`main_header`).innerText = `${superString}`;
+	</script>
+</body>
+</html>

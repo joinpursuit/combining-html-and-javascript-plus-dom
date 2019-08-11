@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2</title>
+</head>
+<body>
+	<h1 id='number'></h1>
+	<script>
+		let num =window.prompt('Give me a number and I will tell you if it is even or odd');
+		if(isNaN(num)){
+			window.alert('Next time, please just give me a number........');
+			document.getElementById('number').innerText ='You didnt give me a number.....'
+
+		}
+		else{
+			if(parseInt(num) % 2 === 0){
+				window.alert('This number is even');
+				document.getElementById('number').innerText = 'This number is even';
+			}
+			else{
+				window.alert('This number is odd');
+				document.getElementById('number').innerText ='This number is odd'
+			}
+		}	
+	</script>
+</body>
+</html>

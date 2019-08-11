@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Question 7
+	</title>
+</head>
+<body>
+	<h1>String Capital Counter Comparer</h1>
+	<label for='string_1'>String 1</label>
+	<input type='text' id ='string_1'><br>
+	<label for='string_2'>String2</label>
+	<input type='text' id='string_2'><br>
+	<button type='button' onClick='comparer()'>Submit</button>
+	<p id='answer'></p>
+	<script>
+		function comparer(){
+			let word1 = document.getElementById('string_1').value;
+			let word2 = document.getElementById('string_2').value;
+			let num1 = word1.split('').reduce((total, current) => {
+				if(current.toUpperCase() === current && current !== ' '){
+					return total += 1;
+				}
+				else{
+					return total
+				}
+			},0);
+			let num2 = word2.split('').reduce((total, current) => {
+				if(current.toUpperCase() === current && current !== ' '){
+					return total += 1;
+				}
+				else{
+					return total
+				}
+			},0);
+			if(num1 > num2){
+				window.alert(`String one has more capital letters than String 2`);
+				document.getElementById('answer').innerText = `String 1 has more capital letters than String 2`;
+			}
+			else if(num1 === num2){
+				window.alert('Both strings have the same amount of capital letters!');
+				document.getElementById('answer').innerText = 'Both strings have the same amount of capital letters!';
+			}
+			else{
+				window.alert(`String 2 has more capital letters than String 1`);
+				document.getElementById('answer').innerText = `String 2 has more capital letters than String 1`;
+			}
+		}
+	</script>
+</body>
+</html>

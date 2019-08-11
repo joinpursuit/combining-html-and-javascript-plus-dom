@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Question 5
+	</title>
+</head>
+<body>
+	<h1>String Uppercaser</h1>
+	<input type='text' id='uppercaser'>
+	<button type='button' onClick='uppercased()'>Submit</button><br>
+	<p id='answer'></p>
+	<script>	
+		function uppercased(){
+			let uppercased = document.getElementById('uppercaser').value;
+			window.alert(`${uppercased.toUpperCase()}`);
+			document.getElementById('answer').innerText = `${uppercased.toUpperCase()}`;
+			document.getElementById('uppercaser').value = `${uppercased.toUpperCase()}`;
+		}
+	</script>
+</body>
+</html>

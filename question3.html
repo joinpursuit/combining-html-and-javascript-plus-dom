@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 3</title>
+</head>
+<body>
+	<form>
+		<h1>Double your number below</h1>
+		<input type='text' id='double_number' placeholder="Enter a number please">
+		<button type='submit' onClick =doubler(document.getElementById('double_number').value)>Submit here</button>
+	</form>
+	<p id='answer'></p>
+	<script>
+		function doubler(num){
+			window.alert(`${num * 2}`);
+			document.getElementById('answer').innerText = `${num * 2}`;
+			document.getElementById('double_number').value = `${num * 2}`;
+		}		
+	</script>
+</body>
+</html>

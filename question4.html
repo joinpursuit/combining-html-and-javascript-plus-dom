@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Question4
+	</title>
+</head>
+<body>
+		<script>
+		function palindrone(){
+			let word = document.getElementById('palindrone').value;
+			console.log("value", word)
+			let backwards = '';
+			for(let i = word.length -1; i >= 0; i--){
+				backwards += word[i];
+			}
+			if(word === backwards){
+				window.alert('YES!! This word is a palindrone!');
+				document.getElementById('answer').innerText = 'YES!! This word is a palindrone!';
+			}
+			else {
+				window.alert('Sorry buddy, this aint a palindrone');
+				document.getElementById('answer').innerText = 'Sorry buddy, this aint a palindrone';
+			}
+		}
+	</script>
+	<h1>Palindrone Detector</h1>
+	<input type='text' id='palindrone' >
+	<button type='button' onClick='palindrone()'>Submit
+	</button><br>
+	<p id='answer'></p>
+
+
+</body>
+</html>
