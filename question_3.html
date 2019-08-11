@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Luxury Number Doubler</title>
+  </head>
+  <body>
+    <h1><center>Double your number below!</center></h1>
+    <p id="para1">This is a luxury service provided to only the higest clientele.</p>
+    <p>Enter your number for doubling:
+      <input type="text" id="num_input" placeholder="Numbers only, please." size=50>
+    </p>
+    <p id="hidden_text"></p>
+    <script>
+      function numDub() {
+        let numInputElement = document.getElementById("num_input")
+        let userSubmittedNum = numInputElement.value
+        let userNum = Number(userSubmittedNum) * 2
+        window.alert(`Sit back and relax. We've got you covered. \nYour doubled number is: \n${userNum}`)
+        let answer = document.getElementById("hidden_text")
+        answer.innerText = `Sit back and relax. We've got you covered. \nYour doubled number is: \n${userNum}`
+      }
+    </script>
+    <button onclick = "numDub()">SUBMIT</button>
+  </body>
+</html>
