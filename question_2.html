@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Even Checker</title>
+    <script>
+      let num = window.prompt("EVEN CHECKER \nPlease enter a number, and we'll let you know if it's even or not. \nWe have no secret motives.")
+      if (!isNaN(Number(num))) {
+        if (Number(num) % 2 === 0) {
+          window.alert("WARNING! \nEVEN NUMBER DETECTED! \nPOISON RELEASED! \nTHE THREAT WILL SOON BE OVER! \nPLEASE TRY NOT TO BREATH ANY OF THE POISON")
+        } else {
+          window.alert("No even numbers detected. \nYou are safe... \For now.")
+        }
+      } else {
+        window.alert("That is not a number. Please try again.")
+      }
+    </script>
+  </head>
+  <body>
+    <h1><center>COMPLETELY FREE EVEN CHECKING SERVICE</center></h1>
+    <p id="para1">Welcome to our completely <strong>free</strong> Even Checking service.</p>
+    <p id="para2">We have no ulterior motives.</p>
+    <p id="para3">This is a free service.</p>
+    <p>Please enter your number:
+      <input type="text" id="num_input" placeholder="Numbers ONLY" size=50>
+    </p>
+    <p id="hidden_text"></p>
+    <script>
+      function evenCheck() {
+        let numInputElement = document.getElementById("num_input")
+        let userSubmittedNum = numInputElement.value
+        let answer = document.getElementById("hidden_text")
+        if (!isNaN(Number(userSubmittedNum))) {
+          if (Number(userSubmittedNum) % 2 === 0) {
+            answer.innerText = "WARNING! \nEVEN NUMBER DETECTED! \nPOISON RELEASED! \nTHE THREAT WILL SOON BE OVER! \nPLEASE TRY NOT TO BREATH ANY OF THE POISON"
+          } else {
+            answer.innerText = "No even numbers detected. \nYou are safe... \For now."
+          }
+        } else {
+          answer.innerText = "That is not a number. Please take this seriously."
+        }
+      }
+    </script>
+    <button onclick = "evenCheck()">CHECK NOW</button>
+  </body>
+</html>
