@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Uppercaser</title>
+  </head>
+  <body>
+    <h1><center>String Uppercaser</center></h1>
+    <p id="para1">Automatically uppercase every character in any word!</p>
+    <p>INPUT YOUR WORD OR SENTENCE HERE:
+      <input type="text" id="str_input" size=100>
+    </p>
+    <script>
+      function userUpperCase() {
+        let strInputElement = document.getElementById("str_input")
+        let userSubmittedStr = strInputElement.value
+        let answer = document.getElementById("hidden_text")
+        window.alert(`${userSubmittedStr.toUpperCase()}`)
+        strInputElement.value = `${userSubmittedStr.toUpperCase()}`
+        answer.innerText = `${userSubmittedStr.toUpperCase()}`
+      }
+    </script>
+    <button onclick = "userUpperCase()">SUBMIT</button>
+    <p id="hidden_text"></p>
+  </body>
+</html>
