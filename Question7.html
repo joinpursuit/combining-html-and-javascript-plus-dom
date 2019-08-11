@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion Seven : String Capital Counter Comparer</h2>
+        <h3>Part a.</h3>
+        <p> Make a website with a heading at the top that reads "String Capital Counter Comparer". 
+            Add 2 input fields and a button. When the user clicks the button, 
+            display an alert that shows which string has more capital letters in it.
+        </p>
+        
+        <p>
+            <label for="word1">Please enter something here :</label>
+            <input type="text" word="str1" id="word1" placeholder="expecting a word here" size="35">
+        </p>
+        <p>
+            <label for="word2">Please enter something here :</label>
+            <input type="text" word="str2" id="word2" placeholder="expecting a word here" size="35">
+        </p>
+        <button onclick = "comparer()">Submit</button>
+        <p id="answer"></p>
+        <hr>
+
+        <h3>Part b.</h3>
+        <p>Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+        <hr>
+
+        <script>
+            function strCapitalCounter(str) {
+                let word = str.replace(/[^a-zA-Z0-9]/g, '');
+                console.log(word)
+                let counter = 0;
+            
+                for (let i = 0; i < word.length; i++) {
+                    if (word[i] === word[i].toUpperCase()) {
+                        counter += 1;
+                    }
+                }
+                return counter;
+            }
+
+            function comparer() {
+                let num1 = strCapitalCounter(document.getElementById("word1").value);
+                let num2 = strCapitalCounter(document.getElementById("word2").value);
+
+                if (num1 > num2) {
+                    //window.alert(`${document.getElementById("word1").value} has more capital letters then ${document.getElementById("word2").value}`);
+                    document.getElementById("answer").innerText = `${document.getElementById("word1").value} has more capital letters then ${document.getElementById("word2").value}`;
+                } else if (num1 < num2) {
+                    //window.alert(`${document.getElementById("word2").value} has more capital letters then ${document.getElementById("word1").value}`);
+                    document.getElementById("answer").innerText = `${document.getElementById("word2").value} has more capital letters then ${document.getElementById("word1").value}`;
+                } else {
+                    //window.alert(`${document.getElementById("word1").value} and ${document.getElementById("word2").value} have the same number of capital letters`);
+                    document.getElementById("answer").innerText = `${document.getElementById("word1").value} and ${document.getElementById("word2").value} have the same number of capital letters`
+                }
+            }
+        </script>
+    </body>
+</html>

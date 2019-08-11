@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion Eight : Average of Three Numbers</h2>
+        <h3>Part a.</h3>
+        <p> Make a website with a heading at the top that reads "Average of Three Numbers". 
+            Add 3 input fields and a button. When the user clicks the button, 
+            display an alert that shows the average of all 3 text fields.
+        </p>
+        
+        <p>
+            <label for="number1">Please enter the 1st number :</label>
+            <input type="text" number="num1" id="number1" placeholder="expecting a number here" size="35">
+        </p>
+        <p>
+            <label for="number2">Please enter the 2nd number :</label>
+            <input type="text" number="num2" id="number2" placeholder="expecting a number here" size="35">
+        </p>
+        <p>
+            <label for="number3">Please enter the 3rd number :</label>
+            <input type="text" number="num3" id="number3" placeholder="expecting a number here" size="35">
+        </p>
+
+        <button onclick = "averageOfThreeNumbers()">Submit</button>
+        <p id="answer"></p>
+        <hr>
+
+        <h3>Part b.</h3>
+        <p> Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+        <hr>
+
+        <h3>Part c.</h3>
+        <p> If any of the text fields doesn't have a number, show an error message that reads 
+            "All of the inputs must be numbers"</p>
+        <hr>
+
+        <script>
+            function averageOfThreeNumbers() {
+                let num1 = parseInt(document.getElementById("number1").value);
+                let num2 = parseInt(document.getElementById("number2").value);
+                let num3 = parseInt(document.getElementById("number3").value);
+
+                if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                    window.alert("All of the inputs must be numbers, try again")
+                } else {
+                    //window.alert(`The average of ${num1}, ${num2} and ${num3} is : ${(num1+num2+num3)/3}`);
+                    document.getElementById("answer").innerText = `The average of ${num1}, ${num2} and ${num3} is : ${(num1+num2+num3)/3}`
+                }
+            }
+
+        </script>
+    </body>
+</html>

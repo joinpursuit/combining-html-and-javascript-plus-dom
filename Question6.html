@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion Six : String Capital Counter</h2>
+        <h3>Part a.</h3>
+        <p> Make a website with a heading at the top that reads "String Capital Counter". 
+            Add an input field and a button. When the user clicks the button, 
+            display an alert that contains a count of how many capital letters are in the string.
+        </p>
+            
+        <label for="word">Please enter a something here :</label>
+        <input type="text" word="str" id="word" placeholder="expecting a word here" size="35">
+        <button onclick = "strCapitalCounter()">Submit</button>
+        <p id="answer"></p>
+        <hr>
+
+        <h3>Part b.</h3>
+        <p>Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+        <hr>
+
+        <script>
+            function strCapitalCounter() {
+                let str = (document.getElementById("word").value).replace(/[^a-zA-Z0-9]/g, '');
+                let counter = 0;
+                
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] === str[i].toUpperCase()) {
+                        counter += 1;
+                    }
+                }
+
+                if (counter === 0) {
+                    //window.alert(`${str} has no capital character`);
+                    document.getElementById("answer").innerText = `${str} has no capital character`;
+                } else if (counter === 1) {
+                    //window.alert(`${str} contains ${counter} capital character`);
+                    document.getElementById("answer").innerText = `${str} contains ${counter} capital character`;
+                } else {
+                    //window.alert(`${str} contains ${counter} capital characters`);
+                    document.getElementById("answer").innerText = `${str} contains ${counter} capital characters`;
+                }
+            }
+        </script>
+    </body>
+</html>

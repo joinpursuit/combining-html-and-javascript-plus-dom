@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion Three</h2>
+        <h3>Part a.</h3>
+        <p>Make a website with an input field and a button. 
+            Have a heading at the top that reads "Double your number below" When the user clicks on the button, 
+            display an alert showing that number times two.
+        </p>
+        <h4>Double your number below :</h4>
+            
+        <label for="number">Please enter a number:</label>
+        <input type="text" number="num" id="number" placeholder="expecting a number" size="35">
+        <button onclick = "doubleNum()">Submit</button>
+        <hr>
+
+        <h3>Part b.</h3>
+        <p>Instead of showing a popup, make the doubled number appear in a paragraph below.</p>
+        <p id="part_b"></p>
+        <hr>
+
+        <h3>Part c.</h3>
+        <p>Make the doubled number instead appear inside the input</p>
+        <p id="part_c"></p>
+        <hr>
+        <script>
+            function doubleNum() {
+                let num = parseInt(document.getElementById("number").value);
+                while(isNaN(num)) {
+                    num = window.prompt("Invalid input, try again");
+                }
+                //window.alert(`${num} x 2 = ${num * 2}`);
+                document.getElementById("part_b").innerText = `The result of ${num} x 2 is equal to ${num * 2}`;
+                document.getElementById('number').value = `${num} x 2 = ${num * 2}`;
+                //return num * 2;
+            }
+        </script>
+    </body>
+</html>

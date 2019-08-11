@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion One</h2>
+        <h3>Part a.</h3>
+        <p>Make a website that prompts the user for a string, then a number. 
+            Then show a popup that displays the string that many times
+        </p>
+        <hr>
+        <h3>Part b.</h3>
+        <p>Instead of showing a popup, make the text appear on the screen.</p>
+        <p id="display_part"></p>
+        <hr>
+        <script>
+            let str = window.prompt('Please entrer a text to be displayed');
+
+            let rep = parseInt(window.prompt("Please entrer a number"));
+            while (isNaN(rep)) {
+                rep = parseInt(window.prompt("Please entrer a number"));
+            }
+
+            let text = ''
+
+            for (let i = 0; i < rep; i++) {
+                text += str + '... \n'
+            }
+            //window.alert(text)
+            document.getElementById("display_part").innerText = text;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion Four : Palindrome detector</h2>
+        <h3>Part a.</h3>
+        <p> Make a website with a heading at the top that reads "Palindrome detector". 
+            Add an input field and a button. When the user clicks the button, 
+            display an alert that says whether or not the text in the input field is a palindrome 
+            (the same backwards and forwards).
+        </p>
+            
+        <label for="word">Please enter something here:</label>
+        <input type="text" word="str" id="word" placeholder="expecting a word here" size="35">
+        <button onclick = "isPalindrome()">Submit</button>
+        <p id="answer"></p>
+        <hr>
+
+        <h3>Part b.</h3>
+        <p>Instead of showing a popup, have that information appear in a paragraph below the button</p>
+        <p id="part_b"></p>
+        <hr>
+
+        <script>
+            function isPalindrome() {
+                let str = document.getElementById("word").value;
+                let reverseStr = '';
+                for (let i = str.length - 1; i >= 0; i--){
+                    reverseStr += str[i];
+                }
+                if (str === reverseStr){
+                    //window.alert(`${str} is a palindrome`);
+                    document.getElementById("answer").innerText = `${str.toUpperCase()} is a palindrome`;
+                } else {
+                    //window.alert(`${str} is not palindrome, backareds its : ${reverseStr}`);
+                    document.getElementById("answer").innerText = `${str.toUpperCase()} is not palindrome, backareds its : ${reverseStr.toUpperCase()}`;
+                }
+            }
+        </script>
+    </body>
+</html>

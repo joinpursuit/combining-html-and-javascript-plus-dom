@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion Five : String Uppercaser</h2>
+        <h3>Part a.</h3>
+        <p> Make a website with a heading at the top that reads "String Uppercaser". 
+            Add an input field and a button. When the user clicks the button, 
+            display an alert that contains the uppercased text of the input text field.
+        </p>
+            
+        <label for="word">Please enter somthing here :</label>
+        <input type="text" word="str" id="word" placeholder="expecting a word here" size="35">
+        <button onclick = "upperCaser()">Submit</button>
+        <p id="answer"></p>
+        <hr>
+
+        <h3>Part b.</h3>
+        <p>Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+        <hr>
+
+        <h3>Part c.</h3>
+        <p>Have the uppercased overwrite the text that was there before.</p>
+        <hr>
+
+        <script>
+            function upperCaser() {
+                let str = document.getElementById("word").value;
+
+                //window.alert(`${str} capitalized is ${str.toUpperCase()}`);
+                document.getElementById("answer").innerText = `${str} capitalized is ${str.toUpperCase()}`;
+                document.getElementById("word").value = str.toUpperCase();
+            }
+        </script>
+    </body>
+</html>

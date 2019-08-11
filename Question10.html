@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion Ten : Disemvoweler</h2>
+        <h3>Part a.</h3>
+        <p> Make a website with a heading at the top that reads "Disemvoweler". 
+            Add 1 input field, a checkbox and a button. When the user clicks the button, 
+            display an alert that shows the text in the input field with the vowels removed. 
+            If the checkbox is checked, count y as a vowel.
+        </p>
+        
+        <p>
+            <label for="word">Please enter something here :</label>
+            <input type="text" word="string" id="word" placeholder="expecting a string here" size="35">
+        </p>
+
+        <p>
+            <input id = check_box type="checkbox" name="choice" value="y_is_a_vowel"> Count "<strong>y</strong>" as a vowel<br>
+        </p>
+
+        <button onclick = "disemvoweler()">Submit</button>
+        <p id="answer"></p>
+        <hr>
+
+        <h3>Part b.</h3>
+        <p> Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+        <hr>
+
+        <h3>Part c.</h3>
+        <p> Have the uppercased overwrite the text that was there before.</p>
+        <hr>
+
+        <script>
+            function disemvoweler() {
+                let str = document.getElementById("word").value;
+                let noVowels;
+                let removeY = document.getElementById("check_box").checked;
+
+                if (removeY) {
+                    noVowels = str.replace(/[aeuioyAEUIOY]/g, "");
+                } else {
+                    noVowels = str.replace(/[aeuioAEUIO]/g, "");
+                }
+                //window.alert(`The word ${str} without any vowel is : ${noVowels}`);
+                document.getElementById("answer").innerText = `The word ${str} without any vowel is : ${noVowels}`
+                document.getElementById("word").value = noVowels.toUpperCase();
+            }
+
+        </script>
+    </body>
+</html>

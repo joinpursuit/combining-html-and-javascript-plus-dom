@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang=en dir=ltr>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & JS + DOM Lab</title>
+    </head>
+
+    <body>
+        <h1>HTML & JS + DOM Lab</h1>
+        <h2>Quesion Two</h2>
+        <h3>Part a.</h3>
+        <p>Make a website that prompts the user for a number, then alerts them of whether or not the number is even.</p>
+        <hr>
+        <h3>Part b.</h3>
+        <p>Instead of showing a popup, make the text appear on the screen.</p>
+        <p id="display_part"></p>
+        <hr>
+        <script>
+
+            let num = parseInt(window.prompt("Please entrer a number"));
+
+            while (isNaN(num)) {
+                num = parseInt(window.prompt("Please entrer a number"));
+            }
+
+            if (num % 2) {
+                //window.alert(`The number ${num} is odd`);
+                document.getElementById("display_part").innerText = `The number ${num} is odd`;
+            } else {
+                // window.alert(`The number ${num} is even`);
+                document.getElementById("display_part").innerText = `The number ${num} is even`;
+            }
+        </script>
+    </body>
+</html>
