@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Average of Three Numbers</h1>
+  <input type = "text"/>
+  <input type = "text"/>
+  <input type = "text"/>
+  <button>Click</button>
+  <p></p>
+ <script>
+    let button = document.getElementsByTagName('button')[0]
+    let p = document.getElementsByTagName('p')[0]
+    button.addEventListener('click',()=>{
+    let n1 = parseInt(document.getElementsByTagName('input')[0].value)
+    let n2 = parseInt(document.getElementsByTagName('input')[1].value)
+    let n3 = parseInt(document.getElementsByTagName('input')[2].value)
+    let avg = (n1 + n2 + n3)/3
+    if(isNaN(avg)){
+    window.alert("Error: All of the inputs must be numbers")
+    }
+    else{
+    window.alert(avg)
+    p.innerText = avg
+  }
+
+  })
+
+  </script>
+</body>
+</html>

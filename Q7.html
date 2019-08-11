@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>String Capital Counter Comparer</h1>
+  <input type = "text"/>
+  <input type = "text"/>
+  <button>Click</button>
+  <p></p>
+ <script>
+    let button = document.getElementsByTagName('button')[0]
+    let count1 = 0;
+    let count2 = 0;
+    button.addEventListener('click',()=>{
+    let string1 = document.getElementsByTagName('input')[0].value
+    let string2 = document.getElementsByTagName('input')[1].value
+    for(let i = 0;i<string1.length;i++){
+      if(string1[i].toUpperCase() === string1[i]){
+        count1++
+      }
+    }
+    for(let i = 0;i<string2.length;i++){
+      if(string2[i].toUpperCase() === string2[i]){
+        count2++
+      }
+    }
+    let p = document.getElementsByTagName('p')[0]
+    if(count1 === count2){
+      window.alert("They have the same amount of capital letters.")
+      p.innerText ="They have the same amount of capital letters."
+    }
+    else if(count1 < count2){
+      window.alert(string2 + " has more capital letters.")
+      p.innerText = string2 + " has more capital letters."
+    }
+    else{
+      window.alert(string1 + " has more capital letters.")
+      p.innerText = string1 + " has more capital letters."
+    }
+
+
+
+    })
+  </script>
+</body>
+</html>

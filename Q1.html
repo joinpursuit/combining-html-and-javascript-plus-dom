@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1></h1>
+  <script>
+    let string = window.prompt("Write a string")
+    let number = window.prompt("Write a number")
+    let arr = []
+    for(let i = 0;i < number;i++){
+      arr.push(string)
+    }
+    window.alert(arr.join(" "))
+
+    let h1 = document.getElementsByTagName('h1')
+
+    h1[0].innerHTML = arr.join(" ")
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>String Uppercaser</h1>
+  <input type = "text"/>
+  <button>Click</button>
+  <p></p>
+ <script>
+    let button = document.getElementsByTagName('button')[0]
+    button.addEventListener('click',()=>{
+    let string = document.getElementsByTagName('input')[0].value
+    let p = document.getElementsByTagName('p')[0]
+    window.alert(string.toUpperCase())
+    p.innerText = string.toUpperCase()
+    document.getElementsByTagName('input')[0].value = string.toUpperCase()})
+  </script>
+</body>
+</html>

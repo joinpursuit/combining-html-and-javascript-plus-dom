@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Disemvoweler</h1>
+  <input type = "text"/>
+  <input type = "checkbox" id = "check" />
+  <button>Click</button>
+  <p></p>
+ <script>
+   let checkbox = document.getElementById("check");
+   function isvowel(letter){
+     let isTrue = false
+     let vowels = {"a":0,"e":0,"o":0,"i":0,"u":0}
+     if(checkbox.checked){
+       vowels["y"]=0
+     }
+
+       if(vowels[letter.toLowerCase()] !== undefined){
+         isTrue = true
+       }
+
+     return isTrue
+   }
+
+   function disemvowel(string){
+     let arr = string.split("")
+     for(let i = arr.length-1; i >= 0;i--){
+       if(isvowel(arr[i])){
+         arr.splice(i,1)
+       }
+     }
+
+   return arr.join("")
+   }
+    let button = document.getElementsByTagName('button')[0]
+    button.addEventListener('click',()=>{
+    let p = document.getElementsByTagName('p')[0]
+    let string = document.getElementsByTagName('input')[0].value
+
+let answer = disemvowel(string)
+  window.alert(answer)
+  p.innerText = answer
+})
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>String Capital Counter</h1>
+  <input type = "text"/>
+  <button>Click</button>
+  <p></p>
+ <script>
+    let button = document.getElementsByTagName('button')[0]
+    button.addEventListener('click',()=>{
+    let string = document.getElementsByTagName('input')[0].value
+    let p = document.getElementsByTagName('p')[0]
+    let count = 0;
+    for(let i = 0;i<string.length;i++){
+      if(string[i].toUpperCase() === string[i]){
+        count++
+      }
+    }
+    window.alert(count)
+    p.innerText = count
+    })
+  </script>
+</body>
+</html>

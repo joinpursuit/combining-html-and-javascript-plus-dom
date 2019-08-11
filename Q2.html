@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1></h1>
+  <script>
+    let number = window.prompt("Write a number.")
+        let h1 = document.getElementsByTagName('h1')
+    if(number%2 === 0){
+      window.alert("The number is even")
+        h1[0].innerHTML = "The number is even"
+    }
+    else{
+        window.alert("The number is odd")
+        h1[0].innerHTML = "The number is odd"
+    }    
+  </script>
+</body>
+</html>
