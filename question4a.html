@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Four</title>
+  </head>
+  <body>
+    <h1>Palindrome detector</h1>
+    <input type="text" id="input">
+    <button id="button" onclick="detector()">Detect</button>
+    <script>
+      function detector() {
+        let input = document.getElementById("input")
+        let word = input.value
+        let reverse = word.split('').reverse().join('')
+        if (word === reverse) {
+          window.alert("It's a palindrome")
+        } else {
+          window.alert("It's not a palindrome")
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Six</title>
+  </head>
+  <body>
+    <h1>String Capital Counter</h1>
+    <input type="text" id="input">
+    <button id="button" onclick="counter()">Count</button>
+    <script>
+      function counter() {
+        let input = document.getElementById("input")
+        let word = input.value
+        let array = word.split('')
+        let count = 0
+        array.forEach(a => {
+          if (a === a.toUpperCase()) {
+            count++
+          }
+        })
+        window.alert(count)
+      }
+    </script>
+  </body>
+</html>

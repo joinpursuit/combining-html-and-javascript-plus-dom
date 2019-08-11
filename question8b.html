@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Eight</title>
+  </head>
+  <body>
+    <h1>Average of Three Numbers</h1>
+    <input type="text" id="input1"><br>
+    <input type="text" id="input2"><br>
+    <input type="text" id="input3"><br>
+    <button id="button" onclick="average()">Calculate</button>
+    <p id="paragraph"></p>
+    <script>
+      function average() {
+        let paragraph = document.getElementById("paragraph")
+        let input1 = document.getElementById("input1")
+        let input2 = document.getElementById("input2")
+        let input3 = document.getElementById("input3")
+        let sum = Number(input1.value) + Number(input2.value) + Number(input3.value)
+        paragraph.innerText = (sum / 3)
+      }
+    </script>
+  </body>
+</html>

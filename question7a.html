@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Seven</title>
+  </head>
+  <body>
+    <h1>String Capital Counter Comparer</h1>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <button id="button" onclick="comparer()">Compare</button>
+    <script>
+      function comparer() {
+        let input1 = document.getElementById("input1")
+        let word1 = input1.value
+        let array1 = word1.split('')
+        let count1 = 0
+        array1.forEach(a => {
+          if (a === a.toUpperCase()) {
+            count1++
+          }
+        })
+        let input2 = document.getElementById("input2")
+        let word2 = input2.value
+        let array2 = word2.split('')
+        let count2 = 0
+        array2.forEach(a => {
+          if (a === a.toUpperCase()) {
+            count2++
+          }
+        })
+        if (count1 > count2) {
+          window.alert(`${word1} has more capitals`)
+        } else if (count2 > count1) {
+          window.alert(`${word2} has more capitals`)
+        } else if (count1 === count2) {
+          window.alert('Same amount of capitals')
+        }
+      }
+    </script>
+  </body>
+</html>

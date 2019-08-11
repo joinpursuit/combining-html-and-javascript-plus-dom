@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Five</title>
+  </head>
+  <body>
+    <h1>String Uppercaser</h1>
+    <input type="text" id="input">
+    <button id="button" onclick="uppercaser()">Detect</button>
+    <p id="paragraph"></p>
+    <script>
+      function uppercaser() {
+        let paragraph = document.getElementById("paragraph")
+        let input = document.getElementById("input")
+        let word = input.value
+        paragraph.innerText = word.toUpperCase()
+      }
+    </script>
+  </body>
+</html>

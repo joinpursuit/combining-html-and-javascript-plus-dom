@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Question Ten</title>
+  </head>
+  <body>
+    <h1>Disemvoweler</h1>
+    <input type="text" id="input"><br>
+    <input type="checkbox" id="check">Y as vowel
+    <button id="button" onclick="disemvowel()">Disemvowel</button>
+    <script>
+      function disemvowel() {
+        let input = document.getElementById("input")
+        let check = document.getElementById("check")
+        let word = input.value
+        let array = word.split('')
+        let vowels = ['A','E','I','O','U']
+        let disemvoweled = []
+        if (check.checked) {vowels.push('Y')}
+        array.forEach(a => {
+          if (vowels.includes(a.toUpperCase()) === false) {
+            disemvoweled.push(a)
+          }
+        })
+        result = disemvoweled.join('')
+        input.value = result
+      }
+    </script>
+  </body>
+</html>
