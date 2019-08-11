@@ -12,17 +12,18 @@
         <input type="text" id="number_input">
     </p>
 
-    <p id="end_result"> Your number doubled is</p>
+    <p id="end_result"> Your number doubled is:</p>
 
     <button onclick="doubleNumber()">submit</button>
 
 
     <script>
         function doubleNumber() {
-            let inputNumber = document.getElementById("number_input")
-            let num = inputNumber.value
+            let numInput = document.getElementById('number_input')
+            // window.alert(` Your number doubled is ${numInput.value * 2}`)
             let endResult = document.getElementById("end_result")
-            endResult.innerText = `Your number doubled is: ${num * 2}`
+            endResult.innerText = `Your number doubled is: ${numInput.value * 2}`
+            numInput.value = numInput.value * 2
         }
     </script>
 
