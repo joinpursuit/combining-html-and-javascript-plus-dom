@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Html & Js</title>
+
+      <!--
+      let str = window.prompt("Please type a string")
+      let numStr = window.prompt("Please type a number")
+      let num = parseInt(numStr)
+      window.alert(str.repeat(num))
+//-->
+
+  <head>
+  <body>
+
+  <h1> My Website</h1>
+    <p id="string_para">Please type a string</p>
+    <input type="text" id= string_para placeholder="hello">
+    <p id= "number_string">Please type a number</p>
+<input type="text" id= number_string placeholder="number">
+<script>
+  //let str = window.prompt("Please type a string")
+  //let numStr = window.prompt("Please type a number")
+  let num = parseInt(numStr)
+  let str1= document.getElementById('string_para')
+
+  let num1 = document.getElementById('number_string')
+  str1 += `, ${num1}`
+
+
+</script>
+  </body>
+</html>
