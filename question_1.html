@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <script>
+      let str = window.prompt("I am the amazing DUPLO! \nFeed me a word, and I will duplicate it!")
+      let num = window.prompt("How many times shall I, DUPLO, duplicate this word?")
+      let duplo = ""
+      for (let i = 0; i < Number(num); i++) {
+        duplo += `${str} `
+      }
+      window.alert(`BEHOLD THE POWER OF DUPLO! \n${duplo}`)
+    </script> -->
+  </head>
+  <body>
+    <h1><center>DUPLO'S HOUSE OF DUPLICATION</center></h1>
+    <p id="para1">I am the amazing <em>DUPLO!</em></p>
+    <p>Feed me a word, and I will <strong>duplicate</strong> it!
+      <input type="text" id="str_input_text" placeholder="I can duplicate ANYTHING!" size=75>
+    </p>
+    <p>How many times shall I, <em>DUPLO</em>, duplicate this word?
+      <input type="text" id="num_input_text" placeholder="Numbers only!" size=75>
+    </p>
+    <script>
+      function duplo() {
+       let duploedElem = ""
+       let strInputElement = document.getElementById("str_input_text")
+       let userSubmittedStr = strInputElement.value
+       let numInputElement = document.getElementById("num_input_text")
+       let userSubmittedNum = numInputElement.value
+       for (let i = 0; i < Number(userSubmittedNum); i++) {
+         duploedElem += `${userSubmittedStr} `
+       }
+       let answer = document.getElementById("hidden_text")
+       answer.innerText = `BEHOLD THE POWER OF DUPLO! \n${duploedElem}`
+      }
+    </script>
+    <button onclick = "duplo()">SUBMIT TO DUPLO!</button>
+    <p id="hidden_text">I await your word.</p>
+  </body>
+</html>
