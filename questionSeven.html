@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website for Question 5</title>
+</head>
+
+<body>
+    <h1 id=" heading_for_6">String Capital Counter Comparer</h1>
+    <p>
+        String 1:
+        <input type="text" id="string_counter">
+
+        String 2:
+        <input type="text" id="string_counter_two">
+
+        <button onclick="stringCounter()">submit</button>
+    </p>
+
+    <p id="end_result"></p>
+
+    <script>
+        function stringCounter() {
+            let counter = 0;
+            let count = 0;
+            let strInput = document.getElementById("string_counter")
+            let strInputTwo = document.getElementById("string_counter_two")
+            let endRes = document.getElementById("end_result")
+            for (let i = 0; i < strInput.value.length; i++) {
+                if (strInput.value[i] === strInput.value[i].toUpperCase() && strInputTwo.value[i] !== ' ') {
+                    counter++
+
+                }
+            }
+            for (let i = 0; i < strInputTwo.value.length; i++) {
+                if (strInputTwo.value[i] === strInputTwo.value[i].toUpperCase() && strInputTwo.value[i] !== ' ') {
+                    count++
+                }
+            }
+            if (counter > count) {
+                window.alert(`The string with the most capital letter is ${strInput.value}`)
+            } else if (counter < count) {
+                window.alert(`The string with the most capital letter is ${strInputTwo.value}`)
+            }
+            console.log(counter);
+            console.log(count);
+
+
+        }
+    </script>
+
+</body>
+
+</html>

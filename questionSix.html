@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website for Question 5</title>
+</head>
+
+<body>
+    <h1 id=" heading_for_6">String Capital Counter</h1>
+    <p>
+        Enter a string:
+        <input type="text" id="string_counter">
+        <button onclick="stringUpper()">submit</button>
+    </p>
+
+    <p id="end_result"></p>
+
+    <script>
+        function stringUpper() {
+            let counter = 0;
+            let strInput = document.getElementById("string_counter")
+            let endRes = document.getElementById("end_result")
+            for (let i = 0; i < strInput.value.length; i++) {
+                if (strInput.value[i] === strInput.value[i].toUpperCase() && strInput.value[i] !== " ") {
+                    counter++
+                }
+            }
+            window.alert(`There are ${counter} upper-cased letter(s) in your string`)
+            strInput.value = counter
+            endRes.innerText += `There are ${counter} upper-cased letter(s) in your string \n`
+
+        }
+    </script>
+
+</body>
+
+</html>

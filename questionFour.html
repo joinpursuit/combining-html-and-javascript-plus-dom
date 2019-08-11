@@ -10,28 +10,23 @@
     <p>
         Enter a string:
         <input type="text" id="string_input">
+        <button onclick="palindrome()">submit</button>
     </p>
 
-    <p id="end_result">Result:</p>
-
-    <button onclick="palindrome()">submit</button>
-
+    <p id="end_result">Results:</p>
 
     <script>
         function palindrome() {
             let strInput = document.getElementById("string_input")
             let endRes = document.getElementById("end_result")
             let str = strInput.value
-            let revStr = "";
-            for (let i = str.length + 1; i >= 0; i--) {
-                revStr = revStr + str.charAt(i)
-            }
+            let revStr = str.split('').reverse().join('')
             if (str === revStr) {
                 window.alert('You have a palindrome')
-                endRes.innerText = `Result: Congratulation you have a palindrome`
+                endRes.innerText += `\nCongratulation you have a palindrome `
             } else {
                 window.alert('This does not work')
-                endRes.innerText = `Result: This does not work`
+                endRes.innerText += `\nThis does not work`
             }
 
         }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website for Question 5</title>
+</head>
+
+<body>
+    <h1 id=" heading_for_5">String UpperCaser</h1>
+    <p>
+        Enter a string:
+        <input type="text" id="string_upper">
+        <button onclick="stringUpper()">submit</button>
+    </p>
+
+    <p id="end_result"></p>
+
+    <script>
+        function stringUpper() {
+            let strInput = document.getElementById("string_upper")
+            let endRes = document.getElementById("end_result")
+            window.alert(`${strInput.value.toUpperCase()}`)
+            strInput.value = strInput.value.toUpperCase()
+            endRes.innerText += `The string upper-cased is ${strInput.value.toUpperCase()} \n`
+
+        }
+    </script>
+
+</body>
+
+</html>

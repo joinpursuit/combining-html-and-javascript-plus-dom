@@ -8,21 +8,20 @@
 <body>
     <h1 id=" heading_for_3">Double your number below</h1>
     <p>
+    
         Enter a number:
         <input type="text" id="number_input">
+        <button onclick="doubleNumber()">submit</button>
     </p>
 
-    <p id="end_result"> Your number doubled is:</p>
-
-    <button onclick="doubleNumber()">submit</button>
-
+    <p id="end_result"></p>
 
     <script>
         function doubleNumber() {
             let numInput = document.getElementById('number_input')
             // window.alert(` Your number doubled is ${numInput.value * 2}`)
             let endResult = document.getElementById("end_result")
-            endResult.innerText = `Your number doubled is: ${numInput.value * 2}`
+            endResult.innerText += `\n Your number doubled is: ${numInput.value * 2}`
             numInput.value = numInput.value * 2
         }
     </script>
