@@ -8,7 +8,7 @@ b. Instead of showing a popup, make the text appear on the screen.
 
 # Question Two
 
-a. Make a website that prompts the user for a string, then alerts them of whether or not the number is even.
+a. Make a website that prompts the user for a number, then alerts them of whether or not the number is even.
 
 b. Instead of showing a popup, make the text appear on the screen.
 
