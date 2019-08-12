@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+
+    <title>Lab 1</title>
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <script>
+      const get_string = () => {
+        let string = window.prompt("Please give me a string:");
+        if (string) {
+          return string.toString();
+        }
+        return get_string();
+      }
+      const get_num = () => {
+        let number = window.prompt("Now please give me a number:");
+        if (number && !isNaN(number)) {
+          return number;
+        }
+        return get_num();
+      }
+      const process_output = (str, num) => {
+        let output = str;
+        for (let i = 1; i < num; i++) {
+          output += `\n${str}`;
+        };
+        return output;
+      };
+      
+      let output = process_output(get_string(), get_num());
+      window.alert(output);
+    </script>
+
+  </head>
+  <body>
+
+    <h1> Question One </h1>
+    
+    <p>a. Make a website that prompts the user for a string, then a number. Then show a popup that displays the string that 
+    many times</p>
+    
+    <p>b. Instead of showing a popup, make the text appear on the screen.</p>
+
+    <hr>
+
+    <p id="change_to_output">Replace this!</p>
+
+    <script>
+      document.getElementById('change_to_output').innerText = `All your base now belong to us.\n\n${output}`;
+    </script>
+
+  </body>
+</html>

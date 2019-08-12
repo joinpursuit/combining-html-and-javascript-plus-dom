@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+
+    <title>Lab 3</title>
+    <meta name="author" content="Joseph P. Pasaoa">
+
+  </head>
+  <body>
+
+    <h1> Question Three </h1>
+
+    <p>a. Make a website with an input field and a button.  Have a heading at the top that reads "Double your number below" 
+      When the user clicks on the button, display an alert showing that number times two.</p>
+      
+    <p>b. Instead of showing a popup, make the doubled number appear in a paragraph below.</p>
+      
+    <p>c. Make the doubled number instead appear inside the input</p>
+
+    <hr>
+
+    <h1>Double Your Number Below</h1>
+
+    <p id="change_to_output">This used to be my paragraph. Used to be.</p>
+    
+    <form id="double_alert">
+      <div>
+        <label for="alert_num">Enter number to alert:</label>
+        <input type="text" name="alert_num">
+      </div>
+
+      <input type="submit" value="Send to Alert" onclick="alert_double(alert_num.value); return false;">
+    </form>
+    <br>
+
+    <form id="double_para">
+      <div>
+        <label for="para_num">Enter number for paragraph:</label>
+        <input type="text" name="para_num">
+      </div>
+
+      <input type="submit" onclick="para_double(para_num.value); return false;">
+    </form>
+    <br>
+
+    <form id="double_into_input">
+      <div>
+        <label for="inbox_num">Enter number for input box:</label>
+        <input type="text" name="inbox_num" id="inbox_num">
+      </div>
+
+      <input type="submit" onclick="inbox_double(inbox_num.value); return false;">
+    </form>
+
+    <script>
+      const alert_double = (num) => {
+        num && !isNaN(num)
+          ? window.alert(Number(num) * 2)
+          : window.alert("Not in valid number form! Try again.");
+      }
+      const para_double = (num) => {
+        num && !isNaN(num)
+          ? document.getElementById("change_to_output").innerHTML = Number(num) * 2
+          : window.alert("Not in valid number form! Try again.");
+      }
+      const inbox_double = (num) => {
+        num && !isNaN(num)
+          ? document.getElementById("inbox_num").value = Number(num) * 2
+          : window.alert("Not in valid number form! Try again.");
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lab 2</title>
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <script>
+      const get_number = () => {
+        let number = window.prompt("Please give me a number:");
+        if (!isNaN(number) && number) {
+          return number;
+        }
+        return get_number();
+      }
+      
+      let output = !(get_number() % 2) ? "You gave me an even number!" : "That number you gave me isn't even.";
+      window.alert(output);
+    </script>
+    
+  </head>
+  <body>
+
+      <h1>Question Two</h1>
+
+      <p>a. Make a website that prompts the user for a string, then alerts them of whether or not the number is even.</p>
+      
+      <p>b. Instead of showing a popup, make the text appear on the screen.</p>
+
+      <hr>
+
+      <p id="change_to_output">Not here anymore.</p>
+
+      <script>
+        document.getElementById('change_to_output').innerText = `All your base now belong to us.\n\n${output}`;
+      </script>
+
+  </body>
+</html>
