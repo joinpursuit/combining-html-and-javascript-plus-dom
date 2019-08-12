@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 6</title>
+  </head>
+  <body>
+    <h1>String Captial Counter</h1>
+    <input id="strCap" type="text" placeholder="Enter a Text">
+    <button onclick = "capitalCounter()">Submit Text</button>
+    <p  id="counter" />
+<script>
+  function capitalCounter() {
+    let string = document.getElementById("strCap").value
+    let letters = string.match(/[A-Z]/g)
+    let result = letters.length
+    window.alert(result)
+    document.getElementById("counter").innerText = result
+    }
+
+
+</script>
+
+  </body>
+</html>

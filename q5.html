@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 5</title>
+  </head>
+  <body>
+    <h1>String Uppercaser</h1>
+    <input id="upperCase" type="text" placeholder="Enter a Text">
+    <button onclick = "Uppercaser()">Submit Text</button>
+    <p id="Uppercase" />
+    <script>
+      function Uppercaser() {
+        let text = document.getElementById("upperCase").value
+        let result = text.toUpperCase()
+        //window.alert(result)
+        document.getElementById("Uppercase").innerText = result
+      }
+    </script>
+
+  </body>
+</html>

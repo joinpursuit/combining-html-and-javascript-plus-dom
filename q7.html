@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 7</title>
+  </head>
+  <body>
+    <h1>String Capital Counter Comparer</h1>
+    <input id="firstInput" type="text" placeholder="enter text">
+    <input id="secInput" type="text" placeholder="enter text">
+    <button onclick = "counter()"> Submit Input</button>
+<p id="count"/>
+<script>
+  function counter() {
+    let cap1 = document.getElementById("firstInput").value
+    let cap2 = document.getElementById("secInput").value
+    let letter1 = cap1.match(/[A-Z]/g)
+    let letter2 = cap2.match(/[A-Z]/g)
+
+    if(letter1.length > letter2.length){
+      document.getElementById("count").innerText = cap1 + " has more capital letters"
+    }else{
+      document.getElementById("count").innerText = cap2 + " has more capital letters"
+    }
+  }
+
+</script>
+  </body>
+</html>
