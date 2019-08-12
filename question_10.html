@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disemvoweler</title>
+  </head>
+  <body>
+    <h1><center>Disemvoweler</center></h1>
+    <center><p id="para1">Enter words below, and have their vowels removed!</p></center>
+    <center><p>INPUT YOUR WORDS:
+      <input type="text" id="str_input" size=70>
+      CLICK HERE TO REMOVE "Y"
+      <input type="checkbox" id="remove_y">
+    </p></center>
+    <script>
+      function removeVowel() {
+        let strInputElement = document.getElementById("str_input")
+        let userSubmit1 = strInputElement.value
+        let answer = document.getElementById("hidden_text")
+        let checkBoxInput = document.getElementById("remove_y").checked
+        if (checkBoxInput === true){
+          let inputChopped = userSubmit1.split("")
+          for (let i = inputChopped.length; i >= 0; i--) {
+            if (inputChopped[i] === "a" || inputChopped[i] === "A") {
+              inputChopped.splice([i], 1)
+            } else if (inputChopped[i] === "e" || inputChopped[i] === "E") {
+              inputChopped.splice([i], 1)
+            } else if (inputChopped[i] === "i" || inputChopped[i] === "I") {
+              inputChopped.splice([i], 1)
+            } else if (inputChopped[i] === "o" || inputChopped[i] === "O") {
+              inputChopped.splice([i], 1)
+            } else if (inputChopped[i] === "u" || inputChopped[i] === "U") {
+              inputChopped.splice([i], 1)
+            } else if (inputChopped[i] === "y" || inputChopped[i] === "Y") {
+              inputChopped.splice([i], 1)
+            }
+          } let wellDone = inputChopped.join("")
+            console.log(wellDone)
+            window.alert(`${wellDone}`)
+            answer.innerText = `${wellDone}`
+        } else {
+          let inputChopped2 = userSubmit1.split("")
+          for (let i = inputChopped2.length; i >= 0; i--) {
+            if (inputChopped2[i] === "a" || inputChopped2[i] === "A") {
+              inputChopped2.splice([i], 1)
+            } else if (inputChopped2[i] === "e" || inputChopped2[i] === "E") {
+              inputChopped2.splice([i], 1)
+            } else if (inputChopped2[i] === "i" || inputChopped2[i] === "I") {
+              inputChopped2.splice([i], 1)
+            } else if (inputChopped2[i] === "o" || inputChopped2[i] === "O") {
+              inputChopped2.splice([i], 1)
+            } else if (inputChopped2[i] === "u" || inputChopped2[i] === "U") {
+              inputChopped2.splice([i], 1)
+            }
+          } let done = inputChopped2.join("")
+            window.alert(`${done}`)
+            answer.innerText = `${done}`
+        }
+      }
+    </script>
+    <center><button onclick="removeVowel()">SUBMIT</button></center>
+    <center><p id="hidden_text"></p></center>
+  </body>
+</html>
