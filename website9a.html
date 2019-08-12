@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 9a </title>
+  </head>
+  <body>
+    <h1> Average of Three Numbers </h1>
+    <form>
+      <label for = 'number1'> First number: </label>
+      <input type = 'text' name = 'number1' id = 'num1'>
+      <label for = 'number2'> Second number: </label>
+      <input type = 'text' name = 'number2' id = 'num2'>
+      <label for = 'number3'> Third Number: </label>
+      <input type = 'text' name = 'number3' id = 'num3'>
+    </form>
+    <br>
+    <button onclick = 'average()'> Average </button>
+    <p id = "result"> </p>
+    <script>
+      const average = () => {
+        let input = document.getElementById('num1').value
+        let input2 = document.getElementById('num2').value
+        let input3 = document.getElementById('num3').value
+        let result = (parseInt(input) + parseInt(input2) + parseInt(input3)) / 3
+        if (isNaN(input) || isNaN(input2) || isNaN(input3)){
+          window.alert(`Error: All of the inputs must be numbers.`)
+        } else{
+          document.getElementById('result').innerText = result
+        }
+      }
+    </script>
+  </body>
+</html>

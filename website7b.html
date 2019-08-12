@@ -1,0 +1,34 @@
+<!-- # Question Seven
+b. Instead of showing a popup, have that information appear in a paragraph below the button. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 7b </title>
+  </head>
+  <body>
+    <h1> String Capital Counter Comparer </h1>
+    <form>
+      <label for = 'char_count'> Word 1: </label>
+      <input type = 'text' name = 'char_count' id = 'count_chars'>
+      <label for = 'char_count2'> Word 2: </label>
+      <input type = 'text' name = 'char_count2' id = 'count_chars2'>
+    </form>
+    <br>
+    <button onclick = 'countChar()'> Check </button>
+    <p id = "result"> </p>
+    <script>
+      function countChar() {
+        let input = document.getElementById('count_chars').value
+        let input2 = document.getElementById('count_chars2') .value
+        let countCap = input.replace(/[^A-Z]/g, '').length
+        let countCap2 = input2.replace(/[^A-Z]/g, '').length
+        if(countCap > countCap2) {
+          document.getElementById('result').innerText = `${input} has more words than ${input2}`
+        } else {
+          document.getElementById('result').innerText = `${input2} has more words than ${input}`
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -21,11 +21,11 @@ Add 2 input fields and a button.  When the user clicks the button, display an al
       const countChar = () => {
         let input = document.getElementById('count_chars').value
         let input2 = document.getElementById('count_chars2') .value
-        let countCap = inputStr.replace(/[^A-Z]/g, '').length
-        let countCap2 = inputStr2.replace(/[^A-Z]/g, '').length
+        let countCap = input.replace(/[^A-Z]/g, '').length
+        let countCap2 = input2.replace(/[^A-Z]/g, '').length
         if(countCap > countCap2) {
-          window.alert(`${countCap} has more capital letters than ${countCap2}`)
-        } else {window.alert(`${countCap2} has more capital letters than ${countCap}`)}
+          window.alert(`${input} has more capital letters than ${input2}`)
+        } else {window.alert(`${input2} has more capital letters than ${input}`)}
       }
     </script>
   </body>
