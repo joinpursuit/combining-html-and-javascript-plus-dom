@@ -9,8 +9,9 @@ b. Instead of showing a popup, make the text appear on the screen.
 
 # Question Two
 
-a. Make a website that prompts the user for a string, then alerts them of whether
-  or not the number is even.
+
+a. Make a website that prompts the user for a number, then alerts them of whether or not the number is even.
+
 
 b. Instead of showing a popup, make the text appear on the screen.
 
@@ -71,12 +72,8 @@ Sample output: false
 
 b. Instead of showing a popup, have that information appear in a paragraph below the button.
 
-c. Have the uppercased overwrite the text that was there before.
-
 # Question Ten
 
 a. Make a website with a heading at the top that reads "Disemvoweler".  Add 1 input field, a checkbox and a button. When the user clicks the button, display an alert that shows the text in the input field with the vowels removed.  If the checkbox is checked, count y as a vowel.
 
 b. Instead of showing a popup, have that information appear in a paragraph below the button.
-
-c. Have the uppercased overwrite the text that was there before.
