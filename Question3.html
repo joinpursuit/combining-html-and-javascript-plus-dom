@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Double Your Number Below:</h1>
+    <br>
+  <input type="text" id = name_input_text >
+
+  <button onclick = "button_function()">Submit</button>
+
+  <p id= "doubleNumber">Doubled Number</p>
+  <script>
+    function button_function() {
+      let nameInputElement = document.getElementById("name_input_text")
+      let userSubmittedName = nameInputElement.value
+      let topHeadingElement = document.getElementById("doubleNumber")
+     topHeadingElement.innerText = `${userSubmittedName}` * 2
+     window.alert(topHeadingElement.innerText)
+
+
+    }
+  </script>
+
+  <body>
+ </html>
+
+
+ <!-- Part C is not complete -->

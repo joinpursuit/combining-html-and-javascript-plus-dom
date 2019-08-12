@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<h2>Palindrome detector</h2>
+  <br>
+<input type="text" id = name_input_text >
+
+<button onclick = "addNameToHeading()">Submit</button>
+
+<p id= "ped">Is it a Palindrome?</p>
+
+
+<script>
+
+
+  function isPalindrome(userSubmittedName ) {
+    return userSubmittedName  === userSubmittedName .split("").reverse().join("");
+  }
+
+
+
+
+  function addNameToHeading() {
+    let nameInputElement = document.getElementById("name_input_text")
+      let userSubmittedName = nameInputElement.value
+
+    let topHeadingElement = document.getElementById("ped")
+    topHeadingElement.innerText = `${isPalindrome(userSubmittedName )}`
+  }
+</script>
+</body>
+</html>
+
+
+<!-- Part a is incomplete -->

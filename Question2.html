@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String & Number</title>
+<script>
+let string = window.prompt("Write a number")
+
+if (parseInt(string) % 2 === 0){
+window.alert("even")
+}else{
+  window.alert("odd")
+}
+
+</script>
+
+</head>
+
+
+<body>
+  <h1>Even or Odd</h1>
+  <p id= "evenOrOdd">e_o</p>
+  <script>
+    function integer(string){
+      if (parseInt(string) % 2 === 0){
+        return "even"
+      }else{
+        return "odd"
+      }
+    }
+
+let answer= document.getElementById("evenOrOdd")
+answer.innerText = `${integer(string)}`
+
+
+
+  </script>
+</body>
+</html>
