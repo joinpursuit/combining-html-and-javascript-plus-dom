@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Capital Counter Comparer</title>
+  </head>
+  <body>
+    <h1><center>String Capital Counter Comparer</center></h1>
+    <p id="para1">Enter two strings below. This site will compare the two and specify which contains more capital letters</p>
+    <p>FIRST STRING:
+      <input type="text" id="str1_input" size=100>
+    </p>
+    <p id="arrow"></p>
+    <p>SECOND STRING:
+      <input type="text" id="str2_input" size=100>
+    </p>
+    <script>
+      function stringComp() {
+        let counter1 = 0
+        let counter2 = 0
+        let str1Element = document.getElementById("str1_input")
+        let userSubmit1 = str1Element.value
+        let str2Element = document.getElementById("str2_input")
+        let userSubmit2 = str2Element.value
+        let arrow = document.getElementById("arrow")
+        let str1 = userSubmit1.split("")
+        let str2 = userSubmit2.split("")
+        for (let i = 0; i < str1.length; i++) {
+          if (str1[i] === str1[i].toUpperCase()) {
+            counter1 += 1
+          }
+        }
+        for (let i = 0; i < str2.length; i++) {
+          if (str2[i] === str2[i].toUpperCase()) {
+            counter2 += 1
+          }
+        }
+        if (counter1 > counter2) {
+          arrow.innerText = "↑↑↑"
+          window.alert(`${userSubmit1} \n↑↑↑ \n${userSubmit2}`)
+        } else {
+          arrow.innerText = "↓↓↓"
+          window.alert(`${userSubmit1} \n↓↓↓ \n${userSubmit2}`)
+        }
+      }
+    </script>
+    <button onclick = "stringComp()">SUBMIT</button>
+    <p id="hidden_text"></p>
+  </body>
+</html>
