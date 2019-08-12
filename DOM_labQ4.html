@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 4</title>
+    <h1 id = "top_heading"> Palindrome Or Nah </h1>
+
+  </head>
+  <body>
+    <p> Enter Text:
+      <input type= "text" id = "text_input">
+    </p>
+    <button onclick = "palindrome()" > Submit </button>
+
+    <script>
+      function palindrome() {
+          let textInputElement = document.getElementById("text_input")
+          let submittedStr = textInputElement.value
+          let lowStr = submittedStr.toLowerCase();
+          let reverseStr = lowStr.split('').reverse().join('');
+          if (submittedStr === reverseStr) {
+            return window.alert(true)
+          } else {
+          return window.alert(false)
+        }
+      }
+
+
+    </script>
+  </body>
+</html>>

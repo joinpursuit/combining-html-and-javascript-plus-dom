@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 3</title>
+  </head>
+  <body>
+    <h1 id = "top_heading">Double your number below</h1>
+    <p> Enter your number:
+    <input type = "text" id = number_input>
+    </p>
+    <button onclick = "doubleNum()" > Submit </button>
+
+  <!-- <p id = "answer" > answer:  </p> -->
+    <script>
+      function doubleNum() {
+          let numberInputElement = document.getElementById("number_input")
+          let submittedNum = numberInputElement.value
+          let doubled = submittedNum * 2
+          return window.alert(doubled)
+      }
+
+      let = screen_display = document.getElementById("answer")
+      screen_display.innerText = submittedNum * 2
+    </script>
+
+  </body>
+</html>
