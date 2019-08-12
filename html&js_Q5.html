@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Question Five</h1>
+          <ol>
+            <li>Make a website with a heading at the top that reads "String Uppercaser".  Add an input field and a button.  When the
+              user clicks the button, display an alert that contains the uppercased text of the input text field.</li>
+            <li>Instead of showing a popup, have that information appear in a paragraph below the button.</li>
+            <li>Have the uppercased overwrite the text that was there before.</li>
+          </ol>
+<hr>
+
+    <h2>String Uppercaser</h2>
+
+      <p>Please enter text
+          <input type="text" id = cap placeholder="text">
+      </p>
+        <button onclick = "str()">Submit</button>
+
+        <p id = "mess">This sentence will be overwritten</p>
+
+<script>
+
+  function str() {
+      let info = document.getElementById("cap")
+      let userAns = info.value
+
+      window.alert(userAns.toUpperCase())
+      mess.innerText = `${userAns.toUpperCase()}`
+  }
+
+
+
+</script>
+
+  </body>
+</html>

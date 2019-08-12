@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+
+    <h1 id= "new_heading">Question 1</h1>
+
+        <ol>
+          <li>Make a website that prompts the user for a string, then a number. Then show a popup that displays the string that many
+            times</li>
+            <li>Instead of showing a popup, make the text appear on the screen.</li>
+        </ol>
+<hr>
+
+        <p>Enter a string
+        <input type="text" id = str placeholder="String">
+        </p>
+
+        <p>Enter a number
+        <input type="text" id = number placeholder="Number">
+        </p>
+
+        <button onclick = "sayHi()">Submit</button>
+
+
+<script>
+
+  let string = window.prompt("Enter a string")
+  let number = window.prompt("Enter a number")
+    let display = ""
+
+    if (isNaN(number)){
+      display = "enter a number"
+    }else {
+      display = `${string}`
+    }
+  window.alert(display.repeat(number))
+
+
+  function sayHi() {
+    let hi = document.getElementById("str")
+    let userAns = hi.value
+    let number = document.getElementById("number")
+    let userAns2 = number.value
+    new_heading.innerText = `${userAns.repeat(userAns2)}`
+
+  }
+
+</script>
+
+
+
+
+
+  </body>
+</html>

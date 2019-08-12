@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Question 3</h1>
+          <ol>
+            <li>Make a website with an input field and a button.  Have a heading at the top that reads "Double your number below"  When
+              the user clicks on the button, display an alert showing that number times two.</li>
+            <li>Instead of showing a popup, make the doubled number appear in a paragraph below.</li>
+            <li>Make the doubled number instead appear inside the input</li>
+          </ol>
+
+
+          <p id = "new_p">This number, , is double the user input</p>
+<hr>
+<h2>Double your number below</h2>
+
+<input type="text" id = "double" placeholder="double your number">
+<button onclick = "doubleNum()">SUBMIT</button>
+
+
+<script>
+
+  function doubleNum(){
+    let mess = document.getElementById("double")
+    let userAns = mess.value
+      window.alert(`${userAns}` * 2)
+      new_p.innerText = `This number,  ${userAns * 2}, is double the user input`
+  }
+
+
+
+</script>
+
+
+  </body>
+</html>

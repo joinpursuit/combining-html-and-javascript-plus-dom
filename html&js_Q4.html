@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <h1>Question 4</h1>
+          <ol>
+            <li>Make a website with a heading at the top that reads "Palindrome detector".  Add an input field and a button.  When the
+              user clicks the button, display an alert that says whether or not the text in the input field is a palindrome (the same
+              backwards and forwards). </li>
+            <li>Instead of showing a popup, have that information appear in a paragraph below the button.</li>
+          </ol>
+<hr>
+
+
+<h2>Palindrome detector</h2>
+
+<p>Please enter your word
+<input type="text" id = palid placeholder="text">
+</p>
+
+<button onclick = "word()">Submit</button>
+
+<p id = "yes"></p>
+
+<script>
+
+function word() {
+  let drone = document.getElementById("palid")
+  let pald = drone.value
+  let rev = pald.split("").reverse().join("")
+
+  if(pald === rev){
+    window.alert("this is a palidrome")
+    yes.innerText = "this is a palidrome"
+  }
+}
+
+
+
+</script>
+
+  </body>
+</html>
