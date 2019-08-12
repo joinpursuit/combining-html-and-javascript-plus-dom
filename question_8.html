@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Average of Three Numbers</title>
+  </head>
+  <body>
+    <h1><center>Average of Three Numbers</center></h1>
+    <p id="para1">Enter three numbers below, and this site will calculate the average automatically!</p>
+    <p>NUMBER 1:
+      <input type="text" id="num1" size=50>
+    </p>
+    <p>NUMBER 2:
+      <input type="text" id="num2" size=50>
+    </p>
+    <p>NUMBER 3:
+      <input type="text" id="num3" size=50>
+    </p>
+    <script>
+      function averageOfThree() {
+        let num1Input = document.getElementById("num1")
+        let userSubmit1 = num1Input.value
+        let num2Input = document.getElementById("num2")
+        let userSubmit2 = num2Input.value
+        let num3Input = document.getElementById("num3")
+        let answer = document.getElementById("hidden_text")
+        let userSubmit3 = num3Input.value
+        let sumOfAll = Number(userSubmit1) + Number(userSubmit2) + Number(userSubmit3)
+        let answerAverage = sumOfAll / 3
+        if (!isNaN(Number(userSubmit1)) && !isNaN(Number(userSubmit2)) && !isNaN(Number(userSubmit3))) {
+          window.alert(`The average of these three numbers is ${Math.floor(answerAverage)}`)
+          answer.innerText = `The average of these three numbers is ${Math.floor(answerAverage)}`
+        } else {
+          window.alert("All of the inputs must be numbers")
+          answer.innerText = "All of the inputs must be numbers"
+        }
+      }
+    </script>
+    <button onclick = "averageOfThree()">SUBMIT</button>
+    <p id="hidden_text"></p>
+  </body>
+</html>
