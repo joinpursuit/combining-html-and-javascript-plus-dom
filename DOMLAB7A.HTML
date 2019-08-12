@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>DOMLAB7A</title>
+    </head>
+    <body>
+        <h1>String Capital Counter Comparer</h1>
+        <p>
+            Enter a word:
+            <input type ='text' id='count_Char_Comp'>
+            <input tpye = 'text' id='count_char_comp2'>
+        </p>
+        <button onClick='counter()'>which one is longer</button>
+        <p id ="on_screen"></p>
+        <script>
+        const countComp=() => {
+            let inputStr = document.getElementById('count_Char_Comp').value
+            let inputStr2 = document.getElementById('count_char_comp2').value
+            let countCap = inputStr.replace(/[^A-Z]/g, "").length
+            let countCap2 = inputStr2.replace(/[^A-Z]/g, "").length
+            if (countCap > countCap2) {
+                window.alert(countCap)
+                
+            } else {
+                window.alert(countCap2)
+            
+            }
+        }
+        </script>
+    </body>
+</html>

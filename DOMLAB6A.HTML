@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title> DOMLAB6A</title>
+
+</head>
+<body>
+    <p>
+        Enter a word:
+        <input type = 'text' id ='count_char'></p>
+        <button onClick='countChStr()'>how many letter(s)</button>
+        <script>
+            const countChStr =() => {
+                let inputStr = document.getElementById('count_char').value
+                let countCap = inputStr.replace(/[^A-Z]/g, "").length
+                window.alert(countCap)
+            }
+        </script>
+    </p>
+</body>
+</html>

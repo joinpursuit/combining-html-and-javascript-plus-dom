@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title> DOMLAB5B </title>
+  </head>
+  <body>
+
+    <form>
+      <label for = 'words'> Type here: </label>
+      <input type = 'text' name = 'words' id = 'word'>
+    </form>
+    <button onClick = 'capitalize()'> Check </button>
+    <p id = 'uppercase'></p>
+    <script>
+      const capitalize = () => {
+        let string = document.getElementById('word').value.toUpperCase()
+        document.getElementById('uppercase').innerText = string
+      }
+    </script>
+  </body>
+</html>

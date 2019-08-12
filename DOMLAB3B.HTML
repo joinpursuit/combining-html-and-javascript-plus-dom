@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_Q3B</title>
+  </head>
+  <body>
+    <h1>Double your number below</h1>
+    <p>Enter a number:
+    <input type = "text" id = "double_num"></p>
+    <button onclick="comput()">Double your number</button>
+    <p id ="on_screen"></p>
+    <script>
+      const comput = () => {
+        let inputNum = document.getElementById('double_num').value
+           let outcome = inputNum * 2
+           window.alert(outcome)
+           document.getElementById("on_screen").innerText = outcome
+      }
+    </script>
+  </body>
+​
+</html>
