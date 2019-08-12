@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Question Two</title>
+</head>
+
+<body>
+    <p id="testingNumber"> </p>
+    <script>
+        let string = window.prompt("whats your number?")
+        let number = parseInt(string) // turn string into a number
+        let p = document.getElementById("testingNumber")
+        if (number % 2 === 0) {
+            p.innerText = "Its an even number"
+        } else {
+            p.innerText = "Its an odd number"
+        }
+    </script>
+</body>
+
+</html>

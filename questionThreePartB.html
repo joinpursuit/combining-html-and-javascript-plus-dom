@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Question Three</title>
+</head>
+
+<body>
+    <p id="display"></p>
+    <h1>Double your number below</h1>
+    <p> Enter your number:
+        <input type="text" id="doubleNumber"></p>
+    <button onclick="timeTwo()">doubleButton</button>
+    <script>
+        const timeTwo = () => {
+            let getInput = document.getElementById('doubleNumber').value
+            let doubleThisNumber = getInput * 2
+            window.alert(doubleThisNumber)
+            document.getElementById('display').innerText = doubleThisNumber
+        }
+    </script>
+
+</body>
+
+</html>
