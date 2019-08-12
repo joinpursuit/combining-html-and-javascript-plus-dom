@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question Six</title>
+  </head>
+  <body>
+    <h1>String Capital Counter Comparer</h1>
+
+    <label for = 'firstword'> First Word: </label>
+    <input type = 'text' name ='text' id ='inputbox'>
+    <br>
+    <label for = 'secondword'> Second Word: </label>
+    <input type = 'text' name ='text' id ='inputbox'>
+    <br>
+    <button onclick = 'capitalLetters()'>Submit</button>
+<br>
+<p id = "answer"></p>
+
+<script>
+
+  const capitalLetters = () =>{
+    let word_input1 = document.getElementById('inputbox');
+    let submited_word1 = word_input1.value
+
+    let word_input2 = document.getElementById('inputbox');
+    let submited_word2 = word_input2.value
+
+    let regex = /[A-Z]/g;
+
+    let found1 = submited_word1.match(regex);
+    let found2 = submited_word2.match(regex);
+window.alert(found1);
+window.alert(found2);
+
+
+  }
+
+
+  </script>
+
+
+  </body>
+</html>

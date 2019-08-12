@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 4</title>
+  </head>
+  <body>
+<h1>Palindrome detector.</h1>
+
+<label for = 'input'> Input: </label>
+<input type = 'text' name ='number' id ='inputbox'>
+<button onclick = 'palindrome_detector()'>Submit</button>
+
+<p id='final'>hi</p>
+
+<script>
+const palindrome_detector =()=>{
+  let input_holder = document.getElementById('inputbox');
+  let submited_value = input_holder.value
+  let lowercase_value = submited_value.toLowerCase();
+  let reverse = lowercase_value.split('').reverse().join('');
+  let accurate = (submited_value === reverse)
+  if(submited_value === reverse){
+    window.alert(true)
+  }else {
+    window.alert(false)
+  }
+
+  let final_answer=document.getElementById('final');
+  final_answer.innerText = `${submited_value} is ${accurate}`
+}
+
+</script>
+
+
+
+  </body>
+</html>

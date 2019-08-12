@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question Five</title>
+  </head>
+  <body>
+
+    <h1>String Uppercaser</h1>
+
+      <label for = 'text'> Text: </label>
+      <input type = 'text' name ='text' id ='inputbox'>
+      <button onclick = 'uppercase()'>Submit</button>
+<br>
+<p id = "answer"></p>
+<!-- this is an object -->
+
+ <script>
+
+   const uppercase =()=> {
+     let word_input = document.getElementById('inputbox');
+     let submited_word = word_input.value
+     let uppercase_word = submited_word.toUpperCase();
+    window.alert(uppercase_word)
+      let print_answer = document.getElementById('answer');
+      print_answer.innerText = uppercase_word;
+      word_input.value = uppercase_word;
+     }
+
+</script>
+
+
+  </body>
+</html>

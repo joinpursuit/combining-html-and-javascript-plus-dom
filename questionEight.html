@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question Eight</title>
+  </head>
+  <body>
+
+    <h1>Average of Three Numbers</h1>
+    <label for = 'firstNum'> First Number: </label>
+    <input type = 'text' name ='number' id ='firstinput'>
+    <br>
+    <label for = 'secNum'> Second Number: </label>
+    <input type = 'text' name ='number' id ='secinput'>
+    <br>
+    <label for = 'thirdNum'> Third Number: </label>
+    <input type = 'text' name ='number' id ='thirdinput'>
+    <br>
+    <button onclick = 'avgOfThree()'>Submit</button>
+    <br>
+<p id='avg'></p>
+    <script>
+      const avgOfThree = () => {
+        let input_one = document.getElementById('firstinput');
+        let first_num = Number(input_one.value);
+        let input_two = document.getElementById('secinput');
+        let sec_num = Number(input_two.value);
+        let input_three = document.getElementById('thirdinput');
+        let third_num = Number(input_three.value);
+
+        if(isNaN(first_num) || isNaN(sec_num)|| isNaN(third_num === true)){
+          window.alert('All of the inputs must be numbers')
+        }
+        
+        let average = Number(first_num + sec_num + third_num)/3;
+        window.alert(average)
+
+        let show_average = document.getElementById('avg');
+        show_average.innerText = average;
+
+
+
+      }
+      </script>
+
+
+  </body>
+</html>

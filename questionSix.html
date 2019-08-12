@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question Six</title>
+  </head>
+  <body>
+    <h1>String Capital Counter</h1>
+
+    <label for = 'text'> Text: </label>
+    <input type = 'text' name ='text' id ='inputbox'>
+    <button onclick = 'capitalLetters()'>Submit</button>
+<br>
+<p id = "answer"></p>
+
+<script>
+
+  const capitalLetters = () =>{
+    let word_input = document.getElementById('inputbox');
+    let submited_word = word_input.value
+    let regex = /[A-Z]/g;
+    let found = submited_word.match(regex);
+    window.alert(found);
+
+    let save_answer = document.getElementById('answer');
+    save_answer.innerText = found;
+  }
+
+
+  </script>
+
+
+  </body>
+</html>

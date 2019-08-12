@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question One</title>
+  </head>
+  <body>
+    <h1>Question One</h1>
+      <p id= 'answer'> </p>
+<script>
+  let string = window.prompt('Please enter an alphabetical value:');
+  let number = window.prompt('Please enter a numerical value: ');
+  let alert = window.alert(string.repeat(number));
+
+
+  let answerEl= document.getElementById('answer');
+  answerEl.innerText = string.repeat(number);
+</script>
+
+  </body>
+</html>

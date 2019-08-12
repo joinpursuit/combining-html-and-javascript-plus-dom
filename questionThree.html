@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question Three</title>
+  </head>
+  <body>
+
+    <h1>Double your number below</h1>
+
+      <label for = 'number'> Number: </label>
+      <input type = 'text' name ='number' id ='inputbox'>
+      <button onclick = 'doubleNum()'>Submit</button>
+<br>
+<p id = "answer"></p>
+<!-- this is an object -->
+
+ <script>
+
+   const doubleNum =()=> {
+     let number_input = document.getElementById('inputbox');
+     let submited_number = number_input.value
+     let doubled = submited_number * 2
+    window.alert(doubled)
+      let print_answer = document.getElementById('answer');
+      print_answer.innerText = doubled;
+      number_input.value = doubled;
+     }
+
+</script>
+
+
+  </body>
+</html>
