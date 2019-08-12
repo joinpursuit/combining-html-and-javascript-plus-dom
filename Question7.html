@@ -33,8 +33,7 @@
 
         <script>
             function strCapitalCounter(str) {
-                let word = str.replace(/[^a-zA-Z0-9]/g, '');
-                console.log(word)
+                let word = str.replace(/[^a-zA-Z]/g, '');
                 let counter = 0;
             
                 for (let i = 0; i < word.length; i++) {

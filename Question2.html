@@ -18,10 +18,14 @@
         <hr>
         <script>
 
-            let num = parseInt(window.prompt("Please entrer a number"));
+            let input = parseInt(window.prompt("Even or odd: Please entrer a number to check it"));
+            let num = parseInt(input);
+            let strNum = num + '';
 
-            while (isNaN(num)) {
-                num = parseInt(window.prompt("Please entrer a number"));
+            while (isNaN(num) || strNum !== input) {
+                input = window.prompt("Invalid input. Please entrer a number");
+                num = parseInt(input);
+                strNum = num + '';
             }
 
             if (num % 2) {

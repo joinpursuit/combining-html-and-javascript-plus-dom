@@ -21,9 +21,14 @@
         <script>
             let str = window.prompt('Please entrer a text to be displayed');
 
-            let rep = parseInt(window.prompt("Please entrer a number"));
-            while (isNaN(rep)) {
-                rep = parseInt(window.prompt("Please entrer a number"));
+            let input = window.prompt("How many times would you like to repeat the previous text?");
+            let rep = parseInt(input);
+            let strRep = rep + '';
+
+            while (isNaN(rep) || strRep !== input) {
+                input = window.prompt("Invalid input. Please entrer a number");
+                rep = parseInt(input);
+                strRep = rep + '';
             }
 
             let text = ''

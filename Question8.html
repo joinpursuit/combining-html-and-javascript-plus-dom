@@ -43,12 +43,21 @@
 
         <script>
             function averageOfThreeNumbers() {
-                let num1 = parseInt(document.getElementById("number1").value);
-                let num2 = parseInt(document.getElementById("number2").value);
-                let num3 = parseInt(document.getElementById("number3").value);
+                let input1 = document.getElementById("number1").value;
+                let num1 = parseInt(input1);
+                let strNum1 = num1 + '';
 
-                if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
-                    window.alert("All of the inputs must be numbers, try again")
+                let input2 = document.getElementById("number2").value;
+                let num2 = parseInt(input2);
+                let strNum2 = num2 + '';
+
+                let input3 = document.getElementById("number3").value;
+                let num3 = parseInt(input3);
+                let strNum3 = num3 + '';
+
+                if (isNaN(num1) || isNaN(num2) || isNaN(num3) ||
+                    strNum1 !== input1 || strNum2 !== input2 || strNum3 !== input3) {
+                    window.alert("All of the inputs must be numbers, try again");
                 } else {
                     //window.alert(`The average of ${num1}, ${num2} and ${num3} is : ${(num1+num2+num3)/3}`);
                     document.getElementById("answer").innerText = `The average of ${num1}, ${num2} and ${num3} is : ${(num1+num2+num3)/3}`

@@ -14,7 +14,7 @@
             Have a heading at the top that reads "Double your number below" When the user clicks on the button, 
             display an alert showing that number times two.
         </p>
-        <h4>Double your number below :</h4>
+        <h3><font color = blue><u>Double your number below :</u></font></h3>
             
         <label for="number">Please enter a number:</label>
         <input type="text" number="num" id="number" placeholder="expecting a number" size="35">
@@ -32,9 +32,14 @@
         <hr>
         <script>
             function doubleNum() {
-                let num = parseInt(document.getElementById("number").value);
-                while(isNaN(num)) {
-                    num = window.prompt("Invalid input, try again");
+                let input = document.getElementById("number").value;
+                let num = parseInt(input);
+                let strNum = num + '';
+
+                while(isNaN(num) || strNum !== input) {
+                    input = window.prompt("Invalid input. Please entrer a number");
+                    num = parseInt(input);
+                    strNum = num + '';
                 }
                 //window.alert(`${num} x 2 = ${num * 2}`);
                 document.getElementById("part_b").innerText = `The result of ${num} x 2 is equal to ${num * 2}`;

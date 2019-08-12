@@ -27,7 +27,7 @@
 
         <script>
             function strCapitalCounter() {
-                let str = (document.getElementById("word").value).replace(/[^a-zA-Z0-9]/g, '');
+                let str = (document.getElementById("word").value).replace(/[^a-zA-Z]/g, '');
                 let counter = 0;
                 
                 for (let i = 0; i < str.length; i++) {
@@ -37,14 +37,14 @@
                 }
 
                 if (counter === 0) {
-                    //window.alert(`${str} has no capital character`);
-                    document.getElementById("answer").innerText = `${str} has no capital character`;
+                    //window.alert(`${document.getElementById("word").value} has no capital character`);
+                    document.getElementById("answer").innerText = `${document.getElementById("word").value} has no capital character`;
                 } else if (counter === 1) {
-                    //window.alert(`${str} contains ${counter} capital character`);
-                    document.getElementById("answer").innerText = `${str} contains ${counter} capital character`;
+                    //window.alert(`${document.getElementById("word").value} contains ${counter} capital character`);
+                    document.getElementById("answer").innerText = `${document.getElementById("word").value} contains ${counter} capital character`;
                 } else {
-                    //window.alert(`${str} contains ${counter} capital characters`);
-                    document.getElementById("answer").innerText = `${str} contains ${counter} capital characters`;
+                    //window.alert(`${document.getElementById("word").value} contains ${counter} capital characters`);
+                    document.getElementById("answer").innerText = `${document.getElementById("word").value} contains ${counter} capital characters`;
                 }
             }
         </script>
