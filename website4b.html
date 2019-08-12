@@ -1,0 +1,29 @@
+<!-- # Question Four
+b. Instead of showing a popup, have that information appear in a paragraph below the button. -->
+
+<!DOCTYPE>
+<html>
+  <head>
+    <title> Question 4b </title>
+  </head>
+  <body>
+    <h1> Palindrome detector </h1>
+    <hr></hr>
+    <form>
+      <label for = 'words'> Type here: </label>
+      <input type = 'text' name = 'words' id = 'word'>
+    </form>
+    <button onClick = 'palindrome()'> Check </button>
+    <script>
+      const palindrome = () => {
+        let string = document.getElementById('word').value.toLowerCase()
+        if(string === string.split('').reverse().join('')){
+          document.getElementById('palindrome').innerText = `${string} is a palindrome`
+        } else {
+          document.getElementById('palindrome').innerText = `${string} is not a palindrome`
+        }
+      }
+    </script>
+    <p id = "palindrome"> </p>
+  </body>
+</html>

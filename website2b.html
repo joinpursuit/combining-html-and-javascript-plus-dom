@@ -1,0 +1,33 @@
+<!-- # Question Two
+
+b. Instead of showing a popup, make the text appear on the screen. -->
+<!DOCTYPE>
+<html>
+<head>
+  <title> Question 2a </title>
+
+<script>
+  let number = window.prompt(`Please enter in a number`)
+</script>
+</head>
+
+<body>
+
+  <h1> Question 2a </h1>
+  <hr></hr>
+  <h3> Answer: </h3>
+  <p id = "answer"></p>
+
+<script>
+  let newAnswer = document.getElementById("answer")
+  if(isNaN(number)){
+    newAnswer.innerText = `Not a valid number. Please enter a number next time`
+  } else if(number % 2 === 0) {
+    newAnswer.innerText = `${number} is even.`
+  } else {
+    newAnswer.innerText = `${number} is odd.`
+  }
+</script>
+
+</body>
+</html>

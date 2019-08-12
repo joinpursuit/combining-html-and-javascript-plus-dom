@@ -1,0 +1,32 @@
+<!-- # Question Seven
+a. Make a website with a heading at the top that reads "String Capital Counter Comparer".
+Add 2 input fields and a button.  When the user clicks the button, display an alert that shows which string has more capital letters in it. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 7a </title>
+  </head>
+  <body>
+    <h1> String Capital Counter Comparer </h1>
+    <form>
+      <label for = 'char_count'> Enter your first word: </label>
+      <input type = 'text' name = 'char_count' id = 'count_chars'>
+      <label for = 'char_count2'> Enter your second word: </label>
+      <input type = 'text' name = 'char_count2' id = 'count_chars2'>
+    </form>
+    <br>
+    <button onclick = 'countChar()'> Check </button>
+    <script>
+      const countChar = () => {
+        let input = document.getElementById('count_chars').value
+        let input2 = document.getElementById('count_chars2') .value
+        let countCap = inputStr.replace(/[^A-Z]/g, '').length
+        let countCap2 = inputStr2.replace(/[^A-Z]/g, '').length
+        if(countCap > countCap2) {
+          window.alert(`${countCap} has more capital letters than ${countCap2}`)
+        } else {window.alert(`${countCap2} has more capital letters than ${countCap}`)}
+      }
+    </script>
+  </body>
+</html>

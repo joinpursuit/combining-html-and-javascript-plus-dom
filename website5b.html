@@ -1,0 +1,25 @@
+<!-- # Question Five
+b. Instead of showing a popup, have that information appear in a paragraph below the button. -->
+
+<!DOCTYPE>
+<html>
+  <head>
+    <title> Question 5b </title>
+  </head>
+  <body>
+    <h1> String Uppercaser </h1>
+    <hr></hr>
+    <form>
+      <label for = 'words'> Type here: </label>
+      <input type = 'text' name = 'words' id = 'word'>
+    </form>
+    <button onClick = 'capitalize()'> Check </button>
+    <p id = 'uppercase'></p>
+    <script>
+      const capitalize = () => {
+        let string = document.getElementById('word').value.toUpperCase()
+        document.getElementById('uppercase').innerText = string
+      }
+    </script>
+  </body>
+</html>

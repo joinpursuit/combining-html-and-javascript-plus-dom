@@ -1,0 +1,30 @@
+<!-- # Question Four
+a. Make a website with a heading at the top that reads "Palindrome detector". Add an input field and a button.
+When the user clicks the button, display an alert that says whether or not the text in the input field is a
+palindrome (the same backwards and forwards). -->
+
+<!DOCTYPE>
+<html>
+  <head>
+    <title> Question 4a </title>
+  </head>
+  <body>
+    <h1> Palindrome detector </h1>
+    <hr></hr>
+    <form>
+      <label for = 'words'> Type here: </label>
+      <input type = 'text' name = 'words' id = 'word'>
+    </form>
+    <button onClick = 'palindrome()'> Check </button>
+    <script>
+      const palindrome = () => {
+        let string = document.getElementById('word').value.toLowerCase()
+        if(string === string.split('').reverse().join('')){
+          window.alert(`${string} is a palindrome`)
+        } else {
+          window.alert(`${string} is not a palindrome`)
+        }
+      }
+    </script>
+  </body>
+</html>

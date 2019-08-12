@@ -1,0 +1,25 @@
+<!-- # Question Three
+c. Make the doubled number instead appear inside the input -->
+<!DOCTYPE>
+<html>
+  <head>
+    <title> Question 3c </title>
+  </head>
+  <body>
+    <h1> Double your number below </h1>
+    <hr></hr>
+    <form>
+      <label for = 'doubled'> Number: </label>
+      <input type = 'text' name = 'doubled' id = 'double'>
+    </form>
+    <button onClick = 'my_function()'> Double </button>
+    <p id = 'show_number'> </p>
+    <script>
+      function my_function() {
+        let result = document.getElementById('double').value
+        let result2 = result * 2
+        document.getElementById('double').value = result2
+        }
+      </script>
+  </body>
+</html>

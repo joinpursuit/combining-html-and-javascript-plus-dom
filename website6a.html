@@ -1,0 +1,25 @@
+<!-- # Question Six
+a. Make a website with a heading at the top that reads "String Capital Counter".  Add an input field and a button.
+When the user clicks the button, display an alert that contains a count of how many capital letters are in the string. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 6a </title>
+  </head>
+  <body>
+    <h1> String Capital Counter </h1>
+    <form>
+      <label for = 'char_count'> Enter your word: </label>
+      <input type = 'text' name = 'char_count' id = 'count_chars'>
+      <button onclick= 'countChars()'> Check </button>
+    </form>
+    <script>
+      const countChars = () => {
+        let inputStr = document.getElementById('count_chars').value
+        let countCapChar = inputStr.replace(/[^A-Z]/g, '').length
+        window.alert(`There are ${countCapChar} capital letters in your word.`)
+      }
+    </script>
+  </body>
+</html>

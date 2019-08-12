@@ -1,0 +1,28 @@
+<!-- # Question Three
+
+a. Make a website with an input field and a button.  Have a heading at the top that reads "Double your number below"
+    When the user clicks on the button, display an alert showing that number times two.-->
+
+<!DOCTYPE>
+<html>
+  <head>
+    <title> Question 3a </title>
+  </head>
+  <body>
+    <h1> Double your number below </h1>
+    <hr></hr>
+    <form>
+      <label for = 'doubled'> Number: </label>
+      <input type = 'text' name = 'doubled' id = 'double'>
+      <br><br>
+      <button onclick = 'my_function()'> Double </button>
+    </form>
+    <script>
+      function my_function() {
+        let result = document.getElementById('double').value
+        let result2 = result * 2
+        window.alert(result2)
+      }
+    </script>
+  </body>
+</html>

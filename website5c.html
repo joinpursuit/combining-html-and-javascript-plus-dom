@@ -1,0 +1,25 @@
+<!-- # Question Five
+c. Have the uppercased overwrite the text that was there before. -->
+
+<!DOCTYPE>
+<html>
+  <head>
+    <title> Question 5c </title>
+  </head>
+  <body>
+    <h1> String Uppercaser </h1>
+    <hr></hr>
+    <form>
+      <label for = 'words'> Type here: </label>
+      <input type = 'text' name = 'words' id = 'word'>
+    </form>
+    <button onClick = 'capitalize()'> Check </button>
+    <p id = 'uppercase'></p>
+    <script>
+      const capitalize = () => {
+        let string = document.getElementById('word').value
+        document.getElementById('uppercase').innerText = string.toUpperCase()
+      }
+    </script>
+  </body>
+</html>

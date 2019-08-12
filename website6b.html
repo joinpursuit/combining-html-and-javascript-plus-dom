@@ -1,0 +1,26 @@
+<!-- # Question Six
+b. Instead of showing a popup, have that information appear in a paragraph below the button. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 6b </title>
+  </head>
+  <body>
+    <h1> String Capital Counter </h1>
+    <form>
+      <label for = 'char_count'> Enter your word: </label>
+      <input type = 'text' name = 'char_count' id = 'count_chars'>
+    </form>
+    <br>
+    <button onclick= 'countChars()'> Check </button>
+    <p id = 'answer'> </p>
+    <script>
+      const countChars = () => {
+        let inputStr = document.getElementById('count_chars').value
+        let countCapChar = inputStr.replace(/[^A-Z]/g, '').length
+        document.getElementById('answer').innerText = countCapChar
+      }
+    </script>
+  </body>
+</html>
