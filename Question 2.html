@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question Two</title>
+    </head>
+    <body>
+        <p id = "evenOrOdd"></p>
+        <script>
+            let number = window.prompt("Write a number")
+            if(parseInt(number) % 2 === 0) {
+                // window.alert("This number is even")
+                let evenAnswer = document.getElementById("evenOrOdd")
+                evenAnswer.innerText += "Even";
+            } else {
+                // window.alert("This number is odd")
+                let oddAnswer = document.getElementById("evenOrOdd")
+                oddAnswer.innerText += "Odd";
+            }
+        </script>
+    </body>
+</html>

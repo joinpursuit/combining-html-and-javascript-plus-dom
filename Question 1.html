@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 1</title>
+    </head>
+    <body>
+        <p id = "output"></p>
+        <script>
+       let string = window.prompt("Write something in string")
+       let number = window.prompt("Write a number")
+       let displayedText = document.getElementById("output");
+       for (let i = 0 ; i < number; i++) {
+        // window.alert(`This ${string} was displayed ${i + 1} times`)
+            displayedText.innerText += `${string}\n`
+       }    
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 7</title>
+    </head>
+    <body>
+        <h1>String Capital Counter Comparer</h1>
+        <input id="input1">
+        <input id="input2">
+        <input type="button" value="Compare!" onclick="compareCaps()">
+        <p id="the_answer"></p>
+        <script>
+            let allCaps = /[A-Z]/;
+            function compareCaps() {
+                let splitWord1 = input1.value.split('')
+                let splitWord2 = input2.value.split('')
+                let counter1 = 0;
+                let counter2 = 0;
+
+                for (let letter of splitWord1) {
+                    if (letter.match(allCaps)) {
+                        counter1++;
+                    }
+                }
+
+                for (let letter of splitWord2) {
+                    if (letter.match(allCaps)) {
+                        counter2++;
+                    }
+                }
+                if (counter1 > counter2) {
+                    // window.alert(`${input1.value} has more caps then ${input2.value}.`)
+                    let answer = document.getElementById("the_answer")
+                    answer.innerText += `${input1.value} has more caps then ${input2.value}.`
+                } else if (counter1 < counter2) {
+                    // window.alert(`${input2.value} has more caps then ${input1.value}.`)
+                    let answer = document.getElementById("the_answer")
+                    answer.innerText += `${input2.value} has more caps then ${input1.value}.`
+                } else {
+                    // window.alert('They have the same number of caps')
+                    let answer = document.getElementById("the_answer")
+                    answer.innerText += 'They have the same number of caps'
+                }
+
+            }
+        </script>
+    </body>
+</html>

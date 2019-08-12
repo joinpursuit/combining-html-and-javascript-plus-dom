@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 3</title>
+    </head>
+    <body>
+        <h1>Double Your Number Below</h1>
+        <input id="userNumber">
+        <input type="button" value="Double or nothing" onclick="doubleIt()">
+        <p id = "doubledNumber"></p>
+        <script>
+            function doubleIt() {
+                // window.alert(2 * userNumber.value);
+                let solution = document.getElementById("doubledNumber")
+                solution.innerText = userNumber.value * 2;
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 5</title>
+    </head>
+    <body>
+        <h1>String Uppercaser</h1>
+        <input id="word">
+        <input type="button" value="Uppercase" onclick="mario()">
+        <p id="displayCase"></p>
+        <script>
+            function mario() {
+                // window.alert(word.value.toUpperCase())
+                let biggerText = document.getElementById("displayCase")
+                document.getElementById("displayCase").innerText = "";
+                biggerText.innerText += word.value.toUpperCase();
+            }
+        </script>
+    </body>
+</html>

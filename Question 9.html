@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 9</title>
+    </head>
+    <body>
+        <h1>Check Middle Number Sum</h1>
+        <input id="num1">
+        <input id="num2">
+        <input id="num3">
+        <input type="button" value="Is Equal?" onclick="sumChecker()">
+        <p id="sumCompare"></p>
+        <script>   
+            function sumChecker() {
+                if (parseInt(num1.value) + parseInt(num3.value) === parseInt(num2.value)) {
+                    // window.alert('True')
+                    let answer = document.getElementById("sumCompare");
+                    answer.innerText += 'True'
+                } else {
+                    // window.alert('false')
+                    let answer = document.getElementById("sumCompare");
+                    document.getElementById("sumCompare").innerText = "";
+                    answer.innerText += 'False'
+                }
+            }
+            
+        </script>
+    </body>
+</html>

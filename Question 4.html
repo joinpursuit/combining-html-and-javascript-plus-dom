@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+    <title>Question 4</title>
+</head>
+<body>
+        <h1>Palindrome detector</h1>
+        <input id="word">
+        <input type="button" value="Palindrome?" onclick="reverseCheck()">
+        <p id="results"></p>
+    <script>
+        function reverseCheck() {
+            let reverse = word.value.split('').reverse().join('');
+            if (word.value === reverse) {
+                // window.alert(`${word.value} is the same when reversed`)
+                let solution = document.getElementById("results")
+                solution.innerText += `${word.value} is the same when reversed`
+            } else {   
+                // window.alert(`${word.value} is not the same as it's reverse ${reverse}`)
+                let solution = document.getElementById("results")
+                solution.innerText += `${word.value} is not the same as it's reverse ${reverse}`
+            }
+        }
+
+    </script>
+</body>

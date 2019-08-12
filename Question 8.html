@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 8</title>
+    </head>
+    <body>
+        <h1>Average of Three Number</h1>
+        <input id="num1">
+        <input id="num2">
+        <input id="num3">
+        <input type="button" value="Average" onclick="findAverage()">
+        <p id="averageFinder"></p>
+        <script>
+            function findAverage() {
+                let empty = '';
+                if (isNaN(num1.value) || isNaN(num2.value) || isNaN(num3.value) || num1.value === empty || num2.value === empty || num3.value === empty) {
+                    let answer = document.getElementById("averageFinder");
+                    answer.innerText += 'All of the inputs must be numbers'
+                } else {
+                    let sum = parseInt(num1.value) + parseInt(num2.value) + parseInt(num3.value)
+                    let average = sum/3
+                    // window.alert(average)
+                    let answer = document.getElementById("averageFinder");
+                    answer.innerText += average
+                }
+
+            }
+        </script>
+    </body>
+</html>

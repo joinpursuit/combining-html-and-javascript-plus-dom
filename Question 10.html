@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Question 10</title>
+    </head>
+    <body>
+        <h1>Disemvoweler</h1>
+        <input id="vowel">
+        <input type="checkbox" id="check">
+        <input type="button" value="Disemvowel" onclick="chopUp()">
+        <p id="result"></p>
+        <script>
+            function chopUp() {
+                // window.alert(document.getElementById("check").checked)
+                if (document.getElementById("check").checked) {
+                    let chopped = vowel.value.replace(/[aeiouyAEIOUY]/gi, '');
+                    // window.alert(chopped);
+                    let answer = document.getElementById("result");
+                    document.getElementById("result").innerText = "";
+                    answer.innerText += chopped.toUpperCase();
+                } else {
+                    let chopped = vowel.value.replace(/[aeiouAEIOU]/gi, '');
+                    // window.alert(chopped);
+                    let answer = document.getElementById("result");
+                    document.getElementById("result").innerText = "";
+                    answer.innerText += chopped.toUpperCase();
+                }
+            }
+
+        </script>
+    </body>
+</html>
