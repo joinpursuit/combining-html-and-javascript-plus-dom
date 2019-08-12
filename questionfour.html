@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 4</title>
+  </head>
+  <body>
+    <h1> Question 4 </h1>
+    <h2> Palindrome detector </h2>
+    <p id = 'para'> </p>
+    <p>
+    <input type='text' id='palindrome'>
+    </p>
+    <button type='button' onclick= "palindromeDetector()"> Submit</button>
+    <script>
+      function palindromeDetector(){
+        let strInput = document.getElementById('palindrome')
+        let userString = strInput.value
+        let myPara = document.getElementById('para')
+        
+        let reverseString = userString.split('').reverse().join('')
+        if (userString === reverseString){
+        window.alert("This is a palindrome")
+         myPara.innerText = "This is a palindrome"
+      } else {
+        window.alert("No, this isn't a palindrome")
+         myPara.innerText = "This isn't a palindrome"
+      }
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 3</title>
+  </head>
+  <body>
+    <h1> Question 3 </h1>
+    <h2> Double your number below </h2>
+    <p id = 'para'> </p>
+    <p>
+    <input type='text' id=doublenum placeholder= "enter number">
+    </p>
+    <button onclick = "doubleTheNum()"> Submit</button>
+    <script>
+      function doubleTheNum() {
+        let numberInput = document.getElementById('doublenum')
+        let userNumber = numberInput.value
+        let myPara = document.getElementById('para')
+        let answer = userNumber * 2
+        window.alert(answer)
+        myPara.innerText = `The answer is ${answer}`
+        numberInput.value = answer
+      }
+     </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 2</title>
+  </head>
+  <body>
+    <h1> Question 2</h1>
+    <p id ="para"> </p>
+    <script>
+    let numberInput = window.prompt('Please enter a number')
+    let myParagraph = document.getElementById('para')
+    if (numberInput % 2 === 1){
+      window.alert('Not even')
+      myParagraph.innerText = 'This number is not even'
+    } else {
+      window.alert('Even Stevens')
+      myParagraph.innerText = 'This number is even'
+    }
+    </script>
+  </body>
+</html>

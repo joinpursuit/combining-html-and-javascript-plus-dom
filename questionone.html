@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 1</title>
+  </head>
+  <body>
+    <h1> Question 1</h1>
+    <p id ='string'></p>
+    <script>
+    let inputString = window.prompt("Enter a string")
+    let inputNum = window.prompt("Now a number")
+    let strParagraph = document.getElementById('string')
+    let emptyStr = ' '
+      for (let i = 0; i < inputNum; i++){
+      emptyStr += inputString
+    }
+    strParagraph.innerText += emptyStr
+    window.alert(emptyStr)
+
+    </script>
+  </body>
+</html>
