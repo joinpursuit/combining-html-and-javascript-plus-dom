@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website for Question 8</title>
+</head>
+
+<body>
+    <h1 id=" heading_for_9">Check Middle Number Sum</h1>
+    <p>
+        First number:
+        <input type="text" id="input_num_first">
+
+        Middle number:
+        <input type="text" id="input_num_mid">
+
+        Last Number:
+        <input type="text" id="input_num_last">
+
+        <button onclick="numAverage()">submit</button>
+    </p>
+
+    <p id="end_result"></p>
+
+    <script>
+        function numAverage() {
+            let num1 = document.getElementById("input_num_first")
+            let num2 = document.getElementById("input_num_mid")
+            let num3 = document.getElementById("input_num_last")
+            let endRes = document.getElementById("end_result")
+            if (!isNaN(num1) && !isNaN(num1) && !isNaN(num3)) {
+                window.alert(`Please enter a valid number`)
+                endRes.innerText += `Please enter a valid number`
+            } else {
+                if (Number(num2.value) === (Number(num1.value) + Number(num3.value))) {
+                    window.alert(`true`)
+                    endRes.innerText = `True`
+                } else {
+                    window.alert(`False`)
+                    endRes.innerText = `False`
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

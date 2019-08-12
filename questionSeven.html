@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Website for Question 5</title>
+    <title>Website for Question 7</title>
 </head>
 
 <body>
-    <h1 id=" heading_for_6">String Capital Counter Comparer</h1>
+    <h1 id=" heading_for_7">String Capital Counter Comparer</h1>
     <p>
         String 1:
         <input type="text" id="string_counter">
@@ -21,31 +21,28 @@
 
     <script>
         function stringCounter() {
-            let counter = 0;
-            let count = 0;
             let strInput = document.getElementById("string_counter")
             let strInputTwo = document.getElementById("string_counter_two")
             let endRes = document.getElementById("end_result")
-            for (let i = 0; i < strInput.value.length; i++) {
-                if (strInput.value[i] === strInput.value[i].toUpperCase() && strInputTwo.value[i] !== ' ') {
-                    counter++
 
+            function counting(str) {
+                let counter = 0;
+                for (let i = 0; i < str.value.length; i++) {
+                    if (str.value[i] === str.value[i].toUpperCase() && str.value[i] !== ' ') {
+                        counter++
+                    }
                 }
+                return counter
             }
-            for (let i = 0; i < strInputTwo.value.length; i++) {
-                if (strInputTwo.value[i] === strInputTwo.value[i].toUpperCase() && strInputTwo.value[i] !== ' ') {
-                    count++
-                }
+            let str1 = counting(strInput)
+            let str2 = counting(strInputTwo)
+            if (str1 > str2) {
+                window.alert(`The string with the most capital letter is Sting 1: ${strInput.value}`)
+                endRes.innerText += `The string with the most capital letter is Sting 1: ${strInput.value} \n`
+            } else if (str1 < str2) {
+                window.alert(`The string with the most capital letter is String 2: ${strInputTwo.value}`)
+                endRes.innerText += `The string with the most capital letter is String 2: ${strInputTwo.value}\n`
             }
-            if (counter > count) {
-                window.alert(`The string with the most capital letter is ${strInput.value}`)
-            } else if (counter < count) {
-                window.alert(`The string with the most capital letter is ${strInputTwo.value}`)
-            }
-            console.log(counter);
-            console.log(count);
-
-
         }
     </script>
 

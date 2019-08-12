@@ -14,12 +14,16 @@
         <button onclick="doubleNumber()">submit</button>
     </p>
 
+    <!-- <button onclick="doubleNumber()">submit</button> -->
     <p id="end_result"></p>
 
     <script>
         function doubleNumber() {
             let numInput = document.getElementById('number_input')
             // window.alert(` Your number doubled is ${numInput.value * 2}`)
+            if (isNaN(numInput)){
+                
+            }
             let endResult = document.getElementById("end_result")
             endResult.innerText += `\n Your number doubled is: ${numInput.value * 2}`
             numInput.value = numInput.value * 2

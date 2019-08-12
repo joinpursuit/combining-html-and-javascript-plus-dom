@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website for Question 8</title>
+</head>
+
+<body>
+    <h1 id=" heading_for_8">Average of Three Numbers</h1>
+    <p>
+        Number 1:
+        <input type="number" id="input_num1">
+
+        Number 2:
+        <input type="number" id="input_num_two">
+
+        Number 3:
+        <input type="number" id="input_num_three">
+
+        <button onclick="numAverage()">submit</button>
+    </p>
+
+    <p id="end_result"></p>
+
+    <script>
+        function numAverage() {
+            let num1 = document.getElementById("input_num1")
+            let num2 = document.getElementById("input_num_two")
+            let num3 = document.getElementById("input_num_three")
+            let endRes = document.getElementById("end_result")
+
+            if (!isNaN(num1) && !isNaN(num1) && !isNaN(num3)) {
+                window.alert(`All of the inputs must be numbers`)
+                endRes.innerText += `All of the inputs must be numbers`
+            } else {
+                window.alert(
+                    `The average of the three numbers is: ${ Number ( ( ( Number(num1.value) + Number(num2.value) + Number(num3.value) ) / 3 ).toFixed(2) ) } \n`
+                )
+                endRes.innerText +=
+                    `The average of the three numbers entered is: ${ Number ( ( (Number(num1.value) + Number(num2.value) + Number(num3.value)) / 3 ).toFixed(2) ) } \n`
+            }
+        }
+    </script>
+
+</body>
+
+</html>
