@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_Q5B</title>
+  </head>
+  <body>
+    <h1>String Uppercaser</h1>
+    <p>Enter a word:
+    <input type = "text" id = "capOnly"></p>
+    <button onclick="convertToUpper()">All Caps</button>
+    <p id ="on_screen"></p>
+    <script>
+      const convertToUpper = () => {
+        let inputStr = document.getElementById('capOnly').value
+           let strUpper = inputStr.toUpperCase()
+             document.getElementById("on_screen").innerText =`${strUpper} is converted to all Caps`
+      }
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>DOM Q2B</title>
+    <script>
+      let num = window.prompt('Please enter a number')
+    </script>
+  </head>
+    <body>
+    <h1>Question 2B </h1>
+    <p id = "answer"></p>
+    <script>
+    let outcome = document.getElementById("answer")
+    if(isNaN(num)){
+      outcome.innerText = `Not a number. Please input a numerical value`
+      } else if(num % 2 === 0) {
+      outcome.innerText = `${num} is even.`
+      } else {
+      outcome.innerText = `${num} is odd.`
+    }
+    </script>
+  </body>
+</html>

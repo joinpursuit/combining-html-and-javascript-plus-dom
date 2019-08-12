@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_Q4B</title>
+  </head>
+  <body>
+    <h1>Palindrome detector</h1>
+    <p>Enter a word:
+    <input type = "text" id = "palindrome"></p>
+    <button onclick="notPalindrome()">Check word</button>
+    <p id ="on_screen"></p>
+    <script>
+
+      const notPalindrome = () => {
+        let inputStr = document.getElementById('palindrome').value
+        let strLower = inputStr.toLowerCase()
+        let verifyWord = strLower.split('').reverse().join('')
+          if(strLower !== verifyWord) {
+            document.getElementById("on_screen").innerText =`${inputStr} is not palindrome word`
+           } else {
+            document.getElementById("on_screen").innerText = `${inputStr} is a palindrome word`
+           }
+      }
+
+    </script>
+  </body>
+
+</html>

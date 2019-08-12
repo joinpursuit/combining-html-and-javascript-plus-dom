@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_Q6B</title>
+  </head>
+  <body>
+    <h1>String Capital Counter</h1>
+    <p>Enter a word:
+    <input type = "text" id = "count_char"></p>
+    <button onclick="countCharStr()">How many cap letter(s)</button>
+    <p id ="on_screen"></p>
+    <script>
+      const countCharStr = () => {
+        let inputStr = document.getElementById('count_char').value
+           let countCapChar = inputStr.replace(/[^A-Z]/g, "").length
+             window.alert(countCapChar)
+             document.getElementById("on_screen").innerText =`Your word ${inputStr} have ${countCapChar} capitalized letter(s)`
+      }
+    </script>
+  </body>
+
+</html>
