@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Question Six</title>
+    <title>Question Seven</title>
   </head>
   <body>
     <h1>String Capital Counter Comparer</h1>
 
     <label for = 'firstword'> First Word: </label>
-    <input type = 'text' name ='text' id ='inputbox'>
+    <input type = 'text' name ='text' id ='inputbox1'>
     <br>
     <label for = 'secondword'> Second Word: </label>
-    <input type = 'text' name ='text' id ='inputbox'>
+    <input type = 'text' name ='text' id ='inputbox2'>
     <br>
     <button onclick = 'capitalLetters()'>Submit</button>
 <br>
@@ -19,10 +19,10 @@
 <script>
 
   const capitalLetters = () =>{
-    let word_input1 = document.getElementById('inputbox');
+    let word_input1 = document.getElementById('inputbox1');
     let submited_word1 = word_input1.value
 
-    let word_input2 = document.getElementById('inputbox');
+    let word_input2 = document.getElementById('inputbox2');
     let submited_word2 = word_input2.value
 
     let regex = /[A-Z]/g;
@@ -32,6 +32,11 @@
 window.alert(found1);
 window.alert(found2);
 
+if(found1.regex > found2.regex === true){
+  window.alert(`${submited_word1} has more capital letters than ${submited_word2}`)
+} else{
+  window.alert(`${submited_word2} has more capital letters than ${submited_word1}`)
+}
 
   }
 

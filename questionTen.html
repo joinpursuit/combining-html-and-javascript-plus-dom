@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question Ten</title>
+  </head>
+  <body>
+    <h1>Disemvoweler</h1>
+    <label for = 'text'>Word:</label>
+    <input type = 'text' name ='word' id='word_entry'>
+    <br>
+    <br>
+    <button onclick ="removeVowels()">Enter</button>
+<br>
+<p id ='vowel_holder'></p>
+
+<script>
+
+  const removeVowels = () =>{
+    let word_input = document.getElementById('word_entry');
+    let actual_word = word_input.value;
+    let clrStr = '';
+    let lower_case = actual_word.toLowerCase();
+
+    for(let i = 0; i < lower_case.length; i++){
+      if(lower_case[i] === 'a' || lower_case[i] === 'e' || lower_case[i] === 'i' || lower_case[i]==='o' || lower_case[i] === 'u'){
+      } else{
+        clrStr += lower_case[i]
+      }
+    }
+window.alert(clrStr)
+
+  }
+</script>
+
+
+
+  </body>
+</html>
