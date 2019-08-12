@@ -5,6 +5,22 @@
   </head>
   <body>
     <h1>Check Middle Number Sum</h1>
-
+    <input id="firstInput" type="text" placeholder="enter a number">
+      <input id="secInput" type="text" placeholder="enter a number">
+      <input id="thirdInput" type="text" placeholder="enter a number">
+      <button onclick = "middleSum()"> Submit Input</button>
+      <p id="add"></p>
+      <script>
+        function middleSum(){
+          let num1 = Number(document.getElementById("firstInput").value)
+          let num2 = Number(document.getElementById("secInput").value)
+          let num3 = Number(document.getElementById("thirdInput").value)
+          if(num1 + num3 === num2 ){
+            document.getElementById("add").innerText = true
+          }else{
+            document.getElementById("add").innerText = false
+          }
+        }
+      </script>
   </body>
 </html>

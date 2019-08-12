@@ -8,6 +8,8 @@
     <label for = 'text'>Word:</label>
     <input type = 'text' name ='word' id='word_entry'>
     <br>
+    <label for = 'checkbox'>Include "y"?</label>
+    <input type = 'checkbox' name = 'include_y' id = 'include_y'>
     <br>
     <button onclick ="removeVowels()">Enter</button>
 <br>
@@ -20,6 +22,7 @@
     let actual_word = word_input.value;
     let clrStr = '';
     let lower_case = actual_word.toLowerCase();
+    let y_checked = document.getElementById('include_y')
 
     for(let i = 0; i < lower_case.length; i++){
       if(lower_case[i] === 'a' || lower_case[i] === 'e' || lower_case[i] === 'i' || lower_case[i]==='o' || lower_case[i] === 'u'){
@@ -28,6 +31,8 @@
       }
     }
 window.alert(clrStr)
+let show_answer = document.getElementById('vowel_holder');
+show_answer.innerText = clrStr;
 
   }
 </script>

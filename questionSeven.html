@@ -29,13 +29,17 @@
 
     let found1 = submited_word1.match(regex);
     let found2 = submited_word2.match(regex);
-window.alert(found1);
-window.alert(found2);
+// window.alert(found1);
+// window.alert(found2);
 
 if(found1.regex > found2.regex === true){
-  window.alert(`${submited_word1} has more capital letters than ${submited_word2}`)
+  window.alert(`${submited_word1} has more capital letters than ${submited_word2}`);
+  document.getElementById('answer').innerText = (`${submited_word1} has more capital letters than ${submited_word2}`)
+
 } else{
   window.alert(`${submited_word2} has more capital letters than ${submited_word1}`)
+  document.getElementById('answer').innerText = (`${submited_word1} has more capital letters than ${submited_word2}`)
+
 }
 
   }
