@@ -1,0 +1,66 @@
+<!-- THIS IS PART A -->
+
+<!doctype html>
+  <html>
+    <head>
+      <title>Palindrome detector</title>
+    </head>
+    <body>
+      <h1>Plaindrome detector</h1>
+      <input type="text" name="word" id="word">
+      <button type="button" onclick = "plaindrome()">Submit</button>
+
+      <p id="isPal"></p>
+      <p id="isNotPal"></p>
+      <script>
+        function plaindrome() {
+          let yourWord = document.getElementById("word");
+          let userSubittedWord = word.value;
+          let arr =[];
+          for(let i of userSubittedWord){
+            arr.unshift(i)
+          }
+          let str = arr.join("");
+          if(str === userSubittedWord){
+            window.alert(`${userSubittedWord} is a palindrome.`)
+          } else {
+            window.alert(`${userSubittedWord} is not a palindrome.`)
+          }
+        }
+      </script>
+    </body>
+  </html>
+
+
+<!-- THIS IS PART B -->
+
+<!-- <!doctype html>
+  <html>
+    <head>
+      <title>Palindrome detector</title>
+    </head>
+    <body>
+      <h1>Plaindrome detector</h1>
+      <input type="text" name="word" id="word">
+      <button type="button" onclick = "plaindrome()">Submit</button>
+
+      <p id="isPal"></p>
+      <p id="isNotPal"></p>
+      <script>
+        function plaindrome() {
+          let yourWord = document.getElementById("word");
+          let userSubittedWord = word.value;
+          let arr =[];
+          for(let i of userSubittedWord){
+            arr.unshift(i)
+          }
+          let str = arr.join("");
+          if(str === userSubittedWord){
+            document.getElementById("isPal").innerText = `${userSubittedWord} is a palindrome.`
+          } else {
+            document.getElementById("isNotPal").innerText = `${userSubittedWord} is not a palindrome.`
+          }
+        }
+      </script>
+    </body>
+  </html> -->

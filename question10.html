@@ -1,0 +1,139 @@
+<!-- THIS IS PART A -->
+ <!-- <!doctype html>
+  <html>
+  <head>
+    <title> Disemvowler </title>
+  </head>
+  <body>
+    <h1> Disemvowler </h1>
+    <input type="text" name="word" id="word">
+    <br>
+    <input type="checkbox" name="checkbox" id="checkbox" value="y">Should y count?
+    <br>
+    <button type="button" onclick = "disemvowler()">Take out those vowels!</button>
+
+    <script>
+      function disemvowler() {
+        let yourWord = document.getElementById("word");
+        let userSubittedWord = word.value;
+        let vowels = "AEIOUaeiou"
+        let vowelsY = "AEIOUYaeiouy"
+        let newStr = "";
+        let check = checkbox.value
+
+        if(check === "y"){
+          for(let i of userSubittedWord) {
+            if (vowelsY.includes(i)) {
+            } else {
+              newStr += i;
+            }
+          }
+          window.alert(`We took the vowels out. You're left with ${newStr}`)
+        } else {
+        for(let i of userSubittedWord) {
+          if (vowels.includes(i)) {
+          } else {
+            newStr += i;
+          }
+        }
+        window.alert(`We took the vowels out. You're left with ${newStr}`)
+      }
+    }
+    </script>
+  </body>
+  </html> -->
+
+<!-- THIS IS PART B -->
+<!--
+<!doctype html>
+ <html>
+ <head>
+   <title> Disemvowler </title>
+ </head>
+ <body>
+   <h1> Disemvowler </h1>
+   <input type="text" name="word" id="word">
+   <br>
+   <input type="checkbox" name="checkbox" id="checkbox" value="y">Should y count?
+   <br>
+   <button type="button" onclick = "disemvowler()">Take out those vowels!</button>
+   <p id="noVowels"></p>
+
+   <script>
+     function disemvowler() {
+       let yourWord = document.getElementById("word");
+       let userSubittedWord = word.value;
+       let vowels = "AEIOUaeiou"
+       let vowelsY = "AEIOUYaeiouy"
+       let newStr = "";
+       let check = document.getElementById("checkbox");
+
+       if(check.checked){
+         for(let i of userSubittedWord) {
+           if (vowelsY.includes(i)) {
+           } else {
+             newStr += i;
+           }
+         }
+         document.getElementById("noVowels").innerText = (`We took the vowels out. You're left with ${newStr}`)
+       } else {
+       for(let i of userSubittedWord) {
+         if (vowels.includes(i)) {
+         } else {
+           newStr += i;
+         }
+       }
+       document.getElementById("noVowels").innerText = (`We took the vowels out. You're left with ${newStr}`)
+     }
+   }
+   </script>
+ </body>
+ </html> -->
+
+ <!-- THIS IS PART C -->
+
+
+ <!doctype html>
+  <html>
+  <head>
+    <title> Disemvowler </title>
+  </head>
+  <body>
+    <h1> Disemvowler </h1>
+    <input type="text" name="word" id="word">
+    <br>
+    <input type="checkbox" name="checkbox" id="checkbox" value="y">Should y count?
+    <br>
+    <button type="button" onclick = "disemvowler()">Take out those vowels!</button>
+    <p id="noVowels"></p>
+
+    <script>
+      function disemvowler() {
+        let yourWord = document.getElementById("word");
+        let userSubittedWord = word.value;
+        let vowels = "AEIOUaeiou"
+        let vowelsY = "AEIOUYaeiouy"
+        let newStr = "";
+        let check = document.getElementById("checkbox");
+
+        if(check.checked){
+          for(let i of userSubittedWord) {
+            if (vowelsY.includes(i)) {
+            } else {
+              newStr += i;
+            }
+          }
+          word.value = newStr
+        } else {
+        for(let i of userSubittedWord) {
+          if (vowels.includes(i)) {
+          } else {
+            newStr += i;
+          }
+        }
+        word.value = newStr
+      }
+    }
+    </script>
+  </body>
+  </html>

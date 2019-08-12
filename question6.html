@@ -1,0 +1,58 @@
+<!-- THIS IS PART A -->
+
+<!doctype html>
+  <html>
+  <head>
+    <title>String Capital Counter</title>
+  </head>
+  <body>
+    <h1>String Capital Counter</h1>
+    <input type="text" name="word" id="word">
+    <button type="button" onclick="counter()">Count Them!</button>
+    <p id="capCount"></p>
+    <script>
+      function counter() {
+        let yourWord = document.getElementById("word");
+        let userSubittedWord = word.value;
+        let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let count = 0;
+        for (let i of userSubittedWord) {
+          if(caps.includes(i)) {
+            count += 1
+          }
+        }
+        window.alert(`There are ${count} capital letters in ${userSubittedWord}`)
+
+      }
+    </script>
+  </body>
+  </html>
+
+<!-- THIS IS PART B -->
+
+<!-- <!doctype html>
+  <html>
+  <head>
+    <title>String Capital Counter</title>
+  </head>
+  <body>
+    <h1>String Capital Counter</h1>
+    <input type="text" name="word" id="word">
+    <button type="button" onclick="counter()">Count Them!</button>
+    <p id="capCount"></p>
+    <script>
+      function counter() {
+        let yourWord = document.getElementById("word");
+        let userSubittedWord = word.value;
+        let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let count = 0;
+        for (let i of userSubittedWord) {
+          if(caps.includes(i)) {
+            count += 1
+          }
+          document.getElementById("capCount").innerText = `There are ${count} capital letters in ${userSubittedWord}`
+        }
+      }
+    </script>
+  </body>
+  </html> -->

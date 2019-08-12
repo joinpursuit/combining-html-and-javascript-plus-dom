@@ -1,0 +1,39 @@
+<!-- THIS IS PART A -->
+
+<!-- <!doctype html>
+  <html>
+    <head>
+      <script>
+        let num = window.prompt("What's your favorite number?");
+        if(num % 2 === 0) {
+          window.alert("That's an even number!");
+        } else {
+          window.alert("That's an odd number!");
+        }
+      </script>
+    </head>
+    <body>
+    </body>
+  </html> -->
+
+<!-- THIS IS PART B -->
+
+<!doctype html>
+  <html>
+    <head>
+      <script>
+        let num = window.prompt("What's your favorite number?")
+      </script>
+    </head>
+    <body>
+      <p id="even"></p>
+      <p id="odd"></p>
+      <script>
+        if(num % 2 === 0) {
+           document.getElementById("even").innerText = "That number is even.";
+         } else {
+           document.getElementById("odd").innerText = "That number is odd.";
+        }
+      </script>
+    </body>
+  </html>

@@ -1,0 +1,99 @@
+<!-- THIS IS PART A -->
+
+<!-- <!doctype html>
+  <html>
+  <head>
+    <title> String Capital Counter Comparer </title>
+  </head>
+  <body>
+    <h1> String Capital Counter Comparer </h1>
+    <input type="text" name="word1" id="word1">
+    <input type="text" name="word2" id="word2">
+    <button type="button" onclick = "compare()">Compare</button>
+    <p id="compared"></p>
+
+    <script>
+      function compare() {
+        let word1 = document.getElementById("word1");
+        let word2 = document.getElementById("word2");
+        let userSubittedWord1 = word1.value;
+        let userSubittedWord2 = word2.value;
+        let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let counter1 = 0;
+        let counter2 = 0;
+
+        for(let i of userSubittedWord1) {
+          if(caps.includes(i)) {
+            counter1 += 1;
+          }
+        }
+        for(let x of userSubittedWord2) {
+          if(caps.includes(x)) {
+            counter2 += 1;
+          }
+        }
+        console.log(counter1)
+        console.log(counter2)
+
+        if (counter1 > counter2) {
+          window.alert(`${userSubittedWord1} has ${counter1} capital letters which is ${counter1 - counter2} more than ${userSubittedWord2} has.`)
+        } else if (counter2 > counter1) {
+          window.alert(`${userSubittedWord2} has ${counter2} capital letters which is ${counter2 - counter1} more than ${userSubittedWord1} has.`)
+        } else if (counter1 === counter2) {
+          window.alert(`${userSubittedWord1} and ${userSubittedWord2} both have ${counter1} capital letters.`)
+        }
+
+      }
+    </script>
+  </body>
+  </html> -->
+
+<!-- THIS IS PART B -->
+
+<!doctype html>
+  <html>
+  <head>
+    <title> String Capital Counter Comparer </title>
+  </head>
+  <body>
+    <h1> String Capital Counter Comparer </h1>
+    <input type="text" name="word1" id="word1">
+    <input type="text" name="word2" id="word2">
+    <button type="button" onclick = "compare()">Compare</button>
+    <p id="compared"></p>
+
+    <script>
+      function compare() {
+        let word1 = document.getElementById("word1");
+        let word2 = document.getElementById("word2");
+        let userSubittedWord1 = word1.value;
+        let userSubittedWord2 = word2.value;
+        let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let counter1 = 0;
+        let counter2 = 0;
+
+        for(let i of userSubittedWord1) {
+          if(caps.includes(i)) {
+            counter1 += 1;
+          }
+        }
+        for(let x of userSubittedWord2) {
+          if(caps.includes(x)) {
+            counter2 += 1;
+          }
+        }
+        console.log(counter1)
+        console.log(counter2)
+
+        if (counter1 > counter2) {
+          document.getElementById("compared").innerText = `${userSubittedWord1} has ${counter1} capital letters which is ${counter1 - counter2} more than ${userSubittedWord2} has.`
+        } else if (counter2 > counter1) {
+          document.getElementById("compared").innerText = `${userSubittedWord2} has ${counter2} capital letters which is ${counter2 - counter1} more than ${userSubittedWord1} has.`
+        } else if (counter1 === counter2) {
+          document.getElementById("compared").innerText = `${userSubittedWord1} and ${userSubittedWord2} both have ${counter1} capital letters.`
+        }
+
+      }
+    </script>
+  </body>
+  </html>

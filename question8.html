@@ -1,0 +1,102 @@
+<!-- THIS IS PART A -->
+
+<!-- <!doctype html>
+  <html>
+  <head>
+    <title>Average of Three Numbers</title>
+  </head>
+  <body>
+    <h1>Average of Three Numbers</h1>
+    <input type="text" name="num1" id="num1">
+    <br>
+    <input type="text" name="num2" id="num2">
+    <br>
+    <input type="text" name="num3" id="num3">
+    <br>
+    <button type="button" onclick="average()">Get the Average</button>
+    <p id="theAverage"></p>
+
+    <script>
+      function average() {
+        let number1 = document.getElementById("num1");
+        let userSubittedNum1 = num1.value;
+        let number2 = document.getElementById("num2");
+        let userSubittedNum2 = num2.value;
+        let number3 = document.getElementById("num3");
+        let userSubittedNum3 = num3.value;
+
+        window.alert(`The average of ${userSubittedNum1}, ${userSubittedNum2}, and ${userSubittedNum3} is ${(Number(userSubittedNum1) + Number(userSubittedNum2) + Number(userSubittedNum3)) / 3}`)
+      }
+    </script>
+  </body>
+  </html> -->
+
+<!-- THIS IS PART B -->
+
+<!-- <!doctype html>
+  <html>
+  <head>
+    <title>Average of Three Numbers</title>
+  </head>
+  <body>
+    <h1>Average of Three Numbers</h1>
+    <input type="text" name="num1" id="num1">
+    <br>
+    <input type="text" name="num2" id="num2">
+    <br>
+    <input type="text" name="num3" id="num3">
+    <br>
+    <button type="button" onclick="average()">Get the Average</button>
+    <p id="theAverage"></p>
+
+    <script>
+      function average() {
+        let number1 = document.getElementById("num1");
+        let userSubittedNum1 = num1.value;
+        let number2 = document.getElementById("num2");
+        let userSubittedNum2 = num2.value;
+        let number3 = document.getElementById("num3");
+        let userSubittedNum3 = num3.value;
+
+        document.getElementById("theAverage").innerText = (`The average of ${userSubittedNum1}, ${userSubittedNum2}, and ${userSubittedNum3} is ${(Number(userSubittedNum1) + Number(userSubittedNum2) + Number(userSubittedNum3)) / 3}`)
+      }
+    </script>
+  </body>
+  </html> -->
+
+  <!-- THIS IS PART C -->
+
+  <!doctype html>
+    <html>
+    <head>
+      <title>Average of Three Numbers</title>
+    </head>
+    <body>
+      <h1>Average of Three Numbers</h1>
+      <input type="text" name="num1" id="num1">
+      <br>
+      <input type="text" name="num2" id="num2">
+      <br>
+      <input type="text" name="num3" id="num3">
+      <br>
+      <button type="button" onclick="average()">Get the Average</button>
+      <p id="theAverage"></p>
+
+      <script>
+        function average() {
+          let number1 = document.getElementById("num1");
+          let userSubittedNum1 = num1.value;
+          let number2 = document.getElementById("num2");
+          let userSubittedNum2 = num2.value;
+          let number3 = document.getElementById("num3");
+          let userSubittedNum3 = num3.value;
+
+          if (isNaN(userSubittedNum1) || isNaN(userSubittedNum2) || isNaN(userSubittedNum3) || userSubittedNum1 == "" || userSubittedNum2 == "" || userSubittedNum3 == "") {
+            window.alert("All of the fields must include numbers!")
+          } else {
+            window.alert(`The average of ${userSubittedNum1}, ${userSubittedNum2}, and ${userSubittedNum3} is ${(Number(userSubittedNum1) + Number(userSubittedNum2) + Number(userSubittedNum3)) / 3}`)
+            }
+        }
+      </script>
+    </body>
+    </html>
