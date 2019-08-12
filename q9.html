@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 9</title>
+  </head>
+  <body>
+    <h1>Check Middle Number Sum</h1>
+    <input id="firstInput" type="text" placeholder="enter a number">
+    <input id="secInput" type="text" placeholder="enter a number">
+    <input id="thirdInput" type="text" placeholder="enter a number">
+    <button onclick = "sum()"> Submit Input</button>
+    <p id="add" />
+
+    <script>
+      function sum(){
+        let num1 = Number(document.getElementById("firstInput").value)
+        let num2 = Number(document.getElementById("secInput").value)
+        let num3 = Number(document.getElementById("thirdInput").value)
+
+        if(num1 + num3 === num2 ){
+          document.getElementById("add").innerText = true
+        }else{
+          document.getElementById("add").innerText = false
+        }
+      }
+    </script>
+
+  </body>
+</html>

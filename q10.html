@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 10</title>
+  </head>
+  <body>
+    <h1>Disemvowler</h1>
+
+   <input type ='text' name ='word' id='word'>
+   <input type = 'checkbox' name = 'y' id = 'includeY'>
+   <button onclick ="removeVowels()">Enter</button>
+<p id ='vowel'/>
+
+<script>
+ const removeVowels = () =>{
+   let wordInput = document.getElementById('word');
+   let actualWord = word.value;
+   let str = '';
+   let lowerCase = actualWord.toLowerCase();
+   let yChecked = document.getElementById('includeY')
+   for(let i = 0; i < lowerCase.length; i++){
+     if(lowerCase[i] === 'a' || lowerCase[i] === 'e' || lowerCase[i] === 'i' || lowerCase[i]==='o' || lowerCase[i] === 'u'){
+       str += lowerCase[i]
+     }
+   }
+window.alert(str)
+let answer = document.getElementById('vowel').innerText = str
+ }
+</script>
+  </body>
+</html>
