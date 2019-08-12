@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 3</title>
+    </head>
+    <body>
+        <h1>Question 3</h1>
+        <h2>Double your number below</h2>
+        <p>
+            Your number: <input id="user_number" type="number" name="user_number">
+            <button 
+                type="button" 
+                name="user_number"
+                onclick="double()"
+            >
+                Double!
+            </button>
+        </p>
+        <p id="doubled_number"></p>
+        <script>
+            function double() {
+                window.alert(`${document.getElementById("user_number").value * 2}`) //Part A
+                document.getElementById("doubled_number").innerText += `\n ${document.getElementById("user_number").value} doubled: ${document.getElementById("user_number").value * 2}` //Part B
+                document.getElementById("user_number").value *= 2 //Part C
+            }
+        </script>
+    </body>
+</html>

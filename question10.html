@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 10</title>
+    </head>
+    <body>
+        <h1>Question 10</h1>
+        <h2>Disemvoweler</h2>
+        <p>
+            Input: 
+            <input type="text" name="user_input" id="user_input">
+        </p>
+        <p>
+            Would you like to count y as a vowel: 
+            <input type="checkbox" name="user_input" id="user_input1">
+        </p>
+        <button
+            type="submit"
+            name="user_input"
+            onclick="disemvoweler(
+                document.getElementById('user_input').value, 
+                document.getElementById('user_input1').checked
+            )"
+        >
+            Disemvowel
+        </button>
+        <p id="user_entries"></p>
+        <script>
+            function disemvoweler(str, check) {
+                let regEx = check ? /[`a`|`e`|`i`|`o`|`u`|`y`]/i : /[`a`|`e`|`i`|`o`|`u`]/i
+                let disemvoweled = str.split(``).filter(e => !e.match(regEx)).join(``)
+                let msg = `Treating y as a ${check ? 'vowel' : 'consonant'} ${str} without vowels is: ${disemvoweled}`
+                window.alert(msg) 
+                document.getElementById("user_entries").innerText += `\n${msg}`
+                document.getElementById("user_input").value = str.toUpperCase()
+                return disemvoweled
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 1</title>
+    </head>
+    <body>
+        <h1>Question 1</h1>
+        <p id="user_submitted_text">Question 1 (This will be deleted)</p>
+        <script>
+            let userSubmission = window.prompt("Enter you name or something. Or wahtever you want")
+            let userSelectedAmount = parseInt(window.prompt("Enter a number"))
+            while (isNaN(userSelectedAmount)) {
+                userSelectedAmount = window.prompt("Enter a number") 
+            }
+            let prompt = ``
+            for (let i = 0; i < userSelectedAmount; i++) {
+                prompt += `${userSubmission}\n`
+            }
+            // window.alert(prompt) // Part A
+            document.getElementById("user_submitted_text").innerText = prompt // Part B
+        </script>
+    </body>
+</html>

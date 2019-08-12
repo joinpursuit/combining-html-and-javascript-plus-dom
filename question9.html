@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 9</title>
+    </head>
+    <body>
+        <h1>Question 9</h1>
+        <h2>Check Middle Number Sum</h2>
+        <p>
+            First Input: 
+            <input type="number" name="user_input" id="user_input1">
+        </p>
+        <p>
+            Second Input: 
+            <input type="number" name="user_input" id="user_input2">
+        </p>
+        <p>
+            Third Input: 
+            <input type="number" name="user_input" id="user_input3">
+        </p>
+        <button
+            type="submit"
+            name="user_input"
+            onclick="checkMid(
+                document.getElementById('user_input1').value, 
+                document.getElementById('user_input2').value, 
+                document.getElementById('user_input3').value
+            )"
+        >
+            Check
+        </button>
+        <p id="user_entries"></p>
+        <script>
+            function checkMid(x, y, z) {
+                let test = x * 1 + z * 1 === y * 1
+                let msg = `${x} + ${z} = ${y} is ${test}`
+                window.alert(msg)
+                document.getElementById("user_entries").innerText += `\n${msg}`
+                return test
+            }
+        </script>
+    </body>
+</html>

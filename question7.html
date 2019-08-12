@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 7</title>
+    </head>
+    <body>
+        <h1>Quesiton 7</h1>
+        <h2>String Capital Counter Comparer</h2>
+        <p>
+            First entry: 
+            <input id="user_input1" name="user_input" type="text">
+        </p>
+        <p>
+            Second entry: 
+            <input id="user_input2" name="user_input" type="text">    
+        </p>
+        <button
+            type="sumbit"
+            name="user_input"
+            onclick="compareCount(document.getElementById('user_input1').value, document.getElementById('user_input2').value)"
+        >
+            Compare
+        </button>
+        <p id="user_entries"></p>
+        <script>
+            function capitalCount(str) {
+                let count = 0
+                let log = `\n`
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] === str[i].toUpperCase() && str[i].toUpperCase() !== str[i].toLowerCase()) {count++}
+                }
+                return count
+            }
+
+            function compareCount(s1, s2) {
+                let c1 = capitalCount(s1)
+                let c2 = capitalCount(s2)
+                let msg = ``
+                let a = c1 > c2 ? s1 : s2
+                let b = c1 > c2 ? c1 - c2 : c2 - c1
+                let c = c1 > c2 ? s2 : s1
+                let d = c1 > c2 ? c2 : c1
+                c1 === c2 ?
+                    msg = `${s1} and ${s2} have ${c1} capital letters` :
+                    msg = `${a} has ${b} more capital letters than ${c} which has ${d} capital letters.`
+                window.alert(msg)
+                document.getElementById("user_entries").innerText += `\n ${msg}`
+            }
+        </script>
+    </body>
+</html>

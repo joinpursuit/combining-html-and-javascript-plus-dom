@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 8</title>
+    </head>
+    <body>
+        <h1>Question 8</h1>
+        <h2>Average of Three Numbers</h2>
+        <p>
+            First Input: 
+            <input type="text" name="user_input" id="user_input1">
+        </p>
+        <p>
+            Second Input: 
+            <input type="text" name="user_input" id="user_input2">
+        </p>
+        <p>
+            Third Input: 
+            <input type="text" name="user_input" id="user_input3">
+        </p>
+        <button
+            type="submit"
+            name="user_input"
+            onclick="average(
+                document.getElementById('user_input1').value, 
+                document.getElementById('user_input2').value, 
+                document.getElementById('user_input3').value
+            )"
+        >
+            Average
+        </button>
+        <p id="user_entries"></p>
+        <script>
+            function average(x, y, z) {
+                //READ THIS COMMENT FOR PART C
+                //I dont need this since the input only allows numbers using attribute type="number"
+                if (isNaN(x) || isNaN(y) || isNaN(z)) {
+                    window.alert(`All inputs must be numbers`)
+                    return
+                }
+                let avg = (x * 1 + y * 1 + z * 1) / 3 // Order of ops will turn them into numbers (x*1) to avoid concat
+                let msg = `The average of ${x}, ${y}, and ${z} = ${avg}`
+                window.alert(msg)
+                document.getElementById("user_entries").innerText += `\n${msg}`
+                return avg
+            }
+        </script>
+    </body>
+</html>

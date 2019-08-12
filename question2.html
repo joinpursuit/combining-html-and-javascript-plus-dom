@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 2</title>
+    </head>
+    <body>
+        <h1>Question 2</h1>
+        <p id="user_entry"></p>
+        <script>
+            let number = window.prompt("Enter a number")
+            while (isNaN(number)) number = window.prompt("Enter a number")
+            //window.alert(`${number} is ${number % 2 ? `NOT ` : ``}an even number.`) // Part A
+            //document.write(`${number} is ${number % 2 ? `NOT ` : ``}an even number.`) //Part B optional
+            document.getElementById("user_entry").innerText = `${number} is ${number % 2 ? `NOT ` : ``}an even number.`
+        </script>
+    </body>
+</html>
