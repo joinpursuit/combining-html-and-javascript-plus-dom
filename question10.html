@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 10</title>
+</head>
+<body>
+    <h1>Disemvoweler</h1>
+    <form action="">
+        <label for="check_box">Remove 'Y': </label>
+        <input type="checkbox" name="same" id="check_box">
+        <br>
+        <input type="text" name="same" id="input">
+        <input type="button" value="MAGIC" id="btn">
+    </form>
+    <p id="display"></p>
+
+    <script>
+        let checkBox = document.querySelector('#check_box');
+        let input = document.querySelector('#input')
+        let btn = document.querySelector('#btn');
+        let display = document.querySelector('#display');
+
+        function removeVowel(str) {
+            let bool = document.querySelector('#check_box').checked;
+            let vwlStr = '';
+            let vowel = 'aeiou';
+            if (bool) {
+                vowel += 'y';
+            }
+            for (let i = 0; i < str.length; i++) {
+                if(vowel.includes(str[i].toLowerCase())) {
+                    continue;
+                } else {
+                    vwlStr += str[i];
+                }
+            }
+            return vwlStr;
+        }
+
+        btn.addEventListener('click', function() {
+            let outStr = removeVowel(input.value);
+            display.innerText = outStr;
+            window.alert(outStr);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 3</title>
+</head>
+<body>
+    <div id="root">
+        <h1 id="heading">Double your number below:</h1>
+        <form action="#" id="form">
+            <label for="dbl_num">Number: </label>
+            <input type="number" name="number" id="dbl_num" placeholder="Write a number">
+            <input type="button" value="Double Up" id="dbl_btn">
+            <p id="dbl_output"></p>
+        </form>
+        <!-- Magic happens below -->
+        <script>
+            let btn = document.querySelector('#dbl_btn');
+            let inputNum = document.querySelector('#dbl_num');
+            let form = document.querySelector('#form');
+            let dblNum = document.querySelector('#dbl_num');
+
+            btn.addEventListener('click', function() {
+                let doubled = inputNum.value * 2;
+                window.alert(doubled);
+                document.querySelector('#dbl_output').innerText = "Doubled: " + doubled;
+                dblNum.value = doubled;
+
+                // document.querySelector('#dbl_num').placeholder = doubled;
+            })
+            // inputNum.addEventListener('keyup', function(event) {
+            //     if (event.keyCode === 13) {
+            //         btn.click()
+            //     }
+            // })
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                btn.click()
+            })
+        </script>
+    </div>
+</body>
+</html>

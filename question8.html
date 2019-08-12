@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 8</title>
+</head>
+<body>
+    <h1>Average of Three Numbers</h1>
+    <form action="#">
+        <label for="numOne">One: </label>
+        <input type="number" id="numOne">
+        <br>
+        <label for="numTwo">Two: </label>
+        <input type="number" id="numTwo">
+        <br>
+        <label for="numThree">Two: </label>
+        <input type="number" id="numThree">
+        <br>
+        <input type="button" id="btn" value="ADD EM UP BOYS">
+        
+        <p id="display"></p>
+    </form>
+
+    <script>
+        let inputOne = document.querySelector('#numOne');
+        let inputTwo = document.querySelector('#numTwo');
+        let inputThree = document.querySelector('#numThree');
+        let btn = document.querySelector('#btn');
+        let display = document.querySelector('#display');
+
+        btn.addEventListener('click', function() {
+            inputOne = parseInt(inputOne.value);
+            inputTwo = parseInt(inputTwo.value);
+            inputThree = parseInt(inputThree.value);
+
+            if (isNaN(inputOne) || isNaN(inputTwo) || isNaN(inputThree)) {
+                return window.alert("All of the inputs must be numbers!");
+            }
+            let avg = (Number(inputOne) + Number(inputTwo) + Number(inputThree)) / 3;
+            
+            display.innerText = avg;
+            window.alert(avg);
+        })
+    </script>
+
+</body>
+</html>

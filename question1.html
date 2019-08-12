@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 1</title>
+    <script>
+        let string = window.prompt('What string do you want to show?');
+        let number = window.prompt('How many times?');
+        window.alert(string.repeat(number));
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        let p = document.createElement('p');
+            p.innerText = string;
+        for (let i = 0; i < number; i++) {
+            let cloned = p.cloneNode(true);
+            document.querySelector('#root').appendChild(cloned);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 7</title>
+</head>
+<body>
+    <h1>String Capital Counter Comparer</h1>
+    <form action="#">
+        <label for="strOne">One: </label>
+        <input type="text" id="strOne">
+        <br>
+        <label for="strTwo">Two: </label>
+        <input type="text" id="strTwo">
+        <br>
+        <input type="button" id="btn" value="COMPARE">
+        <p id="display"></p>
+    </form>
+    
+    <script>
+        let inputOne = document.querySelector('#strOne');
+        let inputTwo = document.querySelector('#strTwo');
+        let btn = document.querySelector('#btn');
+        let display = document.querySelector('#display');
+
+        function counter(string) {
+            let split = string.split('');
+            count = 0;
+            split.map(ltr => {
+                if (ltr === ltr.toUpperCase()) {
+                    count++;
+                }
+            })
+            return count;
+        }
+
+        btn.addEventListener('click', function() {
+            let one = counter(inputOne.value);
+            let two = counter(inputTwo.value);
+            let output;
+
+            if (one === two) {
+                output = `They have the same number of capitals.`;
+            } else if (one > two) {
+                output = `One has more capital letters than two.`;
+            } else {
+                output = `Two has more capital letters than one.`;
+            }
+
+            display.innerText = output;
+            window.alert(output);
+        })
+
+    </script>
+
+    
+</body>
+</html>

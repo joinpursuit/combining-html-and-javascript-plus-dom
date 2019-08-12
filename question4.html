@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 4</title>
+</head>
+<body>
+    <h1 id="heading">Palindrome Detector</h1>
+    <form action="#" id="form">
+        <label for="input">Word: </label>
+        <input type="text" id="input" autofocus>
+        <input type="button" id="input_btn" value="Check">
+    </form>
+    <p id="result"></p>
+    <!-- Magic happens below -->
+    <script>
+        let input = document.querySelector('#input');
+        let inputBtn = document.querySelector('#input_btn');
+        let result = document.querySelector('#result');
+
+        function palindrom(str) {
+            let reverse = str.split('').reverse().join('');
+            if (reverse === str) {
+                return true;
+            }
+        }
+
+        inputBtn.addEventListener('click', function() {
+            let bool = palindrom(input.value);
+            let output = bool ? 'It is a Palindrome' : 'That\'s not Palindrome'
+            result.innerText = output;
+            window.alert(output);
+        })
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            inputBtn.click();
+        })
+    </script>
+</body>
+</html>

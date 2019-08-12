@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 9</title>
+</head>
+<body>
+    <h1>Check Middle Number Sum</h1>
+    <form action="#">
+        <label for="one">One:</label>
+        <input type="number" name="same" id="one">
+        <br>
+        <label for="one">Two:</label>
+        <input type="number" name="same" id="two">
+        <br>
+        <label for="one">Three:</label>
+        <input type="number" name="same" id="three">
+        <br>
+        <input type="button" value="Check" id="btn">
+
+        <p id="display"></p>
+
+        <script>
+            let inputOne = document.querySelector('#one');
+            let inputTwo = document.querySelector('#two');
+            let inputThree = document.querySelector('#three');
+            let btn = document.querySelector('#btn');
+            let display = document.querySelector('#display');
+
+            btn.addEventListener('click', function() {
+                let one = Number(inputOne.value);
+                let two = Number(inputTwo.value);
+                let three = Number(inputThree.value);
+
+                if ((one + three) === two) {
+                    display.innerText = 'True';
+                    return window.alert('True');
+                } else {
+                    display.innerText = 'False';
+                    return window.alert('False');
+                }
+            })
+        </script>
+
+    </form>
+</body>
+</html>
