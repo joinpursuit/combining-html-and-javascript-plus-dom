@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Capital Counter</title>
+  </head>
+  <body>
+    <h1><center>String Capital Counter</center></h1>
+    <p id="para1">Step right up! Count your capital characters!</p>
+    <p>ENTER YOUR WORD AND/OR WORDS:
+      <input type="text" id="str_input" size=100>
+    </p>
+    <script>
+      function capCount() {
+        let counter = 0
+        let strInputElement = document.getElementById("str_input")
+        let userSubmittedStr = strInputElement.value
+        let answer = document.getElementById("hidden_text")
+        let str1 = userSubmittedStr.split("")
+        for (let i = 0; i < str1.length; i++) {
+          if (str1[i] === str1[i].toUpperCase()) {
+            counter += 1
+          }
+        }
+        console.log(str1)
+        console.log(counter)
+        window.alert(`There are ${counter} capital letters in your submission.`)
+        answer.innerText = `There are ${counter} capital letters in your submission.`
+      }
+    </script>
+    <button onclick = "capCount()">SUBMIT</button>
+    <p id="hidden_text"></p>
+  </body>
+</html>
