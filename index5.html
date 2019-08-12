@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String Uppercaser</title>
+    </head>
+    <body>
+        <h1>String Uppercaser</h1>
+        <p>Enter your string: <input type="text" id=stringinput  placeholder="string"/>
+        </p>
+        
+        <button onclick="upperCaser()">Submit</button>
+        <p id="stringUpper">
+            
+        </p>
+        <script>
+        const upper = (string) => {
+            if(isNaN(string) !== true) {
+                
+                return "That's not a string. Please enter a string in the box."
+            } else {
+                return string.toUpperCase()
+            }
+        }
+        const upperCaser = () => {
+            let stringInputElement = document.getElementById("stringinput")
+            let userSubmittedString = stringInputElement.value
+            window.alert(upper(userSubmittedString))
+            document.getElementById("stringUpper").innerText = upper(userSubmittedString)
+        }
+        </script>
+    </body>
+</html>

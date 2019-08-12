@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EvenNumber</title>
+       
+    </head>
+    <body>
+        <h1>Is it Even??</h1>
+        <p id="evennumber">
+
+        </p>
+        <script>
+            let string =  window.prompt("Number please")
+                    
+            const even = (num) => {
+            if (num % 2 === 0) {
+                let result = `${num} is even`
+                return result
+            } else if  (num % 2 === 1) {
+                let result = `${num} is not even`
+                return result
+            }
+        }
+        window.alert(even(string))
+        document.getElementById("evennumber").innerText = even(string)
+        </script>
+    </body>
+</html>

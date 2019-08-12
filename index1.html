@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strings and Numbers</title>
+       
+    </head>
+    <body>
+        <p id="repeated">
+
+        </p>
+        <script>
+            let string =  window.prompt("Gimme a string")
+            let number =  window.prompt("Now gimme a number")
+                    
+            const repeatedString = (str, num) => {
+                let arr = []
+                for(let i = 1; i <= num; i++) {
+                arr.push(str)
+                                
+                } return arr.join(" ")
+            }
+            window.alert(repeatedString(string, number))
+            document.getElementById("repeated").innerText = repeatedString(string, number)
+            </script>
+    </body>
+</html>
