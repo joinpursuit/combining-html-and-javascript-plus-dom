@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Check Middle Number Sum</title>
+  </head>
+  <body>
+    <h1><center>Check Middle Number Sum</center></h1>
+    <p id="para1"><center>This site will automatically check to see if the number
+      you input for B: is equal to the sum of the numbers A: and C:</center></p>
+    <p><center>A:
+      <input type="text" id="num1" size=30>
+      B:
+      <input type="text" id="num2" size=30>
+      C:
+      <input type="text" id="num3" size=30>
+    </center></p>
+    <script>
+      function checkMidNumSum() {
+        let num1Input = document.getElementById("num1")
+        let userSubmit1 = num1Input.value
+        let num2Input = document.getElementById("num2")
+        let userSubmit2 = num2Input.value
+        let num3Input = document.getElementById("num3")
+        let userSubmit3 = num3Input.value
+        let answer = document.getElementById("hidden_text")
+        let sumOfAC = Number(userSubmit1) + Number(userSubmit3)
+        if (sumOfAC === Number(userSubmit2)) {
+          window.alert(`Value B is equal to the sum of Value A and C`)
+          answer.innerText = `Value B is equal to the sum of Value A and C`
+        } else {
+          window.alert(`Value B is NOT equal to the sum of Value A and C`)
+          answer.innerText = `Value B is NOT equal to the sum of Value A and C`
+        }
+      }
+    </script>
+    <center><button onclick = "checkMidNumSum()">SUBMIT</button></center>
+    <center><p id="hidden_text"></p></center>
+  </body>
+</html>
