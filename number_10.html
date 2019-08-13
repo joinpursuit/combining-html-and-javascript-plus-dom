@@ -13,19 +13,39 @@
     <h2>Disemvoweler</h2>
     <input type="text" id="input" placeholder="Enter text here" />
     <input type="checkbox" id="checkbox" name="checkbox"> Check here to count Y as a vowel. <br>
-    <button onclick="disemvoweler()">Submit </button>
+    <button onclick="removeVowels()">Submit </button>
     <p id="paragraph"> </p>
     <script>
-      function disemvoweler () {
-      let string = document.getElementById("input").value
-      let newString = ''
+      const removeVowels = () => {
+      let vowels = ["a", "e", "i", "o", "u"]
+      let vowels2 = ["a", "e", "i", "o", "u", "y"]
+      let userInput = document.getElementById("input").value
+      let string = userInput.toLowerCase();
+      let yChecked = document.getElementById("checkbox")
+  //  console.log(yChecked.checked)
+      let newString = " "
       for (let i = 0; i < string.length; i++) {
-        if (string[i] !== "a" && string[i] !== "e" && string[i] !== "i" && string[i] !== "o" && string[i] !== "u" &&
-            string[i] !== "A" && string[i] !== "E" && string[i] !== "I" && string[i] !== "O" && string[i] !== "U") {
-        newString += str[i]
-        window.alert(newString)
+        if (yChecked.checked) {
+          if (!vowels2.includes(string[i])) {
+            newString += string[i]
+          }
+        } else if (yChecked.checked === false) {
+           if (!vowels.includes(string[i])) {
+             newString += string[i]
+           }
+        }
+        // if (string[i] !== "a" && string[i] !== "e" && string[i] !== "i" &&
+        //     string[i] !== "o" && string[i] !== "u") {
+        //     newString += string[i]
       }
+      window.alert(newString)
+      document.getElementById("paragraph").innerText = newString
+      document.getElementById("input").value = newString
     }
+  //   window.alert(newString)
+  //   document.getElementById("paragraph").innerText = newString
+  //   document.getElementById("input").value = newString
+  // }
       </script>
     </body>
 </html>
