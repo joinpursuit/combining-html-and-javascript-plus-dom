@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML & JS Lab Number 9</title>
+  </head>
+  <body>
+    <h1>HTML & JS LAB Question 9</h1>
+    <p> a. Make a website with a heading at the top that reads "Check Middle Number Sum".  Add 3 input fields and a button.
+       When the user clicks the button, display an alert that shows whether the number in the middle input field is equal
+       to the sum of the left input field and the right input field.</p>
+    <p> b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+    <p> c. Have the uppercased overwrite the text that was there before.</p>
+    <h2>Check Middle Number Sum</h2>
+    <input type="text" id="number1" placeholder="Enter a number here" />
+    <input type="text" id="number2" placeholder="Enter a number here" />
+    <input type="text" id="number3" placeholder="Enter a number here" />
+    <button onclick="checkSum()">Submit </button>
+    <p id="paragraph"> </p>
+    <script>
+      function checkSum () {
+        let num1 = Number(document.getElementById("number1").value)
+        let num2 = Number(document.getElementById("number2").value)
+        let num3 = Number(document.getElementById("number3").value)
+        if (num1 + num3 === num2) {
+          window.alert("True")
+          document.getElementById("paragraph").innerText = "True"
+          document.getElementById("number2").value = "True"
+        } else {
+          window.alert("False")
+          document.getElementById("paragraph").innerText = "False"
+          document.getElementById("number2").value = "False"
+        }
+    }
+    </script>
+    </body>
+</html>

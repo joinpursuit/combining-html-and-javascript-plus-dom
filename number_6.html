@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML & JS Lab Number 6</title>
+  </head>
+  <body>
+    <h1>HTML & JS LAB Question 6</h1>
+    <p>a. Make a website with a heading at the top that reads "String Capital Counter".  Add an input field and a button.  When the user clicks the button, display an alert that contains a count of how many capital letters are in the string.</p>
+    <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+    <h2>String Capital Counter</h2>
+    <input type="text" id="string" placeholder="Enter text here" />
+    <button onclick="stringCapitalCounter()">Submit </button>
+    <p id="paragraph"> </p>
+    <script>
+      function stringCapitalCounter () {
+      let userString = document.getElementById("string").value
+      let numOfCap = userString.match(/[A-Z]/g).length
+      window.alert(numOfCap)
+      document.getElementById("paragraph").innerText = "The string has "+ numOfCap + " capitals."
+    }
+      </script>
+    </body>
+</html>

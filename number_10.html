@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML & JS Lab Number 10</title>
+  </head>
+  <body>
+    <h1>HTML & JS LAB Question 10</h1>
+    <p> a. Make a website with a heading at the top that reads "Disemvoweler".
+      Add 1 input field, a checkbox and a button. When the user clicks the button, display an alert that shows the text in the input field with the vowels removed.
+      If the checkbox is checked, count y as a vowel.</p>
+    <p> b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+    <p> c. Have the uppercased overwrite the text that was there before.</p>
+    <h2>Disemvoweler</h2>
+    <input type="text" id="input" placeholder="Enter text here" />
+    <input type="checkbox" id="checkbox" name="checkbox"> Check here to count Y as a vowel. <br>
+    <button onclick="disemvoweler()">Submit </button>
+    <p id="paragraph"> </p>
+    <script>
+      function disemvoweler () {
+      let string = document.getElementById("input").value
+      let newString = ''
+      for (let i = 0; i < string.length; i++) {
+        if (string[i] !== "a" && string[i] !== "e" && string[i] !== "i" && string[i] !== "o" && string[i] !== "u" &&
+            string[i] !== "A" && string[i] !== "E" && string[i] !== "I" && string[i] !== "O" && string[i] !== "U") {
+        newString += str[i]
+        window.alert(newString)
+      }
+    }
+      </script>
+    </body>
+</html>

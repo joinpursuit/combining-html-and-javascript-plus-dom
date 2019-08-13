@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML & JS Lab Number 7</title>
+  </head>
+  <body>
+    <h1>HTML & JS LAB Question 7</h1>
+    <p>a. Make a website with a heading at the top that reads "String Capital Counter Comparer".  Add 2 input fields and a button.  When the user clicks the button, display an alert that shows which string has more capital letters in it.</p>
+    <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+    <h2>String Capital Counter Comparer</h2>
+    <input type="text" id="string1" placeholder="Enter text here" />
+    <input type="text" id="string2" placeholder="Enter text here" />
+    <button onclick="stringCapitalCounterComparer()">Submit </button>
+    <p id="paragraph"> </p>
+    <script>
+      function stringCapitalCounterComparer () {
+        let userString1 = document.getElementById("string1").value
+        let userString2 = document.getElementById("string2").value
+        let numOfCap1 = Number(userString1.match(/[A-Z]/g).length)
+        let numOfCap2 = Number(userString2.match(/[A-Z]/g).length)
+        if (numOfCap1 > numOfCap2) {
+          window.alert(userString1 + " has more capital letters than " + userString2)
+          document.getElementById("paragraph").innerText = userString1 + " has more capital letters than " + userString2
+        } else {
+          window.alert(userString2 + " has more capital letters than " + userString1)
+          document.getElementById("paragraph").innerText = userString2 + "has more capital letters than " + userString1
+        }
+    }
+      </script>
+    </body>
+</html>

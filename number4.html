@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML & JS Lab Number 4</title>
+  </head>
+  <body>
+    <h1>HTML & JS LAB Question 4</h1>
+    <p> a. Make a website with a heading at the top that reads "Palindrome detector".  Add an input field and a button.
+       When the user clicks the button, display an alert that says whether or not the text in the input field is a palindrome (the same backwards and forwards).</p>
+   <p> b. Instead of showing a popup, have that information appear in a paragraph below the button. <p>
+    <h2> Palindrome detector</h2>
+    <input type="text" id="string" placeholder="Enter string here" />
+    <button onclick="isPalindrome()">Submit </button>
+    <p id="paragraph"> </p>
+   <script>
+     function isPalindrome () {
+     let string = document.getElementById("string").value
+     let newStr = "";
+     let len = string.length - 1
+     for (let i = len; i >= 0; i--){
+       newStr += string[i]
+     } if (newStr === string) {
+       window.alert(string + " is a Palindrome")
+       document.getElementById("paragraph").innerText = string + " is a Palindrome"
+     } else {
+       window.alert(string + " is not a Palindrome.")
+       document.getElementById("paragraph").innerText = string + " is not a Palindrome"
+     }
+   }
+     </script>
+    </body>
+</html>

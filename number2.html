@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> HTML & JS Lab Number 2 </title>
+  </head>
+  <body>
+    <h1>HTML & JS LAB Question 2</h1>
+    <p> a. Make a website that prompts the user for a string, then alerts them of whether or not the number is even.</p>
+    <p> b. Instead of showing a popup, make the text appear on the screen.</p>
+    <script>
+    let num = window.prompt("Enter a number")
+      if (num % 2 === 0) {
+        window.alert(`${num} is even`)
+      } else {
+        window.alert(`${num} is odd`)
+      }
+      if (num % 2 === 0) {
+        document.write(`${num} is even`)
+      } else {
+        document.write(`${num} is odd`)
+      }
+      </script>
+    </body>
+</html>

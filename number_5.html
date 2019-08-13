@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML & JS Lab Number 5</title>
+  </head>
+  <body>
+    <h1>HTML & JS LAB Question 5</h1>
+    <p>a. Make a website with a heading at the top that reads "String Uppercaser".  Add an input field and a button.  When the user clicks the button, display an alert that contains the uppercased text of the input text field.</p>
+    <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+    <p>c. Have the uppercased overwrite the text that was there before.</p>
+    <h2>String UpperCaser</h2>
+    <input type="text" id="text" placeholder="Enter text here" />
+    <button onclick="stringUpperCaser()">Submit </button>
+    <p id="paragraph"> </p>
+    <script>
+      function stringUpperCaser() {
+      let userText = document.getElementById("text").value
+      let newUserText = userText.toUpperCase()
+      window.alert(newUserText)
+      document.getElementById("paragraph").innerText = newUserText
+      document.getElementById("text").value = newUserText
+    }
+      </script>
+    </body>
+</html>

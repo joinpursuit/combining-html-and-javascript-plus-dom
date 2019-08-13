@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML & JS Lab Number 3</title>
+  </head>
+  <body>
+    <h1>HTML & JS LAB Question 3</h1>
+    <p>a. Make a website with an input field and a button.  Have a heading at the top that reads "Double your number below"  When the user clicks on the button, display an alert showing that number times two. </p>
+    <p>b. Instead of showing a popup, make the doubled number appear in a paragraph below.</p>
+    <p>c. Make the doubled number instead appear inside the input.</p>
+    <h2>Double your number below</h2>
+    <input type="text" id="number" placeholder="number goes here" />
+    <button onclick="doubleNumber()">Submit</button>
+    <p id="paragraph"></p>
+    <script>
+     function doubleNumber() {
+      let numberInputElement = document.getElementById("number")
+      let userSubmittedNumber = numberInputElement.value
+      let result = userSubmittedNumber * 2
+      window.alert(result)
+      document.getElementById("paragraph").innerText = result
+      document.getElementById("number").value = result
+    }
+      </script>
+    </body>
+</html>
