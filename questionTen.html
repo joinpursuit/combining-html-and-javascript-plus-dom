@@ -28,9 +28,9 @@
             console.log("checkbox value!!!", checkBx.checked);
 
             if (checkBx.checked) {
-                disVowel = strInput.value.split('').filter(el => !el.match(/[aeiou]/i)).join('')
-            } else {
                 disVowel = strInput.value.split('').filter(el => !el.match(/[aeiouy]/i)).join('')
+            } else {
+                disVowel = strInput.value.split('').filter(el => !el.match(/[aeiou]/i)).join('')
             }
             window.alert(`With the values removed your string is now: ${disVowel}`);
             endRes.innerText = `With the values removed your string is now: ${disVowel} \n`
