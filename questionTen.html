@@ -20,15 +20,30 @@
   const removeVowels = () =>{
     let word_input = document.getElementById('word_entry');
     let actual_word = word_input.value;
+    let vowels = ["a", "e", "o", "i", "u"]
+    let vowelsWithY = ["a", "e", "o", "i", "u", "y"]
     let clrStr = '';
     let lower_case = actual_word.toLowerCase();
-    let y_checked = document.getElementById('include_y')
-
+    let y_checked = document.getElementById('include_y');
+    console.log(y_checked.checked)
     for(let i = 0; i < lower_case.length; i++){
-      if(lower_case[i] === 'a' || lower_case[i] === 'e' || lower_case[i] === 'i' || lower_case[i]==='o' || lower_case[i] === 'u'){
-      } else{
-        clrStr += lower_case[i]
+      if(y_checked.checked) {
+        if(!vowelsWithY.includes(lower_case[i])) {
+          clrStr += lower_case[i]
+          console.log("clrStr1", clrStr)
+        }
+      } else if(y_checked.checked === false) {
+          vowels.pop()
+        if(!vowels.includes(lower_case[i])) {
+          console.log("vowels", vowels)
+            clrStr += lower_case[i]
+            console.log("clrStr2", clrStr)
+          }
       }
+      // if(lower_case[i] === 'a' || lower_case[i] === 'e' || lower_case[i] === 'i' || lower_case[i]==='o' || lower_case[i] === 'u'){
+      // } else{
+      //   clrStr += lower_case[i]
+      // }
     }
 window.alert(clrStr)
 let show_answer = document.getElementById('vowel_holder');
