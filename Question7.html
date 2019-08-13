@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <h1>String Capital Counter Comparer</h1>
+
+<input type="text" id = word_input >
+<br>
+<input type="text" id = word2_input >
+<br>
+
+<button onclick = "button_function()">Submit</button>
+
+
+
+<p id= "capital">Result</p>
+<script>
+
+  function word(string1){
+      let capitalVowelLength = '';
+      for (let i = 0; i < string1.length; i++){
+        let capitalLetters = string1[i].toUpperCase()
+        if(capitalLetters === string1[i]){
+          capitalVowelLength += string1[i]
+        }
+      }
+      return capitalVowelLength.length
+    }
+
+
+
+  function word2(string2){
+        let capitalVowelLength2 = '';
+        for (let i = 0; i < string2.length; i++){
+          let capitalLetters2 = string2[i].toUpperCase()
+          if(capitalLetters2 === string2[i]){
+            capitalVowelLength2 += string2[i]
+          }
+        }
+        return capitalVowelLength2.length
+      }
+
+
+  function mostCap(string1, string2){
+    if ( `${word(string1)}` > `${word2(string2)}`){
+      return string1.length
+    }else{
+        return string2.length
+
+  }
+  }
+
+
+  function button_function() {
+    let wordInputElement = document.getElementById("word_input")
+    let string1 = wordInputElement.value
+
+
+
+    let wordInputElement2 = document.getElementById("word2_input")
+    let string2 = wordInputElement2.value
+
+
+
+    let numOfCap = document.getElementById("capital")
+    numOfCap.innerText = `${mostCap(string1, string2)}`
+     window.alert(numOfCap.innerText)
+
+
+}
+
+</script>
+</body>
+</html>

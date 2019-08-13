@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <h1>String Capital Counter</h1>
+
+<input type="text" id = word_input >
+<br>
+
+<button onclick = "button_function()">Submit</button>
+
+
+<p id= "capital">Result</p>
+<script>
+
+
+function word(string){
+    let capitalVowelLength = '';
+    for (let i = 0; i < string.length; i++){
+      let capitalLetters = string[i].toUpperCase()
+      if(capitalLetters === string[i]){
+        capitalVowelLength += string[i]
+      }
+    }
+    return capitalVowelLength.length
+  }
+
+  function button_function() {
+    let wordInputElement = document.getElementById("word_input")
+    let string = wordInputElement.value
+
+
+    let numOfCap = document.getElementById("capital")
+    numOfCap.innerText = `${word(string)}`
+     window.alert(numOfCap.innerText)
+   }
+
+
+
+</script>
+</body>
+</html>

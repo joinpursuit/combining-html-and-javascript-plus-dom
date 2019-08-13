@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <h1>Average of Three Numbers</h1>
+
+<input type="text" id = num_1 >
+<br>
+
+<input type="text" id = num_2 >
+<br>
+
+<input type="text" id = num_3 >
+<br>
+
+<button onclick = "button_function()">Submit</button>
+
+<p id= "average">Result</p>
+<script>
+
+
+  function average(num1, num2, num3){
+    return(parseInt(num1) + parseInt(num2) + parseInt(num3))/3
+  }
+
+  function button_function() {
+    let numInputElement = document.getElementById("num_1")
+    let num1 = numInputElement.value
+
+    let numInputElement2 = document.getElementById("num_2")
+    let num2 = numInputElement2.value
+
+    let numInputElement3 = document.getElementById("num_3")
+    let num3= numInputElement3.value
+
+    let answer = document.getElementById("average")
+    answer.innerText = `${average(num1, num2, num3)}`
+     window.alert(answer.innerText)
+   }
+
+   </script>
+ </body>
+</html>
+
+
+
+<!-- part c is incomplete -->

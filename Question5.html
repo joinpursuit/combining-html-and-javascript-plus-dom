@@ -3,29 +3,42 @@
 <head>
 </head>
 <body>
-  <h1>Double Your Number Below:</h1>
+  <h1>String Uppercaser</h1>
     <br>
-  <input type="text" id = name_input_text >
+  <input type="text" id = word_input >
 
   <button onclick = "button_function()">Submit</button>
 
-  <p id= "doubleNumber">Doubled Number</p>
-  <script>
-    function button_function() {
-      let nameInputElement = document.getElementById("name_input_text")
-      let userSubmittedName = nameInputElement.value
-      let topHeadingElement = document.getElementById("doubleNumber")
-     topHeadingElement.innerText = `${userSubmittedName}` * 2
-     window.alert(topHeadingElement.innerText)
+  <p id= "capital_letter">Result</p>
 
+  <script>
+
+  function word(string){
+      let capitalVowelLength = '';
+      for (let i = 0; i < string.length; i++){
+        let capitalLetters = string[i].toUpperCase()
+        if(capitalLetters === string[i]){
+          capitalVowelLength += string[i]
+        }
+      }
+      return capitalVowelLength
+    }
+
+
+    function button_function() {
+      let wordInputElement = document.getElementById("word_input")
+      let string = wordInputElement.value
+
+
+      let cap = document.getElementById("capital_letter")
+      cap.innerText = `${word(string)}`
+       window.alert(cap.innerText)
 
     }
-  </script>
 
+  </script>
   <body>
  </html>
 
 
-
-
- <!-- Part C is not complete -->
+<!-- Part c is incomplete -->

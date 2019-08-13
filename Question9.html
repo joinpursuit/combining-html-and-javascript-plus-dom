@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <h1>Check Middle Number Sum</h1>
+
+<input type="text" id = num_1 >
+
+
+<input type="text" id = num_2 >
+
+
+<input type="text" id = num_3 >
+<br>
+
+<button onclick = "button_function()">Submit</button>
+
+<p id= "midNum">Result</p>
+
+<script>
+
+
+
+
+
+  function mode(num1, num2, num3){
+
+    if(parseInt(num1) + parseInt(num3) === parseInt(num2)){
+      return "true"
+    }else{
+      return "false"
+    }
+
+  }
+
+  function button_function() {
+    let numInputElement = document.getElementById("num_1")
+    let num1 = numInputElement.value
+
+    let numInputElement2 = document.getElementById("num_2")
+    let num2 = numInputElement2.value
+
+    let numInputElement3 = document.getElementById("num_3")
+    let num3= numInputElement3.value
+
+
+    let answer = document.getElementById("midNum")
+    answer.innerText = `${mode(num1, num2, num3)}`
+     window.alert(answer.innerText)
+   }
+
+   </script>
+ </body>
+</html>

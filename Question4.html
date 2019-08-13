@@ -5,32 +5,31 @@
 </head>
 <body>
 
-<h2>Palindrome detector</h2>
+<h1>Palindrome detector</h1>
   <br>
 <input type="text" id = name_input_text >
 
-<button onclick = "addNameToHeading()">Submit</button>
+<button onclick = "buttonFunction()">submit</button>
 
-<p id= "ped">Is it a Palindrome?</p>
+<p id= "ped">Result</p>
 
 
 <script>
 
 
-  function isPalindrome(userSubmittedName ) {
-    return userSubmittedName  === userSubmittedName .split("").reverse().join("");
+  function isPalindrome(word ) {
+    return word  === word .split("").reverse().join("");
+  }
+
+  function buttonFunction() {
+    let wordInputElement = document.getElementById("name_input_text")
+      let word = wordInputElement.value
+
+    let result = document.getElementById("ped")
+    result.innerText = `${isPalindrome(word )}`
   }
 
 
-
-
-  function addNameToHeading() {
-    let nameInputElement = document.getElementById("name_input_text")
-      let userSubmittedName = nameInputElement.value
-
-    let topHeadingElement = document.getElementById("ped")
-    topHeadingElement.innerText = `${isPalindrome(userSubmittedName )}`
-  }
 </script>
 </body>
 </html>

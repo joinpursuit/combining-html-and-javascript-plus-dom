@@ -5,23 +5,23 @@
 <body>
   <h1>Double Your Number Below:</h1>
     <br>
-  <input type="text" id = name_input_text >
+  <input type="text" id = num_input >
 
   <button onclick = "button_function()">Submit</button>
 
   <p id= "doubleNumber">Doubled Number</p>
+
   <script>
     function button_function() {
-      let nameInputElement = document.getElementById("name_input_text")
-      let userSubmittedName = nameInputElement.value
-      let topHeadingElement = document.getElementById("doubleNumber")
-     topHeadingElement.innerText = `${userSubmittedName}` * 2
-     window.alert(topHeadingElement.innerText)
-
+      let numInputElement = document.getElementById("num_input")
+      let doubleNum = numInputElement.value
+      let result = document.getElementById("doubleNumber")
+     result.innerText = `${doubleNum}` * 2
+     window.alert(result.innerText)
 
     }
-  </script>
 
+  </script>
   <body>
  </html>
 
