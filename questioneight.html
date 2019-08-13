@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 8</title>
+  </head>
+  <body>
+    <h1> Question 8 </h1>
+    <h2>Average of Three Numbers </h2>
+    <input type= 'text' id='numberone'>
+    <br>
+    <input type= 'text' id='numbertwo'>
+    <br>
+    <input type= 'text' id='numberthree'>
+    <br>
+    <button onclick='avgOfThreeNums()'> Submit</button>
+    <p id ='para'></p>
+
+    <script>
+      function avgOfThreeNums(){
+      let numberOne = document.getElementById('numberone').value
+      let numberTwo = document.getElementById('numbertwo').value
+      let numberThree = document.getElementById('numberthree').value
+      let myPara = document.getElementById('para')
+      let avgNum = ((parseInt(numberOne) + parseInt(numberTwo) + parseInt(numberThree))/ 3)
+
+      if(isNaN(avgNum)){
+        window.alert('All the inputs must be numbers')
+      } else {
+        window.alert(avgNum)
+        myPara.innerText = avgNum
+      }
+    }
+
+    </script>
+  </body>
+</html>

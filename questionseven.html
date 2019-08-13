@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 7</title>
+  </head>
+  <body>
+    <h1>Question 7 </h1>
+    <h2> String Capital Counter </h2>
+    <input type='text' id=counterone>
+    <input type='text' id=countertwo>
+    <button onclick='capitalComparer()'>Submit </button>
+    <p id ='para'> </p>
+
+    <script>
+    function capitalComparer(){
+    let userCounterOne = document.getElementById('counterone')
+    let userCounterTwo = document.getElementById('countertwo')
+    let myPara = document.getElementById('para')
+    let allCaps = /[A-Z]/
+    let wordOne = userCounterOne.value.split('')
+    let wordTwo = userCounterTwo.value.split('')
+    let countOne = 0;
+    let countTwo = 0;
+
+    for (let i = 0; i < wordOne.length; i++){
+      if (wordOne[i].match(allCaps)){
+        countOne ++
+      }
+    }
+    for (let i = 0; i < wordTwo.length; i++){
+      if (wordTwo[i].match(allCaps)){
+        countTwo ++
+      }
+    }
+    if (countOne > countTwo){
+      window.alert(wordOne.join('')+ "has more capital letters")
+      myPara.innerText = wordOne.join('') + " has more capital letters"
+    } else if (countTwo > countOne){
+      window.alert(wordTwo.join('') + " has more capital letters")
+      myPara.innerText = wordTwo.join('') + " has more capital letters"
+    } else if (countTwo === countOne){
+      window.alert('They have an equal amount of capital letters')
+      myPara.innerText = 'They have an equal amount of capital letters'
+    }
+  }
+    </script>
+  </body>
+</html>

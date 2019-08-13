@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 9</title>
+  </head>
+  <body>
+    <h1>Question 9 </h1>
+    <h2> Check Middle Number Sum </h2>
+    <input type='text' id='numberone'>
+    <input type='text' id='numbertwo'>
+    <input type='text' id='numberthree'>
+    <br>
+    <button onclick='checkMiddleNumSum()'> Try it</button>
+    <p id= 'para'></p>
+
+    <script>
+      function checkMiddleNumSum(){
+        let firstNum = document.getElementById('numberone').value
+        let secondNum = document.getElementById('numbertwo').value
+        let thirdNum = document.getElementById('numberthree').value
+        let myPara = document.getElementById('para')
+
+        let sumOfOthers = (parseInt(firstNum) + parseInt(thirdNum))
+
+        if (sumOfOthers === parseInt(secondNum)){
+          window.alert(true)
+          myPara.innerText = true
+        } else if (sumOfOthers !== parseInt(secondNum)){
+          window.alert(false)
+          myPara.innerText = false
+        }
+      }
+
+    </script>
+  </body>
+</html>

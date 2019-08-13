@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 10</title>
+  </head>
+  <body>
+    <h1>Question 10</h1>
+    <h2>Disemvoweler </h2>
+    <input type='text' id='string'>
+    <br>
+    <label for ='yvowel'>Count Y as a vowel</label>
+    <input type='checkbox' id='yvowel'>
+    <br>
+    <button onclick='disemvoweler()'>Do it</button>
+    <p id ='para'></p>
+    <script>
+      function disemvoweler(){
+        let inputStr = document.getElementById('string').value
+        let myPara = document.getElementById('para')
+        let checkBox = document.getElementById('yvowel')
+        let noVowelIncludingY = inputStr.replace(/[aeiouy]/g, '')
+        let noVowelNotIncludingY = inputStr.replace(/[aeiou]/g, '')
+        if (checkBox.checked === true){
+          window.alert(noVowelIncludingY)
+          myPara.innerText = noVowelIncludingY
+        } else if (checkBox.checked === false){
+          window.alert(noVowelNotIncludingY)
+          myPara.innerText = noVowelNotIncludingY
+        }
+      }
+    </script>
+  </body>
+</html>
