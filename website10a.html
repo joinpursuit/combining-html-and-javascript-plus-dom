@@ -1,0 +1,35 @@
+<!-- # Question Ten
+a. Make a website with a heading at the top that reads "Disemvoweler".  Add 1 input field, a checkbox and a button.
+When the user clicks the button, display an alert that shows the text in the input field with the vowels removed.
+If the checkbox is checked, count y as a vowel.
+  ~ c. Have the uppercased overwrite the text that was there before. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 10a </title>
+  </head>
+  <body>
+    <h1> Disemvoweler </h1>
+    <form>
+      <label for = 'string'> type your word here: </label>
+      <input type = 'text' name = 'string' id = 'str'>
+      <label for = 'number3'> counting y as a vowel: </label>
+      <input type = 'checkbox' name = 'y' id = 'y'>
+    </form>
+    <br>
+    <button onclick = 'remove_Vowel()'> Disemvoweler </button>
+    <p id = 'remove_vowel'></p>
+    <script>
+      const middleSum = () => {
+        if (){
+          document.getElementById('middle_sum').innerText = (`Error: All of the inputs must be numbers.`)
+        } else if(input + input3 === input2){
+          document.getElementById('middle_sum').innerText = true
+        } else {
+          document.getElementById('middle_sum').innerText = false
+        }
+      }
+    </script>
+  </body>
+</html>
