@@ -1,22 +1,24 @@
 <!doctype html>
 <html>
   <head>
-    <title>Lab 2</title>
+    
     <meta name="author" content="Joseph P. Pasaoa">
+    
+    <title>Lab 2</title>
 
     <script>
-      const get_number = () => {
+      const getNumber = () => {
         let number = window.prompt("Please give me a number:");
         if (!isNaN(number) && number) {
           return number;
         }
-        return get_number();
+        return getNumber();
       }
       
-      let output = !(get_number() % 2) ? "You gave me an even number!" : "That number you gave me isn't even.";
+      let output = !(getNumber() % 2) ? "You gave me an even number!" : "That number you gave me isn't even.";
       window.alert(output);
     </script>
-    
+
   </head>
   <body>
 
@@ -28,10 +30,10 @@
 
       <hr>
 
-      <p id="change_to_output">Not here anymore.</p>
+      <p id="change-to-output">Not here anymore.</p>
 
       <script>
-        document.getElementById('change_to_output').innerText = `All your base now belong to us.\n\n${output}`;
+        document.getElementById('change-to-output').innerText = `All your base now belong to us.\n\n${output}`;
       </script>
 
   </body>

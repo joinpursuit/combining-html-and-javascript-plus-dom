@@ -2,8 +2,39 @@
 <html>
   <head>
 
-    <title>Lab 3</title>
     <meta name="author" content="Joseph P. Pasaoa">
+    
+    <title>Lab 3</title>
+
+    <script>
+      const alertDouble = (num) => {
+        if (!num) {
+          window.alert("No input found");
+        } else {
+          !isNaN(num)
+            ? window.alert(Number(num) * 2)
+            : window.alert("Not a valid number. Try again.");
+        }
+      }
+      const paraDouble = (num) => {
+        if (!num) {
+          window.alert("No input found");
+        } else {
+          !isNaN(num)
+            ? document.getElementById("change-to-output").innerHTML = Number(num) * 2
+            : window.alert("Not a valid number. Try again.");
+        }
+      }
+      const inboxDouble = (num) => {
+        if (!num) {
+          window.alert("No input found");
+        } else {
+          !isNaN(num)
+            ? document.getElementById("numinbox").value = Number(num) * 2
+            : window.alert("Not a valid number. Try again.");
+        }
+      }
+    </script>
 
   </head>
   <body>
@@ -21,54 +52,40 @@
 
     <h1>Double Your Number Below</h1>
 
-    <p id="change_to_output">This used to be my paragraph. Used to be.</p>
+    <p id="change-to-output">This used to be my paragraph. Used to be.</p>
     
-    <form id="double_alert">
+    <form id="doubleNum-alert">
       <div>
-        <label for="alert_num">Enter number to alert:</label>
-        <input type="text" name="alert_num">
+        <label for="numalert">Enter number to double in alert:</label>
+        <input type="text" name="numalert" id="numalert">
       </div>
 
-      <input type="submit" value="Send to Alert" onclick="alert_double(alert_num.value); return false;">
+      <input type="submit" value="Send to Alert" onclick="alertDouble(numalert.value); return false;">
     </form>
     <br>
 
-    <form id="double_para">
+    <form id="doubleNum-para">
       <div>
-        <label for="para_num">Enter number for paragraph:</label>
-        <input type="text" name="para_num">
+        <label for="numpara">Enter number to double in paragraph:</label>
+        <input type="text" name="numpara" id="numpara">
       </div>
 
-      <input type="submit" onclick="para_double(para_num.value); return false;">
+      <input type="submit" onclick="paraDouble(numpara.value); return false;">
     </form>
     <br>
 
-    <form id="double_into_input">
+    <form id="doubleNum-into-input">
       <div>
-        <label for="inbox_num">Enter number for input box:</label>
-        <input type="text" name="inbox_num" id="inbox_num">
+        <label for="numinbox">Enter number to double into input box:</label>
+        <input type="text" name="numinbox" id="numinbox">
       </div>
 
-      <input type="submit" onclick="inbox_double(inbox_num.value); return false;">
+      <input type="submit" onclick="inboxDouble(numinbox.value); return false;">
     </form>
 
     <script>
-      const alert_double = (num) => {
-        num && !isNaN(num)
-          ? window.alert(Number(num) * 2)
-          : window.alert("Not in valid number form! Try again.");
-      }
-      const para_double = (num) => {
-        num && !isNaN(num)
-          ? document.getElementById("change_to_output").innerHTML = Number(num) * 2
-          : window.alert("Not in valid number form! Try again.");
-      }
-      const inbox_double = (num) => {
-        num && !isNaN(num)
-          ? document.getElementById("inbox_num").value = Number(num) * 2
-          : window.alert("Not in valid number form! Try again.");
-      }
-
+        document.getElementById("numalert").focus();
+        document.getElementById("numalert").select();
     </script>
 
   </body>

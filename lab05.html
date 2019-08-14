@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <title>Lab 5</title>
+
+    <script>
+      const upperThis = (str) =>{
+        if (!str) {
+          window.alert("No input entered");
+        } else {
+          document.getElementById('changingthis').innerText = str.toUpperCase();
+          window.alert(str.toUpperCase());
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Question Five</h1>
+
+      <p>a. Make a website with a heading at the top that reads "String Uppercaser".  Add an input field and a button.  When the user 
+        clicks the button, display an alert that contains the uppercased text of the input text field.</p>
+      
+      <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+      
+      <p>c. Have the uppercased overwrite the text that was there before.</p>
+
+      <hr>
+
+      <h1>String Uppercaser</h1>
+
+      <form id="str-upper">
+        <div>
+          <label for="upperthis">Entry to uppercase:</label>
+          <input type="text" name="upperthis" id="upperthis">
+
+          <input type="submit" value="Uppercase" onclick="upperThis(upperthis.value); return false;">
+        </div>
+      </form>
+
+      <p id="changingthis">Replace me!</p>
+
+      <script>
+          document.getElementById("upperthis").focus();
+          document.getElementById("upperthis").select();
+      </script>
+
+  </body>
+</html>

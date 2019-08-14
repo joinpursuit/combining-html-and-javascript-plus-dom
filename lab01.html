@@ -2,34 +2,34 @@
 <html>
   <head>
 
-    <title>Lab 1</title>
     <meta name="author" content="Joseph P. Pasaoa">
 
+    <title>Lab 1</title>
+
     <script>
-      const get_string = () => {
+      const getString = () => {
         let string = window.prompt("Please give me a string:");
         if (string) {
           return string.toString();
         }
-        return get_string();
+        return getString();
       }
-      const get_num = () => {
+      const getNum = () => {
         let number = window.prompt("Now please give me a number:");
         if (number && !isNaN(number)) {
           return number;
         }
-        return get_num();
+        return getNum();
       }
-      const process_output = (str, num) => {
+      const processOutput = (str, num) => {
         let output = str;
         for (let i = 1; i < num; i++) {
           output += `\n${str}`;
         };
         return output;
       };
-      
-      let output = process_output(get_string(), get_num());
-      window.alert(output);
+      let askOnEntry = processOutput(getString(), getNum());
+      window.alert(askOnEntry);
     </script>
 
   </head>
@@ -44,10 +44,10 @@
 
     <hr>
 
-    <p id="change_to_output">Replace this!</p>
+    <p id="change-to-output">Replace this!</p>
 
     <script>
-      document.getElementById('change_to_output').innerText = `All your base now belong to us.\n\n${output}`;
+      document.getElementById('change-to-output').innerText = `All your base now belong to us.\n\n${askOnEntry}`;
     </script>
 
   </body>

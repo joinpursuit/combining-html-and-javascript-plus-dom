@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <title>Lab 9</title>
+
+    <script>
+      const sumCheck = (sum, num1, num2) => {
+        if (!sum || !num1 || !num2) {
+          window.alert("Not all inputs entered");
+        } else if (isNaN(sum) || isNaN(num1) || isNaN(num2)) {
+          window.alert("Please check that all your inputs are numbers and try again");
+        } else {
+          let output;
+          Number(sum) === Number(num1) + Number(num2)
+            ? output = "true"
+            : output = "false";
+          document.getElementById("changingthis").innerText = output;
+          document.getElementById("sumcheck").value = output;
+          window.alert(output);
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Question Nine</h1>
+
+        <p>a. Make a website with a heading at the top that reads "Check Middle Number Sum".  Add 3 input fields and a button.  When 
+          the user clicks the button, display an alert that shows whether the number in the middle input field is equal to the sum of 
+          the left input field and the right input field.</p>
+        
+        <pre>
+          Sample input: 4, 14, 10
+          Sample output: true
+          
+          Sample input: 4,9,8
+          Sample output: false
+        </pre>
+        
+        <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+        
+        <p>c. Have the information overwrite the text in the middle input.</p>
+
+        <hr>
+
+        <h1>Check Middle Number Sum</h1>
+
+        <form id="checkforsum">
+          <div>
+            <label for="numleft">1st Number to Add:</label>
+            <input type="text" name="numleft" id="numleft">
+
+            <label for="sumcheck"> Sum to Check:</label>
+            <input type="text" name="sumcheck" id="sumcheck">
+
+            <label for="numright"> 2nd Number to Add:</label>
+            <input type="text" name="numright" id="numright">
+          </div>
+
+          <input type="submit" value="Check" onclick="sumCheck(sumcheck.value, numleft.value, numright.value); return false;">
+        </form>
+
+        <p id="changingthis">Replace me!</p>
+
+        <script>
+          document.getElementById("numleft").focus();
+          document.getElementById("numleft").select();
+        </script>
+
+  </body>
+</html>

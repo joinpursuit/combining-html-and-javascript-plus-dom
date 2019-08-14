@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <title>Lab 8</title>
+
+    <script>
+      const avgThree = (num1, num2, num3) => {
+        if (!num1 || !num2 || !num3) {
+          window.alert("Please check your inputs and try again")
+        } else if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+          window.alert("All of your inputs must be numbers");
+        } else {
+          let output = ((Number(num1) + Number(num2) + Number(num3)) / 3);
+          document.getElementById("changingthis").innerText = output;
+          window.alert(output);
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Question Eight</h1>
+
+      <p>a. Make a website with a heading at the top that reads "Average of Three Numbers".  Add 3 input fields and a button.  When 
+        the user clicks the button, display an alert that shows the average of all 3 text fields.</p>
+      
+      <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+        
+      <p>c. If any of the text fields doesn't have a number, show an error message that reads "All of the inputs must be numbers"</p>
+
+      <hr>
+
+      <h1>Average of Three Numbers</h1>
+
+      <form id="averagethree">
+        <div>
+          <label for="numone">Number 1:</label>
+          <input type="text" name="numone" id="numone">
+        </div>
+
+        <div>
+          <label for="numtwo">Number 2:</label>
+          <input type="text" name="numtwo" id="numtwo">
+        </div>
+
+        <div>
+          <label for="numthree">Number 3:</label>
+          <input type="text" name="numthree" id="numthree">
+        </div>
+
+        <input type="submit" value="Calculate" onclick="avgThree(numone.value, numtwo.value, numthree.value); return false;">
+      </form>
+
+      <p id="changingthis">Replace me!</p>
+
+      <script>
+        document.getElementById("numone").focus();
+        document.getElementById("numone").select();
+      </script>
+
+  </body>
+</html>

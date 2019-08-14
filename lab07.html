@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta name="author" content="Joseph P. Pasaoa">
+
+    <title>Lab 7</title>
+
+    <script>
+      const compareStrs = (string1, string2) => {
+        if (!string1 || !string2) {
+          window.alert("Check your inputs and try again");
+        } else {
+          let chars1 = string1.split('');
+          let chars2 = string2.split('');
+          let uppers1 = chars1.filter( (char) => {
+              if (char.toLowerCase() !== char.toUpperCase()) {
+                return char === char.toUpperCase();
+              };
+          } );
+          let uppers2 = chars2.filter( (char) => {
+              if (char.toLowerCase() !== char.toUpperCase()) {   
+                return char === char.toUpperCase();
+              };
+          } );
+          let output;
+          if (uppers1.length > uppers2.length) {
+            output = "Input ONE has more capital letters in it.";
+          } else if (uppers1.length === uppers2.length) {
+            output = "Both inputs have an equa number of capital letters.";
+          } else {
+            output = "Input TWO has more capital letters in it.";
+          }
+          document.getElementById("changingthis").innerText = output;
+          window.alert(output);
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h1>Question Seven</h1>
+
+      <p>a. Make a website with a heading at the top that reads "String Capital Counter Comparer".  Add 2 input fields and a button.  
+        When the user clicks the button, display an alert that shows which string has more capital letters in it.</p>
+        
+      <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+
+      <hr>
+
+      <h1>String Capital Counter Comparer</h1>
+
+      <form id="compare-uppers">
+        <div>
+          <label for="str1">Input 1:</label>
+          <input type="text" name="str1" id="str1">
+        </div>
+
+        <div>
+          <label for="str2">Input 2:</label>
+          <input type="text" name="str2">
+        </div>
+
+        <input type="submit" value="Compare" onclick="compareStrs(str1.value, str2.value); return false;">
+      </form>
+
+      <p id="changingthis">Change me!</p>
+
+      <script>
+        document.getElementById("str1").focus();
+        document.getElementById("str1").select();
+      </script>
+
+  </body>
+</html>
