@@ -1,76 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Lab 7</title>
+   <title>Question 7 | Combining HTML & JS + DOM Lab</title>
 
-    <script>
+   <script>
       const compareStrs = (string1, string2) => {
-        if (!string1 || !string2) {
-          window.alert("Check your inputs and try again");
-        } else {
-          let chars1 = string1.split('');
-          let chars2 = string2.split('');
-          let uppers1 = chars1.filter( (char) => {
-              if (char.toLowerCase() !== char.toUpperCase()) {
-                return char === char.toUpperCase();
-              };
-          } );
-          let uppers2 = chars2.filter( (char) => {
-              if (char.toLowerCase() !== char.toUpperCase()) {   
-                return char === char.toUpperCase();
-              };
-          } );
-          let output;
-          if (uppers1.length > uppers2.length) {
-            output = "Input ONE has more capital letters in it.";
-          } else if (uppers1.length === uppers2.length) {
-            output = "Both inputs have an equa number of capital letters.";
-          } else {
-            output = "Input TWO has more capital letters in it.";
-          }
-          document.getElementById("changingthis").innerText = output;
-          window.alert(output);
-        }
+         if (!string1 || !string2) {
+            window.alert("Check your inputs and try again");
+         } else {
+            let chars1 = string1.split('');
+            let chars2 = string2.split('');
+            let uppers1 = chars1.filter((char) => {
+               if (char.toLowerCase() !== char.toUpperCase()) {
+                  return char === char.toUpperCase();
+               };
+            } );
+            let uppers2 = chars2.filter((char) => {
+               if (char.toLowerCase() !== char.toUpperCase()) {
+                  return char === char.toUpperCase();
+               };
+            } );
+            let output;
+            if (uppers1.length > uppers2.length) {
+               output = `INPUT ONE has the more capital letters: ${uppers1.length} v ${uppers2.length}`;
+            } else if (uppers1.length < uppers2.length) {
+               output = `INPUT TWO has the more capital letters: ${uppers1.length} v ${uppers2.length}`;
+            } else {
+               output = `Both inputs have an equal number of capital letters: ${uppers2.length}`;
+            }
+            document.getElementById("changingthis").innerText = output;
+            window.alert(output);
+         }
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="name">
 
-    <h1>Question Seven</h1>
+   <h1>Question Seven</h1>
 
-      <p>a. Make a website with a heading at the top that reads "String Capital Counter Comparer".  Add 2 input fields and a button.  
-        When the user clicks the button, display an alert that shows which string has more capital letters in it.</p>
-        
-      <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+   <p>a. Make a website with a heading at the top that reads "String Capital Counter Comparer". Add 2 input fields and a
+      button. When the user clicks the button, display an alert that shows which string has more capital letters in it.</p>
 
-      <hr>
+   <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
 
-      <h1>String Capital Counter Comparer</h1>
+   <hr>
 
-      <form id="compare-uppers">
-        <div>
-          <label for="str1">Input 1:</label>
-          <input type="text" name="str1" id="str1">
-        </div>
+   <h1>String Capital Counter Comparer</h1>
 
-        <div>
-          <label for="str2">Input 2:</label>
-          <input type="text" name="str2">
-        </div>
+   <form id="compare-uppers">
+      <div>
+         <label for="str1">Input 1:</label>
+         <input type="text" name="str1" id="str1">
+      </div>
 
-        <input type="submit" value="Compare" onclick="compareStrs(str1.value, str2.value); return false;">
-      </form>
+      <div>
+         <label for="str2">Input 2:</label>
+         <input type="text" name="str2">
+      </div>
 
-      <p id="changingthis">Change me!</p>
+      <input type="submit" value="Compare" onclick="compareStrs(str1.value, str2.value); return false;">
+   </form>
 
-      <script>
-        document.getElementById("str1").focus();
-        document.getElementById("str1").select();
-      </script>
+   <p id="changingthis">Change me!</p>
 
-  </body>
+   <script>
+      document.getElementById("str1").focus();
+      document.getElementById("str1").select();
+   </script>
+
+</body>
+
 </html>

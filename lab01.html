@@ -1,54 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Lab 1</title>
+   <title>Question 1 | Combining HTML & JS + DOM Lab</title>
 
-    <script>
+   <script>
       const getString = () => {
-        let string = window.prompt("Please give me a string:");
-        if (string) {
-          return string.toString();
-        }
-        return getString();
+         let string = window.prompt("Give me a string:");
+         if (string) {
+            return string.toString();
+         }
+         return getString();
       }
       const getNum = () => {
-        let number = window.prompt("Now please give me a number:");
-        if (number && !isNaN(number)) {
-          return number;
-        }
-        return getNum();
+         let number = window.prompt("Now please give me a number:");
+         if (number && !isNaN(number)) {
+            return number;
+         }
+         return getNum();
       }
       const processOutput = (str, num) => {
-        let output = str;
-        for (let i = 1; i < num; i++) {
-          output += `\n${str}`;
-        };
-        return output;
+         let workVar = str;
+         for (let i = 1; i < num; i++) {
+            workVar += `\n${str}`;
+         };
+         return workVar;
       };
-      let askOnEntry = processOutput(getString(), getNum());
-      window.alert(askOnEntry);
-    </script>
+      let output = processOutput(getString(), getNum());
+      window.alert(output);
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1> Question One </h1>
-    
-    <p>a. Make a website that prompts the user for a string, then a number. Then show a popup that displays the string that 
-    many times</p>
-    
-    <p>b. Instead of showing a popup, make the text appear on the screen.</p>
+   <h1>Question One</h1>
 
-    <hr>
+   <p>a. Make a website that prompts the user for a string, then a number. Then show a popup that displays the string that 
+      many times</p>
 
-    <p id="change-to-output">Replace this!</p>
+   <p>b. Instead of showing a popup, make the text appear on the screen.</p>
 
-    <script>
-      document.getElementById('change-to-output').innerText = `All your base now belong to us.\n\n${askOnEntry}`;
-    </script>
+   <hr>
 
-  </body>
+   <p id="change-to-output">Replace this!</p>
+
+   <script>
+      document.getElementById('change-to-output').innerText = `All your base now belong to us.\n\n${output}`;
+   </script>
+
+</body>
+
 </html>

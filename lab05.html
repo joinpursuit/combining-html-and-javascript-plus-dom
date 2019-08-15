@@ -1,53 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Lab 5</title>
+   <title>Question 5 | Combining HTML & JS + DOM Lab</title>
 
-    <script>
-      const upperThis = (str) =>{
-        if (!str) {
-          window.alert("No input entered");
-        } else {
-          document.getElementById('changingthis').innerText = str.toUpperCase();
-          window.alert(str.toUpperCase());
-        }
+   <script>
+      const upperThis = (str) => {
+         if (!str) {
+            window.alert("No input entered");
+         } else {
+            document.getElementById('changingthis').innerText = str.toUpperCase();
+            window.alert(str.toUpperCase());
+         }
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Five</h1>
+   <h1>Question Five</h1>
 
-      <p>a. Make a website with a heading at the top that reads "String Uppercaser".  Add an input field and a button.  When the user 
-        clicks the button, display an alert that contains the uppercased text of the input text field.</p>
-      
-      <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
-      
-      <p>c. Have the uppercased overwrite the text that was there before.</p>
+   <p>a. Make a website with a heading at the top that reads "String Uppercaser". Add an input field and a button. When the 
+      user clicks the button, display an alert that contains the uppercased text of the input text field.</p>
 
-      <hr>
+   <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
 
-      <h1>String Uppercaser</h1>
+   <p>c. Have the uppercased overwrite the text that was there before.</p>
 
-      <form id="str-upper">
-        <div>
-          <label for="upperthis">Entry to uppercase:</label>
-          <input type="text" name="upperthis" id="upperthis">
+   <hr>
 
-          <input type="submit" value="Uppercase" onclick="upperThis(upperthis.value); return false;">
-        </div>
-      </form>
+   <h1>String Uppercaser</h1>
 
-      <p id="changingthis">Replace me!</p>
+   <form id="str-upper">
+      <div>
+         <label for="upperthis">Entry to uppercase:</label>
+         <input type="text" name="upperthis" id="upperthis">
 
-      <script>
-          document.getElementById("upperthis").focus();
-          document.getElementById("upperthis").select();
-      </script>
+         <input type="submit" value="Uppercase" onclick="upperThis(upperthis.value); return false;">
+      </div>
+   </form>
 
-  </body>
+   <p id="changingthis">Replace me!</p>
+
+   <script>
+      document.getElementById("upperthis").focus();
+      document.getElementById("upperthis").select();
+   </script>
+
+</body>
+
 </html>

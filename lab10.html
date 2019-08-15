@@ -1,66 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Lab 10</title>
+   <title>Question 10 | Combining HTML & JS + DOM Lab</title>
 
-    <script>
+   <script>
       const removeVowels = (str, bool) => {
-        if (!str) {
-          window.alert("No input found");
-        } else {
-          let vowels = { a: true, e: true, i: true, o: true, u: true };
-          bool
-            ? vowels["y"] = true
-            : false;
-          str = str + "";
-          let output = str
-            .split('')
-            .filter( (char) => {
-              return !vowels[char.toLowerCase()]
-            } )
-            .join('');
-          document.getElementById("changingthis").innerText = output;
-          document.getElementById("disemvowelthis").value = output;
-          window.alert(output);
-        }
+         if (!str) {
+            window.alert("No input found");
+         } else {
+            let vowels = { a: true, e: true, i: true, o: true, u: true };
+            bool
+               ? vowels["y"] = true
+               : false;
+            str = str + "";
+            let output = str
+               .split('')
+               .filter( (char) => {
+                  return !vowels[char.toLowerCase()]
+               } )
+               .join('');
+            document.getElementById("changingthis").innerText = output;
+            document.getElementById("disemvowelthis").value = output;
+            window.alert(output);
+         }
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Ten</h1>
+   <h1>Question Ten</h1>
 
-    <p>a. Make a website with a heading at the top that reads "Disemvoweler".  Add 1 input field, a checkbox and a button. When the user 
-      clicks the button, display an alert that shows the text in the input field with the vowels removed.  If the checkbox is checked, 
-      count y as a vowel.</p>
-    
-    <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
-      
-    <p>c. Have the information overwrite the text that was there before.</p>
+   <p>a. Make a website with a heading at the top that reads "Disemvoweler". Add 1 input field, a checkbox and a button.
+      When the user clicks the button, display an alert that shows the text in the input field with the vowels removed. 
+      If the checkbox is checked, count y as a vowel.</p>
 
-    <hr>
+   <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
 
-    <h1>Disemvoweler</h1>
+   <p>c. Have the information overwrite the text that was there before.</p>
 
-    <form id="disemvoweler">
+   <hr>
+
+   <h1>Disemvoweler</h1>
+
+   <form id="disemvoweler">
       <div>
-        <label for="disemvowelthis">Input to disemvowel:</label>
-        <input type="text" name="disemvowelthis" id="disemvowelthis">
+         <label for="disemvowelthis">Input to disemvowel:</label>
+         <input type="text" name="disemvowelthis" id="disemvowelthis">
       </div>
 
       <div>
-        <label for="optiony">Consider "y" a vowel?</label>
-        <input type="checkbox" name="optiony" id="optiony">
+         <label for="optiony">Consider "y" a vowel?</label>
+         <input type="checkbox" name="optiony" id="optiony">
       </div>
 
-      <input type="submit" value="Disemvowel" onclick="removeVowels(disemvowelthis.value, optiony.checked); return false;">
-    </form>
+      <input type="submit" value="Disemvowel"
+         onclick="removeVowels(disemvowelthis.value, optiony.checked); return false;">
+   </form>
 
-    <p id="changingthis">Replace me!</p>
+   <p id="changingthis">Replace me!</p>
 
-  </body>
+</body>
+
 </html>

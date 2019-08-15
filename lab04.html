@@ -1,60 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
-    
-    <title>Lab 4</title>
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <script>
-      const pDetect = (str) => {
-        if (!str) {
-          window.alert("No input entered")
-        } else {
-          str = str.toString();
-          let j = str.length - 1;
-          for (let i = 0; i < Math.floor(str.length / 2); i++) {
-            if (str[i] !== str[j]) {
-              document.getElementById('changingthis').innerText = "This is NOT a palindrome.";
-              return window.alert("This is NOT a palindrome.");
+   <title>Question 4 | Combining HTML & JS + DOM Lab</title>
+
+   <script>
+      const pDetect = (str) => { // time complexity O(0.5n)
+         if (!str) {
+            window.alert("No input entered");
+         } else { 
+            str = str.toString(); 
+            let j = str.length - 1;
+            for (let i = 0; i < Math.floor(str.length / 2); i++) {
+               if (str[i] !== str[j]) {
+                  document.getElementById('changingthis').innerText = "This is NOT a palindrome.";
+                  return window.alert("This is NOT a palindrome.");
+               }
+               j -= 1;
             }
-            j -= 1;
-          }
-          document.getElementById('changingthis').innerText = "This IS a palindrome.";
-          return window.alert("This IS a palindrome.");
-        }
+            document.getElementById('changingthis').innerText = "This IS a palindrome.";
+            return window.alert("This IS a palindrome.");
+         }
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-      <h1>Question Four</h1>
+   <h1>Question Four</h1>
 
-      <p>a. Make a website with a heading at the top that reads "Palindrome detector".  Add an input field and a button.  When the user clicks 
-        the button, display an alert that says whether or not the text in the input field is a palindrome (the same backwards and forwards).</p>
-      
-      <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
+   <p>a. Make a website with a heading at the top that reads "Palindrome detector". Add an input field and a button. When 
+      the user clicks the button, display an alert that says whether or not the text in the input field is a palindrome (the 
+      same backwards and forwards).</p>
 
-      <hr>
+   <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
 
-      <h1>Palindrome detector</h1>
+   <hr>
 
-      <form>
-        <div>
-          <label for="checkthis">What do you want to check?</label>
-          <input type="text" name="checkthis" id="checkthis">
-        </div>
+   <h1>Palindrome detector</h1>
 
-        <input type="submit" value="Check" onclick="pDetect(checkthis.value); return false;">
-      </form>
+   <form>
+      <label for="checkthis">What do you want to check?</label>
+      <input type="text" name="checkthis" id="checkthis">
 
-      <p id="changingthis">Replace me!</p>
+      <input type="submit" value="Check" onclick="pDetect(checkthis.value); return false;">
+   </form>
 
-      <script>
-          document.getElementById("checkthis").focus();
-          document.getElementById("checkthis").select();
-      </script>
+   <p id="changingthis">Replace me!</p>
 
-  </body>
+   <script>
+      document.getElementById("checkthis").focus();
+      document.getElementById("checkthis").select();
+   </script>
+
+</body>
+
 </html>

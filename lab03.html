@@ -1,92 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
-    
-    <title>Lab 3</title>
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <script>
+   <title>Question 3 | Combining HTML & JS + DOM Lab</title>
+
+   <script>
       const alertDouble = (num) => {
-        if (!num) {
-          window.alert("No input found");
-        } else {
-          !isNaN(num)
-            ? window.alert(Number(num) * 2)
-            : window.alert("Not a valid number. Try again.");
-        }
+         !num
+            ? window.alert("No input found")
+            : window.alert(num * 2);
       }
       const paraDouble = (num) => {
-        if (!num) {
-          window.alert("No input found");
-        } else {
-          !isNaN(num)
-            ? document.getElementById("change-to-output").innerHTML = Number(num) * 2
-            : window.alert("Not a valid number. Try again.");
-        }
+         !num
+            ? window.alert("No input found")
+            : document.getElementById("change-to-output").innerHTML = num * 2;
       }
       const inboxDouble = (num) => {
-        if (!num) {
-          window.alert("No input found");
-        } else {
-          !isNaN(num)
-            ? document.getElementById("numinbox").value = Number(num) * 2
-            : window.alert("Not a valid number. Try again.");
-        }
+         !num
+            ? window.alert("No input found")
+            : document.getElementById("numinbox").value = num * 2;
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1> Question Three </h1>
+   <h1> Question Three </h1>
 
-    <p>a. Make a website with an input field and a button.  Have a heading at the top that reads "Double your number below" 
-      When the user clicks on the button, display an alert showing that number times two.</p>
-      
-    <p>b. Instead of showing a popup, make the doubled number appear in a paragraph below.</p>
-      
-    <p>c. Make the doubled number instead appear inside the input</p>
+   <p>a. Make a website with an input field and a button. Have a heading at the top that reads "Double your number
+      below". When the user clicks on the button, display an alert showing that number times two.</p>
 
-    <hr>
+   <p>b. Instead of showing a popup, make the doubled number appear in a paragraph below.</p>
 
-    <h1>Double Your Number Below</h1>
+   <p>c. Make the doubled number instead appear inside the input</p>
 
-    <p id="change-to-output">This used to be my paragraph. Used to be.</p>
-    
-    <form id="doubleNum-alert">
+   <hr>
+
+   <h1>Double Your Number</h1>
+
+   <p id="change-to-output">This used to be my paragraph. Used to be.</p>
+
+   <form id="doubleNum-alert">
       <div>
-        <label for="numalert">Enter number to double in alert:</label>
-        <input type="number" name="numalert" id="numalert">
+         <label for="numalert">Enter number to double in alert:</label>
+         <input type="number" name="numalert" id="numalert">
       </div>
 
       <input type="submit" value="Send to Alert" onclick="alertDouble(numalert.value); return false;">
-    </form>
-    <br>
+   </form>
+   <br>
 
-    <form id="doubleNum-para">
+   <form id="doubleNum-para">
       <div>
-        <label for="numpara">Enter number to double in paragraph:</label>
-        <input type="number" name="numpara" id="numpara">
+         <label for="numpara">Enter number to double in paragraph:</label>
+         <input type="number" name="numpara" id="numpara">
       </div>
 
-      <input type="submit" onclick="paraDouble(numpara.value); return false;">
-    </form>
-    <br>
+      <input type="submit" value="Send to Paragraph" onclick="paraDouble(numpara.value); return false;">
+   </form>
+   <br>
 
-    <form id="doubleNum-into-input">
+   <form id="doubleNum-into-input">
       <div>
-        <label for="numinbox">Enter number to double into input box:</label>
-        <input type="number" name="numinbox" id="numinbox">
+         <label for="numinbox">Enter number to double into input box:</label>
+         <input type="number" value="Replace" name="numinbox" id="numinbox">
       </div>
 
       <input type="submit" onclick="inboxDouble(numinbox.value); return false;">
-    </form>
+   </form>
 
-    <script>
-        document.getElementById("numalert").focus();
-        document.getElementById("numalert").select();
-    </script>
+   <script>
+      document.getElementById("numalert").focus();
+      document.getElementById("numalert").select();
+   </script>
 
-  </body>
+</body>
+
 </html>

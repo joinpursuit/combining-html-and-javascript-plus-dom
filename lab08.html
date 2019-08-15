@@ -1,66 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Lab 8</title>
+   <title>Question 8 | Combining HTML & JS + DOM Lab</title>
 
-    <script>
+   <script>
       const avgThree = (num1, num2, num3) => {
-        if (!num1 || !num2 || !num3) {
-          window.alert("Please check your inputs and try again")
-        } else if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
-          window.alert("All of your inputs must be numbers");
-        } else {
-          let output = ((Number(num1) + Number(num2) + Number(num3)) / 3);
-          document.getElementById("changingthis").innerText = output;
-          window.alert(output);
-        }
+         if (!num1 || !num2 || !num3) {
+            window.alert("Please check your inputs and try again");
+         } else if (isNaN(num1) || isNaN(num2) || isNaN(num3)) { // error checks hyphens and periods
+            window.alert("All of your inputs must be numbers");
+         } else {
+            let output = (Number(num1) + Number(num2) + Number(num3)) / 3;
+            document.getElementById("changingthis").innerText = `Average: ${output}`;
+            window.alert(`Average: ${output}`);
+         }
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Eight</h1>
+   <h1>Question Eight</h1>
 
-      <p>a. Make a website with a heading at the top that reads "Average of Three Numbers".  Add 3 input fields and a button.  When 
-        the user clicks the button, display an alert that shows the average of all 3 text fields.</p>
-      
-      <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
-        
-      <p>c. If any of the text fields doesn't have a number, show an error message that reads "All of the inputs must be numbers"</p>
+   <p>a. Make a website with a heading at the top that reads "Average of Three Numbers". Add 3 input fields and a button. 
+      When the user clicks the button, display an alert that shows the average of all 3 text fields.</p>
 
-      <hr>
+   <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
 
-      <h1>Average of Three Numbers</h1>
+   <p>c. If any of the text fields doesn't have a number, show an error message that reads "All of the inputs must be
+      numbers"</p>
 
-      <form id="averagethree">
-        <div>
-          <label for="numone">Number 1:</label>
-          <input type="number" name="numone" id="numone">
-        </div>
+   <hr>
 
-        <div>
-          <label for="numtwo">Number 2:</label>
-          <input type="number" name="numtwo" id="numtwo">
-        </div>
+   <h1>Average of Three Numbers</h1>
 
-        <div>
-          <label for="numthree">Number 3:</label>
-          <input type="number" name="numthree" id="numthree">
-        </div>
+   <form id="averagethree">
+      <div>
+         <label for="numone">Number 1:</label>
+         <input type="number" name="numone" id="numone">
+      </div>
 
-        <input type="submit" value="Calculate" onclick="avgThree(numone.value, numtwo.value, numthree.value); return false;">
-      </form>
+      <div>
+         <label for="numtwo">Number 2:</label>
+         <input type="number" name="numtwo" id="numtwo">
+      </div>
 
-      <p id="changingthis">Replace me!</p>
+      <div>
+         <label for="numthree">Number 3:</label>
+         <input type="number" name="numthree" id="numthree">
+      </div>
 
-      <script>
-        document.getElementById("numone").focus();
-        document.getElementById("numone").select();
-      </script>
+      <input type="submit" value="Calculate" onclick="avgThree(numone.value, numtwo.value, numthree.value); return false;">
+   </form>
 
-  </body>
+   <p id="changingthis">Replace me!</p>
+
+   <script>
+      document.getElementById("numone").focus();
+      document.getElementById("numone").select();
+   </script>
+
+</body>
+
 </html>

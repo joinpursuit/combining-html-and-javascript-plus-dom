@@ -1,57 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
 
-    <meta name="author" content="Joseph P. Pasaoa">
+<head>
+   <meta name="author" content="Joseph P. Pasaoa">
 
-    <title>Lab 6</title>
+   <title>Question 6 | Combining HTML & JS + DOM Lab</title>
 
-    <script>
+   <script>
       function upperCounter(str) {
-        if (!str) {
-          window.alert("No input entered")
-        } else {
-          let chars = str.split('');
-          let uppers = chars.filter( (char) => {
-              if (char.toLowerCase() !== char.toUpperCase()) {
-                return char === char.toUpperCase();
-              }
-          } );
-          document.getElementById('changingthis').innerText = uppers.length;
-          return window.alert(uppers.length);
-        }
+         if (!str) {
+            window.alert("No input entered");
+         } else {
+            let chars = str.split('');
+            let uppers = chars.filter((char) => {
+               if (char.toLowerCase() !== char.toUpperCase()) {
+                  return char === char.toUpperCase();
+               }
+            } );
+            document.getElementById('changingthis').innerText = uppers.length;
+            return window.alert(uppers.length);
+         }
       }
-    </script>
+   </script>
+</head>
 
-  </head>
-  <body>
+<body id="home">
 
-    <h1>Question Six</h1>
+   <h1>Question Six</h1>
 
-    <p>a. Make a website with a heading at the top that reads "String Capital Counter".  Add an input field and a button.  When the user 
+   <p>a. Make a website with a heading at the top that reads "String Capital Counter". Add an input field and a button.
+      When the user
       clicks the button, display an alert that contains a count of how many capital letters are in the string.</p>
-    
-    <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
 
-    <hr>
+   <p>b. Instead of showing a popup, have that information appear in a paragraph below the button.</p>
 
-    <h1>String Capital Counter</h1>
-    
-    <form id="count-uppers">
-      <div>
-        <label for="checkthis">Check this:</label>
-        <input type="text" name="checkthis" id="checkthis">
-      </div>
+   <hr>
+
+   <h1>String Capital Counter</h1>
+
+   <form id="count-uppers">      
+      <label for="checkthis">Check this:</label>
+      <input type="text" name="checkthis" id="checkthis">
 
       <input type="submit" value="Submit" onclick="upperCounter(checkthis.value); return false;">
-    </form>
+   </form>
 
-    <p id="changingthis">Replace me!</p>
+   <p id="changingthis">Replace me!</p>
 
-    <script>
-        document.getElementById("checkthis").focus();
-        document.getElementById("checkthis").select();
-    </script>
+   <script>
+      document.getElementById("checkthis").focus();
+      document.getElementById("checkthis").select();
+   </script>
 
-  </body>
+</body>
+
 </html>
