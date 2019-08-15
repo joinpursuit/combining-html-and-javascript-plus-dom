@@ -8,18 +8,18 @@
 
    <script>
       const alertDouble = (num) => {
-         !num
-            ? window.alert("No input found")
+         !num || isNaN(num) // checks also for error hyphens and periods
+            ? window.alert("Input is not valid. Please try again")
             : window.alert(num * 2);
       }
       const paraDouble = (num) => {
-         !num
-            ? window.alert("No input found")
+         !num || isNaN(num)
+            ? window.alert("Input is not valid. Please try again")
             : document.getElementById("change-to-output").innerHTML = num * 2;
       }
       const inboxDouble = (num) => {
-         !num
-            ? window.alert("No input found")
+         !num || isNaN(num)
+            ? window.alert("Input is not valid. Please try again")
             : document.getElementById("numinbox").value = num * 2;
       }
    </script>
