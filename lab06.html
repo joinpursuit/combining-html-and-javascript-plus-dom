@@ -12,13 +12,11 @@
             window.alert("No input entered");
          } else {
             let chars = str.split('');
-            let uppers = chars.filter((char) => {
-               if (char.toLowerCase() !== char.toUpperCase()) {
-                  return char === char.toUpperCase();
-               }
+            let uppers = chars.filter( (char) => {
+               return char.toLowerCase() !== char.toUpperCase() && char === char.toUpperCase();
             } );
             document.getElementById('changingthis').innerText = uppers.length;
-            return window.alert(uppers.length);
+            window.alert(uppers.length);
          }
       }
    </script>

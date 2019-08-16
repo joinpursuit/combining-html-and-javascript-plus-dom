@@ -13,21 +13,17 @@
          } else {
             let chars1 = string1.split('');
             let chars2 = string2.split('');
-            let uppers1 = chars1.filter((char) => {
-               if (char.toLowerCase() !== char.toUpperCase()) {
-                  return char === char.toUpperCase();
-               };
+            let uppers1 = chars1.filter( (char) => {
+               return char.toLowerCase() !== char.toUpperCase() && char === char.toUpperCase();
             } );
-            let uppers2 = chars2.filter((char) => {
-               if (char.toLowerCase() !== char.toUpperCase()) {
-                  return char === char.toUpperCase();
-               };
+            let uppers2 = chars2.filter( (char) => {
+               return char.toLowerCase() !== char.toUpperCase() && char === char.toUpperCase();
             } );
             let output;
             if (uppers1.length > uppers2.length) {
-               output = `INPUT ONE has the more capital letters: ${uppers1.length} v ${uppers2.length}`;
+               output = `INPUT ONE has more capital letters: ${uppers1.length} v ${uppers2.length}`;
             } else if (uppers1.length < uppers2.length) {
-               output = `INPUT TWO has the more capital letters: ${uppers1.length} v ${uppers2.length}`;
+               output = `INPUT TWO has more capital letters: ${uppers1.length} v ${uppers2.length}`;
             } else {
                output = `Both inputs have an equal number of capital letters: ${uppers2.length}`;
             }
