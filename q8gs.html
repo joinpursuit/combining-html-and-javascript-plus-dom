@@ -1,0 +1,44 @@
+<!-- a. Make a website with a heading at the top that reads "Average of
+Three Numbers".  Add 3 input fields and a button.  When the user
+clicks the button, display an alert that shows the average of all
+3 text fields.
+b. Instead of showing a popup, have that information appear in a
+paragraph below the button.
+c. If any of the text fields doesn't have a number, show an error
+message that reads "All of the inputs must be numbers" -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 8</title>
+    <h1>Average of Three Numbers</h1>
+  </head>
+  <input type="text" id="number1" placeholder="Insert a number here">
+  <br>
+  <input type="text" id="number2" placeholder="Insert a number here">
+  <br>
+  <input type="text" id="number3" placeholder="Insert a number here">
+  <br>
+  <button onclick="average()">Click to average numbers!</button>
+  <br>
+  <p id="paragraph"></p>
+  <body>
+      <script>
+        const average = () => {
+          let input1 = document.getElementById("number1")
+            let number1 = Number(document.getElementById("number1").value)
+          let input2 = document.getElementById("number2")
+            let number2 = Number(document.getElementById("number2").value)
+          let input3 = document.getElementById("number3")
+            let number3 = Number(document.getElementById("number3").value)
+          if(!isNaN(number1) && !isNaN(number2) && !isNaN(number3)){
+            window.alert("All of the inputs must be numbers.")
+          } else {
+            let sum = number1 + number2 + number3
+            let result = Math.floor(sum / 3)
+            window.alert(`The average of these three numbers is ${result}`)
+            document.getElementById("paragraph").innerText = (`The average of these three numbers is ${result}`)
+            }
+          }
+        </script>
+  </body>
+</html>

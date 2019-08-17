@@ -1,0 +1,42 @@
+<!-- a. Make a website with a heading at the top that reads
+"String Capital Counter Comparer".  Add 2 input fields and a button.
+When the user clicks the button, display an alert that shows which
+string has more capital letters in it.
+b. Instead of showing a popup, have that information appear in a
+paragraph below the button. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 7</title>
+    <h1> String Capital Counter Comparer</h1>
+  </head>
+  <input type="text" id="firststring" placeholder="Insert text here">
+  <br>
+  <input type="text" id="secondstring" placeholder="Insert text here">
+  <br>
+  <button onclick="compare()"> Compare Capital Letters! </button>
+  <br>
+  <p id="paragraph"></p>
+  <body>
+    <script>
+      const compare = () => {
+        let string1 = document.getElementById('firststring').value
+        let string2 = document.getElementById('secondstring').value
+
+        let capitalCount1 = Number((string1.match(/[A-Z]/g)).length)
+        let capitalCount2 = Number((string2.match(/[A-Z]/g)).length)
+
+        // if(isNaN(capitalCount1) || isNaN(capitalCount2)) {
+        //   window.alert('Please input at least one capital letter')
+        // } else
+        if(capitalCount1 > capitalCount2) {
+          window.alert(`Your first phrase, "${string1}", has more capital letters than your second one,"${string2}"`)
+          document.getElementById("paragraph").innerText = (`Your first phrase, "${string1}", has more capital letters(${capitalCount1}) than your second one, "${string2}"(${capitalCount2})`)
+        } else if(capitalCount1 < capitalCount2){
+          window.alert(`Your second phrase, "${string2}", has more capital letters(${capitalCount2}) than your first one,"${string1}" (${capitalCount1})`)
+          document.getElementById("paragraph").innerText = (`Your second phrase, "${string2}, has more capital letters than your first one,${string2}"`)
+        }
+      }
+      </script>
+  </body>
+</html>

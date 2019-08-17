@@ -1,0 +1,43 @@
+<!-- a. Make a website with a heading at the top that reads "Check Middle Number Sum".
+Add 3 input fields and a button.  When the user clicks the button, display an
+alert that shows whether the number in the middle input field is equal to the sum
+of the left input field and the right input field.
+```
+Sample input: 4, 14, 10
+Sample output: true
+Sample input: 4,9,8
+Sample output: false
+```
+b. Instead of showing a popup, have that information appear in a paragraph below the button.
+c. Have the uppercased overwrite the text that was there before. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 9</title>
+    <h1>Check Middle Number Sum</h1>
+  </head>
+  <input type="text" id="number1" placeholder="Input number here">
+  <br>
+  <input type="text" id="number2" placeholder="Input number here">
+  <br>
+  <input type="text" id="number3" placeholder="Input number here">
+  <br>
+  <button onclick="middleNumberSum()">Check</button>
+  <body>
+    <script>
+      const middleNumberSum = () => {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let number3 = Number(document.getElementById("number3").value)
+        let sum = number1 + number3
+        if(number2 === sum){
+          // window.alert(`Your first number, ${number1} + your last number, ${number3} is equal to your middle number, ${number2}.`)
+          window.alert('true')
+        } else {
+          // window.alert(`Your first number, ${number1} + your last number, ${number3} is not equal to your middle number, ${number2}.`)
+          window.alert('false')
+        }
+      }
+    </script>
+  </body>
+</html>

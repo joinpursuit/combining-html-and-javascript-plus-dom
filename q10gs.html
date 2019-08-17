@@ -1,0 +1,55 @@
+<!-- a. Make a website with a heading at the top that reads "Disemvoweler".  Add 1 input field,
+a checkbox and a button. When the user clicks the button, display an alert that shows the
+text in the input field with the vowels removed.  If the checkbox is checked, count y as a vowel.
+b. Instead of showing a popup, have that information appear in a paragraph below the button.
+c. Have the uppercased overwrite the text that was there before. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 10</title>
+    <h1>Disemvoweler</h1>
+  </head>
+  <input type="text" id="input" placeholder="insert a word here">
+  <input type="checkbox" id="box">Check to remove y's
+  <br>
+  <button onclick="disemvowel()"> Click to remove vowels!</button>
+  <br>
+  <p id="paragraph"></p>
+  <br>
+  <body>
+  <script>
+    const disemvowel = () => {
+      let input = document.getElementById('input').value
+      let str = input.toLowerCase()
+      let checkbox = document.getElementById('box')
+
+      if(checkbox.checked){
+        let stringNoY = str.match(/[bcdfghjklmnpqrstvwxz]/g)
+        window.alert(stringNoY.join(''))
+      } else{
+        let stringY = str.match(/[bcdfghjklmnpqrstvwxyz]/g)
+        window.alert(stringY.join(''))
+      }
+  }
+  </script>
+  </body>
+</html>
+<!--
+      for(let i = 0; i < str.length; i++){
+if(checkbox.checked){
+  if(str[i] !== 'a' || str[i] !== 'e' || str[i] !== 'i' || str[i] !== 'o' || str[i] !== 'u' || str[i] !== 'y'){
+      newStr += str[i]
+      window.alert(`${newStr}`)
+  } else {
+    window.alert(`Your input, ${input}, does not have any vowels.`)
+  }
+}
+else {
+  if(str[i] !== 'a' || str[i] !== 'e' || str[i] !== 'i' || str[i] !== 'o' || str[i] !== 'u'){
+    newStr += str[i]
+    window.alert(`${newStr}`)
+  } else {
+    window.alert(`Your input, ${input}, does not have any vowels.`)
+}
+}
+} -->

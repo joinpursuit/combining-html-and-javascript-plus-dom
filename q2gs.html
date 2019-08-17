@@ -1,0 +1,30 @@
+<!-- # Question Two
+a. Make a website that prompts the user for a string,
+then alerts them of whether or not the number is even.
+b. Instead of showing a popup, make the text appear on the screen. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 2</title>
+  </head>
+  <body>
+    <script>
+      const isEven = (answer) => {
+      answer = window.prompt(`Input a number`)
+      if(isNaN(answer)){
+        window.alert('That is not a number. Please input a number.')
+        isEven()
+      }else{
+        if(parseInt(answer) % 2 === 0){
+          // window.alert(`Your number: ${answer} is even.`)
+          document.write(`Your number : ${answer} is even.`)
+        } else{
+          // window.alert(`Your number: ${answer} is odd.`)
+          document.write(`Your number : ${answer} is even.`)
+        }
+      }
+    }
+    isEven()
+    </script>
+  </body>
+</html>

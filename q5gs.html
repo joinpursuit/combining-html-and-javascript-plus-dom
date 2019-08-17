@@ -1,0 +1,28 @@
+<!-- a. Make a website with a heading at the top that reads "String Uppercaser".
+Add an input field and a button.  When the user clicks the button, display
+an alert that contains the uppercased text of the input text field.
+b. Instead of showing a popup, have that information appear in a paragraph
+below the button.
+c. Have the uppercased overwrite the text that was there before. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 5</title>
+    <h1>String Uppercaser</h1>
+  </head>
+
+  <input type="text" id="strbox">
+  <button onclick="uppercased()">Uppercase Me!</button>
+  <p id="paragraph"></p>
+  <body>
+    <script>
+      const  uppercased = () => {
+        let str = document.getElementById("strbox").value
+        let upperStr = str.toUpperCase()
+        // return window.alert(upperStr)
+        // document.getElementById("paragraph").innerText = upperStr
+        document.getElementById("strbox").value = upperStr
+      }
+    </script>
+  </body>
+</html>

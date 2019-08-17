@@ -1,0 +1,34 @@
+<!-- a. Make a website with a heading at the top that reads "Palindrome detector".
+Add an input field and a button.  When the user clicks the button, display an
+alert that says whether or not the text in the input field is a palindrome
+(the same backwards and forwards).
+b. Instead of showing a popup, have that information appear in a paragraph
+below the button. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number 4</title>
+    <h1>Palindrome detector</h1>
+  </head>
+  <body>
+    <input type="text" id="input">
+    <button onclick = "isPalindrome()">Check</button>
+    <p id="paragraph"></p>
+<script>
+  const isPalindrome = () => {
+    let string = document.getElementById("input").value
+    let reversedStr = "";
+    for(let i = string.length - 1; i >= 0; i--){
+      reversedStr += string[i]
+    }
+    if(reversedStr === string){
+      // window.alert(`The word ${string} has Palindrome Syndrome. It is the same spelt backwards.`)
+      document.getElementById("paragraph").innerText = `The word ${string} has Palindrome Syndrome. It is the same spelt backwards.`
+    } else {
+      // window.alert(`The word ${string} doesn't have Palindrome Syndrome. It is different spelt backwards.`)
+      document.getElementById("paragraph").innerText = `The word ${string} doesn't have Palindrome Syndrome. It is different spelt backwards.`
+    }
+  }
+  </script>
+  </body>
+</html>

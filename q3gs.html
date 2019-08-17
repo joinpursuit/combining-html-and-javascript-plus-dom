@@ -1,0 +1,32 @@
+<!-- a. Make a website with an input field and a button.  Have a
+heading at the top that reads "Double your number below"  When the
+user clicks on the button, display an alert showing that number times two.
+b. Instead of showing a popup, make the doubled number appear
+in aparagraph below.
+c. Make the doubled number instead appear inside the input -->
+<!DOCTYPE html>
+  <head>
+    <title>Number 3</title>
+  </head>
+  <body>
+    <h2>Double Your Number Below </h2>
+    <br>
+    <input type="text" id="numberinput" placeholder="example: 7">
+    <button onclick = "doubleYourNumber()"> Start </button>
+    <p id="output"></p>
+    <script>
+      const doubleYourNumber = () => {
+        let number = document.getElementById("numberinput").value
+        if(isNaN(number)){
+          window.alert(`That is not a number, try again.`)
+        } else{
+          let doubleNum = parseInt(number) * 2
+          // window.alert(`Your number doubled is ${doubleNum}`)
+          // document.write(doubleNum)
+          document.getElementById("output").innerText = doubleNum
+          document.getElementById("numberinput").value = doubleNum
+        }
+      }
+    </script>
+  </body>
+</html>
