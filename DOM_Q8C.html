@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DOM_Q8A</title>
+    <title>DOM_Q8C</title>
   </head>
   <body>
     <h1>Average of Three Numbers</h1>
@@ -14,14 +14,19 @@
       <input type = "text" name = "numThree"  id = "num_three_avg"></p><br>
     </form>
     <button onclick="doAvg()">Click to find Average</button>
+    <p id ="on_screen"></p>
     <script>
       const doAvg = () => {
         let valOne = parseInt(document.getElementById('num_one_avg').value)
         let valTwo = parseInt(document.getElementById('num_two_avg').value)
         let valThree = parseInt(document.getElementById('num_three_avg').value)
-        let avgNums = Math.Floor(valOne + valTwo + valThree) / 3
-            window.alert(`Your average is ${avgNums}`)
-      }
+        let avgNums = Math.floor(valOne + valTwo + valThree)/3
+          if (isNaN(valOne) || isNaN(valTwo) || isNaN(valThree)){
+           window.alert(`Error: All of the inputs must be numbers.`)
+          } else {
+           window.alert(avgNums)
+          }
+        }
     </script>
   </body>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DOM_Q9A</title>
+    <title>DOM_Q9B</title>
   </head>
   <body>
     <h1>Check Middle Number Sum</h1>
@@ -14,17 +14,17 @@
       <input type = "text" name = "numThree"  id = "num_three_right"></p><br>
     </form>
     <button onclick="midSum()">Check the Sum</button>
+    <p id ="on_screen"></p>
     <script>
       const midSum = () => {
         let valOne = parseInt(document.getElementById('num_one_left').value)
         let valTwo = parseInt(document.getElementById('num_two_mid').value)
         let valThree = parseInt(document.getElementById('num_three_right').value)
         if (valOne + valThree === valTwo) {
-          window.alert(`The middle number is equal to the sum of top and bottom number`)
+          window.alert('The middle number is equal to the sum of the top and bottom number')
         } else {
-          window.alert(`The middle number IS NOT equal to the sum of the top and bottom number`)
+          window.alert('The middle number IS NOT EQUAL to sum of the top and bottom number')
         }
-
       }
     </script>
   </body>

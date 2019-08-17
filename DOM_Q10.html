@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_Q10A</title>
+  </head>
+  <body>
+    <h1>Disemvoweler</h1>
+    <p>a. Make a website with a heading at the top that reads "Disemvoweler".
+      Add 1 input field, a checkbox and a button. <br>When the user clicks the
+      button, display an alert that shows the text in the input field with the
+      vowels removed. <br>If the checkbox is checked, count y as a vowel.</p>
+
+    <p>b. Instead of showing a popup, have that information appear in a
+      paragraph below the button.</p>
+    <form>
+      <label for = "string">Enter a word or phrase:</label>
+      <input type = "text" name = "string"  id = "words"><br>
+      <br>
+      <label for = "isY">Word/Phrase includes letter "Y"</label>
+      <input type = "checkbox" name = "isY"><br>
+      <br>
+    </form>
+    <button onclick="remVowel()">Remove the vowels</button>
+    <p id ="on_screen"></p>
+    <script>
+      const remVowel = () => {
+        let inputStr = document.getElementById("words").value
+        let newStr = '';
+        for (let i = 0; i <= inputStr.length; i++) {
+          let lower = inputStr.toLowerCase();
+          if (lower !== 'a' && lower !==  'e' && lower !==  'i' && lower !== 'o' && lower !==  'u') {
+          newStr += inputStr[i]
+          }
+        }
+         window.alert(newStr);
+      }
+
+
+    </script>
+  </body>
+
+</html>
