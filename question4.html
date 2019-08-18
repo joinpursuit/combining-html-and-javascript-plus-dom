@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 4</title>
+</head>
+<body>
+    <h1>Palindrome detector</h1>
+    <input type="text" name="" id="theInput">
+    <br><br>
+    <button onclick="isPalindrome()">Submit</button>
+    <h1 id="theOutput"></h1>
+    <script>
+        const isPalindrome = () => {
+            let input = document.querySelector("#theInput");
+            let arrayedInput = input.value.split("").reverse().join("");
+            let theOutput = document.querySelector("#theOutput")
+            if(input.value === arrayedInput) {
+                window.alert("It's a palindrome");
+                theOutput.innerText = "It's a palindrome";
+            }  else {
+                window.alert("It's not a palindrome");
+                theOutput.innerText = "It's not a palindrome";
+            }
+        }
+
+    </script>
+</body>
+</html>
