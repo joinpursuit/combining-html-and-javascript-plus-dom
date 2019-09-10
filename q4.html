@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palindrome Detector</title>
+    </head>
+    <body>
+        <h1>Palindrome Detector</h1>
+        <label for = "palindrome"  value = "palindrome">Text</label>
+        <input type = "text" name = "Palindrome" id = "palindrome" placeholder="type here"/>
+        <button onclick = "palindromeFunct()">CHECK</button>
+        <p id = 'result'></p>
+    <script>
+    let string = document.getElementById('palindrome')
+    let palinText = document.getElementById('result')
+    function palindromeFunct(){
+        let palinString = string.value//.toLowerCase()
+        let palinArray = palinString.split('').reverse().join('')
+        
+        if (palinArray === palinString){
+            //window.alert("it's a palindrome")
+            palinText.innerText = "This is a palindrome"
+        }else{
+            //window.alert("this is not a palindrome")
+            palinText.innerText = "This is not a palindrome"
+        }
+    }
+    
+    
+    </script>
+    </body>
+</html>

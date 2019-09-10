@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_Q6A</title>
+  </head>
+  <body>
+    <h1>String Capital Counter</h1>
+    <p>Enter a word:
+    <input type = "text" id = "count_char">
+    <p id = "char_count"></p>
+    <button onclick="countCharStr()">How many cap letter(s)</button>
+    <script>
+      let string = document.getElementById('char_count')
+      const countCharStr = () => {
+        let inputStr = document.getElementById('count_char').value
+        
+        let countCapChar = inputStr.replace(/[a-z]/g, "").length
+        //let countCapChar2 = inputStr.replace(/[a-z]/g, "")
+        window.alert(countCapChar)
+        string.innerText = countCapChar
+            
+      }
+    </script>
+  </body>
+​
+</html>

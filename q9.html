@@ -1,0 +1,56 @@
+<!-- # Question Nine
+
+a. Make a website with a heading at the top that reads "Check Middle Number Sum".  Add 3 input fields and a button.  When the user clicks the button, display an alert that shows whether the number in the middle input field is equal to the sum of the left input field and the right input field.
+
+```
+Sample input: 4, 14, 10
+Sample output: true
+
+Sample input: 4,9,8
+Sample output: false
+```
+
+b. Instead of showing a popup, have that information appear in a paragraph below the button.
+
+c. Have the uppercased overwrite the text that was there before. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Question 9 </title>
+  </head>
+  <body>
+    <h1> Check Middle Number Sum </h1>
+    <form>
+      <label for = 'number1'> First number: </label>
+      <input type = 'text' name = 'number1' id = 'num1'>
+      <label for = 'number2'> Second number: </label>
+      <input type = 'text' name = 'number2' id = 'num2'>
+      <label for = 'number3'> Third Number: </label>
+      <input type = 'text' name = 'number3' id = 'num3'>
+    </form>
+    <br>
+    <button onclick = 'middleSum()'> Middle Sum </button>
+    <script>
+      let answer = document.createElement('p');
+      const middleSum = () => {
+        let input = parseInt(document.getElementById('num1').value)
+        let input2 = parseInt(document.getElementById('num2').value)
+        let input3 = parseInt(document.getElementById('num3').value)
+        if (isNaN(input) || isNaN(input2) || isNaN(input3)){
+          window.alert(`Error: All of the inputs must be numbers.`)
+          answer.innerText = 'Error: All of the inputs must be numbers';
+          document.body.appendChild(answer);
+        } else if(input + input3 === input2){
+          window.alert(true)
+          answer.innerText = 'Middle sum is true';
+          document.body.appendChild(answer);
+        } else {
+          window.alert(false)
+          answer.innerText = 'Middle sum is false';
+          document.body.appendChild(answer);
+        }
+      }
+    </script>
+  </body>
+</html>

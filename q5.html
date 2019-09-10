@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            String UpperCase
+        </title>
+    </head>
+    <body>
+        <h1> String UpperCase</h1>
+        <label for = "UpperCase" value = "UpperCase">String</label>
+        <input type = "text" id = "UpperCase" placeholder="type string here">
+        <button onclick= "stringUpperCase()">Press</button>
+        <p id = "text">Input Will Appear Here</p>
+        
+        <script>
+        let upperString = document.getElementById("UpperCase")
+        let text = document.getElementById("text")
+        function stringUpperCase(){
+            window.alert(upperString.value.toUpperCase())
+            upperString.value = upperString.value.toUpperCase()
+            // let p = document.createElement('p')
+            //  p.innerText = upperString.value.toUpperCase()
+            //  document.body.appendChild(p)
+        }
+        </script>
+    </body>
+</html>

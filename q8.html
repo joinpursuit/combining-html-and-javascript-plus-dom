@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_Q8</title>
+  </head>
+  <body>
+    <h1>Average of Three Numbers</h1>
+    <p>Enter 3 numbers:
+    <input type = "text" id = "input1">
+    <input type = "text" id = "input2">
+    <input type = "text" id = "input3">
+    
+    
+    <button onclick="AverageSum()">Average all Numbers</button>
+    <script>
+      let paragraph = document.createElement("P") // created element
+      function AverageSum(){
+      //creating the variable for taking in strings and putting them into numbers
+      let num1 = document.getElementById("input1").value //num1 equal to 1st input box
+      let num2 = document.getElementById("input2").value//num2 equal to 2nd input box
+      let num3 = document.getElementById("input3").value//num3 equal to 3rd input box
+
+
+
+      let numArray = [Number(num1),Number(num2),Number(num3)]//made and array of 3 and used the number function to turn the string into a number
+      let avg = 0 // average variable of all numbers added up 
+      let total = 0// the total of all numbers in the array 
+       for (i = 0; i < numArray.length; i++)
+      {
+         total += numArray[i]
+         
+      }
+      
+      
+      avg = total / numArray.length;
+      if( num1 === '' || num2 === '' || num3 === '') {
+        window.alert('please input number values')
+      }else{
+        window.alert(`the average is ${avg}`)// it worked
+      }
+      console.log(avg)// debug to see how everything worked
+      console.log()
+      
+      
+
+      //create a paragragh element and fill its value
+      
+      paragraph.innerText = avg; // add value to the element
+      console.log(paragraph.innerText)
+      document.body.appendChild(paragraph);// appeneded the document with the new element
+    }   
+        
+      
+    </script>
+  </body>
+​
+</html>

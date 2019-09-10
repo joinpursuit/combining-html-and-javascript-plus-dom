@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Double Your Number</title>
+</head>
+    <body>
+        <h1>Double your Number Below</h1>
+        <div>
+            <label for = "Input">Your Number</label>
+            <input type = "text" name = "input" id = "number" placeholder="input your number here"/>
+            <!-- <input type = "submit" value = "double"/> -->
+            <p id = "paragraph">your number is:</p>
+            <button onclick="windowAlert()">Sumbit</button>
+            <br>
+        
+        </div>
+    <script>
+        function windowAlert()
+        {   
+            let input = document.getElementById("number")
+            let string = document.getElementById("paragraph")
+            window.alert(input.value * 2)
+            string.innerText = ` your number is :  ${input.value * 2}`;
+            input.value = input.value * 2;
+        }   
+    </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM_Q7</title>
+  </head>
+  <body>
+    <h1>String Capital Counter</h1>
+    <p>Enter a word:
+    <input type = "text" id = "count_char">
+    <input type = "text" id = "count_char2">
+    
+    <p id = "char_count"></p>
+    <button onclick="countCharStr()">How many cap letter(s)</button>
+    <script>
+      let string = document.getElementById('char_count')
+      // let string2 = document.getElementById('char_count2')
+      const countCharStr = () => {
+        
+        let inputStr = document.getElementById('count_char').value // give the value of the input box to variable
+        let inputStr2 = document.getElementById('count_char2').value // repeat for second input box
+        let countCapChar = inputStr.replace(/[a-z]/g, "").length
+        let countCapChar2 = inputStr2.replace(/[a-z]/g, "").length
+        let result = document.createElement("p");
+        // countCapChar > countCapChar2? window.alert(`${inputStr} has more capitals then ${inputStr2}`) : window.alert(`${inputStr2} hase more capitals then ${inputStr}`) 
+         //window.alert(countCapChar)
+        // string.innerText = countCapChar
+        // countCapChar > countCapChar2? string.innerText =`${inputStr} has more capitals then ${inputStr2}` : string.innerText = `${inputStr2} hase more capitals then ${inputStr}`     
+        console.log('I clicked button')
+        console.log (countCapChar);
+        if (countCapChar === countCapChar2){
+          console.log('if statement');
+          window.alert(/*string.innerText =*/ `${inputStr} and ${inputStr2} has the same amount of capitals in it`); 
+          result.innerText = `${inputStr} and ${inputStr2} has the same amount of capitals in it`;
+          document.body.appendChild(result);
+         }
+         else if(countCapChar > countCapChar2) {
+          window.alert(`${inputStr} has more capitals then ${inputStr2}`) 
+       }else if(countCapChar < countCapChar2){
+         window.alert( `${inputStr2} has more capitals then ${inputStr}`)
+       }
+      }
+    </script>
+  </body>
+​
+</html>
