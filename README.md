@@ -2,7 +2,7 @@
 
 # Question One
 
-a. Make a website that prompts the user for a string, then a number. Then show a popup that displays the string that many times
+a. Make a website that prompts the user for a string. Then show a popup that displays the string.
 
 b. Instead of showing a popup, make the text appear on the screen.
 
