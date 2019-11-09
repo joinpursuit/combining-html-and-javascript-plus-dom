@@ -18,7 +18,12 @@ document.addEventListener("DOMContentLoaded",() => {
         //     document.getElementById("age").innerText = output 
         // }
         
-        let doubleInput = prompt("Enter a Number")
+
+// let doubleInput = prompt("Enter a Number")
+// let num = document.getElementById("#number")
+document.querySelector("#number")
+
+// console.log(num)
 
 
 
