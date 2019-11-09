@@ -27,7 +27,11 @@ document.addEventListener("DOMContentLoaded",() => {
         
         
     })
-    const TimesTwo = () => {
-     document.querySelector("#num").innerText = num.value * 2;
-     num.value = document.querySelector("#num").innerText
+    const Times2 = () => {
+     let input = document.querySelector("#num").value;
+    //  document.getElementById("#num").innerText = num.value * 2;
+     console.log(input *2)
+     alert(input*2)
+
+     
      }
