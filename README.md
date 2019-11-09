@@ -14,7 +14,7 @@ b. Instead of showing a popup, make the text appear on the screen.
 
 # Question Three
 
-a. Make a website with an input field and a button.  Have a heading at the top that reads "Double your number below"  When the user clicks on the button, display an alert showing that number times two.
+a. Make a website with an   input field and a button.  Have a heading at the top that reads "Double your number below"  When the user clicks on the button, display an alert showing that number times two.
 
 b. Instead of showing a popup, make the doubled number appear in a paragraph below.
 
