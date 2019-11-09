@@ -18,14 +18,16 @@ document.addEventListener("DOMContentLoaded",() => {
         //     document.getElementById("age").innerText = output 
         // }
         
+        
+        // let doubleInput = prompt("Enter a Number")
+        // let num = document.getElementById("#number")
+        // console.log(num)
+        
 
-// let doubleInput = prompt("Enter a Number")
-// let num = document.getElementById("#number")
-document.querySelector("#number")
-
-// console.log(num)
-
-
-
-
-})
+        
+        
+    })
+    const TimesTwo = () => {
+     document.querySelector("#num").innerText = num.value * 2;
+     num.value = document.querySelector("#num").innerText
+     }
