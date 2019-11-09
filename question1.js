@@ -19,37 +19,28 @@
 
 // })
 //question 3
-document.addEventListener("DOMContentLoaded", () => {
-// let numberAnswer = document.querySelector("#num").innerText
+// document.addEventListener("DOMContentLoaded", () => {
 
-  
+// })
 
-// alert (Number(numberAnswer) * 2)
-})
-
-const numDub = () => {
-    document.querySelector("#result").innerText = num.value * 2;
-    num.value = document.querySelector("#result").innerText
-    alert(num.value)
-}
+// const numDub = () => {
+//     document.querySelector("#result").innerText = num.value * 2;
+//     num.value = document.querySelector("#result").innerText
+//     alert(num.value)
+// }
 //question 4
 
 document.addEventListener("DOMContentLoaded", () => {
-    const palindrome = str => {
-        document.querySelector("q4").innerText
-        for(let i = 0; i < str.length; i++){
-            if (str.charAt(i) !== str.charAt(str.length - 1 - i)) {
-                return false
-            }else{
-                return true
-            }
-        }
-        
+
+ })
+
+
+ const isPalindrome = () => {
+     let str = document.querySelector("q4").value
+     for(let i = 0; i < Math.floor(str.length/2); i++){
+         if(str[str.length - 1- i] !== str[i])
+             alert("This ain't it")
+            return document.querySelector("#q4").innerText = "This ain't it"
+     }
+     alert("Hannnnnn")
     }
- }
-
-
-
-
-
-
