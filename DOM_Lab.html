@@ -9,7 +9,7 @@
     <body>
         <h1 id="Heading1">The String</h1>
         
-        <h2>Double Your Number Below</h2>
+        <!-- <h2>Double Your Number Below</h2>
 
         <p>
             <label for = "number">Enter Your Number: </label>
@@ -19,7 +19,27 @@
 
         <p>
             <h2 id = "inputNumber">Number</h2>
+        </p> -->
+
+
+        <!-- <h2>Palindrome Detector</h2>
+        <p>
+            <label for = "palindrome"> Enter Your Palindrome: </label>
+            <input id = "palindrome" type = "text" placeholder = 'Type it here'/>
+            <input type = "submit" id = "submit" value = "submit"/>
         </p>
+        <p id = "word">
+            Is it a Palindrome?
+        </p> -->
+
+        <h2>String Uppercase</h2>
+        <p>
+            <label for = "upperCase"> UpperCase that Word </label>
+            <input id = "upperCase" type = "text" placeholder = 'Type it here'/>
+            <input type = "submit" id = "submit" value = "submit"/>
+        </p>
+        <p id = "answer"> </p>
+        <p id = "answer2">This will get replaced</p>
 
         <script>
             // Question 1
@@ -41,14 +61,35 @@
             // })
 
             //Question 3
-            document.querySelector("#submit").addEventListener("click", () => {
-                let num = document.querySelector("#number").value
-                //alert ("Your number doubled: " + (num * 2))
-                let header = document.querySelector("#inputNumber")
-                header.innerText = (num * 2)
-            })
+            // document.querySelector("#submit").addEventListener("click", () => {
+            //     let num = document.querySelector("#number").value
+            //     //alert ("Your number doubled: " + (num * 2))
+            //     let header = document.querySelector("#inputNumber")
+            //     header.innerText = (num * 2)
+            // })
 
             //Question 4
+            // document.querySelector("#submit").addEventListener("click", () => {
+            //     let word = document.querySelector("#palindrome").value
+                
+            //     if (word.toLowerCase() === word.toLowerCase().split("").reverse().join("")){
+            //         word = document.querySelector("#word")
+            //         word.innerText = "This is a Palindrome"
+            //     } else {
+            //         word = document.querySelector("#word")
+            //         word.innerText = "Not a Palindrome"
+            //     }
+                
+            // })
+
+            //Question 5
+            document.querySelector("#submit").addEventListener("click", () => {
+                let word = document.querySelector("#upperCase").value.toUpperCase()
+                //alert (`Your word has evolved:  ${word.toUpperCase()}`)
+                answer.innerText = word
+                answer2.innerText = word
+
+            })
 
             
         </script>
