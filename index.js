@@ -32,5 +32,6 @@ document.addEventListener("DOMContentLoaded",() => {
         //  document.getElementById("#num").innerText = num.value * 2;
         alert(doubler)
         document.querySelector("#result").innerHTML = doubler
+        document.querySelector("#num").value = doubler
         return doubler
      }
