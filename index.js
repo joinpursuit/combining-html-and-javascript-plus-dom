@@ -29,13 +29,39 @@ const TimesTwo = () => {
 
 //question 4
 const isPalindrome = () => {
-    let userInput = document.querySelector("#palInput").innerText
-    let result = document.querySelector("#resultPal")
+    let userInput = document.querySelector("#palInput").value
     for(let i = 0; i < Math.floor(userInput.length/2); i++){
         if(userInput[userInput.length - 1 - i] !== userInput[i]){
-            result.innerText = "FALSE";
-            
-        } 
+            // alert("Your string is NOT a palindrome");
+            return document.querySelector("#resultPal").innerText = "Your string is NOT a pali";
+        }
     }
-    result.innerText = "TRUE";
+    // alert("Your string IS a palindrome");
+    return document.querySelector("#resultPal").innerText = "Your string IS a pali";  
 }
+
+//question 5
+const upperCase = () => {
+    let userInput = document.querySelector("#upperInput").value
+    let uppercasedInput = userInput.toUpperCase();
+    // alert(uppercasedInput);
+    userInput = uppercasedInput;
+    return document.querySelector("#resultUpper").innerText = uppercasedInput;
+}
+
+//question 6
+const countCapitals = () => {
+    let userInput = document.querySelector("#strCapital").value;
+    let upperCased = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let count = 0;
+    for(let i = 0; i < userInput.length; i++){
+        if(upperCased.includes(userInput[i])){
+            count++;
+        }
+    }
+    // alert(counts);
+    return document.querySelector("#resultCounts").innerText = count;
+}
+
+//question 7
+
