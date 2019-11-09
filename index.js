@@ -25,13 +25,28 @@ document.addEventListener("DOMContentLoaded",() => {
         
         
         
-        
+        // const Times2 = () => {
+        //     let doubler = document.querySelector("#num").value*2;
+        //     //  document.getElementById("#num").innerText = num.value * 2;
+        //     alert(doubler)
+        //     document.querySelector("#result").innerHTML = doubler
+        //     document.querySelector("#num").value = doubler
+        //     return doubler
+        // }
+
+
     })
-    const Times2 = () => {
-        let doubler = document.querySelector("#num").value*2;
-        //  document.getElementById("#num").innerText = num.value * 2;
-        alert(doubler)
-        document.querySelector("#result").innerHTML = doubler
-        document.querySelector("#num").value = doubler
-        return doubler
-     }
+        const isPalindrome = () => {
+            let reverse = []
+            let word = document.querySelector("#text").value
+            for(let i = word.length - 1; i >= 0; i--){
+                reverse.push(word[i])
+            }
+            console.log(reverse)
+            console.log(word) 
+        }
+        
+
+
+
+        
