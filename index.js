@@ -23,15 +23,14 @@ document.addEventListener("DOMContentLoaded",() => {
         // let num = document.getElementById("#number")
         // console.log(num)
         
-
+        
         
         
     })
     const Times2 = () => {
-     let input = document.querySelector("#num").value;
-    //  document.getElementById("#num").innerText = num.value * 2;
-     console.log(input *2)
-     alert(input*2)
-
-     
+        let doubler = document.querySelector("#num").value*2;
+        //  document.getElementById("#num").innerText = num.value * 2;
+        alert(doubler)
+        document.querySelector("#result").innerHTML = doubler
+        return doubler
      }
