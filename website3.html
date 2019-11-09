@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>
+            Question 3
+        </title>
+        <h1>
+           Double Your Number Below 
+        </h1>
+        <label for = "double-num"> Enter a number </label>
+        <input type = "number" id = "double-num">
+        <button onclick = "doubler()"> Double your number </button>
+        <p id = "show-num"> </p>
+
+        <script> 
+         
+        const doubler = () => {
+            let inputValue = document.querySelector("#double-num").value
+            let result = inputValue * 2;
+            alert (result)
+            document.querySelector("#show-num").innerText = `Your number ${inputValue} will result to ${result} when it is doubled.` 
+        }
+
+        </script>
+    
+</html>
