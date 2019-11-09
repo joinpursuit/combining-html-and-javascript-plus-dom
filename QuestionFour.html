@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question Four</title>
+    </head>
+    <body>
+        <h1>Palindrome Detector</h1>
+        <label for="string">Enter your message:</label>    
+        <input type="text" id="str" value=""></input><br>
+        <input type="button" onclick=palindromeDetector() value="Submit"></input>
+        <h2 id="result"></h2>
+        <script>
+            const palindromeDetector = (str) => {
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] !== str[str.length - i - 1]) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            };
+        </script>
+
+    </body>
+</html>
