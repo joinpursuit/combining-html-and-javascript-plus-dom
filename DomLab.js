@@ -1,6 +1,4 @@
-// const input_number = () => {
-//     return (num * 2)
-// }
+ 
 
 document.addEventListener("DOMContentLoaded",() => {
 
