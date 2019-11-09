@@ -32,14 +32,22 @@
             Is it a Palindrome?
         </p> -->
 
-        <h2>String Uppercase</h2>
+        <!-- <h2>String Uppercase</h2>
         <p>
             <label for = "upperCase"> UpperCase that Word </label>
             <input id = "upperCase" type = "text" placeholder = 'Type it here'/>
             <input type = "submit" id = "submit" value = "submit"/>
         </p>
         <p id = "answer"> </p>
-        <p id = "answer2">This will get replaced</p>
+        <p id = "answer2">This will get replaced</p> -->
+
+        <h2>String Capital Counter</h2>
+        <p>
+            <label for = "upperCase"> Count it for me </label>
+            <input id = "upperCase" type = "text" placeholder = 'Word Goes Here'/>
+            <input type = "submit" id = "submit" value = "submit"/>
+        </p>
+        <p id = "answer"> COUNT</p>
 
         <script>
             // Question 1
@@ -83,14 +91,23 @@
             // })
 
             //Question 5
+            // document.querySelector("#submit").addEventListener("click", () => {
+            //     let word = document.querySelector("#upperCase").value.toUpperCase()
+            //     //alert (`Your word has evolved:  ${word.toUpperCase()}`)
+            //     answer.innerText = word //Part B
+            //     answer2.innerText = word //Part C
+
+            // })
+
+            //Question 6
+
             document.querySelector("#submit").addEventListener("click", () => {
-                let word = document.querySelector("#upperCase").value.toUpperCase()
-                //alert (`Your word has evolved:  ${word.toUpperCase()}`)
-                answer.innerText = word
-                answer2.innerText = word
-
-            })
-
+                let word = document.querySelector("#upperCase").value
+                str = word.split("").filter (el => el>="A" && el <="Z")
+                //alert (`There are this many capital letters in your word: ${str.length}`)
+                answer.innerText = str.length
+                })
+                
             
         </script>
     </body>
