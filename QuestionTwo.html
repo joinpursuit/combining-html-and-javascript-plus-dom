@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question Two</title>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        let header = document.getElementById("top");
+        let userInput = window.prompt("Enter your number: ");
+        if (userInput % 2 === 0) {
+            window.alert("Your number is even!")
+            header.innerText = "Your number is even!";
+        } else {
+            window.alert("Your number is odd!")
+            header.innerText = "Your number is odd!";
+        }
+        });
+        </script>
+    </head>
+    <body>
+        <h1 id="top">Question Two</h1>
+    </body>
+</html>

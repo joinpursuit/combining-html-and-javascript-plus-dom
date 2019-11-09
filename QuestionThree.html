@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question Three</title>
+        
+    </head>
+    <body>
+        <h1 id="top">Double Your Number Below</h1>
+        <label for="number">Enter your number:</label>    
+        <input type="text" id="num" value=""></input><br>
+        <input type="button" onclick=doubler() value="Calculate"></input>
+        <h2 id="result"></h2>
+            <script>
+                const doubler = () => {
+                    document.querySelector("#result").innerText = num.value * 2;
+                    // window.alert(doubler(num));
+                    num.value = document.querySelector("#result").innerText
+                };
+            </script>
+    </body>
+</html>
