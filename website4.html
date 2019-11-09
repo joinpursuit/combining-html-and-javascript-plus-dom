@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>
+            Question 4
+        </title>
+
+    <h1> 
+        Palindrome Detector
+    </h1>
+    </head>
+
+        <label for = "pali-word"> Enter a word </label>
+        <input type = "word" id = "pali-word">
+        <button onclick = "isItPali()"> Palindromes Ayeee </button>
+        <p id = "show-word"> </p>
+
+        <script> 
+        const isItPali = () => {
+            let inputWord = document.querySelector("#pali-word").value 
+            for(let i = 0; i < Math.floor(str.length / 2); i++) {
+                if(str[i] !== str[str.length - 1 - i]) {
+                    document.querySelector("#show-word").innerText = `${inputWord} is not a palindrome!`;
+                } 
+            }
+            return document.querySelector("#show-word").innerText = `${inputWord} is a palindrome!`
+            
+            alert ()
+            document.querySelector("#pali-word").innerText = `The word ${inputWord} does not have a palindrom.`
+        }
+        </script>
+
+
+</html>
