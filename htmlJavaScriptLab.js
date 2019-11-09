@@ -12,6 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
             // } else {
             //     alert("This number is odd.")
             // }
-            // let numText = document.querySelector("#num");
             // numText.innerText = userNum;
+            //      QUESTION 3  
+    // const timesTwo = () => {
+    //     let num = document.querySelector("#double").value
+    //     document.querySelector("#result").innerText= Number(num)*2
+    //     document.getElementById("#double").value= Number(num)*2
+    // }
 })
+
+const timesTwo = () => {
+    let num = document.querySelector("#double").value
+    document.querySelector("#result").innerText= Number(num)*2
+    document.querySelector("#resultnum").innerText= Number(num)*2
+    alert(Number(num)*2);
+}
