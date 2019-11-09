@@ -21,9 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
 })
 
-const timesTwo = () => {
-    let num = document.querySelector("#double").value
-    document.querySelector("#result").innerText= Number(num)*2
-    document.querySelector("#resultnum").innerText= Number(num)*2
-    alert(Number(num)*2);
+// const timesTwo = () => {
+//     let num = document.querySelector("#double").value
+//     document.querySelector("#result").innerText= Number(num)*2
+//     document.querySelector("#resultnum").innerText= Number(num)*2
+//     alert(Number(num)*2);
+// }
+
+const palindrome = () => {
+    let string = document.querySelector("#input").value;
+    let backwards = "";
+    for(let i = string.length - 1; i >= 0; i--) {
+        backwards += string[i];
+    }
+    if(backwards === string){
+        alert(`${string} is a palindrome.`);
+        document.querySelector("#pali").innerText = `${string} is a palindrome.`
+    } else {
+        alert(`${string} is not a palindrome.`);
+        document.querySelector("#pali").innerText = `${string} is not a palindrome.`
+    }
 }
