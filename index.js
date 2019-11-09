@@ -38,7 +38,7 @@
 // }
 
 //Problem 5
-function upperCase(){
-    let str = document.querySelector("#str")
-    string2.innerText = `${str.value.toUpperCase()}`
-}
+// function upperCase(){
+//     let str = document.querySelector("#str")
+//     string2.innerText = `${str.value.toUpperCase()}`
+// }
