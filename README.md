@@ -22,7 +22,7 @@ c. Make the doubled number instead appear inside the input
 
 # Question Four
 
-a. Make a website with a heading at the top that reads "Palindrome detector".  Add an input field and a button.  When the user clicks the button, display an alert that says whether or not the text in the input field is a palindrome (the same backwards and forwards).
+a. Make a website with a heading at the top that reads "Palindrome detector".  Add an input field and a button.  When the user clicks the button, display an alert that says whether or not the text in the input field is a palindrome (the same backwards and forwards). 
 
 b. Instead of showing a popup, have that information appear in a paragraph below the button.
 

@@ -11,19 +11,20 @@ document.addEventListener("DOMContentLoaded",() =>{
     // }
     // alert(isEven(Number(userInput)));
     // document.querySelector("#input").innerHTML = isEven(Number(userInput));  
-    const isPalindrome = (string) => {
-        reverseString === document.querySelector("#textBox").value.reverse()
-            return reverseString === string;
-    }
-   
-
+    let userInput = prompt("Insert Palindrome")
+    
     
 }) 
-    // // Problem 3
+// // Problem 3
 
-    //     const doubleNum = () =>{
+//     const doubleNum = () =>{
     //         let doubleNum = Number(document.getElementById("userNum").value) * 2
     //     alert (doubleNum)
     //     document.querySelector("#input2").innerText = (doubleNum)
     //     document.querySelector("#userNum").value = doubleNum
     //     }
+
+const isPalindrome = () => {
+    reverseString = document.querySelector("#textBox").value.reverse() 
+    alert (reverseString === document.querySelector("#textBox").value)
+}  
