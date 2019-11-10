@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> <!--Question 1 part A, B
+<!-- <html> Question 1 part A, B
     <head>
         <script>
             let userString = window.prompt("Enter your name")
@@ -64,7 +64,7 @@
     </body>
 </html> -->
 
-<html>
+<!-- <html>
     <head>
         <title>Palindrome detector</title>
     </head>
@@ -89,5 +89,114 @@
         }   
         </script>
         <p id= "page"> </p>
+    </body>
+</html> -->
+
+
+<!-- <html>
+    <head>
+        <title>String Uppercaser</title>
+    </head>
+
+    <body>
+        Enter Text her:
+        <input id="input" type="text"/> 
+        <button type="button" onclick="upperCase()">UpperCase Me</button>
+
+        <script>
+            const upperCase = () =>{
+                let str = document.getElementById("input").value
+                return document.getElementById("input").value = str.toUpperCase()
+            }
+        </script>
+
+        <p id="page">
+            </p>
+    </body>
+
+    
+</html> -->
+
+<!-- <html>
+    <head>
+        <title>String Capital Counter Compare</title>
+    </head>
+
+    <body>
+        <h1>String Capital Counter Compare</h1>
+        <input id="input1" type="text"/>
+        <input id="input2" type="text"/>
+        <button type="button" onclick="capCounter()">Cap Me</button>
+
+        <script>
+            const capCounter = () =>{
+                let str1 = document.getElementById("input1").value
+                let str2 = document.getElementById("input2").value
+                let count1 = 0;
+                let count2 =0;
+
+                for(let char in str1){
+                    if(str1[char] === str1[char].toUpperCase()){
+                        count1 += 1;
+                    }
+                }
+                for (let char in str2){
+                    if(str2[char] === str2[char].toUpperCase()){
+                        count2 += 1;
+                    }
+                }
+
+                if(count1 > count2){
+                    // return window.alert(str1 + " Has more Caps")
+                    return document.getElementById("page").innerHTML = str1 + " Has more Caps"
+                } else {
+                    // return window.alert(str2 + " Has more Caps")
+                    return document.getElementById("page").innerHTML = str2 + " Has more Caps"
+                }
+               
+            }
+        </script>
+        <p id="page">
+            </p>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Average of three nums</title>
+    </head>
+
+    <body>
+        <h1>Average of three numbers</h1>
+
+        <input id="input1" type="text"/>
+        <input id="input2" type="text"/>
+        <input id="input3" type="text"/>
+        <button type="button" onclick="avgNum()">Average Me!</button>
+
+        <script>
+        const avgNum= ()=> {
+           
+            let num1 = document.getElementById("input1").value
+            let num2 = document.getElementById("input2").value
+            let num3 = document.getElementById("input3").value
+
+            if(num1 === "" || isNaN(Number(num1))){
+               return window.alert("All inputs must be NUMBERS!")
+            } else if(num2 === "" || isNaN(Number(num2))){
+               return window.alert("All inputs must be NUMBERS!")
+            } else if(num3 === "" || isNaN(Number(num3))){
+               return window.alert("All inputs must be NUMBERS!")
+            }
+
+            let avg = Number(num1) + Number(num2) +Number(num3)
+            // return window.alert(avg/3)
+            return document.getElementById("page").innerHTML = avg/3 + " is the Average"
+
+          
+        }
+        </script>
+        <p id="page">
+            </p>
     </body>
 </html>
