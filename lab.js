@@ -1,10 +1,11 @@
+// question 1
 // document.addEventListener("DOMContentLoaded", () => {
 //    let userString = prompt("Let me get a string !")
 // //    alert(userString)
 // let header = document.querySelector("#top")
 //     header.innerText = userString
 // })
-
+// 
 // question 2 
 // document.addEventListener("DOMContentLoaded", () => {
 //    let userNumber = prompt("Give me a number ")
@@ -18,6 +19,7 @@
 //    }
 
 // })
+// 
 //question 3
 // document.addEventListener("DOMContentLoaded", () => {
 
@@ -28,19 +30,30 @@
 //     num.value = document.querySelector("#result").innerText
 //     alert(num.value)
 // }
+
 //question 4
+
+const isPalindrome = () => {
+    // let output = ""
+    let strElement = document.querySelector("#word")
+    let str = strElement.value
+    let header = document.querySelector("#result") 
+    for(let i = 0; i < Math.floor(str.length/2); i++){
+        if(str[str.length - 1- i] !== str[i]){
+            strElement.value = "is not a palindrome"
+            // alert("is not a palindrome")
+            header.innerText = "is not a plaindrome"
+        } else {
+            strElement.value = "is a palindrome"
+            // alert("is a palindrome")
+            header.innerText= "is a palindrome"
+        }
+    }
+    strElement.value
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 
- })
-
-
- const isPalindrome = () => {
-     let str = document.querySelector("q4").value
-     for(let i = 0; i < Math.floor(str.length/2); i++){
-         if(str[str.length - 1- i] !== str[i])
-             alert("This ain't it")
-            return document.querySelector("#q4").innerText = "This ain't it"
-     }
-     alert("Hannnnnn")
-    }
+    let submitButton = document.querySelector("#submitButton");
+   submitButton.addEventListener("click", isPalindrome)
+})
