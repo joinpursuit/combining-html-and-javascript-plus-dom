@@ -1,0 +1,22 @@
+<!Doctype html>
+    <html>
+      <head>
+        <title> Double Your Number </title>
+      </head>
+      <body>
+        <h1> Double Your Number </h1>
+        <form id="double_form">
+        <input type="text" name="double" id="double">
+        <button type="button" onclick = "doubleInput()">Double</button>
+        <p id="doubledNum"></p>
+        <script>
+          function doubleInput() {
+            let yourNum = document.getElementById("double");
+            let userSubittedNum = double.value;
+            let newNum = (Number(userSubittedNum) * 2)
+            double.value = newNum;
+          }
+        </script>
+        </form>
+      </body>
+    </html>

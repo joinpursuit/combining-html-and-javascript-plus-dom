@@ -1,0 +1,68 @@
+
+  <html>
+    <head>
+      <title> String Uppercase </title>
+    </head>
+    <body>
+    <h1> String Uppercase </h1>
+    <input type="text" name="word" id="word">
+    <button type="button" onclick = "capitalize()">CAPITALIZE IT</button>
+    <p id="cap"></p>
+    <script>
+      function capitalize() {
+        let yourWord = document.getElementById("word");
+        let userSubittedWord = word.value;
+        let bigWord = userSubittedWord.toUpperCase();
+        window.alert(bigWord)
+      }
+    </script>
+    </body>
+</html> -->
+
+
+<!-- THIS IS PART B -->
+
+<!-- <!doctype html>
+  <html>
+    <head>
+      <title> String Uppercase </title>
+    </head>
+    <body>
+    <h1> String Uppercase </h1>
+    <input type="text" name="word" id="word">
+    <button type="button" onclick = "capitalize()">CAPITALIZE IT</button>
+    <p id="cap"></p>
+    <script>
+      function capitalize() {
+        let yourWord = document.getElementById("word");
+        let userSubittedWord = word.value;
+        let bigWord = userSubittedWord.toUpperCase();
+        document.getElementById("cap").innerText = bigWord;
+      }
+    </script>
+    </body>
+</html> -->
+
+<!-- THIS IS PART C -->
+
+<!doctype html>
+  <html>
+    <head>
+      <title> String Uppercase </title>
+    </head>
+    <body>
+    <h1> String Uppercase </h1>
+    <input type="text" name="word" id="word">
+    <button type="button" onclick = "capitalize()">CAPITALIZE IT</button>
+
+    <p id="cap"></p>
+    <script>
+      function capitalize() {
+        let yourWord = document.getElementById("word");
+        let userSubittedWord = word.value;
+        let bigWord = userSubittedWord.toUpperCase();
+        word.value = bigWord;
+      }
+    </script>
+    </body>
+</html>
