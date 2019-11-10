@@ -139,3 +139,38 @@ document.addEventListener("DOMContentLoaded",() =>{
 //     }
 // }
 
+// Problem 8
+
+// const averageOfThreeNumbers = () => {
+//     let textBoxOne = document.querySelector("#text1")
+//     let textBoxTwo = document.querySelector("#text2")
+//     let textBoxThree = document.querySelector("#text3")
+//     let sum = Number(textBoxOne.value) + Number(textBoxTwo.value) + Number(textBoxThree.value) 
+//     alert (sum/3)
+// }
+
+// const doesContainNums = (string) => {
+//     let nums = ("1234567890") 
+//     for(i = 0; i < string.length; i++) {
+//         if(nums.includes(string[i])) {
+//             return true
+//         } 
+//     } 
+//     return false
+// }
+
+// const averageOfThreeNumbers = () => {
+//     let output = document.querySelector("#paragraph")
+//     let textBoxOne = document.querySelector("#text1")
+//     let textBoxTwo = document.querySelector("#text2")
+//     let textBoxThree = document.querySelector("#text3")
+//     if(!doesContainNums(textBoxOne.value) || (!doesContainNums(textBoxTwo.value)) || (!doesContainNums(textBoxThree.value))) {
+//         alert ("All inputs must be numbers") 
+//     } else {
+//         let sum = Number(textBoxOne.value) + Number(textBoxTwo.value) + Number(textBoxThree.value)
+//         output.innerText = (sum/3)
+//     }
+// }
+
+// Problem 9
+
