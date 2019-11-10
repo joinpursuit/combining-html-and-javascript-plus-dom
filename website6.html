@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Question 6</title>
+</head>
+
+<body>
+    <h1>String Capital Counter</h1>
+    <label for="strData">Type a word</label>
+    <input type="text" id="countCaps" />
+    <input type="submit" id="btn" />
+    <p id="on-screen"></p>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let button = document.querySelector('#btn')
+        button.addEventListener('click', () => {
+            let input = document.querySelector('#countCaps')
+            let inputStr = input.value
+            let count = 0
+            let capAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            for (let char of inputStr) {
+                if (capAlphabet.includes(char)) {
+                    count++
+                }
+            }
+            alert(count)
+            document.querySelector("#on-screen").innerText = `Your phrase or word " ${inputStr} " contain ${count} capitalized letters`
+        })
+    })
+
+</script>
+
+</html>
