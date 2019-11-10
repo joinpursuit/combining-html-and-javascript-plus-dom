@@ -132,25 +132,49 @@
 // }) 
 
 // Question 8
-const average = () => {
-    let numElement1 = document.querySelector("#num1")
-    let numElement2 = document.querySelector("#num2")
-    let numElement3 = document.querySelector("#num3")
-    let avg = document.querySelector("#avg")
-    let num1 = Number(numElement1.value)
-    let num2 = Number(numElement2.value)
-    let num3 = Number(numElement3.value)
-    debugger
-    let average = Math.floor((num1 + num2 + num3)/3)
-    if(Number.isNaN(average)){
-        alert("All of the inputs must be numbers")
-    } else {
-        alert(average)
-        avg.innerText = average
-    }
-}
+// const average = () => {
+//     let numElement1 = document.querySelector("#num1")
+//     let numElement2 = document.querySelector("#num2")
+//     let numElement3 = document.querySelector("#num3")
+//     let avg = document.querySelector("#avg")
+    // let num1 = Number(numElement1.value)
+    // let num2 = Number(numElement2.value)
+    // let num3 = Number(numElement3.value)
+//     let average = Math.floor((num1 + num2 + num3)/3)
+//     if(Number.isNaN(average)){
+//         alert("All of the inputs must be numbers")
+//     } else {
+//         alert(average)
+//         avg.innerText = average
+//     }
+// }
 
-document.addEventListener("DOMContentLoaded",() => {
-    let button = document.querySelector("#submitButton");
-    button.addEventListener("click", average)
-}) 
+// document.addEventListener("DOMContentLoaded",() => {
+//     let button = document.querySelector("#submitButton");
+//     button.addEventListener("click", average)
+// }) 
+
+// Question 9
+// const chkMidNumSum = () => {
+//     let numElement1 = document.querySelector("#num1")
+//     let numElement2 = document.querySelector("#num2")
+//     let numElement3 = document.querySelector("#num3") 
+//     let num1 = Number(numElement1.value)
+//     let num2 = Number(numElement2.value)
+//     let num3 = Number(numElement3.value)
+//     let mid = document.querySelector("#mid")
+//     if((num1 + num3) === num2){
+//         alert("Middle number is sum")
+//         mid.innerText = "Middle number is sum"
+//     }else{
+//         alert("Middle number is not sum")
+//         mid.innerText = "Middle number is not sum"
+//     }
+// }
+
+// document.addEventListener("DOMContentLoaded",() => {
+//     let button = document.querySelector("#submitButton");
+//     button.addEventListener("click", chkMidNumSum)
+// }) 
+
+// Question 10
