@@ -54,7 +54,6 @@ b. Instead of showing a popup, have that information appear in a paragraph below
 
 c. If any of the text fields doesn't have a number, show an error message that reads "All of the inputs must be numbers"
 
-
 # Question Nine
 
 a. Make a website with a heading at the top that reads "Check Middle Number Sum".  Add 3 input fields and a button.  When the user clicks the button, display an alert that shows whether the number in the middle input field is equal to the sum of the left input field and the right input field.

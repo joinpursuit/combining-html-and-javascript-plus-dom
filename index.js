@@ -121,19 +121,14 @@
 // Problem 8
 // document.addEventListener("DOMContentLoaded",() =>{
 
-
 // const Avg  = (... numArr) => {
 //     let avg = 0
-
 //     for(let i = 0; i< numArr.length; i++){
 //         avg += numArr[i]
 //     }
-        
-   
 //     return avg = (avg/numArr.length)
 // }
 // let submit = document.querySelector("#AvgBtn")
-
 
 // submit.addEventListener("click",() => {
 
@@ -199,3 +194,39 @@
 // })
 
 // })
+
+
+//Problem 10
+document.addEventListener("DOMContentLoaded",() =>{
+
+    const disemvowel = (string) => {
+        vowels = ["a", "e", "i", "o", "u"]
+        newString = ""
+        for(let i = 0; i < string.length; i++){
+            if(!vowels.includes(string[i])){
+                newString += string[i]
+            }
+        }
+        return newString
+    }
+
+    const disemvowelY = (string) => {
+        vowels = ["a", "e", "i", "o", "u", "y"]
+        newString = ""
+        for(let i = 0; i < string.length; i++){
+            if(!vowels.includes(string[i])){
+                newString += string[i]
+            }
+        }
+        return newString
+    }
+    
+    let button = document.querySelector("#disemvowel")
+    
+    button.addEventListener("click",() => {
+        let string =  document.querySelector("#str").value
+        document.querySelector("#result").innerText = disemvowel(string)
+
+    
+    })
+})
