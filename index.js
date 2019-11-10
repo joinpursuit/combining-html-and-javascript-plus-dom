@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded",() => {
         // let num = document.getElementById("#number")
         // console.log(num)
         
-<<<<<<< HEAD
         
         
         // const Times2 = () => {
@@ -36,8 +35,6 @@ document.addEventListener("DOMContentLoaded",() => {
         // }
 
 
-=======
->>>>>>> 6e855610e574f8256767f466e6e8a159c4e6d0e7
     })
     const Times2 = () => {
         let doubler = document.querySelector("#num").value*2;
@@ -84,4 +81,19 @@ document.addEventListener("DOMContentLoaded",() => {
         alert(inputV.toUpperCase())
         document.querySelector("#allUpper").innerHTML=inputV.toUpperCase()
         document.querySelector("#upperCased").value=inputV.toUpperCase()
+    }
+
+    const countingCapital = () => {
+        let input= document.querySelector("#stringCap")
+        let word = input.value
+        let count = 0
+
+        for(let i=0; i<word.length; i++){
+            if(word[i] === word[i].toUpperCase()){
+                count++
+            }
+        }
+        alert(count)
+
+        document.querySelector("#stringCap1").innerHTML= count
     }
