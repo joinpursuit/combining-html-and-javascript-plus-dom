@@ -44,6 +44,7 @@ const isUpperCase = () =>{
     let upp = document.querySelector("#upper").value
 
     let newStr = "";
+
     for(let i = 0; i < upp.length; i++){
         if(upp[i] === (upp[i]).toUpperCase()){
             newStr += upp[i]
@@ -53,7 +54,7 @@ const isUpperCase = () =>{
 
     document.querySelector("#newStr").innerText=`${newStr}`
 
-    document.getElementById("#upper").value= upp.toUpperCase()
+    document.querySelector("#upper").value = upp.toUpperCase()
 
 }
 
@@ -67,8 +68,33 @@ const howManyCap = () =>{
     }
     alert(cap.length)
 
-    document.querySelector("#numCap").innerText= `${cap.length}`
+    document.querySelector("#numCap").innerText = `${cap.length}`
+    document.querySelector("#cap").value = `${cap.length}`
 
 }
 
+const moreCap = () =>{
+    let caps1 = document.querySelector("#caps1").value
+    let caps2 = document.querySelector("#caps2").value
+    let counter1 = "";
+    let counter2 = "";
 
+    for(let i = 0; i < caps1.length; i++) {
+        if(caps1[i] === (caps1[i]).toUpperCase()) {
+            counter1 += caps1[i]
+        }
+    }
+    for(let i = 0; i < caps2.length; i++) {
+        if(caps2[i] === (caps2[i]).toUpperCase()) {
+            counter2 += caps2[i]
+        }
+    }
+    if(counter1.length > counter2.length) {
+        alert(caps1)
+        document.querySelector("#counterComparer").innerText = caps1
+    } else {
+        alert(caps2)
+        document.querySelector("#counterComparer").innerText = caps2
+    }
+    
+}
