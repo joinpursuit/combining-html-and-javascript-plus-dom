@@ -174,3 +174,12 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 // Problem 9
 
+const checkMiddle = () => {
+    let textBoxOne = document.querySelector("#text1")
+    let textBoxTwo = document.querySelector("#text2")
+    let textBoxThree = document.querySelector("text3")
+    let sum = Number(textBoxOne.value) + Number(textBoxThree.value)
+    if(sum === textBoxTwo) {
+
+    }
+}
