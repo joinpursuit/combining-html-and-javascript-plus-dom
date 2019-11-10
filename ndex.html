@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> <!--Question 1 part A, B-->
+<html> <!--Question 1 part A, B
     <head>
         <script>
             let userString = window.prompt("Enter your name")
@@ -18,7 +18,7 @@
 </html>
 
 <html> <!--Question 2 part A, B-->
-   <head>
+   <!-- <head>
    </head>
    <body>
        <script>
@@ -34,5 +34,60 @@
         </script>
 
 
-   </body>
+   </body> -->
+<!-- </html> --> -->
+
+<!-- <html>
+    <head>
+        <title> Double your number below! </title>
+    </head>
+    <body>
+        <h1>Double your number below!</h1>
+
+            Insert Num:<br>
+            <input id= "num" type="text" /> <br>
+            <button type="button" onclick="double()">Press me!</button>
+
+        
+        <script>
+            const double = () => {
+                let num = document.getElementById("num").value  
+                let newNum = num*2             
+                document.getElementById("num").value = "Your number is " + newNum
+                return window.alert(newNum)
+            }
+
+        </script>
+        <p id="page">
+
+        </p>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Palindrome detector</title>
+    </head>
+    <body>
+        <h1>Palindrome!</h1>
+        Insert a word:
+        <input id="word" type="text" /> <br>
+        <button type="button" onclick="palindromeCheck()">Check here!</button>
+        <script>
+        const palindromeCheck = () => {
+            let str = document.getElementById("word").value
+            isPali = false
+            strReverse = str.split("").reverse()
+            strReverse.forEach((el, i) => {
+                if (el === str[i]) {
+                    isPali = true
+                } else {
+                    isPali = false
+                }
+            })
+            return document.getElementById("page").innerHTML = "Pali check = " + isPali
+        }   
+        </script>
+        <p id= "page"> </p>
+    </body>
 </html>
