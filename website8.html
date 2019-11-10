@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 8</title>
+  </head>
+  <body>
+    <h1>Average of Three Numbers</h1>
+    <form>
+      <label for = "numOne">Enter number:</label>
+      <input type = "text" name = "numOne"  id = "avgNumOne"></p><br>
+      <label for = "numTwo">Enter 2nd number:</label>
+      <input type = "text" name = "numTwo"  id = "avgNumTwo"></p><br>
+      <label for = "numThree">Enter 3rd number:</label>
+      <input type = "text" name = "numThree"  id = "avgNumThree"></p><br>
+    </form>
+    <button onclick="doAvg()">Click to perform Average</button>
+    <p id ="print"></p>
+    <script>
+      const doAvg = () => {
+        let input1 = parseInt(document.querySelector('#avgNumOne').value)
+        let input2 = parseInt(document.querySelector('#avgNumTwo').value)
+        let input3 = parseInt(document.querySelector('#avgNumThree').value)
+        let avgNums = (input1 + input2 + input3)/3
+          if (isNaN(input1) || isNaN(input2) || isNaN(input3)){
+          alert(`Error: All of the inputs must be numbers.`)
+          } else {
+           alert(avgNums)
+           document.querySelector("#print").innerText = `Your average is ${avgNums}`
+          }
+        }
+    </script>
+  </body>
+
+</html>
