@@ -11,13 +11,13 @@
         <h1>Pop up String</h1>
         <p id="page">
              <script>
-                document.getElementById("page").innerHTML = "Your name is" + userString ;
+                document.getElementById("page").innerHTML = "Your name is " + userString ;
                 </script>
         </p>
     </body>
 </html>
 
-<html>
+<html> <!--Question 2 part A, B-->
    <head>
    </head>
    <body>
@@ -25,7 +25,11 @@
         let userNum = window.prompt("Enter a number");
         if(userNum % 2===0){
             window.alert("Your number is even")
-        } else window.alert("your number is not even")
+            document.getElementById("page").innerHTML = "Your number is Even " + userNum ;
+        } else{
+            window.alert("your number is not even")
+            document.getElementById("page").innerHTML = "Your number is not even " + userNum ;
+        } 
         
         </script>
 
