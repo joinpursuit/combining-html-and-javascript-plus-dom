@@ -1,34 +1,21 @@
-  document.addEventListener("DOMContentLoaded",()=>{
-    document.getElementById("submit").addEventListener("click",()=>{
-      
-      str = document.getElementById("string").value
-      // newStr = document.getElementById("string")
-    
-      
-  let newStr = ""
-  for(let i = str.length-1; i >=0; i--){
-    newStr +=str[i]
-  }
-  
-  
-  let string = document.getElementById("check")
-  let output2;
-  
-  if(newStr === str){
-    //alert("palindrome found")
-     output2 = "palindrome found"
-  } else{
-    //alert("not a palindrome")
-     output2 = "palindrome found"
-  }
-  string.innerText = output2
-  
-    
-  
-    
-  // alert(output)
-//   number.value = output
-debugger
+const toUpper1 = () =>{
+  let strElement = document.querySelector("#string")
+  let str = strElement.value
+  alert(str.toUpperCase())
+}
+const toUpper2 = () =>{
+  let strElement = document.querySelector("#string")
+  let str = strElement.value
+  strElement.value = str.toUpperCase()
+}
+const toUpper3 = () =>{
+  let strElement = document.querySelector("#string")
+  let newSent = document.querySelector("#surprise")
+  let str = strElement.value
+  newSent.innerText = str.toUpperCase()
+}
 
-})
+document.addEventListener("DOMContentLoaded", () =>{
+  let submitButton = document.querySelector("#submitButton")
+  submitButton.addEventListener("click", toUpper3)
 })
