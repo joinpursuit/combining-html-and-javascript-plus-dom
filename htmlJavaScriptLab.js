@@ -42,7 +42,9 @@ const palindrome = () => {
         document.querySelector("#pali").innerText = `${string} is not a palindrome.`
     }
 }
-const strUppercase = (string) => {
+const strUppercase = () => {
 let string = document.querySelector("#uppercase").value;
     alert(string.toUpperCase());
+    // document.querySelector("#top").innerText = string.toUpperCase()
+     document.querySelector("#uppercase").value = string.toUpperCase();
 }
