@@ -1,16 +1,30 @@
-<!Doctype html>
-    <html>
-      <head>
-        <title> String Capital Counters </title>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 6</title>
+    </head>
+    <body>
+        <h1>Quesiton 6</h1>
+        <h2>String Capital Counter</h2>
+        <input id="user_input1" name="user_input" type="text">
+        <button
+            type="submit"
+            name="user_input2"
+            onclick="capitalCount(document.getElementById('user_input1').value)"
+        >
+            Count
+        </button>
+        <p id="user_entries"></p>
         <script>
-          window.alert(``)
+            function capitalCount(str) {
+                let count = 0
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] === str[i].toUpperCase()) {count++}
+                }
+                window.alert(count)
+                document.getElementById("user_entries").innerText =`There are ${count} capital letters in: ${str}`
+                return count
+            }
         </script>
-      </head>
-      <body>
-        <h1> String Capital Counter</h1>
-        <form id= "String capital">
-       <input type= "text" id= "String" placeHolder="String With Capitals"/>
-        <button type = button id = "submit">Submit</button>
-        </form>
-      </body>
-    </html>
+    </body>
+</html>
