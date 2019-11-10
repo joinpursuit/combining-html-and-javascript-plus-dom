@@ -97,3 +97,36 @@ document.addEventListener("DOMContentLoaded",() => {
 
         document.querySelector("#stringCount").innerHTML= count
     }
+
+    const compareCapitals = () => {
+        let input1 = document.querySelector("#string1")
+        let word1 = input1.value
+        let count1 = 0
+        let input2 = document.querySelector("#string2")
+        let word2 = input2.value
+        let count2 = 0
+
+        for(let i=0; i<word1.length; i++){
+            if(word1[i] === word1[i].toUpperCase()){
+                count1++
+            }
+        }
+        for(let i=0; i < word2.length; i++){
+            if(word2[i] === word2[i].toUpperCase()){
+                count2++
+            }
+        }
+        if(count1 > count2){
+            alert(word1 + " has more capital letters")
+            document.querySelector("#comapareResults").innerHTML= word1 + " has " + count1 +" capital letters."
+
+        }else if(count2 > count1) {
+            alert(word2 + " has more capital letters")
+            document.querySelector("#comapareResults").innerHTML= word2 + " has " + count2 +" capital letters."
+        }else {
+            alert(word1 + " has the same amount of capital letters as " + word2)
+            document.querySelector("#comapareResults").innerHTML= word1 + " and " + word2 + " both have " + count1 + " capital letters."
+
+        }
+
+    }
