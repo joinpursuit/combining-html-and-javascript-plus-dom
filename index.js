@@ -1,34 +1,43 @@
-const CheckMid1 = ()=>{
-  let numEl1 = document.querySelector("#number1")
-  let numEl2 = document.querySelector("#number2")
-  let numEl3 = document.querySelector("#number3")
-  let num1 = Number(numEl1.value)
-  let num2 = Number(numEl2.value)
-  let num3 = Number(numEl3.value)
-  if(num2 === num1+num3){
-    alert(true)
+vowels = "aieou"
+const deval = (str,vol) =>{
+  let newStr=""
+  for(i = 0; i <str.length; i++){
+    if(!vol.includes(str[i])){
+      newStr += str[i] 
+    }
+  }
+  return newStr
+}
+const devowler1 = ()=>{
+  let string = document.querySelector("#string")
+  let stringEl = string.value
+  let check = document.querySelector("#yInclude")
+  let statement = document.querySelector("#surprise")
+  if(check.checked){
+    vowels += "y"
+    state = deval(stringEl, vowels)
+    alert(state)
   } else {
-    alert(false)
+    state = deval(stringEl, vowels)
+    alert(state)
   }
 }
-
-const CheckMid2 = ()=>{
-  let numEl1 = document.querySelector("#number1")
-  let numEl2 = document.querySelector("#number2")
-  let numEl3 = document.querySelector("#number3")
-  let newSent = document.querySelector("#surprise")
-
-  let num1 = Number(numEl1.value)
-  let num2 = Number(numEl2.value)
-  let num3 = Number(numEl3.value)
-  if(num2 === num1+num3){
-    newSent.innerText = `true`
+const devowler2 = ()=>{
+  let string = document.querySelector("#string")
+  let stringEl = string.value
+  let check = document.querySelector("#yInclude")
+  let statement = document.querySelector("#surprise")
+  if(check.checked){
+    vowels += "y"
+    state = deval(stringEl, vowels)
+    statement.innerText = state
   } else {
-    newSent.innerText = `false`
+    state = deval(stringEl, vowels)
+    statement.innerText = state
   }
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
   let submitButton = document.querySelector("#submitButton")
-  submitButton.addEventListener("click", CheckMid2)
+  submitButton.addEventListener("click", devowler2)
 })
