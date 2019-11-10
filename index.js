@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded",() => {
-    // let submitButton = document.querySelector("#submitButton");
-    // submitButton.addEventListener("click", evenChar)
+
 // let stringInput = prompt("What's your name?")
 
 // alert("Hello " + stringInput)
@@ -10,39 +9,22 @@ document.addEventListener("DOMContentLoaded",() => {
 // let numberInput = prompt("What's your age")
 // let output = ""
 // if (numberInput % 2 === 0){
-    //     alert("Your age even")
-    //     output ="Your age is is even"
-    //     document.getElementById("age").innerText = output 
-    // } else {
-        //     alert("Your age is not even")
-        //     output = "Your age is not even"
-        //     document.getElementById("age").innerText = output 
-        // }
-        
-        // let doubleInput = prompt("Enter a Number")
-        // let num = document.getElementById("#number")
-        // console.log(num)
-        
-        
-        
-        // const Times2 = () => {
-        //     let doubler = document.querySelector("#num").value*2;
-        //     //  document.getElementById("#num").innerText = num.value * 2;
-        //     alert(doubler)
-        //     document.querySelector("#result").innerHTML = doubler
-        //     document.querySelector("#num").value = doubler
-        //     return doubler
-        // }
-
-
-    })
+//         alert("Your age even")
+//         output ="Your age is even"
+//         document.getElementById("age").innerText = output 
+//     } else {
+//             alert("Your age is not even")
+//             output = "Your age is not even"
+//             document.getElementById("age").innerText = output 
+//         }
+        })
     const Times2 = () => {
         let doubler = document.querySelector("#num").value*2;
         //  document.getElementById("#num").innerText = num.value * 2;
         alert(doubler)
         document.querySelector("#result").innerHTML = doubler
         document.querySelector("#num").value = doubler
-        return doubler
+        console.log(doubler) 
     }
     
     const isPalindrome = () => {
@@ -179,7 +161,6 @@ document.addEventListener("DOMContentLoaded",() => {
     }else{
         avoidLetters ="aAeEiIoOuU"
     }
-    console.log(avoidLetters)
 }
     const disemvowel = () => {
         let input = document.querySelector("#takeVowels");
