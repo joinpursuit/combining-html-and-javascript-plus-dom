@@ -202,6 +202,7 @@ document.addEventListener("DOMContentLoaded",() =>{
     const disemvowel = (string) => {
         vowels = ["a", "e", "i", "o", "u"]
         newString = ""
+
         for(let i = 0; i < string.length; i++){
             if(!vowels.includes(string[i])){
                 newString += string[i]
@@ -222,11 +223,17 @@ document.addEventListener("DOMContentLoaded",() =>{
     }
     
     let button = document.querySelector("#disemvowel")
+    let CheckboxY = document.querySelector("#disY");
     
     button.addEventListener("click",() => {
         let string =  document.querySelector("#str").value
-        document.querySelector("#result").innerText = disemvowel(string)
-
+        
+        if(CheckboxY.checked){
+            return document.querySelector("#result").innerText = disemvowelY(string)
+        } else{
+            return document.querySelector("#result").innerText = disemvowel(string)
+        }
+       
     
     })
 })
