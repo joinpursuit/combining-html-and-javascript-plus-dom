@@ -97,15 +97,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //question 8
-const average = () => {
-    let num1 = document.querySelector("#num1").value
-    let num2 = document.querySelector("#num2").value
-    let num3 = document.querySelector("#num3").value
-    let total = Number(num1) + Number(num2) + Number(num3);
-    let avg = Math.round(total / 3)
-    // !Number(num1) || !Number(num2) || !Number(num3) ? alert("All inputs must be numbers") : alert(avg);
-    !Number(num1) || !Number(num2) || !Number(num3) ? document.querySelector("#resultAverage").innerText = "All inputs must be numbers" : document.querySelector("#resultAverage").innerText = avg;
-}
+// const average = () => {
+//     let num1 = document.querySelector("#num1").value
+//     let num2 = document.querySelector("#num2").value
+//     let num3 = document.querySelector("#num3").value
+//     let total = Number(num1) + Number(num2) + Number(num3);
+//     let avg = Math.round(total / 3)
+//     // !Number(num1) || !Number(num2) || !Number(num3) ? alert("All inputs must be numbers") : alert(avg);
+//     !Number(num1) || !Number(num2) || !Number(num3) ? document.querySelector("#resultAverage").innerText = "All inputs must be numbers" : document.querySelector("#resultAverage").innerText = avg;
+// }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const average = (...numArr) => {
+        let avg = 0;
+        for(let i = 0; i < numArr.length; i++){
+            avg += numArr[i]
+        }
+        return avg = (avg / numArr.length);
+    }
+
+    let submit = document.querySelector("#averageBtn")
+    submit.addEventListener("click", ()=>{
+        let num1 = Number(document.querySelector("#num1").value)
+        let num2 = Number(document.querySelector("#num2").value)
+        let num3 = Number(document.querySelector("#num3").value)
+        !Number(num1) || !Number(num2) || !Number(num3) ? document.querySelector("#resultAverage").innerText = "All inputs must be numbers" : document.querySelector("#resultAverage").innerText = Math.round(average(num1, num2, num3));
+    })
+})
 
 
 //question 9
