@@ -36,8 +36,61 @@ if (isEven(Number(number))){
 
 
 
-    
+
+const onlyOdds = ()=>{
+    let output = ""
+    let strElement = document.querySelector("#string")
+    let str = strElement.value;
+    for (let i = 0; i<str.length; i++){
+        if (i%2){
+            output += str[i]
+        }
+    }
+    strElement.value = output;
+}
+ 
+ 
+
+
+
+
+
+
+
+    // <form>
+    // <p id = "num2>"  <label for"number">Enter your number </label>
+    //   <input id= "name" type="text" placeholder="name"><br>
+
+
+
+
+
+
+
+//     document.getElementById("demo").innerHTML = "Hello World";
+//   }
+
+ 
 
     // a. Make a website with an input field and a button. 
     //  Have a heading at the top that reads "Double your number below"  
     //  When the user clicks on the button, display an alert showing that number times two.
+ 
+
+
+
+//b. Instead of showing a popup, make the text appear on the screen.
+
+
+
+// @channel Warm up. Make an HTML file and add a script file to a JS page. 
+// Put an input field and submit button on the html file. The user will enter a string 
+// in the input field and click the submit button. 
+// Change the text inside the input to only have the odd indexed characters.
+
+const multiplyTwo = () => {
+        let num = document.querySelector("#double").value
+         document.querySelector("#result").innerText= Number(num)*2
+         document.getElementById("double").value= Number(num)*2
+    }
+    
