@@ -51,12 +51,45 @@ let string = document.querySelector("#uppercase").value;
 
 const capitalCounter = () => {
     let string = document.querySelector("#capital").value;
-    let newString = 0;
+    let counter = 0;
     for(let char of string) {
         if(char === char.toUpperCase()) {
-            newString++;
+            counter++;
         }
     }
-    alert(newString);
-    document.querySelector("#capitalCount").innerText = newString;
+    alert(counter);
+    document.querySelector("#capitalCount").innerText = counter;
+}
+
+const capCountComp = () => {
+    let string1 = document.querySelector("#str1").value;
+    let string2 = document.querySelector("#str2").value;
+    let counter1 = 0;
+    let counter2 = 0;
+    for(let char1 of string1) {
+        if(char1 === char1.toUpperCase()) {
+            counter1++
+        }
+    }
+    for(let char2 of string2) {
+        if(char2 === char2.toUpperCase()) {
+            counter2++
+        }
+    }
+    if(counter1 > counter2) {
+        alert(string1)
+        document.querySelector("#counterComparer").innerText = string1
+    } else {
+        alert(string2)
+        document.querySelector("#counterComparer").innerText = string2
+    }
+}
+
+const averageOfThree = () => {
+    let num1 = document.querySelector("#num1").value;
+    let num2 = document.querySelector("#num2").value;
+    let num3 = document.querySelector("#num3").value;
+    average = (Number(num1) + Number(num2) + Number(num3)) / 3
+    alert(average);
+    document.querySelector("#averageOfThree").innerText = average;
 }
