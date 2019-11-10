@@ -98,35 +98,59 @@
 // }) 
 
 // Question 7
-const strCapCountComp = () => {
-    let count1 = 0
-    let count2 = 0
-    let strElement1 = document.querySelector("#string")
-    let strElement2 = document.querySelector("#stringdos")
-    let str1 = strElement1.value
-    let str2 = strElement2.value
-    let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    let para = document.querySelector("#count")
-    for(let i = 0; i < str1.length; i++){
-        for(let j = 0; j < str2.length; j++){
-            if(caps.includes(str2[j])){
-                count2++
-            }
-        }
-        if(caps.includes(str1[i])){
-            count1++
-        }
-    }
-    if(count1 > count2){
-        alert("String 1 has more capitals")
-        para.innerText = "String 1 has more capitals"
+// const strCapCountComp = () => {
+//     let count1 = 0
+//     let count2 = 0
+//     let strElement1 = document.querySelector("#string")
+//     let strElement2 = document.querySelector("#stringdos")
+//     let str1 = strElement1.value
+//     let str2 = strElement2.value
+//     let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+//     let para = document.querySelector("#count")
+//     for(let i = 0; i < str1.length; i++){
+//         for(let j = 0; j < str2.length; j++){
+//             if(caps.includes(str2[j])){
+//                 count2++
+//             }
+//         }
+//         if(caps.includes(str1[i])){
+//             count1++
+//         }
+//     }
+//     if(count1 > count2){
+//         alert("String 1 has more capitals")
+//         para.innerText = "String 1 has more capitals"
+//     } else {
+//         alert("String 2 has more capitals")
+//         para.innerText = "String 2 has more capitals"
+//     }
+// }
+
+// document.addEventListener("DOMContentLoaded",() => {
+//     let button = document.querySelector("#submitButton");
+//     button.addEventListener("click", strCapCountComp)
+// }) 
+
+// Question 8
+const average = () => {
+    let numElement1 = document.querySelector("#num1")
+    let numElement2 = document.querySelector("#num2")
+    let numElement3 = document.querySelector("#num3")
+    let avg = document.querySelector("#avg")
+    let num1 = Number(numElement1.value)
+    let num2 = Number(numElement2.value)
+    let num3 = Number(numElement3.value)
+    debugger
+    let average = Math.floor((num1 + num2 + num3)/3)
+    if(Number.isNaN(average)){
+        alert("All of the inputs must be numbers")
     } else {
-        alert("String 2 has more capitals")
-        para.innerText = "String 2 has more capitals"
+        alert(average)
+        avg.innerText = average
     }
 }
 
 document.addEventListener("DOMContentLoaded",() => {
     let button = document.querySelector("#submitButton");
-    button.addEventListener("click", strCapCountComp)
+    button.addEventListener("click", average)
 }) 
