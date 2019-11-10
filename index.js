@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // question 1
-    // let q1 = prompt("Enter a string:")
-    // // alert(q1);
-    // let header = document.querySelector("#q1")
-    // header.innerText = q1;
+    let q1 = prompt("Enter a string:")
+    // alert(q1);
+    let header = document.querySelector("#q1")
+    header.innerText = q1;
 
 
-    //question 2
-    // let q2 = prompt("Enter a number:")
-    // let header2 = document.querySelector("#q2");
-    // if(q2 % 2 === 0){
-    //     // alert("Number is EVEN");
-    //     header2.innerText = "Number is EVEN";
-    // } else {
-    //     // alert("Number is NOT EVEN");
-    //     header2.innerText = "Number is NOT EVEN";
-    // }
+    // question 2
+    let q2 = prompt("Enter a number:")
+    let header2 = document.querySelector("#q2");
+    if(q2 % 2 === 0){
+        // alert("Number is EVEN");
+        header2.innerText = "Number is EVEN";
+    } else {
+        // alert("Number is NOT EVEN");
+        header2.innerText = "Number is NOT EVEN";
+    }
     debugger
 
 })
@@ -97,15 +97,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //question 8
-const average = () => {
-    let num1 = document.querySelector("#num1").value
-    let num2 = document.querySelector("#num2").value
-    let num3 = document.querySelector("#num3").value
-    let total = Number(num1) + Number(num2) + Number(num3);
-    let avg = Math.round(total / 3)
-    // !Number(num1) || !Number(num2) || !Number(num3) ? alert("All inputs must be numbers") : alert(avg);
-    !Number(num1) || !Number(num2) || !Number(num3) ? document.querySelector("#resultAverage").innerText = "All inputs must be numbers" : document.querySelector("#resultAverage").innerText = avg;
-}
+// const average = () => {
+//     let num1 = document.querySelector("#num1").value
+//     let num2 = document.querySelector("#num2").value
+//     let num3 = document.querySelector("#num3").value
+//     let total = Number(num1) + Number(num2) + Number(num3);
+//     let avg = Math.round(total / 3)
+//     // !Number(num1) || !Number(num2) || !Number(num3) ? alert("All inputs must be numbers") : alert(avg);
+//     !Number(num1) || !Number(num2) || !Number(num3) ? document.querySelector("#resultAverage").innerText = "All inputs must be numbers" : document.querySelector("#resultAverage").innerText = avg;
+// }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const average = (...numArr) => {
+        let avg = 0;
+        for(let i = 0; i < numArr.length; i++){
+            avg += numArr[i]
+        }
+        return avg = (avg / numArr.length);
+    }
+
+    let submit = document.querySelector("#averageBtn")
+    submit.addEventListener("click", ()=>{
+        let num1 = Number(document.querySelector("#num1").value)
+        let num2 = Number(document.querySelector("#num2").value)
+        let num3 = Number(document.querySelector("#num3").value)
+        !Number(num1) || !Number(num2) || !Number(num3) ? document.querySelector("#resultAverage").innerText = "All inputs must be numbers" : document.querySelector("#resultAverage").innerText = Math.round(average(num1, num2, num3));
+    })
+})
 
 
 //question 9
@@ -141,7 +161,8 @@ const disemvowel = () => {
             result += char;
         }
     }
-    alert(result);
+    // alert(result);
+    document.querySelector("#disemvowelResult").innerText = result;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
