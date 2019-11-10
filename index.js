@@ -128,5 +128,22 @@ document.addEventListener("DOMContentLoaded",() => {
             document.querySelector("#comapareResults").innerHTML= word1 + " and " + word2 + " both have " + count1 + " capital letters."
 
         }
+    }
 
+    const avgALL = () =>{
+        let input1 = document.querySelector("#num1");
+        let input2 = document.querySelector("#num2");
+        let input3 = document.querySelector("#num3");
+        let numb1 = Number(input1.value);
+        let numb2 = Number(input2.value);;
+        let numb3 = Number(input3.value);;
+        let sum = numb1+numb2+numb3
+        let avg = (sum/3)
+        if(avg){
+            alert("the Average is "+ avg)
+            document.querySelector("#avgResult").innerHTML= "The Average is "+avg
+        }else{
+            alert("All of the inputs must be numbers")
+            document.querySelector("#avgResult").innerHTML= "All of the inputs must be numbers"
+        }
     }

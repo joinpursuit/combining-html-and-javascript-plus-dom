@@ -37,6 +37,8 @@ c. Have the uppercased overwrite the text that was there before.
 # Question Six
 
 a. Make a website with a heading at the top that reads "String Capital Counter".  Add an input field and a button.  When the user clicks the button, display an alert that contains a count of how many capital letters are in the string.
+hello
+Hello
 
 b. Instead of showing a popup, have that information appear in a paragraph below the button.
 
