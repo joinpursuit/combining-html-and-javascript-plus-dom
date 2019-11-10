@@ -103,6 +103,48 @@ const average = () => {
     let num3 = document.querySelector("#num3").value
     let total = Number(num1) + Number(num2) + Number(num3);
     let avg = Math.round(total / 3)
-    !Number(num1) || !Number(num2) || !Number(num3) ? alert("All inputs must be numbers") : alert(avg);
+    // !Number(num1) || !Number(num2) || !Number(num3) ? alert("All inputs must be numbers") : alert(avg);
+    !Number(num1) || !Number(num2) || !Number(num3) ? document.querySelector("#resultAverage").innerText = "All inputs must be numbers" : document.querySelector("#resultAverage").innerText = avg;
 }
 
+
+//question 9
+const isMidEqual = () => {
+    let firstNum = document.querySelector("#firstNum").value;
+    firstNum = Number(firstNum);
+    let middleNum = document.querySelector("#middleNum").value;
+    middleNum = Number(middleNum);
+    let lastNum = document.querySelector("#lastNum").value;
+    lastNum = Number(lastNum);
+    if(firstNum + lastNum == middleNum){
+        // alert("Middle number IS EQUAL to the sum of first and last numbers");
+        document.querySelector("#isResult").innerHTML = "Middle number <strong>IS EQUAL</strong> to the sum of first and last numbers";
+    } else {
+        // alert("Middle number IS NOT EQUAL to the sum of first and last numbers")
+        document.querySelector("#isResult").innerHTML = "Middle number <strong>IS NOT EQUAL</strong> to the sum of first and last numbers";
+    }
+
+}
+
+
+//question 10
+const disemvowel = () => {
+    let result = ""
+    let yCheckbox = document.querySelector("#yIsVowel");
+    let str = document.querySelector("#str").value;
+    let vowels = "AaEeIiOoUu";
+    if(yCheckbox.checked){
+        vowels += "Yy";
+    } 
+    for(let char of str){
+        if(!vowels.includes(char)){
+            result += char;
+        }
+    }
+    alert(result);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    let submit = document.querySelector("#disemvowelBtn")
+    submit.addEventListener("click", disemvowel)
+})
