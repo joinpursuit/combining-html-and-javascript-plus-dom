@@ -161,7 +161,8 @@ const disemvowel = () => {
             result += char;
         }
     }
-    alert(result);
+    // alert(result);
+    document.querySelector("#disemvowelResult").innerText = result;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
