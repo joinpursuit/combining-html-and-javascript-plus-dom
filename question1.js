@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
  const isPalindrome = () => {
-     let str = document.querySelector("q4").value
+     let str = document.querySelector("q4").word
      for(let i = 0; i < Math.floor(str.length/2); i++){
-         if(str[str.length - 1- i] !== str[i])
-             alert("This ain't it")
-            return document.querySelector("#q4").innerText = "This ain't it"
+         if(str[str.length - 1 - i] !== str[i])
+             alert("This ain't it, not Palindrome")
+            // return document.querySelector("#q4").innerText = "This ain't it"
      }
-     alert("Hannnnnn")
+     alert("Hannnnnn it is Palindrome")
     }
