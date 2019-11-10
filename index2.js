@@ -76,9 +76,3 @@ const multiplyTwo = () => {
 
 
 
-const multiplyTwo = () => {
-        let num = document.querySelector("#double").value
-         document.querySelector("#result").innerText= Number(num)*2
-         document.getElementById("double").value= Number(num)*2
-    }
-    
