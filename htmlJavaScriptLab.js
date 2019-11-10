@@ -85,11 +85,39 @@ const capCountComp = () => {
     }
 }
 
-const averageOfThree = () => {
+// const averageOfThree = () => {
+//     let num1 = document.querySelector("#num1").value;
+//     let num2 = document.querySelector("#num2").value;
+//     let num3 = document.querySelector("#num3").value;
+//     average = (Number(num1) + Number(num2) + Number(num3)) / 3
+//     alert(average);
+//     document.querySelector("#averageOfThree").innerText = average;
+// }
+const middleSum = () => {
     let num1 = document.querySelector("#num1").value;
     let num2 = document.querySelector("#num2").value;
     let num3 = document.querySelector("#num3").value;
-    average = (Number(num1) + Number(num2) + Number(num3)) / 3
-    alert(average);
-    document.querySelector("#averageOfThree").innerText = average;
+    if(Number(num2) === Number(num1) + Number(num3)) {
+        alert("true");
+        document.querySelector("#middleSum").innerText = "true";
+    } else {
+        alert("false")
+        document.querySelector("#middleSum").innerText = "false";
+    }
+}
+const disemvowel = () => {
+    let vowels = "aAeEiIoOuU"
+    let novowels = ""
+    let str = document.querySelectofor("#novowels").value
+    let checkbox = document.querySelector("#yes");
+    if(checkbox.checked) {
+        vowels += "yY"
+    }
+    for(let i = 0; i < str.length; i++) {
+        if(!vowels.includes(str[i])) {
+            novowels += str[i]
+        } 
+    }
+    alert(novowels);
+    document.querySelector("#novowels").value = novowels;
 }
