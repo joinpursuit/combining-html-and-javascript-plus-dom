@@ -33,27 +33,45 @@
 
 //question 4
 
-const isPalindrome = () => {
-    // let output = ""
-    let strElement = document.querySelector("#word")
-    let str = strElement.value
-    let header = document.querySelector("#result") 
-    for(let i = 0; i < Math.floor(str.length/2); i++){
-        if(str[str.length - 1- i] !== str[i]){
-            strElement.value = "is not a palindrome"
-            // alert("is not a palindrome")
-            header.innerText = "is not a plaindrome"
-        } else {
-            strElement.value = "is a palindrome"
-            // alert("is a palindrome")
-            header.innerText= "is a palindrome"
-        }
-    }
-    strElement.value
-}
+// const isPalindrome = () => {
+//     // let output = ""
+//     let strElement = document.querySelector("#word")
+//     let str = strElement.value
+//     let header = document.querySelector("#result") 
+//     for(let i = 0; i < Math.floor(str.length/2); i++){
+//         if(str[str.length - 1- i] !== str[i]){
+//             strElement.value = "is not a palindrome"
+//             // alert("is not a palindrome")
+//             header.innerText = "is not a plaindrome"
+//         } else {
+//             strElement.value = "is a palindrome"
+//             // alert("is a palindrome")
+//             header.innerText= "is a palindrome"
+//         }
+//     }
+//     strElement.value
+// }
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-    let submitButton = document.querySelector("#submitButton");
-   submitButton.addEventListener("click", isPalindrome)
-})
+//     let submitButton = document.querySelector("#submitButton");
+//    submitButton.addEventListener("click", isPalindrome)
+// })
+
+// Question 5
+
+// const strToUpperCase = () => {
+//     let strElement = document.querySelector("#string")
+//     let str = strElement.value.toUpperCase()
+//     // let paragraph = document.querySelector("#upper")
+//     let header = document.querySelector("#uppers")
+//     // alert(str)
+//     // paragraph.innerText = str
+//     debugger
+//     header.innerText = str
+// }
+
+// document.addEventListener("DOMContentLoaded",() => {
+//     let button = document.querySelector("#submitButton");
+//     button.addEventListener("click", strToUpperCase)
+// }) 
