@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     let number = prompt("Enter number");
-    let result = alert(`${number} $sw`)
+    let result = alert(`${number}`)
     document.querySelector("#number").innerText = number
 
     if(number % 2 == 0) {
