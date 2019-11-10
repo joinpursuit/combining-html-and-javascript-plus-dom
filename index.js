@@ -95,5 +95,5 @@ document.addEventListener("DOMContentLoaded",() => {
         }
         alert(count)
 
-        document.querySelector("#stringCap1").innerHTML= count
+        document.querySelector("#stringCount").innerHTML= count
     }
