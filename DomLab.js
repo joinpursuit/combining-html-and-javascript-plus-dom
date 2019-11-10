@@ -12,6 +12,21 @@ document.addEventListener("DOMContentLoaded",() => {
     }) 
  }) 
 
+// document.addEventListener("DOMContentLoaded",() => {
+
+//     document.getElementById("submit").addEventListener("click",() => { 
+//         let element = document.getElementById("submit")
+//         alert(element)
+//     }) 
+//  })
+//  let promptStr = Prompt(enter your string)
+//     for(let i =0; i < promptStr.length; i++) {
+//         if (i % 2 === 0) {
+//             promptStr[i] = ""
+//         }
+//         return promptStr
+//     }
+
 
     
 
