@@ -75,3 +75,58 @@
 //     let button = document.querySelector("#submitButton");
 //     button.addEventListener("click", strToUpperCase)
 // }) 
+
+// Question 6
+// const strCapCount = () => {
+//     let count = 0
+//     let strElement = document.querySelector("#string")
+//     let str = strElement.value
+//     let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+//     let para = document.querySelector("#count")
+//     for(let i = 0; i < str.length; i++){
+//         if(caps.includes(str[i])){
+//             count++
+//         }
+//     }
+//     alert(count)
+//     para.innerText = count
+// }
+
+// document.addEventListener("DOMContentLoaded",() => {
+//     let button = document.querySelector("#submitButton");
+//     button.addEventListener("click", strCapCount)
+// }) 
+
+// Question 7
+const strCapCountComp = () => {
+    let count1 = 0
+    let count2 = 0
+    let strElement1 = document.querySelector("#string")
+    let strElement2 = document.querySelector("#stringdos")
+    let str1 = strElement1.value
+    let str2 = strElement2.value
+    let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let para = document.querySelector("#count")
+    for(let i = 0; i < str1.length; i++){
+        for(let j = 0; j < str2.length; j++){
+            if(caps.includes(str2[j])){
+                count2++
+            }
+        }
+        if(caps.includes(str1[i])){
+            count1++
+        }
+    }
+    if(count1 > count2){
+        alert("String 1 has more capitals")
+        para.innerText = "String 1 has more capitals"
+    } else {
+        alert("String 2 has more capitals")
+        para.innerText = "String 2 has more capitals"
+    }
+}
+
+document.addEventListener("DOMContentLoaded",() => {
+    let button = document.querySelector("#submitButton");
+    button.addEventListener("click", strCapCountComp)
+}) 
