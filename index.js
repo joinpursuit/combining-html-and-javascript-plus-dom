@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // question 1
-    // let q1 = prompt("Enter a string:")
-    // // alert(q1);
-    // let header = document.querySelector("#q1")
-    // header.innerText = q1;
+    let q1 = prompt("Enter a string:")
+    // alert(q1);
+    let header = document.querySelector("#q1")
+    header.innerText = q1;
 
 
-    //question 2
-    // let q2 = prompt("Enter a number:")
-    // let header2 = document.querySelector("#q2");
-    // if(q2 % 2 === 0){
-    //     // alert("Number is EVEN");
-    //     header2.innerText = "Number is EVEN";
-    // } else {
-    //     // alert("Number is NOT EVEN");
-    //     header2.innerText = "Number is NOT EVEN";
-    // }
+    // question 2
+    let q2 = prompt("Enter a number:")
+    let header2 = document.querySelector("#q2");
+    if(q2 % 2 === 0){
+        // alert("Number is EVEN");
+        header2.innerText = "Number is EVEN";
+    } else {
+        // alert("Number is NOT EVEN");
+        header2.innerText = "Number is NOT EVEN";
+    }
     debugger
 
 })
