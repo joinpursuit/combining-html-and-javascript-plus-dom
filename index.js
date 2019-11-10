@@ -128,3 +128,23 @@ const isMidEqual = () => {
 
 
 //question 10
+const disemvowel = () => {
+    let result = ""
+    let yCheckbox = document.querySelector("#yIsVowel");
+    let str = document.querySelector("#str").value;
+    let vowels = "AaEeIiOoUu";
+    if(yCheckbox.checked){
+        vowels += "Yy";
+    } 
+    for(let char of str){
+        if(!vowels.includes(char)){
+            result += char;
+        }
+    }
+    alert(result);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    let submit = document.querySelector("#disemvowelBtn")
+    submit.addEventListener("click", disemvowel)
+})
