@@ -160,7 +160,7 @@
             </p>
     </body>
 </html> -->
-
+<!-- 
 <html>
     <head>
         <title>Average of three nums</title>
@@ -195,6 +195,68 @@
 
           
         }
+        </script>
+        <p id="page">
+            </p>
+    </body>
+</html> -->
+
+<!-- <html>
+<head>
+    <title>Check Middle Number Sum!</title>
+</head>
+<body>
+    <h1>Check Middle Number sum!</h1>
+    <input id="input1" type="text" />
+    <input id="input2" type="text" />
+    <input id="input3" type="text" />
+    <button type="button" onclick="middleSum()">Sum me!</button>
+    <script>
+        const middleSum =() => {
+            let num1 = document.getElementById("input1").value
+            let num2 = document.getElementById("input2").value
+            let num3 = document.getElementById("input3").value
+            if (Number(num1) + Number(num3) === Number(num2)) {
+                // return window.alert(true)
+                return document.getElementById("page").innerHTML = "This equals the middle number!"
+            } else {
+                // return window.alert(false)
+                return document.getElementById("page").innerHTML = "This does not equal the middle number!"
+            }
+        }
+    </script>
+    <p id="page">
+        </p>
+</body>
+</html> -->
+
+<html>
+    <head>
+        <title>Disemvowel</title>
+    </head>
+    <body>
+        <h1>Disemvowel!</h1>
+        <input id="input" type="text" />
+        <input id="checkbox" type="checkbox" onclick="disemvowelY()" />
+        <button type="button" onclick="disemvowel()">Disemvowel me!</button>
+        <script>
+        const disemvowel = () => {
+            let checkbox = document.getElementById("checkbox")
+            let avoid = "aAeEiIoOuU"
+            let str = document.getElementById("input").value 
+            let nStr = ""
+            if (checkbox.checked === true) {
+                avoid += "yY"
+            }
+            for (let char of str) {
+                if(!avoid.includes(char)) {
+                    nStr += char
+                }
+            }
+
+            return document.getElementById("page").innerHTML = nStr
+        } 
+               
         </script>
         <p id="page">
             </p>
