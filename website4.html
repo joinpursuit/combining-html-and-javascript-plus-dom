@@ -1,34 +1,29 @@
 <!DOCTYPE html>
-<html>
-    <head> 
-        <title>
-            Question 4
-        </title>
+<html lang="en">
 
-    <h1> 
-        Palindrome Detector
-    </h1>
-    </head>
+<head>
+    <title>Question 4</title>
+</head>
 
-        <label for = "pali-word"> Enter a word </label>
-        <input type = "word" id = "pali-word">
-        <button onclick = "isItPali()"> Palindromes Ayeee </button>
-        <p id = "show-word"> </p>
-
-        <script> 
-        const isItPali = () => {
-            let inputWord = document.querySelector("#pali-word").value 
-            for(let i = 0; i < Math.floor(str.length / 2); i++) {
-                if(str[i] !== str[str.length - 1 - i]) {
-                    document.querySelector("#show-word").innerText = `${inputWord} is not a palindrome!`;
-                } 
+<body>
+    <h1>Palindrome detector</h1>
+    <label for="palindrome">Type a word</label>
+    <input type="text" id="palindrome">
+    <button onclick="isPali()">Is it Palindrome? Click to see</button>
+    <p id="on-screen"></p>
+</body>
+<script>
+    const isPali = () => {
+        let inputStr = document.querySelector("#palindrome")
+        let str = inputStr.value
+        for (let i = 0; i < Math.floor(str.length / 2); i++) {
+            if (str[i] !== str[str.length - 1 - i]) {
+                 `${str} is palidrome`
             }
-            return document.querySelector("#show-word").innerText = `${inputWord} is a palindrome!`
-            
-            alert ()
-            document.querySelector("#pali-word").innerText = `The word ${inputWord} does not have a palindrom.`
         }
-        </script>
-
+        alert(`${str} is palindrome word`)
+        document.querySelector("#on-screen").innerText = `${str} is palindrome word`;
+    }
+</script>
 
 </html>

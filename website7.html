@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 7</title>
+    </head>
+    <body>
+        <h1>String Capital Counter Comparer</h1>
+        Input 1: <input type="text" id="str1"/>
+        Input 2: <input type="text" id="str2"/>
+        <button onclick="capComparer()"id="submitBtn">Submit</button>
+    </body>
+    <script>
+        const capComparer = () => {
+            let input1 = document.querySelector("#str1").value
+            let input2 = document.querySelector("#str2").value
+            let countStr1 = 0;
+            let countStr2 = 0;
+            let capAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            for (let i = 0; i < input1.length; i++) {
+                if(capAlphabet.includes(input1[i])){
+                    countStr1++
+                }
+                for(let j = 0; j < input2.length; j++){
+                    if(capAlphabet.includes(input2[i])){
+                        countStr2++
+                    }
+                }
+            }
+            
+        }
+    </script>
+</html>
