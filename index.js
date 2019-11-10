@@ -147,3 +147,26 @@ document.addEventListener("DOMContentLoaded",() => {
             document.querySelector("#avgResult").innerHTML= "All of the inputs must be numbers"
         }
     }
+
+    const checkMiddle = () =>{
+        let input1 = document.querySelector("#numL");
+        let input2 = document.querySelector("#numM");
+        let input3 = document.querySelector("#numR");
+        let numb1 = Number(input1.value);
+        let numb2 = Number(input2.value);
+        let numb3 = Number(input3.value);
+        console.log(numb1)
+        console.log(numb2)
+        console.log(numb3)
+        let sum = numb1+numb3
+        console.log(sum)
+        if(numb2===sum){
+            alert(true)
+            document.querySelector("#middleResult").innerHTML= true
+
+        }else{
+            alert(false)
+            document.querySelector("#middleResult").innerHTML= false
+
+        }
+    }
