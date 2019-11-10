@@ -48,3 +48,15 @@ let string = document.querySelector("#uppercase").value;
     // document.querySelector("#top").innerText = string.toUpperCase()
      document.querySelector("#uppercase").value = string.toUpperCase();
 }
+
+const capitalCounter = () => {
+    let string = document.querySelector("#capital").value;
+    let newString = 0;
+    for(let char of string) {
+        if(char === char.toUpperCase()) {
+            newString++;
+        }
+    }
+    alert(newString);
+    document.querySelector("#capitalCount").innerText = newString;
+}
