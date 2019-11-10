@@ -172,7 +172,15 @@ document.addEventListener("DOMContentLoaded",() => {
     }
     
     let avoidLetters = "aAeEiIoOuU"
-
+    
+    const addingy = () => {
+        if(document.querySelector("#myCheck").checked === true){
+            avoidLetters+= "yY"
+    }else{
+        avoidLetters ="aAeEiIoOuU"
+    }
+    console.log(avoidLetters)
+}
     const disemvowel = () => {
         let input = document.querySelector("#takeVowels");
         let string = input.value;
@@ -183,9 +191,8 @@ document.addEventListener("DOMContentLoaded",() => {
                 output = output + char
             }
         }
-        console.log(output) 
+        alert(output) 
+        document.querySelector("#checkResult").innerHTML= output
 
     }
-    const disemvowely = () => {
-        avoidLetters+= "yY"
-    }
+  
