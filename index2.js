@@ -37,20 +37,13 @@ if (isEven(Number(number))){
 
 
 
-const onlyOdds = ()=>{
-    let output = ""
-    let strElement = document.querySelector("#string")
-    let str = strElement.value;
-    for (let i = 0; i<str.length; i++){
-        if (i%2){
-            output += str[i]
-        }
-    }
-    strElement.value = output;
-}
- 
  
 
+const multiplyTwo = () => {
+    let num = document.querySelector("#double").value
+     document.querySelector("#result").innerText= Number(num)*2
+     document.getElementById("double").value= Number(num)*2
+}
 
 
 
@@ -82,11 +75,6 @@ const onlyOdds = ()=>{
 //b. Instead of showing a popup, make the text appear on the screen.
 
 
-
-// @channel Warm up. Make an HTML file and add a script file to a JS page. 
-// Put an input field and submit button on the html file. The user will enter a string 
-// in the input field and click the submit button. 
-// Change the text inside the input to only have the odd indexed characters.
 
 const multiplyTwo = () => {
         let num = document.querySelector("#double").value
