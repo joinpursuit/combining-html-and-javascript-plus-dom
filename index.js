@@ -50,7 +50,7 @@ const upperCase = () => {
 }
 
 //question 6
-const countCapitals = () => {
+const countCapitals1 = () => {
     let userInput = document.querySelector("#strCapital").value;
     let upperCased = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let count = 0;
@@ -64,4 +64,45 @@ const countCapitals = () => {
 }
 
 //question 7
+
+document.addEventListener("DOMContentLoaded", () => {
+    const countCapitals = (string) => {
+        let upperCased = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let count = 0;
+        for(let i = 0; i < string.length; i++){
+            if(upperCased.includes(string[i])){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    let submit = document.querySelector("#capitalComparer")
+
+    submit.addEventListener("click", () => {
+        let str1 = document.querySelector("#str1").value
+        let str2 = document.querySelector("#str2").value
+        if(countCapitals(str1) > countCapitals(str2)){
+            //alert("Input String 1 has more CAPITALS")
+            return document.querySelector("#resultCapitals").innerText = `Input String 1 has more CAPITALS`
+        } else if(countCapitals(str2) > countCapitals(str1)){
+            // alert(`Input String 2 has more CAPITALS`)
+            return document.querySelector("#resultCapitals").innerText = `Input String 2 has more CAPITALS`
+        } else {
+            // alert(`Both string have equal amount of CAPITALS`)
+            return document.querySelector("#resultCapitals").innerText = `Both string have equal amount of CAPITALS`
+        }
+    })
+})
+
+
+//question 8
+const average = () => {
+    let num1 = document.querySelector("#num1").value
+    let num2 = document.querySelector("#num2").value
+    let num3 = document.querySelector("#num3").value
+    let total = Number(num1) + Number(num2) + Number(num3);
+    let avg = Math.round(total / 3)
+    !Number(num1) || !Number(num2) || !Number(num3) ? alert("All inputs must be numbers") : alert(avg);
+}
 

@@ -10,6 +10,7 @@
 
         <h1 id="q2"></h1>
 
+
         <form>
 
             <h2>Times Two a Number</h2>
@@ -19,6 +20,8 @@
             <input type="button" name="x2" value="Times Two" onclick=TimesTwo()><br>
             <br>
             <h1 id="q3"></h1>
+
+            <hr>
  
             <h2>String palindrome</h2>
             <label for="palindrome">Enter a string</label>
@@ -30,7 +33,8 @@
 
         </form>
 
-
+        <hr>
+        
         <h2>String Uppercaser</h2>
         <label for ="string">Uppercase a string!</label>
         <input type="text" id="upperInput" value=""><br>
@@ -39,16 +43,45 @@
         <br>
         <p id ="resultUpper" value=""></p>
 
+        <hr>
 
         <h2>String Capital Counter</h2>
         <label for="string">Counter the Capitals!</label>
         <input type="text" id="strCapital" value=""><br>
         <br>
-        <input type="button" name="countCapitals" value="count capitals" onclick=countCapitals()><br>
+        <input type="button" name="countCapitals" value="count capitals" onclick=countCapitals1()><br>
         <br>
         <p id ="resultCounts"></p>
 
+        <hr>
 
+        <h2>String Capital Counter</h2>
+        <label for="string">Compare the Capitals!</label>
+        <br>
+        Input String 1<input type="text" id="str1" placeholder="String" value=""><br>
+        <br>
+        Input String 2<input type="text" id="str2" placeholder="String" value=""><br>
+        <br>
+        <input type="button" id="capitalComparer" value="compare capitals" ><br>
+        <br>
+        <p id ="resultCapitals"></p>
+
+        <hr>
+
+        <h2>Average of Three Numbers</h2>
+        <label for="average">What is the average of your input numbers?</label>
+        <br>
+        Input String 1<input type="text" id="num1" placeholder="Number 1" value=""><br>
+        <br>
+        Input String 2<input type="text" id="num2" placeholder="Number 2" value=""><br>
+        <br>
+        Input String 3<input type="text" id="num3" placeholder="Number 3" value=""><br>
+        <br>
+        <button id="averageBtn" onclick=average()>average numbers</button><br>
+        <br>
+        <p id="resultAverage"></p>
+
+        
     </body>
 
 
