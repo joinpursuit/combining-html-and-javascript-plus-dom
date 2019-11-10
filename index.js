@@ -170,3 +170,22 @@ document.addEventListener("DOMContentLoaded",() => {
 
         }
     }
+    
+    let avoidLetters = "aAeEiIoOuU"
+
+    const disemvowel = () => {
+        let input = document.querySelector("#takeVowels");
+        let string = input.value;
+        let output = ""
+
+        for(let char of string) {
+            if(!avoidLetters.includes(char)){
+                output = output + char
+            }
+        }
+        console.log(output) 
+
+    }
+    const disemvowely = () => {
+        avoidLetters+= "yY"
+    }
