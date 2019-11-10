@@ -98,3 +98,13 @@ const moreCap = () =>{
     }
     
 }
+
+
+const aveOfThree = () => {
+    let num1 = document.querySelector("#num1").value
+    let num2 = document.querySelector("#num2").value
+    let num3 = document.querySelector("#num3").value
+    let sum = num1 + num2 + num3
+    let ave = sum/3
+        document.querySelector("#answerOfThree").innerText = ave
+    }
