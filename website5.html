@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title> 
+         Question 5 
+     </title>
+    </head>
+
+    <body> 
+        <h1>
+            String Uppercase 
+        </h1>
+        <label for = "strCapital"> Enter a word </label>
+        <input type = "text" id = "strCapital">
+        <input type = "submit" id = "user-id">
+        <p id = "on-screen"> </p>
+    </body>
+    <script> 
+    document.addEventListener("DOMContentLoader", () => {
+        let button = document.querySelector("#user-input")
+        button.addEventListener("click", () => {
+            let str = document.querySelector("#strCapital")
+            let inputStr = str.value
+            let strCapital = inputStr.toUpperCase()
+            alert(`Your word ${strCapital} is now capitalized.`)
+            document.querySelector("#on-screen").innerText = (`${strCapital} is now appearing in all caps.`)
+            document.querySelector("#strCapital").value = strCapital
+        })
+    })
+    
+    </script>
+</html>
