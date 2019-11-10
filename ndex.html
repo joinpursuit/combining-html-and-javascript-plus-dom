@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> <!--Question 1 part A, B-->
+    <head>
+        <script>
+            let userString = window.prompt("Enter your name")
+            window.alert(`Thank you ${userString}`);
+                </script>
+    </head>
+
+    <body>
+        <h1>Pop up String</h1>
+        <p id="page">
+             <script>
+                document.getElementById("page").innerHTML = "Your name is" + userString ;
+                </script>
+        </p>
+    </body>
+</html>
+
+<html>
+   <head>
+   </head>
+   <body>
+       <script>
+        let userNum = window.prompt("Enter a number");
+        if(userNum % 2===0){
+            window.alert("Your number is even")
+        } else window.alert("your number is not even")
+        
+        </script>
+
+
+   </body>
+</html>
