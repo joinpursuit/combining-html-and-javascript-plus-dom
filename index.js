@@ -39,3 +39,24 @@ document.addEventListener("DOMContentLoaded",() =>{
 //     let reverseString = string.split("").reverse().join("")
 //     output.innerText = reverseString === string
 // }  
+
+// Problem 5
+//a 
+// const upperCase = () => {
+//     let textBox = document.querySelector("#text")
+//     let string = textBox.value
+//     alert(string.toUpperCase())
+// }
+// b
+// const upperCase = () => {
+//     let output = document.querySelector("#value")
+//     let textBox = document.querySelector("#text")
+//     let string = textBox.value
+//     output.innerText = string.toUpperCase()
+// }
+
+// const upperCase = () => {
+//     let textBox = document.querySelector("#text")
+//     let string = textBox.value
+//     textBox.value = string.toUpperCase() 
+// }
