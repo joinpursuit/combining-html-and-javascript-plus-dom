@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Question 10</title>
+</head>
+<body>
+   <h1>Disemvoweler</h1>
+   <form>
+       <label for="textbox">Enter word or phrase</label>
+       <input type="text" name="textbox" id="input-text"/>
+       <input type="checkbox" id="cbox" value="y"/>
+       <button id="btn" onclick="disemvoweler()">Submit</button>
+   </form>
+   <p id="print"></p>
+   <script>
+       const disemvoweler = () => {
+           let inputStr = document.querySelector("#input-text")
+           let str = inputStr.value.toLowerCase()
+           let newStr = ''
+           let vowels = "aeiou"
+           for (let letter of str){
+               if(!vowels.includes(letter)){
+                   newStr = newStr + letter
+               }
+           }
+           alert(newStr)
+       }
+       document.querySelector("#cbox").addEventListener("change", disemvoweler)
+   </script>
+</body>
+</html>
