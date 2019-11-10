@@ -37,10 +37,13 @@
 //     return document.querySelector("#header").innerText = "Your word or string is a pallindrome"
 // }
 
-//Problem 5
-// function upperCase(){
+// Problem 5
+// const upperCase = () =>{
+    
+//     // string2.innerText = `${str.value.toUpperCase()}`
+  
 //     let str = document.querySelector("#str")
-//     string2.innerText = `${str.value.toUpperCase()}`
+//     document.querySelector("#str").value = str.value.toUpperCase()
 // }
 
 //Problem 6
@@ -61,35 +64,138 @@
 
 // })
 
+// Problem 7
+// document.addEventListener("DOMContentLoaded",() =>{
 
-document.addEventListener("DOMContentLoaded",() =>{
+//     const numUpper = (string) =>{
+//         let num =0
+//         // let upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+//         for(let i = 0; i < string.length; i++){
+//             if(string[i] === string[i].toUpperCase()) num++ 
+//         }
+//         return num
 
-const numUpper = (string) =>{
-    let num =0
-    let upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    for(let i = 0; i < string.length; i++){
-        if(upper.includes(string[i])) num++ 
-    }
-    return num
+//     }
 
-}
+//     let submit = document.querySelector("#upperCaseBtn")
 
-let submit = document.querySelector("#upperCaseBtn")
+//     submit.addEventListener("click",() => {
 
-submit.addEventListener("click",() => {
-    let stringone = document.querySelector("#strone").value
-    let stringtwo = document.querySelector("#strtwo").value
-    if(numUpper(stringone) > numUpper(stringtwo)){
-        return  document.querySelector("#result").innerText = "First string has more capital letters"
-    } else if (numUpper(stringone) < numUpper(stringtwo)) {
-        return document.querySelector("#result").innerText = "Second string has more capital letters"
-    } else {
-        return document.querySelector("#result").innerText = "Both strings have equal amounts of capital letters"
-    }
+//         let stringone = document.querySelector("#strone").value
+//         let stringtwo = document.querySelector("#strtwo").value
+        
+//         if(numUpper(stringone) > numUpper(stringtwo)){
+//             return  document.querySelector("#result").innerText = "First string has more capital letters"
+//         } else if (numUpper(stringone) < numUpper(stringtwo)) {
+//             return document.querySelector("#result").innerText = "Second string has more capital letters"
+//         } else{
+//             return document.querySelector("#result").innerText = "Both strings have equal amounts of capital letters"
+//         }
 
-})
+//     })
+
+// })
+
+// Problem 7 doesnt work for even
+// document.addEventListener("DOMContentLoaded",() =>{
+
+//     const numUpper = (string) =>{
+//         let num =0
+//         for(let letter of string) if(letter === letter.toUpperCase()) num++ 
+//         return num
+//     }
     
+//     let submit = document.querySelector("#upperCaseBtn")
+   
+//     submit.addEventListener("click",() => {
+
+//         let stringone = document.querySelector("#strone").value
+//         let stringtwo = document.querySelector("#strtwo").value
+//         let resultText = document.querySelector("#result")
+
+//         return  resultText.innerText = (numUpper(stringone) > numUpper(stringtwo) )?  "First string has more capital letters" : "Second string has more capital letters"
+
+//     })
+// })
+
+// Problem 8
+// document.addEventListener("DOMContentLoaded",() =>{
 
 
+// const Avg  = (... numArr) => {
+//     let avg = 0
 
-})
+//     for(let i = 0; i< numArr.length; i++){
+//         avg += numArr[i]
+//     }
+        
+   
+//     return avg = (avg/numArr.length)
+// }
+// let submit = document.querySelector("#AvgBtn")
+
+
+// submit.addEventListener("click",() => {
+
+//     let numONE =  Number(document.querySelector("#numone").value)
+//     let numTWO =  Number(document.querySelector("#numtwo").value)
+//     let numTHREE = Number( document.querySelector("#numthree").value)
+    
+    
+//     debugger
+//     if (Number (numONE) &&  Number (numTWO)&& Number (numTHREE)){
+//         document.querySelector("#result").innerText = Avg(numONE,numTWO,numTHREE)
+
+//     } else {
+
+//         alert("All of the inputs must be numbers")
+//          document.querySelector("#result").innerText = "Please type in numbers"
+        
+//         document.querySelector("#numone").value = ""
+//         document.querySelector("#numtwo").value = ""
+//         document.querySelector("#numthree").value = ""
+
+//     }
+
+// })
+
+// })
+
+//Problem 9
+// document.addEventListener("DOMContentLoaded",() =>{
+
+// const sum = (...sumArr) =>{
+//     let sum = 0
+//     for(let i = 0; i< sumArr.length; i++){
+//                 sum += sumArr[i]
+//     }
+                
+//     return sum
+// }
+
+// let submit = document.querySelector("#sumBtn")
+
+// submit.addEventListener("click",() => {
+
+//     let numONE =  Number(document.querySelector("#numone").value)
+//     let numTWO =  Number(document.querySelector("#numtwo").value)
+//     let numTHREE = Number( document.querySelector("#numthree").value)
+    
+    
+//     if (Number (numONE) &&  Number (numTWO)&& Number (numTHREE)){
+//         document.querySelector("#result").innerText = sum(numONE,numTHREE) === numTWO
+
+//     } else {
+
+//         alert("All of the inputs must be numbers")
+//          document.querySelector("#result").innerText = "Please type in numbers"
+        
+//         document.querySelector("#numone").value = ""
+//         document.querySelector("#numtwo").value = ""
+//         document.querySelector("#numthree").value = ""
+
+//     }
+
+// })
+
+// })
