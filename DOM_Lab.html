@@ -41,13 +41,22 @@
         <p id = "answer"> </p>
         <p id = "answer2">This will get replaced</p> -->
 
-        <h2>String Capital Counter</h2>
+        <!-- <h2>String Capital Counter</h2>
         <p>
             <label for = "upperCase"> Count it for me </label>
             <input id = "upperCase" type = "text" placeholder = 'Word Goes Here'/>
             <input type = "submit" id = "submit" value = "submit"/>
         </p>
-        <p id = "answer"> COUNT</p>
+        <p id = "answer"> COUNT</p> -->
+
+        <h2>String Capital Counter Comparer</h2>
+        <p>
+            <label for = "upperCase">  </label>
+            <input id = "upperCase" type = "text" placeholder = 'Initial Word'/>
+            <input id = "upperCase2" type = "text" placeholder = 'Compare Word'/>
+            <input type = "submit" id = "submit" value = "submit"/>
+        </p>
+        <p id = "answer"> </p>
 
         <script>
             // Question 1
@@ -101,14 +110,28 @@
 
             //Question 6
 
+            // document.querySelector("#submit").addEventListener("click", () => {
+            //     let word = document.querySelector("#upperCase").value
+            //     str = word.split("").filter (el => el>="A" && el <="Z")
+            //     //alert (`There are this many capital letters in your word: ${str.length}`)
+            //     answer.innerText = str.length
+            //     })
+            
+
+            //Question 7
             document.querySelector("#submit").addEventListener("click", () => {
                 let word = document.querySelector("#upperCase").value
+                let word2 = document.querySelector("#upperCase2").value
                 str = word.split("").filter (el => el>="A" && el <="Z")
-                //alert (`There are this many capital letters in your word: ${str.length}`)
-                answer.innerText = str.length
+                str2 = word2.split("").filter (el => el>="A" && el <="Z")
+                if (str.length > str2.length){
+                    alert (`${word} has more capital letters`)
+                } else {
+                    alert (`${word2} has more capital letters`)
+                }
                 })
-                
-            
+        
+        
         </script>
     </body>
 
