@@ -60,3 +60,82 @@ document.addEventListener("DOMContentLoaded",() =>{
 //     let string = textBox.value
 //     textBox.value = string.toUpperCase() 
 // }
+
+// Problem 6
+
+// const capitalCounter = () => {
+//     let textBox = document.querySelector("#input")
+//     let string = textBox.value
+//     let count = 0
+//     for(i = 0; i < string.length; i++) {
+//         if(string[i] === string[i].toUpperCase()) {
+//             count ++
+//         }
+//     }
+//     alert (count)
+// }
+
+// const capitalCounter = () => {
+//     let output = document.querySelector("#paragraph")
+//     let textBox = document.querySelector("#input")
+//     let string = textBox.value
+//     let count = 0
+//     for(i = 0; i < string.length; i++) {
+//         if(string[i] === string[i].toUpperCase()) {
+//             count ++
+//         }
+//     }
+//     output.innerText = (count)
+// }
+
+// Question 7 
+// a
+// const capitalCount = (string) => {
+//     let count = 0
+//     for(i = 0; i < string.length; i++) {
+//         if(string[i] === string[i].toUpperCase()) {
+//             count ++
+//         }
+//     }
+//     return count
+// }
+
+// const stringCompare = () => {
+//     let textBoxOne = document.querySelector("#input1")
+//     let textBoxTwo = document.querySelector("#input2")
+//     let stringOne = textBoxOne.value
+//     let stringTwo = textBoxTwo.value
+//     let countOne = capitalCount(stringOne)
+//     let countTwo = capitalCount(stringTwo)
+//     if(countOne > countTwo) {
+//         alert (stringOne)
+//     } else {
+//         alert (stringTwo)
+//     }
+// }
+// b
+// const capitalCount = (string) => {
+//     let count = 0
+//     for(i = 0; i < string.length; i++) {
+//         if(string[i] === string[i].toUpperCase()) {
+//             count ++
+//         }
+//     }
+//     return count    
+// }
+
+// const stringCompare = () => {
+//     let output = document.querySelector("#paragraph")
+//     let textBoxOne = document.querySelector("#input1")
+//     let textBoxTwo = document.querySelector("#input2")
+//     let stringOne = textBoxOne.value
+//     let stringTwo = textBoxTwo.value
+//     let countOne = capitalCount(stringOne)
+//     let countTwo = capitalCount(stringTwo)
+//     if(countOne > countTwo) {
+//         output.innerText = stringOne
+//     } else {
+//         output.innerText = stringTwo
+//     }
+// }
+
