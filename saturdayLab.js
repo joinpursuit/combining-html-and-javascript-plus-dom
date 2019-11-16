@@ -1,19 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
-    
-    let userName= prompt (
-        "what would you like your new name to be?"
-    );
-    document.querySelector("#top").innerText = `${userName}`
-
-    const isEven = (num) => {
-        if (num % 2 === 0) return (`${userInput}, Your Number is Even!`);
-        if (num % 2 !== 0) return (`${userInput}, Your Number is ODD!`);
-    }
-let userInput = prompt("Enter a number, please!");
-
-document.querySelector("#number").innerText = `${isEven(Number(userInput))}`
-
-
+    let name = prompt("What would you like your name to be?")
+    document.querySelector("#top").innerText = `${name}`
 }
 )
 const multiplyTwo = () => {
@@ -31,8 +18,10 @@ const isPalindrome = () => {
     let reverseWrd = str.toLowerCase().split("").reverse().join("")
     if (str === reverseWrd){
         alert(`${str}, your word is a palindrome`);
+        document.querySelector("#aPalindrome").innerText = `${str}, your word is a palindrome`
     }else{
         alert(`${str}, your word is not a palindrome`);
+        document.querySelector("#aPalindrome").innerText = `${str}, your word is not a palindrome`
     }
 
 
@@ -102,9 +91,18 @@ const moreCap = () =>{
 
 const aveOfThree = () => {
     let num1 = document.querySelector("#num1").value
+    console.log((num1))
+    typeof(num1)
     let num2 = document.querySelector("#num2").value
+    console.log(Number(num2))
     let num3 = document.querySelector("#num3").value
-    let sum = num1 + num2 + num3
-    let ave = sum/3
-        document.querySelector("#answerOfThree").innerText = ave
-    }
+    console.log(Number(num3))
+    
+    document.querySelector("#answerOfThree").innerText = Number((num1+ num2 + num3)/3)
+}
+
+const sumInTheMiddle = () => {
+    let uno = document.querySelector("#uno").value
+    let dos = document.querySelector("#dos").value
+    let tres = document.querySelector("#tres").value
+}
