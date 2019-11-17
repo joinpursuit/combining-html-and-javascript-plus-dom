@@ -2,15 +2,40 @@
 
 # Question One
 
-a. Make a website that prompts the user for a string. Then show a popup that displays the string.
+```
+<script>
+  let userSubmission = window.prompt("Enter Text")
+window.alert(prompt) 
+document.getElementById("user_submitted_text").innerText = prompt // 
+</script>
+ 
 
-b. Instead of showing a popup, make the text appear on the screen.
+```
 
 # Question Two
 
-a. Make a website that prompts the user for a number, then alerts them of whether or not the number is even.
+```
 
-b. Instead of showing a popup, make the text appear on the screen.
+ <script>
+      const isEven = (answer) => {
+      answer = window.prompt(`Input a number`)
+      if(isNaN(answer)){
+        window.alert('That is not a number. Please input a number.')
+        isEven()
+      }else{
+        if(parseInt(answer) % 2 === 0){
+          // window.alert(`Your number: ${answer} is even.`)
+          document.write(`Your number : ${answer} is even.`)
+        } else{
+          // window.alert(`Your number: ${answer} is odd.`)
+          document.write(`Your number : ${answer} is even.`)
+        }
+      }
+    }
+    isEven()
+  </script>
+
+  ```
 
 # Question Three
 
@@ -20,11 +45,62 @@ b. Instead of showing a popup, make the doubled number appear in a paragraph bel
 
 c. Make the doubled number instead appear inside the input
 
+```
+<body>
+    <h2>Double Your Number Below </h2>
+    <br>
+    <input type="text" id="numberinput" placeholder="example: 4">
+    <button onclick = "doubleYourNumber()"> Start </button>
+    <p id="output"></p>
+    <script>
+      const doubleYourNumber = () => {
+        let number = document.getElementById("numberinput").value
+        if(isNaN(number)){
+          window.alert(`That is not a number, try again.`)
+        } else{
+          let doubleNum = parseInt(number) * 2
+          window.alert(`Your number doubled is ${doubleNum}`)
+          document.write(doubleNum)
+          document.getElementById("output").innerText = doubleNum
+          document.getElementById("numberinput").value = doubleNum
+        }
+      }
+    </script>
+  </body>
+
+  ```
+
 # Question Four
 
 a. Make a website with a heading at the top that reads "Palindrome detector".  Add an input field and a button.  When the user clicks the button, display an alert that says whether or not the text in the input field is a palindrome (the same backwards and forwards).
 
 b. Instead of showing a popup, have that information appear in a paragraph below the button.
+
+
+```
+<body>
+        <p>
+            Your word: <input id="user_entry" type="text" name="user_entry">
+            <button 
+                type="button" 
+                name="user_entry"
+                onclick="palDetect(document.getElementById('user_entry').value)"
+            >
+                Submit
+            </button>
+        </p>
+        <p id="palindrome_or_not"></p>
+        <script>
+            function palDetect(str) {
+                let backwards = str.split(``).reverse().join(``)
+                for (let i = str.length - 1; i >= 0; i--) backwards += str[i]
+                window.alert(`${str} is ${backwards === str ? `` : `NOT `}a palindrome.`)
+                document.getElementById("palindrome_or_nah").innerText += `\n${str} is ${backwards === str ? `` : `NOT `}a palindrome.`
+            }
+        </script>
+</body>
+
+```
 
 # Question Five
 
@@ -33,6 +109,35 @@ a. Make a website with a heading at the top that reads "String Uppercaser".  Add
 b. Instead of showing a popup, have that information appear in a paragraph below the button.
 
 c. Have the uppercased overwrite the text that was there before.
+```
+<body>
+        <h1>Quesiton 6</h1>
+        <h2>String Capital Counter</h2>
+        <input id="user_input" name="user_input" type="text">
+        <button
+            type="submit"
+            name="user_input"
+            onclick="capitalCount(document.getElementById('user_input').value)"
+        >
+            Count
+        </button>
+        <p id="user_entries"></p>
+        <script>
+            function capitalCount(str) {
+                let count = 0
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] === str[i].toUpperCase()) {count++}
+                }
+                window.alert(count)
+                document.getElementById("user_entries").innerText +=`There are ${count} capital letters in: ${str}`
+                return count
+            }
+        </script>
+  </body>
+
+    ```
+
+
 
 # Question Six
 
@@ -40,37 +145,32 @@ a. Make a website with a heading at the top that reads "String Capital Counter".
 
 b. Instead of showing a popup, have that information appear in a paragraph below the button.
 
-# Question Seven
-
-a. Make a website with a heading at the top that reads "String Capital Counter Comparer".  Add 2 input fields and a button.  When the user clicks the button, display an alert that shows which string has more capital letters in it.
-
-b. Instead of showing a popup, have that information appear in a paragraph below the button.
-
-# Question Eight
-
-a. Make a website with a heading at the top that reads "Average of Three Numbers".  Add 3 input fields and a button.  When the user clicks the button, display an alert that shows the average of all 3 text fields.
-
-b. Instead of showing a popup, have that information appear in a paragraph below the button.
-
-c. If any of the text fields doesn't have a number, show an error message that reads "All of the inputs must be numbers"
-
-
-# Question Nine
-
-a. Make a website with a heading at the top that reads "Check Middle Number Sum".  Add 3 input fields and a button.  When the user clicks the button, display an alert that shows whether the number in the middle input field is equal to the sum of the left input field and the right input field.
-
 ```
-Sample input: 4, 14, 10
-Sample output: true
+ <body>
+        <h1>Quesiton 6</h1>
+        <h2>String Capital Counter</h2>
+        <input id="user_input" name="user_input" type="text">
+        <button
+            type="submit"
+            name="user_input"
+            onclick="capitalCount(document.getElementById('user_input').value)"
+        >
+            Count
+        </button>
+        <p id="user_entries"></p>
+        <script>
+            function capitalCount(str) {
+                let count = 0
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] === str[i].toUpperCase()) {count++}
+                }
+                window.alert(count)
+                document.getElementById("user_entries").innerText +=`There are ${count} capital letters in: ${str}`
+                return count
+            }
+        </script>
+</body>
 
-Sample input: 4,9,8
-Sample output: false
-```
+  ```
 
-b. Instead of showing a popup, have that information appear in a paragraph below the button.
 
-# Question Ten
-
-a. Make a website with a heading at the top that reads "Disemvoweler".  Add 1 input field, a checkbox and a button. When the user clicks the button, display an alert that shows the text in the input field with the vowels removed.  If the checkbox is checked, count y as a vowel.
-
-b. Instead of showing a popup, have that information appear in a paragraph below the button.
