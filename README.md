@@ -109,6 +109,8 @@ a. Make a website with a heading at the top that reads "String Uppercaser".  Add
 b. Instead of showing a popup, have that information appear in a paragraph below the button.
 
 c. Have the uppercased overwrite the text that was there before.
+
+
 ```
 <body>
         <h1>Quesiton 6</h1>
@@ -135,42 +137,8 @@ c. Have the uppercased overwrite the text that was there before.
         </script>
   </body>
 
-    ```
-
-
-
-# Question Six
-
-a. Make a website with a heading at the top that reads "String Capital Counter".  Add an input field and a button.  When the user clicks the button, display an alert that contains a count of how many capital letters are in the string.
-
-b. Instead of showing a popup, have that information appear in a paragraph below the button.
-
 ```
- <body>
-        <h1>Quesiton 6</h1>
-        <h2>String Capital Counter</h2>
-        <input id="user_input" name="user_input" type="text">
-        <button
-            type="submit"
-            name="user_input"
-            onclick="capitalCount(document.getElementById('user_input').value)"
-        >
-            Count
-        </button>
-        <p id="user_entries"></p>
-        <script>
-            function capitalCount(str) {
-                let count = 0
-                for (let i = 0; i < str.length; i++) {
-                    if (str[i] === str[i].toUpperCase()) {count++}
-                }
-                window.alert(count)
-                document.getElementById("user_entries").innerText +=`There are ${count} capital letters in: ${str}`
-                return count
-            }
-        </script>
-</body>
 
-```
+
 
 
