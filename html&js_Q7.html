@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Question Seven</h1>
+    <ol>
+      <li>
+        Make a website with a heading at the top that reads "String Capital
+        Counter Comparer". Add 2 input fields and a button. When the user clicks
+        the button, display an alert that shows which string has more capital
+        letters in it.
+      </li>
+      <li>
+        Instead of showing a popup, have that information appear in a paragraph
+        below the button.
+      </li>
+    </ol>
+    <hr />
+    <h2>String Capital Counter Comparer</h2>
+    <input type="text" id="text1" placeholder="Enter Text" />
+    <br />
+    <input type="text" id="text2" placeholder="Enter Text" />
+    <br />
+    <button onclick="compareCap()">Submit</button>
+    <p id="para"></p>
+
+    <script>
+      const compareCap = () => {
+        let textOne = document.getElementById("text1");
+        let textOneVal = textOne.value;
+        let textTwo = document.getElementById("text2");
+        let textTwoVal = textTwo.value;
+        let para = document.getElementById("para");
+        let count1 = 0;
+        let count2 = 0;
+        for (let i = 0; i < textOneVal.length; i++) {
+          if (textOneVal[i] === textOneVal[i].toUpperCase()) {
+            count1++;
+          }
+        }
+        for (let i = 0; i < textTwoVal.length; i++) {
+          if (textTwoVal[i] === textTwoVal[i].toUpperCase()) {
+            count2++;
+          }
+        }
+        if (count1 > count2) {
+          window.alert("Text 1 has more Caps");
+          para.innerText = "Text 1 has more Caps";
+        } else {
+          window.alert("Text 2 has more Caps");
+          para.innerText = "Text 2 has more Caps";
+        }
+      };
+    </script>
+  </body>
+</html>

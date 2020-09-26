@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Question Six</h1>
+    <ol>
+      <li>
+        Make a website with a heading at the top that reads "String Capital
+        Counter". Add an input field and a button. When the user clicks the
+        button, display an alert that contains a count of how many capital
+        letters are in the string.
+      </li>
+      <li>
+        Instead of showing a popup, have that information appear in a paragraph
+        below the button.
+      </li>
+    </ol>
+    <hr />
+    <h2>String Capital Counter</h2>
+    <input type="text" id="text" placeholder="Enter text" />
+    <button onclick="capitalCounter()">Submit</button>
+    <p id="para"></p>
+    <script>
+      const capitalCounter = () => {
+        let text = document.getElementById("text");
+        let para = document.getElementById("para");
+        let textVal = text.value;
+        let count = 0;
+        for (let i = 0; i < textVal.length; i++) {
+          if (textVal[i] === textVal[i].toUpperCase()) {
+            count++;
+          }
+        }
+        window.alert(`${count}`);
+        para.innerText = count;
+      };
+    </script>
+  </body>
+</html>

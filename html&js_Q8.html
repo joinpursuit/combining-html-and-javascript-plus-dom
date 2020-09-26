@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Question Eight</h1>
+    <ol>
+      <li>
+        Make a website with a heading at the top that reads "Average of Three
+        Numbers". Add 3 input fields and a button. When the user clicks the
+        button, display an alert that shows the average of all 3 text fields.
+      </li>
+      <li>
+        Instead of showing a popup, have that information appear in a paragraph
+        below the button.
+      </li>
+      <li>
+        If any of the text fields doesn't have a number, show an error message
+        that reads "All of the inputs must be numbers"
+      </li>
+    </ol>
+    <hr />
+    <h2>Average of Three Numbers</h2>
+    <input type="text" id="numOne" placeholder="Enter a number" />
+    <br />
+    <input type="text" id="numTwo" placeholder="Enter a number" />
+    <br />
+    <input type="text" id="numThree" placeholder="Enter a number" />
+    <br />
+    <button onclick="findAvg()">Submit</button>
+    <p id="para"></p>
+
+    <script>
+      const findAvg = () => {
+        let numOne = document.getElementById("numOne");
+        let numOneVal = parseInt(numOne.value);
+        let numTwo = document.getElementById("numTwo");
+        let numTwoVal = parseInt(numTwo.value);
+        let numThree = document.getElementById("numThree");
+        let numThreeVal = parseInt(numThree.value);
+        let avg = (numOneVal + numTwoVal + numThreeVal) / 3;
+        let para = document.getElementById("para");
+
+        if (isNaN(numOneVal) || isNaN(numTwoVal) || isNaN(numThreeVal)) {
+          window.alert("All of the inputs must be numbers");
+        } else {
+          window.alert(`${avg}`);
+          para.innerText = `Average = ${avg}`;
+        }
+      };
+    </script>
+  </body>
+</html>

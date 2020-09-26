@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Question Nine</h1>
+    <ol>
+      <li>
+        Make a website with a heading at the top that reads "Check Middle Number
+        Sum". Add 3 input fields and a button. When the user clicks the button,
+        display an alert that shows whether the number in the middle input field
+        is equal to the sum of the left input field and the right input field.
+      </li>
+      <li>
+        Instead of showing a popup, have that information appear in a paragraph
+        below the button.
+      </li>
+      <li>Have the uppercased overwrite the text that was there before.</li>
+    </ol>
+    <hr />
+
+    <h2>Check Middle Number Sum</h2>
+    <input type="text" id="first" placeholder="enter text" />
+    <input type="text" id="middle" placeholder="enter text" />
+    <input type="text" id="last" placeholder="enter text" />
+    <button onclick="checkMiddleSum()">Submit</button>
+    <p id="para"></p>
+    <script>
+      const checkMiddleSum = () => {
+        let first = document.getElementById("first");
+        let firstVal = parseInt(first.value);
+        let middle = document.getElementById("middle");
+        let middleVal = parseInt(middle.value);
+        let last = document.getElementById("last");
+        let lastVal = parseInt(last.value);
+        let para = document.getElementById("para");
+
+        if (middleVal === firstVal + lastVal) {
+          window.alert("Middle = First + Last");
+          para.innerText = "Middle = First + Last";
+        } else {
+          window.alert("Middle != First + Last");
+          para.innerText = "Middle != First + Last";
+        }
+      };
+    </script>
+  </body>
+</html>

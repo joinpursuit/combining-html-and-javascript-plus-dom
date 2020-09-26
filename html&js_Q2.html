@@ -2,55 +2,31 @@
 
 <html>
   <head>
-
     <title></title>
   </head>
   <body>
+    <h1 id="new_heading">Question Two</h1>
+    <ol>
+      <li>
+        Make a website that prompts the user for a string, then alerts them of
+        whether or not the number is even.
+      </li>
+      <li>Instead of showing a popup, make the text appear on the screen.</li>
+    </ol>
+    <hr />
+    <p id="text"></p>
 
-      <h1 id = "new_heading">Question Two</h1>
-            <ol>
-              <li>Make a website that prompts the user for a string, then alerts them of whether or not the number is even.</li>
-              <li>Instead of showing a popup, make the text appear on the screen.</li>
-            </ol>
-<hr>
+    <script>
+      let num = window.prompt("Enter a number");
+      let para = document.getElementById("text");
 
-<p>Please enter a number
-<input type="text" id = num placeholder="Number">
-</p>
-
-<button onclick = "number()">Submit</button>
-
-
-<script>
-
-let num = window.prompt("Please enter a number")
-let message = ""
-
-if(isNaN(num)){
-  message = "Please enter a NUMBER!"
-} else if (parseInt(num) % 2 === 0){
-  message = `Your ${num} is even`
-} else {
-  message = `Your ${num} is odd`
-}
-window.alert(message)
-
-function number() {
-  let mess = document.getElementById("num")
-  let numb = mess.value
-
-  if(numb % 2 === 0){
-    new_heading.innerText = `your ${numb} is even`
-  }else {
-    new_heading.innerText = `your ${numb} is odd`
-
-  }
-
-}
-</script>
-
-
-
-
+      if (num % 2 === 0) {
+        // window.alert("This is even");
+        para.innerText = "this is even";
+      } else {
+        // window.alert("this is odd");
+        para.innerText = "this is odd";
+      }
+    </script>
   </body>
 </html>
