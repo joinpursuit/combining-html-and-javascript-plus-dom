@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1 id="new_heading">Question 1</h1>
+
+    <ol>
+      <li>
+        Make a website with a heading at the top that reads "Disemvoweler". Add
+        1 input field, a checkbox and a button. When the user clicks the button,
+        display an alert that shows the text in the input field with the vowels
+        removed. If the checkbox is checked, count y as a vowel.
+      </li>
+      <li>Instead of showing a popup, make the text appear on the screen.</li>
+      <li>Have the uppercased overwrite the text that was there before.</li>
+    </ol>
+    <hr />
+    <h2>Disemvoweler</h2>
+
+    <input type="text" id="string" placeholder="Enter Text" />
+    <label>Y</label>
+    <input type="checkbox" id="check" />
+    <button onclick="disemvowel()">Submit</button>
+
+    <hr />
+
+    <script>
+      const disemvowel = () => {
+        let text = document.getElementById("string");
+        let textValue = text.value;
+        let y = document.getElementById("check");
+        let arr = textValue.split("");
+        for (let i = 0; i < arr.length; i++) {
+          if (
+            (y.checked && arr[i] === "y") ||
+            arr[i] === "a" ||
+            arr[i] === "e" ||
+            arr[i] === "i" ||
+            arr[i] === "o" ||
+            arr[i] === "u"
+          ) {
+            arr[i] = "";
+          }
+        }
+        window.alert(arr.join(""));
+      };
+    </script>
+  </body>
+</html>
