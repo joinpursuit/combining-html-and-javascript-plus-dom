@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/joinpursuit/combining-html-and-javascript-plus-dom/issues"
   },
-  "homepage": "https://github.com/joinpursuit/combining-html-and-javascript-plus-dom#readme"
+  "homepage": "https://github.com/joinpursuit/combining-html-and-javascript-plus-dom#readme",
+  "devDependencies": {
+    "cypress": "^6.1.0"
+  }
 }
