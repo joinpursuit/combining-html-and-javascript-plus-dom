@@ -5,4 +5,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-        spec: cypress/integration/mirror_spec.js
+          spec: cypress/integration/mirror_spec.js
