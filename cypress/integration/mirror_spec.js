@@ -68,7 +68,7 @@ describe("Mirror-spec", () => {
         .get("#doubler-form button")
         .click()
         .get("#doubler-output")
-        .contains("12 doubled is 23");
+        .contains("12 doubled is 24");
     });
   });
 
@@ -84,28 +84,6 @@ describe("Mirror-spec", () => {
         .click()
         .get("#average-output")
         .contains("The average of 10, 35, and 45 is 30");
-    });
-  });
-
-  describe("Bonus: Vowel Remover", () => {
-    it("removes vowels excluding y when the checkbox is not checked", () => {
-      cy.get("vowel-remover-input")
-        .type("happy days ahead")
-        .get("#vowel-remover-form button")
-        .click()
-        .get("#vowel-remover-output")
-        .contains("hppy dys hd");
-    });
-
-    it("removes vowels including y when the checkbox is checked", () => {
-      cy.get("vowel-remover-input")
-        .type("happy days ahead")
-        .get("y-is-vowel-checkbox")
-        .click()
-        .get("#vowel-remover-form button")
-        .click()
-        .get("#vowel-remover-output")
-        .contains("hpp ds hd");
     });
   });
 });
