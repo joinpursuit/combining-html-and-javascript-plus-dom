@@ -4,4 +4,5 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run
+      - cypress/run:
+          spec: cypress/integration/mirror_spec.js
