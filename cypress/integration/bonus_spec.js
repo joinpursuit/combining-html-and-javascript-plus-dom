@@ -1,6 +1,7 @@
 describe("Bonus: Vowel Remover", () => {
   it("removes vowels excluding y when the checkbox is not checked", () => {
-    cy.get("vowel-remover-input")
+    cy.get("#vowel-remover-input")
+      .clear()
       .type("happy days ahead")
       .get("#vowel-remover-form button")
       .click()
@@ -9,9 +10,10 @@ describe("Bonus: Vowel Remover", () => {
   });
 
   it("removes vowels including y when the checkbox is checked", () => {
-    cy.get("vowel-remover-input")
+    cy.get("#vowel-remover-input")
+      .clear()
       .type("happy days ahead")
-      .get("y-is-vowel-checkbox")
+      .get("#y-is-vowel-checkbox")
       .click()
       .get("#vowel-remover-form button")
       .click()
