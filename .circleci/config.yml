@@ -6,3 +6,8 @@ workflows:
     jobs:
       - cypress/run:
           spec: cypress/integration/mirror_spec.js
+          post-steps:
+            - store_artifacts:
+                path: cypress/videos
+            - store_artifacts:
+                path: cypress/screenshots
