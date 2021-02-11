@@ -16,12 +16,32 @@
 
     <input id="mirror-input" type="text" placeholder="Enter your string here">
     <p id="mirror-output">Waiting for input...</p>
-    <button id="mirror-button" type="submit">Submit</button>
+    <button id="mirror-button" type="submit" onclick="newMirrorInput()">Submit</button>
 
+    <script>
+      function newMirrorInput() {
+        let input = document.getElementById('mirror-input').value;
+        let output = document.getElementById('mirror-output');
+        output.innerText = input;
+      }
+    </script>
     <h2>2. String Uppercaser</h2>
 
     <li>Make a text input with id='uppercaser-input'</li>
     <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
+
+    <input id="uppercaser-input" type="text" placeholder="Enter your string here">
+    <p id="uppercaser-ouput">Waiting for input...</p>
+    <button id="uppercaser-button" type="submit" onclick="makeUpperCaser()">Submit</button>
+
+    <script>
+      function makeUpperCaser() {
+        let input = document.getElementById('uppercaser-input').value;
+        let output = document.getElementById('uppercaser-output');
+        output.innerText = input.toUpperCase();
+      }
+    </script>
+
 
     <h2>3. Palindrome Detector</h2>
 
