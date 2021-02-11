@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
     <title>Combining HTML and JavaScript + DOM Lab</title>
   </head>
   <body>
@@ -15,8 +16,9 @@
     </ul>    
 
     <input id="mirror-input" type="text" placeholder="Enter your string here">
-    <p id="mirror-output">Waiting for input...</p>
-    <button id="mirror-button" type="submit">Submit</button>
+    <p id="mirror-output"></p>
+    <button onclick="mirrorString()" id="mirror-button" type="submit">Submit</button>
+    <!-- <button >Hello world!</button> -->
 
     <h2>2. String Uppercaser</h2>
 
