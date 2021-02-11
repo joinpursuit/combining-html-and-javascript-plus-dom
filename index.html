@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
     <title>Combining HTML and JavaScript + DOM Lab</title>
   </head>
   <body>
@@ -16,27 +17,43 @@
 
     <input id="mirror-input" type="text" placeholder="Enter your string here">
     <p id="mirror-output">Waiting for input...</p>
-    <button id="mirror-button" type="submit">Submit</button>
+    <button id="mirror-button" type="submit" onclick="mirror()">Submit</button>
 
     <h2>2. String Uppercaser</h2>
 
     <li>Make a text input with id='uppercaser-input'</li>
     <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
 
+    <input type="text" id="uppercaser-input">
+    <button id="uppercaser-button" type="submit" onclick="uppercaser()">Submit</button>
+    <p id="uppercaser-output">Waiting for input...</p>
+
     <h2>3. Palindrome Detector</h2>
 
     <li>The user should be able to enter a string into a text input with id='palindrome-input'</li>
     <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li>
+
+    <input type="text" id="palindrome-input">
+    <button id="palindrome-button" type="submit" onclick="palindrome()">Submit</button>
+    <p id="palindrome-output">Waiting for input...</p>
 
     <h2>4. Even Checker</h2>
 
     <li>The user should be able to enter a number into an input with id='even-checker-input'</li>
     <li>They should then be able to click a "submit" button with id='even-checker-button' that will display a string in the form "It is ${true/false} that ${entered number} is even" with id='even-checker-output'</li>
 
+    <input type="number" id="even-checker-input">
+    <button id="even-checker-button" type="submit" onclick="evenCheck()">Submit</button>
+    <p id="even-checker-output">Waiting for input...</p>
+
     <h2>5. Number Doubler</h2>
 
     <li>The user should be able to enter a number into an input with id='doubler-input'</li>
     <li>They should then be able to click a "submit" button with id='doubler-button' that will display a string in the form "${entered number} doubled is ${doubledVal}" with id='doubler-output'</li>
+
+    <input type="number" id="doubler-input">
+    <button id="doubler-button" type="submit" onclick="doubler()">Submit</button>
+    <p id="doubler-output">Waiting for input...</p>
 
     <h2>6. Average of Three Numbers</h2>
 
