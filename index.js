@@ -9,3 +9,10 @@ const displayUppercaseString = () => {
     const p = document.getElementById("uppercaser-output")
     p.innerText = input.toUpperCase()
 }
+
+const displayPalindrome = () => {
+    const input = document.getElementById("palindrome-input").value
+    
+}
+
+"It is ${true/false} that ${entered string} is a palindrome"
