@@ -3,3 +3,28 @@ form {
     padding: 20px;
     background-color: beige;
 }
+
+body {
+    background-color: lightblue;
+}
+
+h1, h2 {
+    color: red;
+}
+
+p{
+    color:green;
+}
+
+li {
+    color:blue;
+}
+
+button{
+    color: gold;
+    background-color: aqua
+}
+
+input {
+    background-color: silver;
+}
