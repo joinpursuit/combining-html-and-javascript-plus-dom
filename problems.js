@@ -59,25 +59,50 @@ function doubleIt() {
     output.textContent = "Please enter a number";
   } else {
     doubleVal = number * 2;
-
     output.textContent = `${number} doubled is ${doubleVal}`;
   }
 }
 
 function averageIt() {
-  const input1 = document.getElementById("average-input-1");
-  const input2 = document.getElementById("average-input-2");
-  const input3 = document.getElementById("average-input-3");
-  let number1 = parseInt(input1.value);
-  let number2 = parseInt(input2.value);
-  let number3 = parseInt(input3.value);
+  let number1 = parseInt(document.getElementById("average-input-1").value);
+  let number2 = parseInt(document.getElementById("average-input-2").value);
+  let number3 = parseInt(document.getElementById("average-input-3").value);
   let output = document.getElementById("average-output");
   if (isNaN(number1) || isNaN(number2) || isNaN(number3)) {
     output.textContent = "Please enter a number";
   } else {
-    total = (number1 + number2 + number3);
-    average = total / 3;
-
+    average = (number1 + number2 + number3) / 3;
     output.textContent = `The average of ${number1}, ${number2}, and ${number3} is ${average}`;
   }
 }
+
+
+
+function removeVowels() {
+  let string = document.getElementById("vowel-remover-input").value;
+  let output = document.getElementById("vowel-remover-output");
+  let checkbox = document.getElementById("y-is-vowel-checkbox");
+  let vowel = "aeiouyAEIOUY";
+  let newStr = "";
+
+  if (checkbox.checked) {
+    for (let i = 0; i < string.length; i += 1) {
+      if (!vowel.includes(string[i])) {
+        newStr = newStr + string[i];
+      } else {
+        newStr = newStr + "";
+      }
+    }
+  } else {
+    let vowelNoY = "aeiouAEIOU";
+    for (let i = 0; i < string.length; i += 1) {
+      if (!vowelNoY.includes(string[i])) {
+        newStr = newStr + string[i];
+      } else {
+        newStr = newStr + "";
+      }
+    }
+  }
+  output.textContent = newStr;
+}
+

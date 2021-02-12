@@ -59,9 +59,9 @@
 
     <li>The user should be able to enter 3 numbers into text inputs with ids 'average-input-1', 'average-input-2', and 'average-input-3'</li>
     <li>They should then be able to click a "submit" button with id='average-button' that will display a string in the form "The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with id='average-output'</li>
-<input id="average-input-1" type="text" placeholder="Enter first number please">
-<input id="average-input-2" type="text" placeholder="Enter second number please">
-<input id="average-input-3" type="text" placeholder="Enter third number please">
+<input id="average-input-1" type="text" placeholder="Enter first number please"> <br>
+<input id="average-input-2" type="text" placeholder="Enter second number please"> <br>
+<input id="average-input-3" type="text" placeholder="Enter third number please"> <br>
     <p id="average-output">Waiting for input...</p>
     <button id="average-button" onclick="averageIt()" type="submit">Average it</button>
 
@@ -71,6 +71,13 @@
     <li>The user should be able to enter a string into a text input with id='vowel-remover-input'</li>
     <li>The user should be able to select or deselect a checkbox with id='y-is-vowel-checkbox'</li>
     <li>They should then be able to click a "submit" button with id='vowel-remover-button' that will display the original string with all vowels removed with id='vowel-remover-output'. If the checkbox is checked, count y as a vowel. Otherwise, count y as a consonant.</li>
-
+    <br>
+    <input id="vowel-remover-input" type="text" placeholder="Enter your text please"> <br>
+    <br>
+    <input type="checkbox" id="y-is-vowel-checkbox"> Y is a vowel
+    <br>
+    <p id="vowel-remover-output">Waiting for input...</p>
+    <br>
+    <button id="vowel-remover-button" onclick="removeVowels()" type="submit">Remove vowels</button>
   </body>
 </html>
