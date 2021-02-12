@@ -1,5 +1,35 @@
-form {
-    border: 1px solid black;
-    padding: 20px;
+body{
+    font-family: sans-serif;
+    background-color: #d3574b;
+    margin: 0 auto;
+}
+#welcome{
+    text-align: center;
+}
+#top_heading{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.container_div{
+    border: 3px solid rgb(10, 10, 10);
+    padding: 10px;
+    width: 75%;
+    height: 370px;
+    margin:30px auto;
+    padding: 0px 0px;
     background-color: beige;
+    text-align: center;
+}
+
+.child_div {
+    background-color: #d3574b;
+    border: 2px solid black;
+    padding: 10px;
+    width: 41%;
+    height: 320px;
+    float: left;
+    margin: 5px 20px;
+    text-align: justify;
 }
