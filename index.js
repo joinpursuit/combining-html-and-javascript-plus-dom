@@ -18,9 +18,24 @@ const palindromeDetector = () => {
 };
 
 const evenChecker = () => {
-  const userInput = document.querySelector("#even-checker-input").value;
+  const userInput = Number(document.querySelector("#even-checker-input").value);
   const targetElement = document.querySelector("#even-checker-output");
   return userInput % 2 === 0
     ? (targetElement.innerText = `It is true that ${userInput} is even`)
     : (targetElement.innerText = `It is false that ${userInput} is even`);
 };
+
+const numberDoubler = () => {
+    const userInput = Number(document.querySelector("#doubler-input").value);
+    const targetElement = document.querySelector("#doubler-output"); 
+    targetElement.innerText =  `${userInput} doubled is ${userInput * 2}`;
+}
+
+const averageOfThreeNumbers = () => {
+    const userInput1 = Number(document.querySelector("#average-input-1").value);
+    const userInput2 = Number(document.querySelector("#average-input-2").value);
+    const userInput3 = Number(document.querySelector("#average-input-3").value);
+    const targetElement = document.querySelector("#average-output");
+    let average = (userInput1 + userInput2 + userInput3) / 3
+    targetElement.innerText = `The average of ${userInput1}, ${userInput2}, and ${userInput3} is ${average}`
+}

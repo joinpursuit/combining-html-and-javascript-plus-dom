@@ -30,7 +30,7 @@
 
   <input id="uppercaser-input" type="text">
   <p id="uppercaser-output">Input will display here</p>
-  <button id="uppercaser-button" onclick="stringUppercaser()">submit</button>
+  <button id="uppercaser-button" onclick="stringUppercaser()" type="submit">submit</button>
 
   <h2>3. Palindrome Detector</h2>
 
@@ -41,7 +41,7 @@
 
   <input id="palindrome-input" type="text" />
   <p id="palindrome-output">Input will display here</p>
-  <button id="palindrome-button" onclick="palindromeDetector()">submit</button>
+  <button id="palindrome-button" onclick="palindromeDetector()" type="submit">submit</button>
 
 
 
@@ -54,13 +54,17 @@
 
   <input id="even-checker-input" type="number" />
   <p id="even-checker-output">Input will display here</p>
-  <button id="even-checker-button" onclick="evenChecker()">submit</button>
+  <button id="even-checker-button" onclick="evenChecker()" type="submit">submit</button>
 
   <h2>5. Number Doubler</h2>
 
   <li>The user should be able to enter a number into an input with id='doubler-input'</li>
   <li>They should then be able to click a "submit" button with id='doubler-button' that will display
     a string in the form "${entered number} doubled is ${doubledVal}" with id='doubler-output'</li>
+
+  <input id="doubler-input" type="number" />
+  <p id="doubler-output">Input will display here</p>
+  <button id="doubler-button" onclick="numberDoubler()" type="submit">submit</button>
 
   <h2>6. Average of Three Numbers</h2>
 
@@ -69,6 +73,12 @@
   <li>They should then be able to click a "submit" button with id='average-button' that will display a
     string in the form "The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with
     id='average-output'</li>
+
+    <input id="average-input-1" type="number" />
+    <input id="average-input-2" type="number" />
+    <input id="average-input-3" type="number" />
+    <p id="average-output">Input will display here</p>
+    <button id="average-button" onclick="averageOfThreeNumbers()" type="submit">submit</button>
 
   <h2>Bonus: Vowel Remover</h2>
 
