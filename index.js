@@ -43,11 +43,37 @@ const numberDoubler = () => {
 };
 
 const averageOfThreeNumbers = () => {
-  const numberOne = Number(document.querySelector("#average-input-1").value)
-  const numberTwo = Number(document.querySelector("#average-input-2").value)
-  const numberThree = Number(document.querySelector("#average-input-3").value)
-  const p = document.querySelector("#average-output")
+  const numberOne = Number(document.querySelector("#average-input-1").value);
+  const numberTwo = Number(document.querySelector("#average-input-2").value);
+  const numberThree = Number(document.querySelector("#average-input-3").value);
+  const p = document.querySelector("#average-output");
 
-  const average = (numberOne + numberTwo + numberThree) / 3
-  p.innerText = `The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}`
-}
+  const average = (numberOne + numberTwo + numberThree) / 3;
+  p.innerText = `The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}`;
+};
+
+const vowelRemover = () => {
+  const input = document.getElementById("vowel-remover-input");
+  const string = input.value;
+  const checkbox = document.getElementById("y-is-vowel-checkbox").checked;
+  const p = document.getElementById("vowel-remover-output");
+  const vowelWithY = "AEIOUYaeiouy";
+  const vowels = "AEIOUaeiou";
+  let output = "";
+  if (!checkbox) {
+    for (const char of string) {
+      if (!vowels.includes(char)) {
+        output += char;
+      }
+    }
+  }
+  if (checkbox) {
+    for (const char of string) {
+      if (!vowelWithY.includes(char)) {
+        output += char;
+      }
+    }
+  }
+
+  p.innerText = output;
+};
