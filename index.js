@@ -41,3 +41,13 @@ const numberDoubler = () => {
   let doubledVal = input * 2;
   p.innerText = `${input} doubled is ${doubledVal}`;
 };
+
+const averageOfThreeNumbers = () => {
+  const numberOne = Number(document.querySelector("#average-input-1").value)
+  const numberTwo = Number(document.querySelector("#average-input-2").value)
+  const numberThree = Number(document.querySelector("#average-input-3").value)
+  const p = document.querySelector("#average-output")
+
+  const average = (numberOne + numberTwo + numberThree) / 3
+  p.innerText = `The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}`
+}
