@@ -13,8 +13,7 @@ const stringUpperCase = () => {
 const palindromeDetector = () =>{
     const input = document.getElementById("palindrome-input").value
     const p = document.getElementById("palindrome-output")
-    for(let i = 0; i < value ; i++) {
-        if (value[i] == value[value.length - 1])
-
+    const arr = input.split('');
+    let answer = arr.every((el, i) => el === input[input.length -1 -i]);
+    p.innerText = `It is ${answer} that ${input} is a palindrome`;
     }
-}
