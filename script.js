@@ -68,6 +68,17 @@ const averageThreeNumbers = () => {
   let numAverage = (input1 + input2 + input3) / 3;
   output.innerText = `The average of ${input1}, ${input2}, and ${input3} is ${numAverage}`;
 };
+
+/* const getAverage = () => {
+	const num1 = Number(document.getElementById("average-input-1").value);
+	const num2 = Number(document.getElementById("average-input-2").value);
+	const num3 = Number(document.getElementById("average-input-3").value);
+	const p = document.getElementById("average-output");
+	const average = (num1 + num2 + num3) / 3;
+	p.innerText = `The average of
+			${num1}, ${num2}, and ${num3} is ${average}`;
+}; */
+
 const removeVowels = () => {
   const input = document.getElementById("vowel-remover-input").value;
   const inputCheck = document.getElementById("y-is-vowel-checkbox").checked;
@@ -80,4 +91,22 @@ const removeVowels = () => {
  !vowels.includes(char) && (noVowelsString += char)
   }
   output.innerText = noVowelsString;
+};
+
+const removeVowels = () => {
+	const input = document.getElementById("vowel-remover-input");
+	const p = document.getElementById("vowel-remover-output");
+	const isChecked = document.getElementById("y-is-vowel-checkbox");
+	const words = input.value;
+	let output = "";
+	let vowels = "aeiouAEIOU";
+	// if checked add y to vowels --> vowels += "y"
+	if (isChecked.checked) {
+		vowels += "yY";
+	}
+		for (const char of words) {
+			vowels.includes(char) ? (output += "") : (output += char);
+		}
+	
+	p.innerText = output;
 };
