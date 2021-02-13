@@ -60,3 +60,36 @@ const average = () =>{
  
     p.innerText = `The average of ${num1}, ${num2}, and ${num3} is ${avg}`
 }
+
+
+const removeVowels = () => {
+    (document.getElementById("y-is-vowel-checkbox").checked) ? removeY() :  doNotRemoveY()
+}
+
+const removeY = () => {
+    const str = document.getElementById("vowel-remover-input").value
+    const p = document.getElementById("vowel-remover-output")
+    
+    let vowels = "aeiouy"
+    let newStr =""
+    for (letter of str){
+        if(!vowels.includes(letter)){
+            newStr += letter
+        }
+    }
+    p.innerText =`${newStr}`
+}
+
+const doNotRemoveY =() => {
+    const str = document.getElementById("vowel-remover-input").value
+    const p = document.getElementById("vowel-remover-output")
+
+        let vowels = "aeiou"
+        let newStr =""
+        for (letter of str){
+            if(!vowels.includes(letter)){
+               newStr += letter
+             }
+         }
+    p.innerText =`${newStr}`
+}
