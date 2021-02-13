@@ -20,16 +20,26 @@ const palindromeWord = () => {
 }
 
 const isEven = () => {
-    console.log(`It is ${answer} that ${input} is even`);
+    const input = document.querySelector("#even-checker-input").value;
+    const p = document.querySelector("#even-checker-output");
+    let answer = input % 2 === 0;
+    p.innerText = `It is ${answer} that ${input} is even`;
 }
 
 const numDoubler = () => {
-    console.log(`${input} doubled is ${doubledVal}`);
+    const input = document.querySelector("#doubler-input").value;
+    const p = document.querySelector("#doubler-output");
+    let doubledVal = input * 2
+    p.innerText = `${input} doubled is ${doubledVal}`;
 }
 
 const averageOfThreeNums = () => {
-    console.log(`The average of ${numberOne}, ${numberTwo}, and ${numberThree} 
-        is ${average}`);
+    const numberOne = Number(document.querySelector("#average-input-1").value);
+    const numberTwo = Number(document.querySelector("#average-input-2").value);
+    const numberThree = Number(document.querySelector("#average-input-3").value);
+    const p = document.querySelector("#average-output");
+    let average = (numberOne + numberTwo + numberThree) / 3;
+    p.innerText = `The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}`;
 }
 
 const vowelRemover = () => {
