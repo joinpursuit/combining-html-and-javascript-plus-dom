@@ -36,7 +36,7 @@
 			all uppercase in an element with id='uppercaser-output'
 		</li>
     <input type="text" id="uppercaser-input" />
-    <button id="uppercaser-button" onclick="upperCaser()"></button>
+    <button id="uppercaser-button" onclick="upperCaser()">To Uppercase</button>
     <p id="uppercaser-output"></p>
     
 		<h2>3. Palindrome Detector</h2>
@@ -52,7 +52,7 @@
 			id='palindrome-output'
 		</li>
 <input type="text" id="palindrome-input">
-<button id="palindrome-button" onclick="palindrome()"></button>
+<button id="palindrome-button" onclick="palindrome()">Is this a palindrome?</button>
 <p id="palindrome-output"></p>
 
 		<h2>4. Even Checker</h2>
@@ -67,9 +67,12 @@
 			${true/false} that ${entered number} is even" with
 			id='even-checker-output'
 		</li>
+		<input type="number" id="even-checker-input">
+        <button id="even-checker-button" onclick="isEven()">Is this number even?</button>
+        <p id="even-checker-output"></p>
 
 		<h2>5. Number Doubler</h2>
-
+remote 
 		<li>
 			The user should be able to enter a number into an input with
 			id='doubler-input'
@@ -79,7 +82,9 @@
 			id='doubler-button' that will display a string in the form "${entered
 			number} doubled is ${doubledVal}" with id='doubler-output'
 		</li>
-
+<input type="number" id="doubler-input">
+        <button id="doubler-button" onclick="double()">Double the number</button>
+        <p id="doubler-output"></p>
 		<h2>6. Average of Three Numbers</h2>
 
 		<li>
@@ -92,6 +97,12 @@
 			${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with
 			id='average-output'
 		</li>
+		 Give me three numbers: <br/>
+        <input type="number" id="average-input-1">
+        <input type="number" id="average-input-2">
+        <input type="number" id="average-input-3">
+        <button id="average-button" onclick="getAverage()">Get the average</button>
+        <p id="average-output"></p>
 
 		<h2>Bonus: Vowel Remover</h2>
 
@@ -109,5 +120,10 @@
 			vowels removed with id='vowel-remover-output'. If the checkbox is checked,
 			count y as a vowel. Otherwise, count y as a consonant.
 		</li>
+		Enter a sentence: <br/><br/>
+<input type="text" id="vowel-remover-input"> <br/>
+<input type="checkbox" id="y-is-vowel-checkbox" name="add-y" value="y"> Click to add "y" as a vowel</input>
+<button id="vowel-remover-button" onclick="removeVowels()">Remove the vowels</button>
+<p id="vowel-remover-output"></p> 
 	</body>
 </html>
