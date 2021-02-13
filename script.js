@@ -53,17 +53,30 @@ const getAverage = () => {
 const removeVowels = () => {
 	const input = document.getElementById("vowel-remover-input");
 	const p = document.getElementById("vowel-remover-output");
+	const isChecked = document.getElementById("y-is-vowel-checkbox"); //Boolean
 	const words = input.value;
 	let output = "";
 	let vowels = "aeiouAEIOU";
-	let addVowel = document.getElementById("y-is-vowel-checkbox").value;
-	// if checked add y to vowels --> vowels += "y";
-	if (addVowel === "y") {
-		vowels += "y";
-		vowels += "Y";
+	// if checked add y to vowels --> vowels += "yY"
+	if (isChecked.checked) {
+		vowels += "yY";
 	}
 	for (const char of words) {
 		vowels.includes(char) ? (output += "") : (output += char);
 	}
 	p.innerText = output;
 };
+
+/* function myFunction() {
+	// Get the checkbox
+	var checkBox = document.getElementById("myCheck");
+	// Get the output text
+	var text = document.getElementById("text");
+
+	// If the checkbox is checked, display the output text
+	if (checkBox.checked == true) {
+		text.style.display = "block";
+	} else {
+		text.style.display = "none";
+	}
+} */
