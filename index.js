@@ -25,12 +25,19 @@ function palindromeDetector() {
 }
 
 const evenChecker = () => {
-  const input = Number(document.querySelector("#even-checker-input").value)
-  const p = document.querySelector("#even-checker-output")
+  const input = Number(document.querySelector("#even-checker-input").value);
+  const p = document.querySelector("#even-checker-output");
 
   if (input % 2 === 0) {
     p.innerText = `It is true that ${input} is even`;
   } else {
     p.innerText = `It is false that ${input} is even`;
   }
-}
+};
+
+const numberDoubler = () => {
+  const input = Number(document.getElementById("doubler-input").value);
+  const p = document.getElementById("doubler-output");
+  let doubledVal = input * 2;
+  p.innerText = `${input} doubled is ${doubledVal}`;
+};
