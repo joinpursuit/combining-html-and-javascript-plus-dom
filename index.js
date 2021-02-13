@@ -29,6 +29,13 @@ const averageNums = () => {
 const doubleNums = () => {
     let enteredNum = Number(document.getElementById("doubler-input").value);
     let p = document.getElementById("doubler-output");
-    let doubledVal = enteredNum * 2
+    let doubledVal = enteredNum * 2 
     p.innerText = `${enteredNum} doubled is ${doubledVal}`
+}
+
+const evenNums = () => {
+    let enteredNum = Number(document.getElementById("even-checker-input").value)
+    let p = document.getElementById("even-checker-output");
+    let evenVal = enteredNum % 2 === 0
+    p.innerText = `It is ${evenVal} that ${enteredNum} is even`
 }
