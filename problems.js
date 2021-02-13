@@ -28,14 +28,20 @@ function stringPanlinDrome(){
 }
 function eveNum(){
     const input =document.getElementById('even-checker-input')
-    const text = input.value
-    const output = document.getElementById('even-checker-output')
-    const num = text
-    if(text % 2 === 0){
-        output.textContent =`It is true that ${num} is a palindrome`
+    let text = input.value
+    let output = document.getElementById('even-checker-output')
+    let num = text
+    if(num % 2 === 0){
+        output.textContent =`It is true that ${num} is a even`
     }else{
-        output.textContent =`It is false that ${num} is a palindrome`
+        output.textContent =`It is false that ${num} is a even`
     }
+    // if(isNaN(num)){
+    //     output.textContent = "Please enter a number"
+    // }else{
+        
+    // }
+    
 
 }
 function doublerNum() {
@@ -48,14 +54,10 @@ function doublerNum() {
      }
 }
 function averageTotal(){
-    const input =document.getElementById('average-input-2','average-input-1', 'average-input-3')
-    // const input =document.getElementById('average-input-1')
-    // const input =document.getElementById('average-input-3')
-    let text = input.value
-    const output = document.getElementById('average-output')
-    let average = text /3 
-   
-        output.textContent =`The average of ${text}, ${text}, and ${text} is ${average}`
-    
-    
+    let input1 =parseInt(document.getElementById('average-input-1').value) 
+    let input2 =parseInt(document.getElementById('average-input-2').value)
+    let input3 =parseInt(document.getElementById('average-input-3').value)
+    let output = document.getElementById('average-output')
+    let average = (input1 + input2 + input3)/3 
+    output.textContent =`The average of ${input1}, ${input2}, and ${input3} is ${average}`
 }
