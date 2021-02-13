@@ -40,3 +40,24 @@ const averageButton = () => {
     let average = (input1 + input2 + input3) / 3;
     p.innerText = `The average of ${input1}, ${input2}, and ${input3} is ${average}`;
 }
+
+const vowelRemover = () => {
+    let vowels = "aAeEiIoOuU"
+    let output = ""
+    const input = document.getElementById('vowel-remover-input').value;
+    const includesY = document.getElementById('y-is-vowel-checkbox').checked;
+    const p = document.getElementById('vowel-remover-output');
+    
+    if (includesY) {
+        vowels += "yY"
+    }
+    
+    for(let char of input) {
+        if(vowels.includes(char)) {
+            output += ''
+        } else {
+            output += char
+        }
+    }
+    p.innerText = output;
+}

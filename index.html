@@ -64,7 +64,11 @@
     <li>They should then be able to click a "submit" button with id='average-button' that will display a string in the form "The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with id='average-output'</li>
 
     <h2>Bonus: Vowel Remover</h2>
-    
+
+  <input type="text" id='vowel-remover-input'>
+  <input type="checkbox" id='y-is-vowel-checkbox'>
+  <button onclick="vowelRemover()"id='vowel-remover-button'>submit</button>
+  <p id='vowel-remover-output'></p>
     <li>The user should be able to enter a string into a text input with id='vowel-remover-input'</li>
     <li>The user should be able to select or deselect a checkbox with id='y-is-vowel-checkbox'</li>
     <li>They should then be able to click a "submit" button with id='vowel-remover-button' that will display the original string with all vowels removed with id='vowel-remover-output'. If the checkbox is checked, count y as a vowel. Otherwise, count y as a consonant.</li>
