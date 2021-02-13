@@ -25,3 +25,10 @@ const averageNums = () => {
    
 
 }
+
+const doubleNums = () => {
+    let enteredNum = Number(document.getElementById("doubler-input").value);
+    let p = document.getElementById("doubler-output");
+    let doubledVal = enteredNum * 2
+    p.innerText = `${enteredNum} doubled is ${doubledVal}`
+}
