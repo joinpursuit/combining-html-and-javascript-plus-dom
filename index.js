@@ -50,3 +50,37 @@ const doubler = ()=> {
     output5.innerText = `${input5.value} doubled is ${num}`
 
 }
+
+const average = () => {
+    const input6 = document.querySelector("#average-input-1");
+    const input7 = document.querySelector("#average-input-2");
+    const input8 = document.querySelector("#average-input-3");
+    const output6 = document.querySelector("#average-output");
+
+    let average = (parseInt(input6.value) + parseInt(input7.value) + parseInt(input8.value)) / 3
+
+    output6.innerText = `The average of ${input6.value}, ${input7.value}, and ${input8.value} is ${average}`
+}
+
+const vowelRemover = () => {
+    const input9 = document.querySelector("#vowel-remover-input");
+    const output7 = document.querySelector("#vowel-remover-output");
+    const checkbox = document.querySelector("#y-is-vowel-checkbox").checked;
+    let string = input9.value
+    let vowels = 'AEIOUaeiou'
+
+    if(checkbox){
+        vowels = 'AEIOUYaeiouy'
+    }
+    let output8 = ''
+
+    for(let char of string){
+        if(vowels.includes(char)){
+            output8 += ''
+        } else {
+            output8 += char
+        }
+    }
+    output7.innerText = output8;
+
+}   
