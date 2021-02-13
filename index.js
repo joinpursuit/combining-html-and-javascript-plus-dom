@@ -12,16 +12,44 @@ const uppercaserWord = () => {
 }
 
 const palindromeWord = () => {
-    const input = document.querySelector('#palindrome-input').value;
-    const p = document.querySelector('#palindrome-output');
-    const charArr = input.split('');
-    const trueFalse;
-    for (let c of charArr) {
-        if(c !== charArr.pop()){
-            trueFalse = false;
-        }
+    const input = document.querySelector("#palindrome-input").value;
+    const p = document.querySelector("#palindrome-output");
+    const arr = input.split('');
+    let answer = arr.every((el, i) => el === input[input.length -1 -i]);
+    p.innerText = `It is ${answer} that ${input} is a palindrome`;
+}
+
+const isEven = () => {
+    console.log(`It is ${answer} that ${input} is even`);
+}
+
+const numDoubler = () => {
+    console.log(`${input} doubled is ${doubledVal}`);
+}
+
+const averageOfThreeNums = () => {
+    console.log(`The average of ${numberOne}, ${numberTwo}, and ${numberThree} 
+        is ${average}`);
+}
+
+const vowelRemover = () => {
+    const input = document.querySelector('#vowel-remover-input');
+    const isY = document.querySelector('#y-is-vowel-checkbox').checked;
+    const p = document.querySelector('#vowel-remover-output');
+    const str = input.value;
+    let output = '';
+    let vowels = '';
+    if (isY === false){
+        vowels = 'aeiouAEIOU';  
+    } else {
+        vowels = 'aeiouyAEIOUY';  
     }
-    trueFalse = true;
-   
-    p.innerText = `It is ${trueFalse} that ${input} is a palindrome`;
+    for (const char of str){
+        if(vowels.includes(char)){
+            output += '';
+        } else {
+            output += char;
+        }
+    } 
+    p.innerText = output;
 }
