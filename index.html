@@ -3,12 +3,15 @@
   <head>
     <link rel="stylesheet" href="./index.css">
     <title>Combining HTML and JavaScript + DOM Lab</title>
+    <script src="./index.js"  defer></script>
   </head>
   <body>
     <h1 id = "top_heading">Combining HTML and JavaScript + DOM Lab</h1>
     <p id = "welcome_para">Complete each of the sections below</p>
     <h2>1. String Mirror</h2>
-
+    <!-- <p><input type="tetx" id="mirror-button"/></p>
+    <button onclick="" -->
+    
     <ul>
       <li>Make a text input with id='mirror-input' and a button with id='mirror-button'</li>
       <li>They should then be able to click a "submit" button that will display the string the user entered in an element with id='mirror-output'</li>
@@ -16,17 +19,28 @@
 
     <input id="mirror-input" type="text" placeholder="Enter your string here">
     <p id="mirror-output">Waiting for input...</p>
-    <button id="mirror-button" type="submit">Submit</button>
+    <button onclick="string()" id="mirror-button" type="submit">Submit</button>
 
+   
     <h2>2. String Uppercaser</h2>
 
     <li>Make a text input with id='uppercaser-input'</li>
     <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
+  </br>
+    <input id="uppercaser-input" type="text" placeholder="Enter your string here">
+    <p id="uppercase-output">Waiting for input...</p>
+    <button onclick="upperCaseString()" id="uppercase-button" type="submit">Submit</button>
+
+
 
     <h2>3. Palindrome Detector</h2>
 
     <li>The user should be able to enter a string into a text input with id='palindrome-input'</li>
     <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li>
+    </br>
+    <input id="palindrome-input" type="text" placeholder="Enter your string here">
+    <p id="palindrome-output">Waiting for input...</p>
+    <button onclick="palindrome()" id="palindrome-button" type="submit">Submit</button>
 
     <h2>4. Even Checker</h2>
 
