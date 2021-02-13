@@ -11,10 +11,15 @@ const stringUppercaser = () => {
 };
 
 const palindromeDetector = () => {
-  // const userInput = document.querySelector("#palindrome-input").value;
-  // const targetElement = document.querySelector("#palindrome-output");
-  // const userInputArr = userInput.split(" ")
-  // targetElement.innerText = userInputArr;
+  const userInput = document.querySelector("#palindrome-input").value;
+  const targetElement = document.querySelector("#palindrome-output");
+  for (char in userInput) {
+    if (userInput[char] !== userInput.slice(-1 -char)[0]) {
+      targetElement.innerText = `It is false that ${userInput} is a palindrome`
+      return
+    }
+  }
+  targetElement.innerText = `It is true that ${userInput} is a palindrome`
 };
 
 const evenChecker = () => {
@@ -38,4 +43,15 @@ const averageOfThreeNumbers = () => {
     const targetElement = document.querySelector("#average-output");
     let average = (userInput1 + userInput2 + userInput3) / 3
     targetElement.innerText = `The average of ${userInput1}, ${userInput2}, and ${userInput3} is ${average}`
+}
+
+const vowelRemover = () => {
+  const userInput = document.querySelector("#vowel-remover-input").value;
+  const targetElement = document.querySelector("#vowel-remover-output");
+  if (document.querySelector("#vowel-remover-input[checked]")) {
+    targetElement.innerText = !vowels.includes(userInput)
+    return
+  } else {
+    targetElement.innerText = userInput
+  }
 }
