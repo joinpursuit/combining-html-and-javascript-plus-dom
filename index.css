@@ -4,3 +4,18 @@ form {
     background-color: beige;
 }
 
+/* const displayPalindrome = () => {
+    const input = document.querySelector("#palindrome-input").value.toLowerCase().split("").join("");
+    const output = document.querySelector("#palindrome-output");
+    let i = 0;
+    let j = input.length - 1;
+    console.log(input);
+    while (i < j) {
+      if (input[i] !== input[j]) {
+        return output.innerText = `It is false that ${input} is a palindrome.`
+      }
+      i++;
+      j--;
+    }
+    return output.innerText = `It is true that ${input} is a palindrome.`
+  }; */
