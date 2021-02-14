@@ -13,19 +13,25 @@ const upperCaser = () => {
 }
 
 const live_evil = () => {
-    let input = getElementById('palindrome-input').split('')    
+    let input = getElementById('palindrome-input')
+    let output = getElementById('palindrome-output')
+    const inputSplit = input.split(',')
+
+    
     let evil_input = []
 
-    let test = ;
+    let test = undefined;
     for (let i = input.length-1; i >= 0; i--) {
         evil_input.push(input[i])
     }
-    if (input === evil_input) {
-        test = true;
-        output.innerHTML = `It is ${test} that ${input} is a palindrome`;
+    if (inputSplit === evil_input) {
+        test = 'true';
+       return  output.innerHTML = `It is ${test} that ${input} is a palindrome`;
+        
     } else {
-        test = false;
-        output.innerHtml = `It is ${false} that ${input} is a palindrome`;
+        test = 'false';
+        return output.innerHtml = `It is ${false} that ${input} is a palindrome`;
+        
     }
 }
 
