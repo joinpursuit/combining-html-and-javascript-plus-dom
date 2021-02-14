@@ -6,8 +6,8 @@ const stringMirror = () => {
 }
 
 const stringUppercaser = () => {
-    const input = document.getElementById('uppercaser-input').value
-    const output = document.getElementById('uppercaser-output')
+    let input = document.getElementById('uppercaser-input').value
+    let output = document.getElementById('uppercaser-output')
     
     output.innerText = input.toUpperCase()
 }
