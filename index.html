@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="./index.css">
     <title>Combining HTML and JavaScript + DOM Lab</title>
+    <script src='problems.js' defer></script>
   </head>
   <body>
     <h1 id = "top_heading">Combining HTML and JavaScript + DOM Lab</h1>
@@ -16,17 +17,27 @@
 
     <input id="mirror-input" type="text" placeholder="Enter your string here">
     <p id="mirror-output">Waiting for input...</p>
-    <button id="mirror-button" type="submit">Submit</button>
+    <button id="mirror-button" type="submit" onclick="stringMirror()">Submit</button>
 
     <h2>2. String Uppercaser</h2>
 
     <li>Make a text input with id='uppercaser-input'</li>
-    <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
+    <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li><br>
+
+     <input id="uppercaser-input" type="text" placeholder="Enter a string here"><br><br>
+     <p id='uppercaser-output'>big letr go brrrr</p>
+     <button id='uppercaser-button' type='submit' onclick='upperCaser()'>UPPERCASE</button>
 
     <h2>3. Palindrome Detector</h2>
 
     <li>The user should be able to enter a string into a text input with id='palindrome-input'</li>
-    <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li>
+    <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li><br>
+
+    <input id='palindrome-input' type="text" placeholder='Test your palidrome'><br><br>
+    <p id='palindrome-output'>alsdkfalsdfhalehf</p>
+    <button id='palindrome-button' type='submit' onclick='live_evil()'>POOP Check</button>
+
+
 
     <h2>4. Even Checker</h2>
 
