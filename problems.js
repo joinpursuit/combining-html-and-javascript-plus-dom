@@ -13,34 +13,28 @@ function upperCase(){
 
 function stringPanlinDrome(){
     const input =document.getElementById('palindrome-input')
-    let text = input.value
+    const text = input.value
     const output = document.getElementById('palindrome-output')
     let string= ""
-    for(let i = text.length-1;i >=0; i--){
-        string+= text[i]
+    for(let i = text.length-1;i >= 0; i--){
+        string += text[i]
     }
     if(text === string){
-        output.textContent = `It is true that ${string} is a palindrome`
+        output.textContent = `It is true that ${text} is a palindrome`
     }else{
-        output.textContent = `It is false that ${string} is a palindrome`
+        output.textContent = `It is false that ${text} is a palindrome`
     }
 
 }
 function eveNum(){
     const input =document.getElementById('even-checker-input')
-    let text = input.value
-    let output = document.getElementById('even-checker-output')
-    let num = text
-    if(num % 2 === 0){
-        output.textContent =`It is true that ${num} is a even`
+    const text = input.value;
+    const output = document.getElementById('even-checker-output')
+    if(text % 2 === 0){
+        output.textContent =`It is true that ${text} is  even`
     }else{
-        output.textContent =`It is false that ${num} is a even`
+        output.textContent =`It is false that ${text} is  even`
     }
-    // if(isNaN(num)){
-    //     output.textContent = "Please enter a number"
-    // }else{
-        
-    // }
     
 
 }
@@ -60,4 +54,31 @@ function averageTotal(){
     let output = document.getElementById('average-output')
     let average = (input1 + input2 + input3)/3 
     output.textContent =`The average of ${input1}, ${input2}, and ${input3} is ${average}`
+}
+
+function removelsVow() {
+    let string = document.getElementById("vowel-remover-input").value
+    let output = document.getElementById("vowel-remover-output")
+    let checkbox = document.getElementById("y-is-vowel-checkbox")
+    let vowel = "aeiouyAEIOUY"
+    let newStr = ""
+    if (checkbox.checked) {
+      for (let i = 0; i < string.length; i ++) {
+        if (!vowel.includes(string[i])) {
+          newStr = newStr + string[i];
+        } else {
+          newStr = newStr + ""
+        }
+      }
+    } else {
+      let vowelNoY = "aeiouAEIOU";
+      for (let i = 0; i < string.length; i ++) {
+        if (!vowelNoY.includes(string[i])) {
+          newStr = newStr + string[i];
+        } else {
+          newStr = newStr + ""
+        }
+      }
+    }
+    output.textContent = newStr
 }
