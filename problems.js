@@ -32,3 +32,47 @@ function isPalindrome () {
 
   output.textContent = `It is ${newStr === str} that ${str} is a palindrome`
 }
+
+
+
+function isEvenNumber () {
+  
+  const input = document.getElementById('even-checker-input')
+  const number = input.value
+
+  const output = document.getElementById('even-checker-output')
+  
+
+  output.textContent = `It is ${((number % 2) === 0) } that ${number} is even`
+}
+
+
+function doubledNumber () {
+  
+  const input = document.getElementById('doubler-input')
+  const number = input.value
+
+  const output = document.getElementById('doubler-output')
+  
+
+  output.textContent = `${number} doubled is ${number*2}`
+}
+
+
+function averageNumber () {
+  
+  const input = document.getElementById('average-input-1')
+  const number1 = parseInt(input.value)
+
+  const input2 = document.getElementById('average-input-2')
+  const number2 = parseInt(input2.value)
+
+  const input3 = document.getElementById('average-input-3')
+  const number3 = parseInt(input3.value)
+
+  const average = (number1 + number2 + number3)/3
+  const output = document.getElementById('average-output')
+  
+
+  output.textContent = `The average of ${number1}, ${number2}, and ${number3} is ${average.toFixed(0)}`
+}
