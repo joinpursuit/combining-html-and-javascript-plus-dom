@@ -12,14 +12,19 @@ function upperCase(){
     const input =document.getElementById('uppercaser-input')
     const text =input.value
     const output=document.getElementById('uppercaser-output')
+//The textContent property sets or returns the text content of the specified node, and all its descendants.
     output.textContent= text.toUpperCase()
 }
  function palindrome(){
+ //Get the element with the specified ID
   const input =document.getElementById('palindrome-input')
+  //The value property sets or returns the value of the value attribute of a text field.
   const text =input.value
   const input =document.getElementById('palindrome-output')
   let newString ="";
+  // loooping  in a descending order 
   for(let i =string.length -1; i>=0; i--){
+ // adding a new str
       newString +=string[i]
   }
 if(string ===newString){
@@ -32,7 +37,7 @@ function evenChecker(){
     let input =document.getElementById('even-checker-input')
     let number =input.value;
     let output =document.getElementById('even-checker-output')
-    if(number %2 ===2){
+    if(number %2 ===0){
         output.textContent=`It is true that ${number} is even`
     }else{
         output.textContent =`It is false that ${number} is even`
