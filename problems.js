@@ -19,8 +19,8 @@ function upperCase(){
  //Get the element with the specified ID
   const input =document.getElementById('palindrome-input')
   //The value property sets or returns the value of the value attribute of a text field.
-  const text =input.value
-  const input =document.getElementById('palindrome-output')
+  const string =input.value
+  const output =document.getElementById('palindrome-output')
   let newString ="";
   // loooping  in a descending order 
   for(let i =string.length -1; i>=0; i--){
@@ -54,6 +54,31 @@ function average(){
     let num1 =parseInt(document.getElementById('average-input-1').value)
     let num2 =parseInt(document.getElementById('average-input-2').value)
     let num3 =parseInt(document.getElementById('average-input-3').value)
-    let output =document.getElementById('average-input')
+    let output =document.getElementById('average-output')
     output.textContent=`The average of ${num1}, ${num2}, and ${num3} is ${(num1 + num2 + num3)/3}`
+}
+function removeVowels(){
+    let input =document.getElementById("vowel-remover-input").value;
+    let output= document.getElementById('vowel-remover-output');
+    let yVowel =document.getElementById('y-is-vowel-checkbox');
+    let vowels ="aeiouAEIOU"
+    let newStr ='';
+    let newStr1 ='';
+    let y ="yY";
+
+    for(let char of input.value){
+        if(!vowel.includes(char)){
+            newStr +=char;
+        }
+        }
+ if(yVowel.checked){
+    for(let char of newStr){
+        if(!y.includes(char)){
+            newStr1 +=char;
+        }
+    }
+    output.innerText=newStr1
+    return;    
+    }
+    output.innerText=newStr;
 }
