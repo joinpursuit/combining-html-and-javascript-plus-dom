@@ -38,6 +38,25 @@ function even() {
     }
 }
 
+function doubler () {
+    const input = document.getElementById('doubler-input')
+    const text = input.value 
+    const output = document.getElementById('doubler-output')
+    let doubledVal = text * 2
+    output.textContent = `${text} doubled is ${doubledVal}`
+}
+
+function averageThree() {
+    const input1 = document.getElementById('average-input-1')
+    const text1 = Number(input1.value)
+    const input2 = document.getElementById('average-input-2')    
+    const text2 = Number(input2.value)
+    const input3 = document.getElementById('average-input-3')
+    const text3 = Number(input3.value)
+    const output = document.getElementById('average-output')
+    let totalAvg = (text1+text2+text3)/3
+    output.textContent = `The average of ${text1}, ${text2}, and ${text3} is ${totalAvg}`
+}
 
 
 
