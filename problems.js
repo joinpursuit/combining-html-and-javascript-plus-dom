@@ -34,7 +34,7 @@ function isPalindrome() {
 }
 
 
-const isEvenChecker = () => {
+function isEvenChecker () {
     let input = document.getElementById('even-checker-input');
     let number = input.value;
     let output = document.getElementById('even-checker-output');
@@ -47,7 +47,7 @@ const isEvenChecker = () => {
     }
 }
 
-const doubler = () => {
+function doubler() {
     let input = document.getElementById('doubler-input')
     let number = input.value;
     let output = document.getElementById('doubler-output');
@@ -55,7 +55,7 @@ const doubler = () => {
     output.textContent = `${number} doubled is ${number * 2}`
 }
 
-const average = () => {
+function average() {
     let num1 = parseInt(document.getElementById('average-input-1').value);
     let num2 = parseInt(document.getElementById('average-input-2').value);
     let num3 = parseInt(document.getElementById('average-input-3').value);
