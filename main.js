@@ -35,3 +35,22 @@ const evenChecker = () => {
     const textLocation = document.getElementById("even-checker-output")
     textLocation.textContent = `It is ${boolVal} that ${inputValue} is even`
 }
+const numberDoubler = () => {
+    const input = document.getElementById("doubler-input")
+    const inputVal = input.value
+    let doubledNum = inputVal * 2 
+    const textLocation = document.getElementById("doubler-output") 
+    textLocation.textContent = `${inputVal} doubled is ${doubledNum}`
+
+}
+const averageOfThreeNumbers = () => {
+    const inputOne = document.getElementById("average-input-1")
+    const inputValOne = inputOne.value 
+    const inputTwo = document.getElementById("average-input-2")
+    const inputValTwo = inputTwo.value 
+    const inputThree = document.getElementById("average-input-3")
+    const inputValThree = inputThree.value 
+    const average = (Number(inputValOne) + Number(inputValTwo) + Number(inputValThree))/3
+    const textLocation = document.getElementById("average-output")
+    textLocation.textContent = `The average of ${inputValOne}, ${inputValTwo}, and ${inputValThree} is ${average}`
+}
