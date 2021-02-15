@@ -60,7 +60,26 @@ const doubleOrNothin = () => {
     output.innerHTML = `${input} doubled is ${double}`
 }
 
+const avg3 = () => {
+    let integer1 = document.getElementById('average-input-1').value
+    let integer2 = document.getElementById('average-input-2').value
+    let integer3 = document.getElementById('average-input-3').value
+    
+    let output = document.getElementById('average-output')
 
+    const integArr = [integer1, integer2, integer3]
+    const avg = Math.floor((integArr.reduce((a, b) => a + b, 0)) / integArr.length)
+    output.innerText = `The average of ${integer1}, ${integer2}, and ${integer3} is ${avg}`
+}
+
+const bonus = () => {
+    //get the input
+    const value = document.getElementById('vowel-remover-input').value
+    //get the checkbox elem
+    const yCheck = document.getElementById('y-is-vowel-checkbox')
+    const checked = yCheck.checked
+    
+}
 
 
 
