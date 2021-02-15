@@ -16,38 +16,137 @@
 
     <input id="mirror-input" type="text" placeholder="Enter your string here">
     <p id="mirror-output">Waiting for input...</p>
-    <button id="mirror-button" type="submit">Submit</button>
-
+    <button id="mirror-button" type="submit" onclick="displayString()">Submit</button>
+ 
     <h2>2. String Uppercaser</h2>
 
     <li>Make a text input with id='uppercaser-input'</li>
     <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
-
+    <br>
+    <input id="uppercaser-input" type="text" placeholder="Enter UpperCase string">
+    <p id="uppercaser-output">waiting for output...</p>
+    <button id="uppercaser-button" onclick="upperCase()" >Submit</button>
     <h2>3. Palindrome Detector</h2>
 
     <li>The user should be able to enter a string into a text input with id='palindrome-input'</li>
     <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li>
+    <br>
+    <input id="palindrome-input" type="text" placeholder="Palindrome here">
+    <p id="palindrome-output">waiting for output...</p>
+    <button id="palindrome-button"  onclick="palindrome()">Submit</button>
 
     <h2>4. Even Checker</h2>
 
     <li>The user should be able to enter a number into an input with id='even-checker-input'</li>
     <li>They should then be able to click a "submit" button with id='even-checker-button' that will display a string in the form "It is ${true/false} that ${entered number} is even" with id='even-checker-output'</li>
+    <br>
+    <input id="even-checker-input" type="text" placeholder="Give me you number">
+    <br>
+    <p id="even-checker-output">Waiting for output....</p>
+    <button id="even-checker-button" onclick="number()">Submit</button>
 
     <h2>5. Number Doubler</h2>
 
     <li>The user should be able to enter a number into an input with id='doubler-input'</li>
     <li>They should then be able to click a "submit" button with id='doubler-button' that will display a string in the form "${entered number} doubled is ${doubledVal}" with id='doubler-output'</li>
+    <br>
+    <input id="doubler-input" type="text" placeholder="Feed me your number!">
+    <p id="doubler-output">waiting for output...</p>
+    <button id="doubler-button" onclick="double()">Submit</button>
 
     <h2>6. Average of Three Numbers</h2>
 
     <li>The user should be able to enter 3 numbers into text inputs with ids 'average-input-1', 'average-input-2', and 'average-input-3'</li>
     <li>They should then be able to click a "submit" button with id='average-button' that will display a string in the form "The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with id='average-output'</li>
+    <br>
+    <input type="text" id="average-input-1" id="average-input-2" id="average-input-3" id="average-input-3" type="text" placeholder="Three numbers to average">
+    <p id="average-output">waiting for output</p>
+    <button id="average-button" onclick="average()">Submit</button>
 
     <h2>Bonus: Vowel Remover</h2>
     
     <li>The user should be able to enter a string into a text input with id='vowel-remover-input'</li>
     <li>The user should be able to select or deselect a checkbox with id='y-is-vowel-checkbox'</li>
     <li>They should then be able to click a "submit" button with id='vowel-remover-button' that will display the original string with all vowels removed with id='vowel-remover-output'. If the checkbox is checked, count y as a vowel. Otherwise, count y as a consonant.</li>
+<script>
+  function displayString(){
+    let userInput = document.getElementById('mirror-input');
+    let input = userInput.value;
+    let output = document.getElementById("mirror-output");
+    if(typeof input === 'string'){
+      output.textContent =`${input}`;
+    } else {
+      window.alert('enter a proper string')
+  }
+  }
 
+  function upperCase() {
+    const userUpperCase = document.getElementById('uppercaser-input')
+    let output = document.getElementById("uppercaser-output")
+    output.textContent = `${userUpperCase.value.toUpperCase()}`
+  } 
+
+  function palindrome(){
+    let input = document.getElementById('palindrome-input')
+    let userInput = input.value
+    let output = document.getElementById('palindrome-out')
+    let reverseUserInput= ''
+    for(let i = userInput.length -1; i>=0;i--){
+      reverseUserInput += userInput[i]
+    }
+    if(userInput === reverseUserInput){
+      output.textContent = `It is true that ${userInput} is a palindrome.`
+    } else{
+      output.textContent = `It is false that ${userInput} is a palindrome.`
+    }
+  }
+
+  function number() {
+    let input = document.getElementById('even-checker-input')
+    let userInput= input.value
+    let output = document.getElementById("even-checker-output")
+    if(isNaN(userInput)){
+      window.alert('Please feed me a real number')
+    } else if(userInput % 2 ===0){
+        
+        output.textContent = `It is true that ${userInput} is even.`
+    }else {
+      output.textContent = `It is false that ${userInput} is even.`
+    }
+  }
+
+  function double() {
+  let input =document.getElementById("doubler-input")
+  let userInput = input.value;
+  let output = document.getElementById("doubler-output");
+  let doubled = userInput * 2
+  if(isNaN(userInput)){
+    output.textContent ='This only works with numbers. Try a number.'
+  } else{
+  output.textContent = `${userInput} doubled is ${doubled}`  
+  }
+  }
+
+  function average() {
+    let averageInput1 = document.getElementById('average-input-1')
+    let averageInput2 = document.getElementById('average-input-2')
+    let averageInput3 = document.getElementById('average-input-3')
+    let num = averageInput1.value
+    let array = num.split(',')
+    let str1 = array[0];
+    let num1 = Number(str1)
+    let str2 = array[1];
+    let num2 = Number(str2);
+    let str3 = array[2];
+    let num3 = Number(str3)
+    let output = document.getElementById('average-output')
+    // let sumNum = array.reduce((acc,curr)=>{ return acc + curr})
+    let sumNum= num1+num2+num3
+    let averageNum = sumNum/3
+  
+      output.textContent = `The average of ${num1}, ${num2} and ${num3} is ${averageNum}`
+
+  }
+</script>
   </body>
 </html>
