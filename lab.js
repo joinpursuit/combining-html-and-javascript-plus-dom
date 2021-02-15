@@ -32,3 +32,10 @@ const evenChecker = () => {
     isEven.innerText = `It is false that ${userNum} is even`;
   }
 };
+
+const doubler = () => {
+  userNum = document.getElementById("doubler-input").value
+  doubledNum = document.getElementById("doubler-output")
+
+  doubledNum.innerText = `${userNum} doubled is ${userNum*2}`
+}
