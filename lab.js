@@ -34,8 +34,21 @@ const evenChecker = () => {
 };
 
 const doubler = () => {
-  userNum = document.getElementById("doubler-input").value
-  doubledNum = document.getElementById("doubler-output")
+  let userNum = document.getElementById("doubler-input").value
+  let doubledNum = document.getElementById("doubler-output")
 
   doubledNum.innerText = `${userNum} doubled is ${userNum*2}`
+}
+
+const findAvg = () => {
+  let num1 = Number(document.getElementById("average-input-1").value)
+  let num2 = Number(document.getElementById("average-input-2").value)
+  let num3 = Number(document.getElementById("average-input-3").value)
+  let avgOutput = document.getElementById("average-output")
+
+  let avg = ((num1+num2+num3) / 3)
+ 
+
+  avgOutput.textContent = `The average of ${num1}, ${num2}, and ${num3} is ${avg}`
+
 }
