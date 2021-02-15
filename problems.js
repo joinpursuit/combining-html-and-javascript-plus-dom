@@ -39,8 +39,26 @@ const liveevil = () => {
     }         
 }
     
+const oneOrTwo = () => {
+    let input = document.getElementById('even-checker-input').value
+    let output = document.getElementById('even-checker-output')
+    let test;
+    if (input % 2 === 0) {        
+        test = 'true'
+        output.innerHTML = `It is ${test} that ${input} is even`
+    } else {
+        test = 'false'
+        output.innerHTML = `It is ${test} that ${input} is even`
+    }
+}
 
+const doubleOrNothin = () => {
+    let input = document.getElementById('doubler-input').value
+    let output = document.getElementById('doubler-output')
 
+    const double = input * 2;
+    output.innerHTML = `${input} doubled is ${double}`
+}
 
 
 
