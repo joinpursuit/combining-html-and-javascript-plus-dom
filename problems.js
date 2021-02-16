@@ -9,7 +9,25 @@ function stringMirror() {
     output.textContent = text;
   }
   function stringUppercaser(){
-    let input = document.getElementById('uppercaser-input').value
-     let output = document.getElementById('uppercaser-output')
-     output.innerText = input.toUpperCase()
+  let input = document.getElementById('uppercaser-input').value
+  let output = document.getElementById('uppercaser-output')
+  output.innerText = input.toUpperCase()
   }
+
+ function palindrome() {
+   
+  const input = document.getElementById("palindrome-input");
+  const string = input.value;
+  const output = document.getElementById("palindrome-output");
+  let newString = "";
+  for (let i = string.length - 1; i >= 0; i--) {
+      newString += string[i];
+  }
+  if (string === newString) {
+      output.textContent = `It is true that ${string} is a palindrome`;
+  } 
+  else {
+      output.textContent = `It is false that ${string} is a palindrome`;
+  }
+
+ }
