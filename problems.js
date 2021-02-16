@@ -34,8 +34,7 @@ const liveevil = () => {
             
     } else {
         test = false;
-        output.textContent = `It is ${test} that ${input} is a palindrome`          
-        console.log(output)
+        output.innerHTML = `It is ${test} that ${input} is a palindrome`            
     }         
 }
     
@@ -61,16 +60,22 @@ const doubleOrNothin = () => {
 }
 
 const avg3 = () => {
-    let integer1 = document.getElementById('average-input-1').value
-    let integer2 = document.getElementById('average-input-2').value
-    let integer3 = document.getElementById('average-input-3').value
+    let integer1 = parseInt(document.getElementById('average-input-1').value)
+    let integer2 = parseInt(document.getElementById('average-input-2').value)
+    let integer3 = parseInt(document.getElementById('average-input-3').value)
     
     let output = document.getElementById('average-output')
 
     const integArr = [integer1, integer2, integer3]
-    const avg = Math.floor((integArr.reduce((a, b) => a + b, 0)) / integArr.length)
+    const avg = integArr.reduce((a, b) => a + b) / integArr.length       
     output.innerText = `The average of ${integer1}, ${integer2}, and ${integer3} is ${avg}`
 }
+
+
+
+0
+
+
 
 const bonus = () => {
     //get the input
@@ -78,6 +83,16 @@ const bonus = () => {
     //get the checkbox elem
     const yCheck = document.getElementById('y-is-vowel-checkbox')
     const checked = yCheck.checked
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    const arr = []
+    for (let i = 0; i < value.length; i++) {
+        console.log(vowels[i])
+        console.log(vowels)
+        if (!value[i].includes(vowels)) {
+            arr.push(value[i]) 
+        }
+    }
+    console.log(arr`)
     
 }
 
