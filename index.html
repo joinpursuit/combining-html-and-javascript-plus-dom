@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="./index.css">
-    <title>Combining HTML and JavaScript + DOM Lab</title>
-  </head>
-  <body>
-    <h1 id = "top_heading">Combining HTML and JavaScript + DOM Lab</h1>
-    <p id = "welcome_para">Complete each of the sections below</p>
-    <h2>1. String Mirror</h2>
 
-    <ul>
-      <li>Make a text input with id='mirror-input' and a button with id='mirror-button'</li>
-      <li>They should then be able to click a "submit" button that will display the string the user entered in an element with id='mirror-output'</li>
-    </ul>    
+<head>
+  <link rel="stylesheet" href="./index.css">
+  <title>Combining HTML and JavaScript + DOM Lab</title>
+  <script src="./index.js" defer> </script>
+</head>
 
-    <input id="mirror-input" type="text" placeholder="Enter your string here">
-    <p id="mirror-output">Waiting for input...</p>
-    <button id="mirror-button" type="submit">Submit</button>
+<body>
+  <h1 id="top_heading">Combining HTML and JavaScript + DOM Lab</h1>
+  <p id="welcome_para">Complete each of the sections below</p>
+  <h2>1. String Mirror</h2>
 
-    <h2>2. String Uppercaser</h2>
+  <ul>
+    <li>Make a text input with id='mirror-input' and a button with id='mirror-button'</li>
+    <li>They should then be able to click a "submit" button that will display the string the user entered in an element
+      with id='mirror-output'</li>
+  </ul>
 
-    <li>Make a text input with id='uppercaser-input'</li>
-    <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
+  <input id="mirror-input" type="text" placeholder="Enter your string here">
+  <p id="mirror-output">Let's see what you typed!</p>
+  <button id="mirror-button" type="submit" onclick="mirrorInput()">Submit</button>
+  <h2>2. String Uppercaser</h2>
 
-    <h2>3. Palindrome Detector</h2>
+  <li>Make a text input with id='uppercaser-input'</li>
+  <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the
+    user entered in all uppercase in an element with id='uppercaser-output'</li>
 
-    <li>The user should be able to enter a string into a text input with id='palindrome-input'</li>
-    <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li>
+  <input id="uppercaser-input" type="text" placeholder="Enter string here">
+  <p id="uppercaser-output">Changed Text Here:</p>
+  <button id="uppercaser-button" type="submit" onclick="upperCaser()">Submit</button>
 
-    <h2>4. Even Checker</h2>
+  <h2>3. Palindrome Detector</h2>
 
-    <li>The user should be able to enter a number into an input with id='even-checker-input'</li>
-    <li>They should then be able to click a "submit" button with id='even-checker-button' that will display a string in the form "It is ${true/false} that ${entered number} is even" with id='even-checker-output'</li>
+  <li>The user should be able to enter a string into a text input with id='palindrome-input'</li>
+  <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display
+    a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li>
+  <input type="text" id="palindrome-input" placeholder="Enter your string">
+  <p id="palindrome-output">Is it a palindrome?</p>
+  <button id="palindrome-button" type="submit" onclick="isPalindrome()">Check if it's a palindrome!</button>
 
-    <h2>5. Number Doubler</h2>
+  <h2>4. Even Checker</h2>
 
-    <li>The user should be able to enter a number into an input with id='doubler-input'</li>
-    <li>They should then be able to click a "submit" button with id='doubler-button' that will display a string in the form "${entered number} doubled is ${doubledVal}" with id='doubler-output'</li>
+  <li>The user should be able to enter a number into an input with id='even-checker-input'</li>
+  <li>They should then be able to click a "submit" button with id='even-checker-button' that will display a string in
+    the form "It is ${true/false} that ${entered number} is even" with id='even-checker-output'</li>
+<input type="number " id="even-checker-input" placeholder="Enter your number here">
+<p id="even-checker-output">Answer displays here</p>
+<button id="even-checker-button" type="submit" onclick="checkEven()">Submit</button>
+  <h2>5. Number Doubler</h2>
 
-    <h2>6. Average of Three Numbers</h2>
+  <li>The user should be able to enter a number into an input with id='doubler-input'</li>
+  <li>They should then be able to click a "submit" button with id='doubler-button' that will display a string in the
+    form "${entered number} doubled is ${doubledVal}" with id='doubler-output'</li>
+<input type="number" id="doubler-input" placeholder="Number to be doubled">
+<p id="doubler-output">Output here</p>
+<button id="doubler-button" type='submit' onclick="doubleNum()">Let's do it!</button>
 
-    <li>The user should be able to enter 3 numbers into text inputs with ids 'average-input-1', 'average-input-2', and 'average-input-3'</li>
-    <li>They should then be able to click a "submit" button with id='average-button' that will display a string in the form "The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with id='average-output'</li>
+  <h2>6. Average of Three Numbers</h2>
 
-    <h2>Bonus: Vowel Remover</h2>
-    
-    <li>The user should be able to enter a string into a text input with id='vowel-remover-input'</li>
-    <li>The user should be able to select or deselect a checkbox with id='y-is-vowel-checkbox'</li>
-    <li>They should then be able to click a "submit" button with id='vowel-remover-button' that will display the original string with all vowels removed with id='vowel-remover-output'. If the checkbox is checked, count y as a vowel. Otherwise, count y as a consonant.</li>
+  <li>The user should be able to enter 3 numbers into text inputs with ids 'average-input-1', 'average-input-2', and
+    'average-input-3'</li>
+  <li>They should then be able to click a "submit" button with id='average-button' that will display a string in the
+    form "The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with id='average-output'</li>
+<input type="number" id="average-input-1">
+<input type="number" id="average-input-2">
+<input type="number" id="average-input-3">
+<p id="average-output">The Average</p>
+    <button id="average-button" type='submit' onclick="numsAverage()">Let's do it!</button>
 
-  </body>
+  <h2>Bonus: Vowel Remover</h2>
+
+  <li>The user should be able to enter a string into a text input with id='vowel-remover-input'</li>
+  <li>The user should be able to select or deselect a checkbox with id='y-is-vowel-checkbox'</li>
+  <li>They should then be able to click a "submit" button with id='vowel-remover-button' that will display the original
+    string with all vowels removed with id='vowel-remover-output'. If the checkbox is checked, count y as a vowel.
+    Otherwise, count y as a consonant.</li>
+
+    <button id="doubler-button" type='submit' onclick="vowelRemove()">Let's do it!</button>
+</body>
+
 </html>
