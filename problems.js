@@ -27,15 +27,28 @@ const PalindromeDetector = () =>{
         output.textContent = `It is ${false} that ${input} is a palindrome `
     }
 
-}
+};
 
 const EvenChecker = () =>{
+    let input = document.getElementById("even-checker-input").value
+    let output = document.getElementById("even-checker-output")
+    let num = input
+    if(num % 2 === 0){
+        output.textContent = `It is ${true} that ${input} is even`
+    }else{
+        output.textContent = `It is ${false} that ${input} is even`
+    }
 
-}
+};
 
 const NumberDoubler = () =>{
+    let input = document.getElementById("doubler-input").value
+    console.log(input)
+    let output = document.getElementById("doubler-output")
+    let doubledVal = Number(input) + Number(input)
 
-}
+   output.textContent = `${input} doubled is ${doubledVal}`
+};
 
 const AverageofThreeNumbers = () =>{
 
