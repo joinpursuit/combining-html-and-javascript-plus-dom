@@ -51,5 +51,11 @@ const NumberDoubler = () =>{
 };
 
 const AverageofThreeNumbers = () =>{
+    let numberOne = document.getElementById("average-input-1").value
+    let numberTwo = document.getElementById("average-input-2").value
+    let numberThree = document.getElementById("average-input-3").value
+    let average = (Number(numberOne) + Number(numberTwo) + Number(numberThree)) / 3
+    let output = document.getElementById("average-output")
+    output.textContent = `The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}`
 
-}
+};
