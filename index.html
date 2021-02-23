@@ -31,7 +31,21 @@
     <h2>2. String Uppercaser</h2>
 
     <li>Make a text input with id='uppercaser-input'</li>
-    <li>They should then be abble to click a "sumit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
+    <li>They should then be abble to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li><br>
+    
+    <input id="uppercaser-input" type="text" placeholder="Enter your string here">
+    <p id="uppercaser-output">Waiting for input...</p>
+    <button onclick="turnUpperCase()" id="uppercaser-button" type="submit">Submit</button>
+
+    <script>
+      const turnUpperCase = () =>{
+        let uppercaserInput = document.getElementById("uppercaser-input");
+        let uppercaserValue = uppercaserInput.value;
+        let uppercaserOutput = document.getElementById("uppercaser-output");
+        uppercaserOutput.textContent = uppercaserValue.toUpperCase();
+      }
+
+    </script>
 
     <h2>3. Palindrome Detector</h2>
 
