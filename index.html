@@ -16,12 +16,22 @@
 
     <input id="mirror-input" type="text" placeholder="Enter your string here">
     <p id="mirror-output">Waiting for input...</p>
-    <button id="mirror-button" type="submit">Submit</button>
+    <button onclick = "displayUserInput()" id="mirror-button" type="submit">Submit</button>
+
+    <script>
+      const displayUserInput = () =>{
+        let mirrorInput = document.getElementById("mirror-input");
+        let mirrorInputValue = mirrorInput.value;
+        let mirrorOutput = document.getElementById("mirror-output");
+        mirrorOutput.textContent = mirrorInputValue
+      }
+    </script>
+
 
     <h2>2. String Uppercaser</h2>
 
     <li>Make a text input with id='uppercaser-input'</li>
-    <li>They should then be able to click a "submit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
+    <li>They should then be abble to click a "sumit" button with id='uppercaser-button' that will display the string the user entered in all uppercase in an element with id='uppercaser-output'</li>
 
     <h2>3. Palindrome Detector</h2>
 
@@ -51,3 +61,11 @@
 
   </body>
 </html>
+
+<!-- 
+get the value from the input tag
+update the mirror text of the output
+•make a submit button that displays the string the user entered
+•
+
+ -->
