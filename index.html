@@ -50,12 +50,80 @@
     <h2>3. Palindrome Detector</h2>
 
     <li>The user should be able to enter a string into a text input with id='palindrome-input'</li>
-    <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li>
+    <li>They should then be able to click a "submit" button with id='palindrome-button'. Clicking the button will display a string in the form "It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'</li><br>
+
+    <input id="palindrome-input" type="text" placeholder="Enter a string">
+    <p id="palindrome-output">Waiting for input...</p>
+    <button onclick= "palindromeDetector()" id="palindrome-button" type="submit">Submit</button>
+
+    <script>
+
+      // Clicking the button will display a string in the form: 
+      //"It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'
+      
+      const palindromeDetector = () =>{
+        let palindromeInput = document.getElementById("palindrome-input");
+        let palindromeValue = palindromeInput.value;
+        let palindromeOutput = document.getElementById("palindrome-output");
+        if(uppercaser.textContent){//if the input is the same as a reversed version,
+          
+        }
+      }
+    </script>
+
 
     <h2>4. Even Checker</h2>
 
     <li>The user should be able to enter a number into an input with id='even-checker-input'</li>
-    <li>They should then be able to click a "submit" button with id='even-checker-button' that will display a string in the form "It is ${true/false} that ${entered number} is even" with id='even-checker-output'</li>
+    <li>They should then be able to click a "submit" button with id='even-checker-button' that will display a string in the form "It is ${true/false} that ${entered number} is even" with id='even-checker-output'</li><br>
+
+    <input id="even-checker-input" type="number" placeholder="Enter a number">
+    <p id="even-checker-output">Waiting for input...</p>
+    <button onclick="evenChecker()" id="even-checker-button" type="submit">Submit</button>
+
+    <script>
+      // const evenChecker = () =>{
+      //   let userInput = document.getElementById("even-checker-input");
+      //   let userInputValue = userInput.value;
+      //   let evenCheckerOutput = getElementById("even-checker-output").value;
+      //   let trueOrFalse = (userInputValue % 2) === 0;
+      //   evenCheckerOutput.value = `It is ${trueOrFalse} that ${userInputValue} is even`;
+      // }
+
+      // const evenChecker = () =>{
+      //   let userInput = document.getElementById("even-checker-input");
+      //   let userInputValue = userInput.value;
+
+      //   if((userInputValue % 2)===0){
+      //     return true
+      //   }else{
+      //     return false
+      //   }
+      //   // let trueOrFalse = (userInputValue % 2) === 0; 
+      //   let evenCheckerOutput = getElementById("even-checker-output").value;
+      //   evenCheckerOutput.value = `It is ${trueOrFalse} that ${userInputValue} is even`;
+      // }
+
+      // const evenChecker = () =>{
+      //   let userInput = document.getElementById("even-checker-input");
+      //   let userInputValue = userInput.value;
+      //   let trueOrFalse = (userInputValue % 2) === 0;
+
+      //   window.alert(`It is ${trueOrFalse} that ${userInputValue} is even`);
+      // }
+
+      const evenChecker = () =>{
+        let userInput = document.getElementById("even-checker-input");
+        let userInputValue = userInput.value;
+        let trueOrFalse = (userInputValue % 2) === 0;
+        let evenCheckerOutput = document.getElementById("even-checker-output");
+        evenCheckerOutput.textContent = `It is ${trueOrFalse} that ${userInputValue} is even`;
+
+      }
+
+      //try using a different way to update the value of these variables
+
+    </script>
 
     <h2>5. Number Doubler</h2>
 
