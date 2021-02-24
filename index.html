@@ -57,19 +57,42 @@
     <button onclick= "palindromeDetector()" id="palindrome-button" type="submit">Submit</button>
 
     <script>
+      
+      const palindromeDetector = () =>{
+        let originalInput = document.getElementById("palindrome-input").value;
+        let remove = /[\W_]/g;
+        let changeStr = originalInput.toLowerCase().replace(remove, '');
+        let reverseStr = changeStr.split('').reverse().join('');
+        let palindromeOutput = document.getElementById("palindrome-output");
+        let palindromeOrNah = (reverseStr === changeStr);
+        palindromeOutput.textContent = `It is ${palindromeOrNah} that "${originalInput}" is a palindrome`;
+      }
 
+// it works, but only for single words and it's case-sensitive
+
+
+    </script>
+
+<!-- function palindrome(str) {
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join(''); 
+  return reverseStr === lowRegStr;
+}
+palindrome("A man, a plan, a canal. Panama"); -->
+
+<!-- 
       // Clicking the button will display a string in the form: 
       //"It is ${true/false} that ${entered string} is a palindrome" with id='palindrome-output'
       
-      const palindromeDetector = () =>{
-        let palindromeInput = document.getElementById("palindrome-input");
-        let palindromeValue = palindromeInput.value;
-        let palindromeOutput = document.getElementById("palindrome-output");
-        if(uppercaser.textContent){//if the input is the same as a reversed version,
+    //   const palindromeDetector = () =>{
+    //     let palindromeInput = document.getElementById("palindrome-input");
+    //     let palindromeValue = palindromeInput.value;
+    //     let palindromeOutput = document.getElementById("palindrome-output");
+    //     if(uppercaser.textContent){//if the input is the same as a reversed version,
           
-        }
-      }
-    </script>
+    //     }
+    //   } -->
 
 
     <h2>4. Even Checker</h2>
@@ -120,8 +143,6 @@
         evenCheckerOutput.textContent = `It is ${trueOrFalse} that ${userInputValue} is even`;
 
       }
-
-      //try using a different way to update the value of these variables
 
     </script>
 
