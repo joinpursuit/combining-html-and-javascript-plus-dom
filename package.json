@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/joinpursuit/combining-html-and-javascript-plus-dom#readme",
   "devDependencies": {
-    "cypress": "^6.1.0"
+    "cypress": "^6.4.0"
   }
 }
