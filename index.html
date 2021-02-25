@@ -68,9 +68,6 @@
         palindromeOutput.textContent = `It is ${palindromeOrNah} that ${originalInput} is a palindrome`;
       }
 
-// it works, but only for single words and it's case-sensitive
-
-
     </script>
 
 <!-- function palindrome(str) {
@@ -149,12 +146,50 @@ palindrome("A man, a plan, a canal. Panama"); -->
     <h2>5. Number Doubler</h2>
 
     <li>The user should be able to enter a number into an input with id='doubler-input'</li>
-    <li>They should then be able to click a "submit" button with id='doubler-button' that will display a string in the form "${entered number} doubled is ${doubledVal}" with id='doubler-output'</li>
+    <li>They should then be able to click a "submit" button with id='doubler-button' that will display a string in the form "${entered number} doubled is ${doubledVal}" with id='doubler-output'</li><br>
+
+    <input id="doubler-input" type="number" placeholder="Enter a number">
+    <p id="doubler-output">Waiting for input...</p>
+    <button onclick="doubleNum()" id="doubler-button" type="submit">Submit</button>
+
+    <script>
+      const doubleNum = () =>{
+        let doublerInput = document.getElementById("doubler-input").value
+        let doublerOutput = document.getElementById("doubler-output")
+        let doubledValue = (doublerInput * 2)
+        doublerOutput.textContent = `${doublerInput} doubled is ${doubledValue}`
+      }
+
+    </script>
 
     <h2>6. Average of Three Numbers</h2>
 
     <li>The user should be able to enter 3 numbers into text inputs with ids 'average-input-1', 'average-input-2', and 'average-input-3'</li>
-    <li>They should then be able to click a "submit" button with id='average-button' that will display a string in the form "The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with id='average-output'</li>
+    <li>They should then be able to click a "submit" button with id='average-button' that will display a string in the form "The average of ${numberOne}, ${numberTwo}, and ${numberThree} is ${average}" with id='average-output'</li><br>
+
+    <input id="average-input-1" type="number" placeholder="Enter first number">&emsp;
+    <input id="average-input-2" type="number" placeholder="Enter another number">&emsp;
+    <input id="average-input-3" type="number" placeholder="Enter another number"><br>
+    <p id="average-output">Waiting for input...</p>
+
+    <button onclick="getAverage()" id="average-button" type="submit">Submit</button>
+
+    <script>
+      const getAverage = () =>{
+        let num1 = document.getElementById("average-input-1").value
+        let num2 = document.getElementById("average-input-2").value
+        let num3 = document.getElementById("average-input-3").value
+
+        let addedNums = num1 + num2 + num3
+        let avgOfNums = addedNums/3
+        let avgOutput = document.getElementById("average-output")
+        avgOutput.textContent = `The average of ${num1}, ${num2}, and ${num3} is ${avgOfNums}`
+
+      }
+
+
+
+    </script>
 
     <h2>Bonus: Vowel Remover</h2>
     
@@ -164,11 +199,3 @@ palindrome("A man, a plan, a canal. Panama"); -->
 
   </body>
 </html>
-
-<!-- 
-get the value from the input tag
-update the mirror text of the output
-•make a submit button that displays the string the user entered
-•
-
- -->
