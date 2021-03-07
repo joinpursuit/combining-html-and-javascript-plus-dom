@@ -10,7 +10,7 @@
 * `npm test` to open the cypress testing window
 
 > *Note*: Remember to `git add`, `git commit` and `git push` regularly
-
+ 
 ## Submission Guidelines
   * When finished, commit and push your work.
   * Make a pull request on github.`
