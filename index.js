@@ -19,8 +19,9 @@ function upperCaser(){
 function palindrome(){
     const input= document.getElementById("palindrome-input").value;
     const output= document.getElementById("palindrome-output");
-    const arr = input.split('');
-    let answer = arr.every((el, i) => el === input[input.length -1 -i]);
+    //console.log(input.toLowerCase().split(''))
+    const arr = input.toLowerCase().split('');
+    let answer = arr.every((el, i) => el === input.toLowerCase()[input.length -1 -i]);
     output.innerText = `It is ${answer} that ${input} is a palindrome`;
 }
 
